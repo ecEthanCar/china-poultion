@@ -1,0 +1,77 @@
+---
+title: "Analyzing Airbnb Data"
+subtitle: "Report"
+format: pdf
+---
+
+```{r}
+#| load-package
+#| echo: false
+
+library(tidyverse) 
+library(skimr) 
+library(jsonlite) 
+library(scales) 
+library(lubridate) 
+library(knitr) 
+library(kableExtra) 
+library(patchwork) 
+library(tidymodels) 
+library(gridExtra) 
+library(broom)
+library(readxl)
+
+theme_set(theme_minimal())
+```
+
+```{r}
+#| import-data-for-reference
+
+indicator_2016 <- read_excel("Shared_Data/Economic Indicators(China)2016.xlsx")
+indicator_2017 <- read_excel("Shared_Data/Economic Indicators(China)2017.xlsx")
+indicator_2018 <- read_excel("Shared_Data/Economic Indicators(China)2018.xlsx")
+indicator_2019 <- read_excel("Shared_Data/Economic Indicators(China)2019.xlsx")
+indicator_2020 <- read_excel("Shared_Data/Economic Indicators(China)2020.xlsx")
+indicator_2021 <- read_excel("Shared_Data/Economic Indicators(China)2021.xlsx")
+indicator_2022 <- read_excel("Shared_Data/Economic Indicators(China)2022.xlsx")
+
+```
+
+```{r}
+#| efficient-import-data
+
+# Set the directory path where the files are located
+folder_path <- "Shared_Data"
+
+# List all the files in the folder
+file_list <- list.files(folder_path)
+
+# Create an empty list to store the data from each file
+data_list <- list()
+
+# Iterate over the file list using a for loop
+for (file_name in file_list) {
+  # Check if the file name meets criteria
+  if (grepl("^Economic Indicators\\(China\\)\\d{4}\\.xlsx$", file_name) | grepl("^Economic Indicators\\(China\\)\\.xlsx$", file_name)) {
+    file_path <- file.path(folder_path, file_name)
+    file_data <- read_excel(file_path)
+    # New column indicating year
+    file_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
+    # Replaces "--" with NA, then converts all but Region to doubles
+    data_list[[file_name]] <- file_data |>
+      mutate_if(is.character, list(~na_if(., "--"))) |>
+      mutate(across(-Region, as.numeric))
+  }
+}
+
+```
+
+```{r}
+#| merge-files
+
+providence_only <- bind_rows(data_list) |> 
+  filter(Region != c("China", "Source: Wind")) |>
+  group_by(year)
+providence_only
+
+```
