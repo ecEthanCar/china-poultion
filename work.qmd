@@ -38,7 +38,7 @@ indicator_2022 <- read_excel("Shared_Data/Economic Indicators(China)2022.xlsx")
 ```
 
 ```{r}
-#| efficient-import-data
+#| 2016-2022-providence-import-data
 
 # Set the directory path where the files are located
 folder_path <- "Shared_Data"
@@ -64,14 +64,36 @@ for (file_name in file_list) {
   }
 }
 
-```
-
-```{r}
-#| merge-files
-
+# Merge files
 providence_only <- bind_rows(data_list) |> 
   filter(Region != c("China", "Source: Wind")) |>
   group_by(year)
 providence_only
 
 ```
+
+```{r}
+#| 2022-providence-region-import-data
+
+folder_path_2 <- "Shared_Data/provincial_lgfv"
+file_list_2 <- list.files(folder_path_2)
+data_list_2 <- list()
+
+for (file_name in file_list_2) {
+  if (grepl("^Economic Indicators", file_name)) {
+    file_path_2 <- file.path(folder_path_2, file_name)
+    file_data_2 <- read_excel(file_path_2)
+    file_data_2$Providence <- str_match(file_name, "\\((.*?)\\)")[, 2]
+    data_list_2[[file_name]] <- file_data_2 |>
+      mutate_if(is.character, list(~na_if(., "--"))) |>
+      mutate(across(-c(Providence, Region), as.numeric))
+  }
+}
+
+cleaned <- bind_rows(data_list_2) |> 
+  filter(Region != "Source: Wind") |>
+  group_by(Providence)
+cleaned
+
+```
+

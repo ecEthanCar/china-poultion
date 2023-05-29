@@ -452,8 +452,10 @@ for (file_name in file_list) {
       mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
       mutate(across(-Region, as.numeric))
   }
-}</code></pre>
-<pre class="r"><code>providence_only &lt;- bind_rows(data_list) |&gt; 
+}
+
+# Merge files
+providence_only &lt;- bind_rows(data_list) |&gt; 
   filter(Region != c(&quot;China&quot;, &quot;Source: Wind&quot;)) |&gt;
   group_by(year)
 providence_only</code></pre>
@@ -477,6 +479,44 @@ providence_only</code></pre>
 ## #   `Balance of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
 ## #   `Limitation of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
 ## #   `Fiscal Self-sufficiency(%)` &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+<pre class="r"><code>folder_path_2 &lt;- &quot;Shared_Data/provincial_lgfv&quot;
+file_list_2 &lt;- list.files(folder_path_2)
+data_list_2 &lt;- list()
+
+for (file_name in file_list_2) {
+  if (grepl(&quot;^Economic Indicators&quot;, file_name)) {
+    file_path_2 &lt;- file.path(folder_path_2, file_name)
+    file_data_2 &lt;- read_excel(file_path_2)
+    file_data_2$Providence &lt;- str_match(file_name, &quot;\\((.*?)\\)&quot;)[, 2]
+    data_list_2[[file_name]] &lt;- file_data_2 |&gt;
+      mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
+      mutate(across(-c(Providence, Region), as.numeric))
+  }
+}
+
+cleaned &lt;- bind_rows(data_list_2) |&gt; 
+  filter(Region != &quot;Source: Wind&quot;) |&gt;
+  group_by(Providence)
+cleaned</code></pre>
+<pre><code>## # A tibble: 481 × 9
+## # Groups:   Providence [31]
+##    Region    `Debt Ratio(%)` `Wide Range Debt Ratio(%)` `Debt Asset Ratio(%)`
+##    &lt;chr&gt;               &lt;dbl&gt;                      &lt;dbl&gt;                 &lt;dbl&gt;
+##  1 Anhui                29.5                       74.5                   NA 
+##  2 Lu&#39;an                47.6                       95.6                  286.
+##  3 Fuyang               42.8                       95.6                  749.
+##  4 Bozhou               39.9                      111.                   566.
+##  5 Huangshan            36.6                       46.3                  246.
+##  6 Suzhou               34.8                       83.6                  250.
+##  7 tongling             31.9                       84.1                  372.
+##  8 Xuancheng            31.4                      100.                   185.
+##  9 Bengbu               30.9                       93.7                  248 
+## 10 Chuzhou              29.3                       68.2                  226.
+## # ℹ 471 more rows
+## # ℹ 5 more variables: `Wide Range Debt Asset Ratio(%)` &lt;dbl&gt;,
+## #   `Balance of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
+## #   `Limitation of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
+## #   `Fiscal Self-sufficiency(%)` &lt;dbl&gt;, Providence &lt;chr&gt;</code></pre>
 
 
 
