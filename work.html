@@ -411,7 +411,7 @@ library(tidymodels) </code></pre>
 ## ✖ dplyr::lag()             masks stats::lag()
 ## ✖ yardstick::spec()        masks readr::spec()
 ## ✖ recipes::step()          masks stats::step()
-## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
+## • Learn how to get started at https://www.tidymodels.org/start/</code></pre>
 <pre class="r"><code>library(gridExtra) </code></pre>
 <pre><code>## 
 ## Attaching package: &#39;gridExtra&#39;
@@ -444,12 +444,12 @@ for (file_name in file_list) {
   # Check if the file name meets criteria
   if (grepl(&quot;^Economic Indicators\\(China\\)\\d{4}\\.xlsx$&quot;, file_name) | grepl(&quot;^Economic Indicators\\(China\\)\\.xlsx$&quot;, file_name)) {
     file_path &lt;- file.path(folder_path, file_name)
-    file_data &lt;- read_excel(file_path)
+    file_data &lt;- read_xlsx(file_path, na = &quot;--&quot;)
     # New column indicating year
     file_data$year &lt;- str_extract(file_name, &quot;\\d{4}&quot;) |&gt; as.numeric()
-    # Replaces &quot;--&quot; with NA, then converts all but Region to doubles
+    # Converts all but Region to doubles
     data_list[[file_name]] &lt;- file_data |&gt;
-      mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
+      #mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
       mutate(across(-Region, as.numeric))
   }
 }
@@ -458,27 +458,10 @@ for (file_name in file_list) {
 providence_only &lt;- bind_rows(data_list) |&gt; 
   filter(Region != c(&quot;China&quot;, &quot;Source: Wind&quot;)) |&gt;
   group_by(year)
-providence_only</code></pre>
-<pre><code>## # A tibble: 217 × 9
-## # Groups:   year [7]
-##    Region           `Debt Ratio(%)` Wide Range Debt Rati…¹ `Debt Asset Ratio(%)`
-##    &lt;chr&gt;                      &lt;dbl&gt;                  &lt;dbl&gt;                 &lt;dbl&gt;
-##  1 Guizhou                     74.0                  156.                  180. 
-##  2 Qinghai                     52.1                   81.8                  96.4
-##  3 Yunnan                      43.0                   79.4                 116. 
-##  4 Hainan                      38.5                   44.2                  84.4
-##  5 Liaoning                    38.0                   59.8                 138. 
-##  6 Ningxia                     37.1                   48.1                  90.4
-##  7 Neimenggu(Inner…            32.5                   46.3                 126. 
-##  8 Xinjiang                    29.4                   54.8                  68.3
-##  9 Shaanxi                     25.3                   68.0                 104. 
-## 10 Guangxi                     24.9                   54.7                  74.8
-## # ℹ 207 more rows
-## # ℹ abbreviated name: ¹​`Wide Range Debt Ratio(%)`
-## # ℹ 5 more variables: `Wide Range Debt Asset Ratio(%)` &lt;dbl&gt;,
-## #   `Balance of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
-## #   `Limitation of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
-## #   `Fiscal Self-sufficiency(%)` &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+
+providence_only |&gt; write_csv(file = &quot;data/E_I(2016-2022).csv&quot;)
+
+# Ask about Economic Indicators(Xiangxi).xlsx</code></pre>
 <pre class="r"><code>folder_path_2 &lt;- &quot;Shared_Data/provincial_lgfv&quot;
 file_list_2 &lt;- list.files(folder_path_2)
 data_list_2 &lt;- list()
@@ -486,10 +469,10 @@ data_list_2 &lt;- list()
 for (file_name in file_list_2) {
   if (grepl(&quot;^Economic Indicators&quot;, file_name)) {
     file_path_2 &lt;- file.path(folder_path_2, file_name)
-    file_data_2 &lt;- read_excel(file_path_2)
+    file_data_2 &lt;- read_xlsx(file_path_2, na = &quot;--&quot;)
     file_data_2$Providence &lt;- str_match(file_name, &quot;\\((.*?)\\)&quot;)[, 2]
     data_list_2[[file_name]] &lt;- file_data_2 |&gt;
-      mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
+      #mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
       mutate(across(-c(Providence, Region), as.numeric))
   }
 }
@@ -517,6 +500,15 @@ cleaned</code></pre>
 ## #   `Balance of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
 ## #   `Limitation of Municipal Bonds(CNY,B)` &lt;dbl&gt;,
 ## #   `Fiscal Self-sufficiency(%)` &lt;dbl&gt;, Providence &lt;chr&gt;</code></pre>
+<pre class="r"><code>cleaned |&gt; write_csv(file = &quot;data/E_I(all provinces).csv&quot;)</code></pre>
+<pre class="r"><code>economy_2022 &lt;- read_excel(&quot;Shared_Data/Economic Indicators(China)2022.xlsx&quot;, sheet = 2)
+finaical_2022 &lt;- read_excel(&quot;Shared_Data/Economic Indicators(China)2022.xlsx&quot;, sheet = 3)
+
+efs_2022 &lt;- full_join(economy_2022, finaical_2022, by = join_by(Region)) |&gt;
+  mutate_if(is.character, list(~na_if(., &quot;--&quot;))) |&gt;
+  mutate(across(-c(Region), as.numeric))
+
+efs_2022 |&gt; write_csv(file = &quot;data/efs_2022.csv&quot;)</code></pre>
 
 
 

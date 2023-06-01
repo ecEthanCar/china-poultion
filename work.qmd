@@ -54,12 +54,12 @@ for (file_name in file_list) {
   # Check if the file name meets criteria
   if (grepl("^Economic Indicators\\(China\\)\\d{4}\\.xlsx$", file_name) | grepl("^Economic Indicators\\(China\\)\\.xlsx$", file_name)) {
     file_path <- file.path(folder_path, file_name)
-    file_data <- read_excel(file_path)
+    file_data <- read_xlsx(file_path, na = "--")
     # New column indicating year
     file_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
-    # Replaces "--" with NA, then converts all but Region to doubles
+    # Converts all but Region to doubles
     data_list[[file_name]] <- file_data |>
-      mutate_if(is.character, list(~na_if(., "--"))) |>
+      #mutate_if(is.character, list(~na_if(., "--"))) |>
       mutate(across(-Region, as.numeric))
   }
 }
@@ -68,7 +68,10 @@ for (file_name in file_list) {
 providence_only <- bind_rows(data_list) |> 
   filter(Region != c("China", "Source: Wind")) |>
   group_by(year)
-providence_only
+
+providence_only |> write_csv(file = "data/E_I(2016-2022).csv")
+
+# Ask about Economic Indicators(Xiangxi).xlsx
 
 ```
 
@@ -82,10 +85,10 @@ data_list_2 <- list()
 for (file_name in file_list_2) {
   if (grepl("^Economic Indicators", file_name)) {
     file_path_2 <- file.path(folder_path_2, file_name)
-    file_data_2 <- read_excel(file_path_2)
+    file_data_2 <- read_xlsx(file_path_2, na = "--")
     file_data_2$Providence <- str_match(file_name, "\\((.*?)\\)")[, 2]
     data_list_2[[file_name]] <- file_data_2 |>
-      mutate_if(is.character, list(~na_if(., "--"))) |>
+      #mutate_if(is.character, list(~na_if(., "--"))) |>
       mutate(across(-c(Providence, Region), as.numeric))
   }
 }
@@ -94,6 +97,22 @@ cleaned <- bind_rows(data_list_2) |>
   filter(Region != "Source: Wind") |>
   group_by(Providence)
 cleaned
+
+cleaned |> write_csv(file = "data/E_I(all provinces).csv")
+
+```
+
+```{r}
+#| merge-economy-and-finaical-2022
+
+economy_2022 <- read_excel("Shared_Data/Economic Indicators(China)2022.xlsx", sheet = 2)
+finaical_2022 <- read_excel("Shared_Data/Economic Indicators(China)2022.xlsx", sheet = 3)
+
+efs_2022 <- full_join(economy_2022, finaical_2022, by = join_by(Region)) |>
+  mutate_if(is.character, list(~na_if(., "--"))) |>
+  mutate(across(-c(Region), as.numeric))
+
+efs_2022 |> write_csv(file = "data/efs_2022.csv")
 
 ```
 
