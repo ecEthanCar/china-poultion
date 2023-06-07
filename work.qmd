@@ -70,6 +70,7 @@ providence_only <- bind_rows(data_list) |>
   group_by(year)
 
 providence_only |> write_csv(file = "data/E_I(2016-2022).csv")
+providence_only |> write_excel_csv(file = "data/E_I(2016-2022).xlsx")
 
 # Ask about Economic Indicators(Xiangxi).xlsx
 
@@ -86,19 +87,27 @@ for (file_name in file_list_2) {
   if (grepl("^Economic Indicators", file_name)) {
     file_path_2 <- file.path(folder_path_2, file_name)
     file_data_2 <- read_xlsx(file_path_2, na = "--")
-    file_data_2$Providence <- str_match(file_name, "\\((.*?)\\)")[, 2]
+    file_data_2$Province <- str_match(file_name, "\\((.*?)\\)")[, 2]
     data_list_2[[file_name]] <- file_data_2 |>
       #mutate_if(is.character, list(~na_if(., "--"))) |>
-      mutate(across(-c(Providence, Region), as.numeric))
+      mutate(across(-c(Province, Region), as.numeric))
   }
 }
 
-cleaned <- bind_rows(data_list_2) |> 
+cleaned <- bind_rows(data_list_2) |>
   filter(Region != "Source: Wind") |>
-  group_by(Providence)
+  group_by(Province)
+
+cleaned$Region <- gsub("Dist", "", cleaned$Region)
+cleaned$Region <- gsub("(Inner Mongolia)", "", cleaned$Region)
+cleaned$Province <- gsub("(Inner Mongolia)", "", cleaned$Province)
+
 cleaned
 
 cleaned |> write_csv(file = "data/E_I(all provinces).csv")
+
+#remove all instances of "Dist"
+
 
 ```
 
@@ -113,6 +122,62 @@ efs_2022 <- full_join(economy_2022, finaical_2022, by = join_by(Region)) |>
   mutate(across(-c(Region), as.numeric))
 
 efs_2022 |> write_csv(file = "data/efs_2022.csv")
+efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
+  
+```
+
+
+```{r}
+#| id-integration-version-1
+
+city_names_codes <- read_excel("Shared_Data/FIXED-city-names-codes.xlsx")
+
+code <- city_names_codes
+code$Region <- gsub("(?i)district", "", code$Region)
+code$Region <- gsub("(?i)city", "", code$Region)
+code$Province <- gsub("(Inner Mongolia)", "", code$Region)
+
+#Fix translation columns, and remove instances of "City" and "District"
+
+merged_df <- merge(cleaned, code, by = c("Region", "Province"), all.x = TRUE)
+
+
+```
+
+```{r}
+# 
+# #|
+# 
+# folder_path_3 <- "Shared_Data/provincial_lgfv"
+# file_list_3 <- list.files(folder_path_3)
+# data_list_3 <- list()
+# 
+# for (file_name in file_list_3) {
+#   if (grepl("^LGFV", file_name)) {
+#     file_path_3 <- file.path(folder_path_3, file_name)
+#     file_data_3 <- read_xlsx(file_path_3, na = "--") |>
+#       separate(col = Region, into = c("Province", "City"), sep = "-")
+#     data_list_3[[file_name]] <- file_data_3 |>
+#       mutate(
+#         across(c(Ranking, 
+#                  `Outsatanding Bonds(CNY,B)`, 
+#                  `Accumulated Bonds(CNY,B)`,
+#                  `Total Assets(CNY,B)`,
+#                  `Asset-liability Ratio(%)`,
+#                  `Government Subsidy(10K)`,
+#                  `Non-Standard Financing(CNY,B)`
+#                  ), as.numeric))
+#   }
+# }
+# 
+# 
+# 
+# # cleaned <- bind_rows(data_list_2) |> 
+# #   filter(Region != "Source: Wind") |>
+# #   group_by(Providence)
+# # cleaned
+# # 
+# # cleaned |> write_csv(file = "data/E_I(all provinces).csv")
 
 ```
 
