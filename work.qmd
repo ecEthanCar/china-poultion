@@ -20,6 +20,8 @@ library(tidymodels)
 library(gridExtra) 
 library(broom)
 library(readxl)
+library(dplyr)
+
 
 theme_set(theme_minimal())
 ```
@@ -101,13 +103,24 @@ cleaned <- bind_rows(data_list_2) |>
 cleaned$Region <- gsub("Dist", "", cleaned$Region)
 cleaned$Region <- gsub("\\(Inner Mongolia", "", cleaned$Region)
 cleaned$Province <- gsub("\\(Inner Mongolia", "", cleaned$Province)
+cleaned$Province <- gsub("Neimenggu", "Inner Mongolia", cleaned$Province)
+cleaned$Region <- gsub("\\bBaisha\\b", "Baishali", cleaned$Region)
 
 cleaned
 
 cleaned |> write_csv(file = "data/E_I(all provinces).csv")
 
-#remove all instances of "Dist"
+# IMPORTANT: figure out why Aral, Xinjiang has not city code 
+# (it's located/surrounded within Asku, Xinjiang)
+# Ask what to do if there are two of the same row in the city-code data (Banan, Chongqing)
 
+# Cities with no code:
+# - Aral, Xinjiang
+# - Baodi, Tianjin
+# - Bayannur, Inner Mongolia
+
+# Cities with two instances:
+# - Baoshan, Shanghai and Baoshan, Yunnan
 
 ```
 
@@ -133,7 +146,10 @@ efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
 city_names_codes <- read_excel("Shared_Data/NewFixedCode.xlsx")
 
 code <- city_names_codes
+# Removes duplicate rows, ignoring item number
+code <- code[!duplicated(select(code, -Item)), ] 
 
+# Removes unnecessary wording from Region names
 code$Region <- str_remove_all(code$Region,
   paste(c(" (?i)area",
           " (?i)league",
@@ -148,21 +164,31 @@ code$Region <- str_remove_all(code$Region,
           " (?i)administrative (?i)region",
           " (?i)administrative (?i)prefecture",
           " (?i)autonomous (?i)prefecture",
-          " Tibetan Qiang"),
+          " Tibetan Qiang",
+          " Li Miao"),
         collapse = "|"))
 
+# Removes unnecessary wording from Province names
 code$Province <- str_remove_all(code$Province,
   paste(c(" (?i)province",
           " (?i)autonomous (?i)region",
-          " (?i)autonomous (?i)prefecture"),
+          " (?i)autonomous (?i)prefecture",
+          " (?i)uygur"),
         collapse = "|"))
 
+# Adds city codes to each location in cleaned
 merged_df <- merge(cleaned, code, by = c("Region", "Province"), all.x = TRUE)
+# merged_df <- merge(cleaned, code, by = "Region", all.x = TRUE)
 
 na_checker <- merged_df |> filter(is.na(`2019_code`)) 
 all_good <- merged_df |> filter(!is.na(`2019_code`))
 
-# Task: figure out how to widdle checker down to nothing
+# Task: determine why cities are in na_checker
+
+cleaned_2 <- all_good |> select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
+
+cleaned_2 |> write_csv(file = "data/in_progress_ei_provinces.csv")
+cleaned_2 |> write_excel_csv(file = "data/in_progress_ei_provinces.xlsx")
 
 ```
 
