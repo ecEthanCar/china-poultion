@@ -99,8 +99,8 @@ cleaned <- bind_rows(data_list_2) |>
   group_by(Province)
 
 cleaned$Region <- gsub("Dist", "", cleaned$Region)
-cleaned$Region <- gsub("(Inner Mongolia)", "", cleaned$Region)
-cleaned$Province <- gsub("(Inner Mongolia)", "", cleaned$Province)
+cleaned$Region <- gsub("\\(Inner Mongolia", "", cleaned$Region)
+cleaned$Province <- gsub("\\(Inner Mongolia", "", cleaned$Province)
 
 cleaned
 
@@ -130,23 +130,45 @@ efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
 ```{r}
 #| id-integration-version-1
 
-city_names_codes <- read_excel("Shared_Data/FIXED-city-names-codes.xlsx")
+city_names_codes <- read_excel("Shared_Data/NewFixedCode.xlsx")
 
 code <- city_names_codes
-code$Region <- gsub("(?i)district", "", code$Region)
-code$Region <- gsub("(?i)city", "", code$Region)
-code$Province <- gsub("(Inner Mongolia)", "", code$Region)
 
-#Fix translation columns, and remove instances of "City" and "District"
+code$Region <- str_remove_all(code$Region,
+  paste(c(" (?i)area",
+          " (?i)league",
+          " (?i)district",
+          " (?i)new (?i)district",
+          " (?i)county", 
+          " (?i)city", 
+          " (?i)administration",
+          " (?i)autonomous (?i)county",
+          " (?i)autonomous (?i)region",
+          " (?i)new (?i)area",
+          " (?i)administrative (?i)region",
+          " (?i)administrative (?i)prefecture",
+          " (?i)autonomous (?i)prefecture",
+          " Tibetan Qiang"),
+        collapse = "|"))
+
+code$Province <- str_remove_all(code$Province,
+  paste(c(" (?i)province",
+          " (?i)autonomous (?i)region",
+          " (?i)autonomous (?i)prefecture"),
+        collapse = "|"))
 
 merged_df <- merge(cleaned, code, by = c("Region", "Province"), all.x = TRUE)
 
+na_checker <- merged_df |> filter(is.na(`2019_code`)) 
+all_good <- merged_df |> filter(!is.na(`2019_code`))
+
+# Task: figure out how to widdle checker down to nothing
 
 ```
 
 ```{r}
 # 
-# #|
+#
 # 
 # folder_path_3 <- "Shared_Data/provincial_lgfv"
 # file_list_3 <- list.files(folder_path_3)

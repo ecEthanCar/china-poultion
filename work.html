@@ -411,7 +411,7 @@ library(tidymodels) </code></pre>
 ## ✖ dplyr::lag()             masks stats::lag()
 ## ✖ yardstick::spec()        masks readr::spec()
 ## ✖ recipes::step()          masks stats::step()
-## • Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
+## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
 <pre class="r"><code>library(gridExtra) </code></pre>
 <pre><code>## 
 ## Attaching package: &#39;gridExtra&#39;
@@ -483,8 +483,8 @@ cleaned &lt;- bind_rows(data_list_2) |&gt;
   group_by(Province)
 
 cleaned$Region &lt;- gsub(&quot;Dist&quot;, &quot;&quot;, cleaned$Region)
-cleaned$Region &lt;- gsub(&quot;(Inner Mongolia)&quot;, &quot;&quot;, cleaned$Region)
-cleaned$Province &lt;- gsub(&quot;(Inner Mongolia)&quot;, &quot;&quot;, cleaned$Province)
+cleaned$Region &lt;- gsub(&quot;\\(Inner Mongolia&quot;, &quot;&quot;, cleaned$Region)
+cleaned$Province &lt;- gsub(&quot;\\(Inner Mongolia&quot;, &quot;&quot;, cleaned$Province)
 
 cleaned</code></pre>
 <pre><code>## # A tibble: 481 × 9
@@ -518,18 +518,41 @@ efs_2022 &lt;- full_join(economy_2022, finaical_2022, by = join_by(Region)) |&gt
 
 efs_2022 |&gt; write_csv(file = &quot;data/efs_2022.csv&quot;)
 efs_2022 |&gt; write_excel_csv(file = &quot;data/efs_2022.xlsx&quot;)</code></pre>
-<pre class="r"><code>city_names_codes &lt;- read_excel(&quot;Shared_Data/FIXED-city-names-codes.xlsx&quot;)
+<pre class="r"><code>city_names_codes &lt;- read_excel(&quot;Shared_Data/NewFixedCode.xlsx&quot;)
 
 code &lt;- city_names_codes
-code$Region &lt;- gsub(&quot;(?i)district&quot;, &quot;&quot;, code$Region)
-code$Region &lt;- gsub(&quot;(?i)city&quot;, &quot;&quot;, code$Region)
-code$Province &lt;- gsub(&quot;(Inner Mongolia)&quot;, &quot;&quot;, code$Region)
 
-#Fix translation columns, and remove instances of &quot;City&quot; and &quot;District&quot;
+code$Region &lt;- str_remove_all(code$Region,
+  paste(c(&quot; (?i)area&quot;,
+          &quot; (?i)league&quot;,
+          &quot; (?i)district&quot;,
+          &quot; (?i)new (?i)district&quot;,
+          &quot; (?i)county&quot;, 
+          &quot; (?i)city&quot;, 
+          &quot; (?i)administration&quot;,
+          &quot; (?i)autonomous (?i)county&quot;,
+          &quot; (?i)autonomous (?i)region&quot;,
+          &quot; (?i)new (?i)area&quot;,
+          &quot; (?i)administrative (?i)region&quot;,
+          &quot; (?i)administrative (?i)prefecture&quot;,
+          &quot; (?i)autonomous (?i)prefecture&quot;,
+          &quot; Tibetan Qiang&quot;),
+        collapse = &quot;|&quot;))
 
-merged_df &lt;- merge(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE)</code></pre>
+code$Province &lt;- str_remove_all(code$Province,
+  paste(c(&quot; (?i)province&quot;,
+          &quot; (?i)autonomous (?i)region&quot;,
+          &quot; (?i)autonomous (?i)prefecture&quot;),
+        collapse = &quot;|&quot;))
+
+merged_df &lt;- merge(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE)
+
+na_checker &lt;- merged_df |&gt; filter(is.na(`2019_code`)) 
+all_good &lt;- merged_df |&gt; filter(!is.na(`2019_code`))
+
+# Task: figure out how to widdle checker down to nothing</code></pre>
 <pre class="r"><code># 
-# #|
+#
 # 
 # folder_path_3 &lt;- &quot;Shared_Data/provincial_lgfv&quot;
 # file_list_3 &lt;- list.files(folder_path_3)
