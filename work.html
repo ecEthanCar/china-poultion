@@ -411,7 +411,7 @@ library(tidymodels) </code></pre>
 ## ✖ dplyr::lag()             masks stats::lag()
 ## ✖ yardstick::spec()        masks readr::spec()
 ## ✖ recipes::step()          masks stats::step()
-## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
+## • Use tidymodels_prefer() to resolve common conflicts.</code></pre>
 <pre class="r"><code>library(gridExtra) </code></pre>
 <pre><code>## 
 ## Attaching package: &#39;gridExtra&#39;
@@ -423,6 +423,7 @@ library(tidymodels) </code></pre>
 library(readxl)
 library(dplyr)
 
+library(fuzzyjoin)
 
 theme_set(theme_minimal())</code></pre>
 <pre class="r"><code>indicator_2016 &lt;- read_excel(&quot;Shared_Data/Economic Indicators(China)2016.xlsx&quot;)
@@ -486,6 +487,8 @@ cleaned &lt;- bind_rows(data_list_2) |&gt;
 
 cleaned$Region &lt;- gsub(&quot;Dist&quot;, &quot;&quot;, cleaned$Region)
 cleaned$Region &lt;- gsub(&quot;\\(Inner Mongolia&quot;, &quot;&quot;, cleaned$Region)
+cleaned$Region &lt;- gsub(&quot;WULONG&quot;, &quot;Wulong&quot;, cleaned$Region)
+cleaned$Region &lt;- gsub(&quot;Neimenggu\\)&quot;, &quot;Neimenggu&quot;, cleaned$Region)
 cleaned$Province &lt;- gsub(&quot;\\(Inner Mongolia&quot;, &quot;&quot;, cleaned$Province)
 cleaned$Province &lt;- gsub(&quot;Neimenggu&quot;, &quot;Inner Mongolia&quot;, cleaned$Province)
 cleaned$Region &lt;- gsub(&quot;\\bBaisha\\b&quot;, &quot;Baishali&quot;, cleaned$Region)
@@ -536,7 +539,7 @@ efs_2022 |&gt; write_excel_csv(file = &quot;data/efs_2022.xlsx&quot;)</code></pr
 
 code &lt;- city_names_codes
 # Removes duplicate rows, ignoring item number
-code &lt;- code[!duplicated(select(code, -Item)), ] 
+code &lt;- code[!duplicated(select(code, -Item)), ]
 
 # Removes unnecessary wording from Region names
 code$Region &lt;- str_remove_all(code$Region,
@@ -566,18 +569,18 @@ code$Province &lt;- str_remove_all(code$Province,
         collapse = &quot;|&quot;))
 
 # Adds city codes to each location in cleaned
-merged_df &lt;- merge(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE)
-# merged_df &lt;- merge(cleaned, code, by = &quot;Region&quot;, all.x = TRUE)
+#merged_df &lt;- merge(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE)
+# na_checker &lt;- merged_df |&gt; filter(is.na(`2019_code`)) 
+# all_good &lt;- merged_df |&gt; filter(!is.na(`2019_code`))
+# cleaned_2 &lt;- all_good |&gt; select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
+# 
+# cleaned_2 |&gt; write_csv(file = &quot;data/in_progress_ei_provinces.csv&quot;)
+# cleaned_2 |&gt; write_excel_csv(file = &quot;data/in_progress_ei_provinces.xlsx&quot;)
 
-na_checker &lt;- merged_df |&gt; filter(is.na(`2019_code`)) 
-all_good &lt;- merged_df |&gt; filter(!is.na(`2019_code`))
-
-# Task: determine why cities are in na_checker
-
-cleaned_2 &lt;- all_good |&gt; select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
-
-cleaned_2 |&gt; write_csv(file = &quot;data/in_progress_ei_provinces.csv&quot;)
-cleaned_2 |&gt; write_excel_csv(file = &quot;data/in_progress_ei_provinces.xlsx&quot;)</code></pre>
+# Fuzzy joining method (no need to remove more stuff)
+fuzzy_matched_df &lt;- stringdist_left_join(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), method = &quot;jw&quot;, max_dist = 0.3)
+fuzzy_na_checker &lt;- fuzzy_matched_df |&gt; filter(is.na(`2019_code`)) |&gt;
+  filter(Province.x != Region.x)</code></pre>
 <pre class="r"><code># 
 #
 # 
