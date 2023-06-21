@@ -107,9 +107,27 @@ cleaned$Region <- gsub("WULONG", "Wulong", cleaned$Region)
 cleaned$Region <- gsub("Neimenggu\\)", "Neimenggu", cleaned$Region)
 cleaned$Province <- gsub("\\(Inner Mongolia", "", cleaned$Province)
 cleaned$Province <- gsub("Neimenggu", "Inner Mongolia", cleaned$Province)
-cleaned$Region <- gsub("\\bBaisha\\b", "Baishali", cleaned$Region)
+cleaned$Region <- gsub("\\bBaisha\\b", "Baisha Li", cleaned$Region)
+cleaned$Region <- gsub("tongling", "Tongling", cleaned$Region)
+cleaned$Region <- gsub("Bose", "Baise", cleaned$Region)
+cleaned$Region <- gsub("Changdu", "Chengdu", cleaned$Region)
+cleaned$Region <- gsub("Changjiang", "Changjiang Li", cleaned$Region)
+cleaned$Region <- gsub("Hulun Buir", "Hulun Beir", cleaned$Region)
+cleaned$Region <- gsub("Ili Kazak", "Ili Kazakh", cleaned$Region)
+cleaned$Region <- gsub("Kaixian", "Kaizhou", cleaned$Region)
+cleaned$Region <- gsub("Zhongxian", "Zhong", cleaned$Region)
+cleaned$Region <- gsub("Zhanjiang", "Zhangjiang", cleaned$Region)
+cleaned$Region <- gsub("Xigaze", "Shigatse", cleaned$Region)
+cleaned$Region <- gsub("ürümqi", "Urumqi", cleaned$Region)
 
-cleaned
+cleaned$Region[cleaned$Region == cleaned$Province] <- NA
+
+cleaned$Region <- trimws(cleaned$Region)
+
+# cleaned$Region <- tolower(cleaned$Region)
+# cleaned$Province <- tolower(cleaned$Province)
+
+# distinct(cleaned, Province)
 
 cleaned |> write_csv(file = "data/E_I(all provinces).csv")
 
@@ -124,6 +142,9 @@ cleaned |> write_csv(file = "data/E_I(all provinces).csv")
 
 # Cities with two instances:
 # - Baoshan, Shanghai and Baoshan, Yunnan
+
+# Name of places in inner mongolia are weird
+# I'm still in the process of fixing translation errors, since doing it in mass lead to some.
 
 ```
 
@@ -142,94 +163,91 @@ efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
   
 ```
 
-
 ```{r}
-#| id-integration-version-1
+#| new-city-codes
 
-city_names_codes <- read_excel("Shared_Data/NewFixedCode.xlsx")
+prc_place_names <- read_excel("Shared_Data/China City Codes (2022).xlsx", 
+                              na = c("Na", "City area", "")) 
+#Assumes 'City area' mean code for entire city
 
-code <- city_names_codes
-# Removes duplicate rows, ignoring item number
-code <- code[!duplicated(select(code, -Item)), ]
+prc_place_names$Statistical_Division_Code <- format(
+  prc_place_names$Statistical_Division_Code, 
+  scientific = FALSE)
+prc_place_names$Statistical_Division_Code <- gsub("000000", "", 
+  prc_place_names$Statistical_Division_Code) #Removes extra zeros
 
-# Removes unnecessary wording from Region names
-code$Region <- str_remove_all(code$Region,
+for_cleaned <- prc_place_names |> 
+  mutate(Province = str_remove_all(Province,
+  paste(c(" (?i)province",
+          " (?i)autonomous region",
+          " (?i)autonomous prefecture",
+          " (?i)uygur",
+          " (?i)hui",
+          " (?i)zhuang"),
+        collapse = "|"))) |>
+  select(Province, Region, Statistical_Division_Code)
+
+for_cleaned$Region <- str_remove_all(for_cleaned$Region,
   paste(c(" (?i)area",
           " (?i)league",
           " (?i)district",
-          " (?i)new (?i)district",
+          " (?i)new district",
           " (?i)county", 
           " (?i)city", 
           " (?i)administration",
-          " (?i)autonomous (?i)county",
-          " (?i)autonomous (?i)region",
-          " (?i)new (?i)area",
-          " (?i)administrative (?i)region",
-          " (?i)administrative (?i)prefecture",
-          " (?i)autonomous (?i)prefecture",
+          " (?i)region",
+          " (?i)autonomous county",
+          " (?i)autonomous region",
+          " (?i)new area",
+          " (?i)administrative region",
+          " (?i)administrative prefecture",
+          " (?i)autonomous prefecture",
           " Tibetan Qiang",
-          " Li Miao"),
+          " Li Miao",
+          " Tibetan and Qiang Autonomous Prefecture",
+          " Li and Miao",
+          " Mongolian",
+          " (?i)hui",
+          " Bai",
+          " Dai and Jingpo",
+          " Tujia and Miao",
+          " Tibetan",
+          " Hani| Yi",
+          "City of ",
+          " Korean",
+          " Dai",
+          " Zhuang Miao",
+          " Tujia",
+          " Buyi Miao",
+          " Miao and Dong",
+          " Zhuang and Miao Autonomous Prefecture",
+          " and"),
         collapse = "|"))
 
-# Removes unnecessary wording from Province names
-code$Province <- str_remove_all(code$Province,
-  paste(c(" (?i)province",
-          " (?i)autonomous (?i)region",
-          " (?i)autonomous (?i)prefecture",
-          " (?i)uygur"),
-        collapse = "|"))
+for_cleaned$Region <- gsub("Huaian", "Huai'an", for_cleaned$Region)
+for_cleaned$Region <- gsub("Hulunbeir", "Hulun Beir", for_cleaned$Region)
+for_cleaned$Region <- gsub("Jinan", "Ji'nan", for_cleaned$Region)
 
-# Adds city codes to each location in cleaned
-#merged_df <- merge(cleaned, code, by = c("Region", "Province"), all.x = TRUE)
-# na_checker <- merged_df |> filter(is.na(`2019_code`)) 
-# all_good <- merged_df |> filter(!is.na(`2019_code`))
-# cleaned_2 <- all_good |> select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
+merged_cleaned <- merge(cleaned, for_cleaned, by = c("Region", "Province"), all.x = TRUE) 
+# |> 
+#   filter(Province.y == Province.x)
+na_merged_cleaned <- merged_cleaned |> filter(is.na(Statistical_Division_Code)) |>
+  filter(Region != Province)
+
+merged_cleaned |> write_csv(file = "data/known_city_codes.csv")
+na_merged_cleaned |> write_csv(file = "data/unknown_city_codes.csv")
+
+# # fuzzy_df <- stringdist_left_join(prc_place_names, cleaned, by = c("Region", "Province"), method = "jw", max_dist = 0.3)
 # 
-# cleaned_2 |> write_csv(file = "data/in_progress_ei_provinces.csv")
-# cleaned_2 |> write_excel_csv(file = "data/in_progress_ei_provinces.xlsx")
-
-# Fuzzy joining method (no need to remove more stuff)
-fuzzy_matched_df <- stringdist_left_join(cleaned, code, by = c("Region", "Province"), method = "jw", max_dist = 0.3)
-fuzzy_na_checker <- fuzzy_matched_df |> filter(is.na(`2019_code`)) |>
-  filter(Province.x != Region.x)
-
-
+# fuzzy_df
+# find the province codes too
 ```
 
 ```{r}
-# 
-#
-# 
-# folder_path_3 <- "Shared_Data/provincial_lgfv"
-# file_list_3 <- list.files(folder_path_3)
-# data_list_3 <- list()
-# 
-# for (file_name in file_list_3) {
-#   if (grepl("^LGFV", file_name)) {
-#     file_path_3 <- file.path(folder_path_3, file_name)
-#     file_data_3 <- read_xlsx(file_path_3, na = "--") |>
-#       separate(col = Region, into = c("Province", "City"), sep = "-")
-#     data_list_3[[file_name]] <- file_data_3 |>
-#       mutate(
-#         across(c(Ranking, 
-#                  `Outsatanding Bonds(CNY,B)`, 
-#                  `Accumulated Bonds(CNY,B)`,
-#                  `Total Assets(CNY,B)`,
-#                  `Asset-liability Ratio(%)`,
-#                  `Government Subsidy(10K)`,
-#                  `Non-Standard Financing(CNY,B)`
-#                  ), as.numeric))
-#   }
-# }
-# 
-# 
-# 
-# # cleaned <- bind_rows(data_list_2) |> 
-# #   filter(Region != "Source: Wind") |>
-# #   group_by(Providence)
-# # cleaned
-# # 
-# # cleaned |> write_csv(file = "data/E_I(all provinces).csv")
+
+Carbon_Triangle_CEIC <- read_excel("Shared_Data/Carbon Triangle--CEIC.xlsx")
+
+# New goal: merge this dataset with the one I just finished (confirm with professor that this is the one he want me to use to merge of if there is a newer version, same goes for the data I just merged)
 
 ```
 

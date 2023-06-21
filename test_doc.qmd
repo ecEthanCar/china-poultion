@@ -1,0 +1,275 @@
+
+```{r}
+
+
+
+```
+
+```{r}
+
+not_in_df2 <- setdiff(cleaned$Region, for_cleaned$Region)
+
+not_in_df1 <- setdiff(cleaned$Province, for_cleaned$Province)
+
+not_in_df2
+not_in_df1
+
+not_in_df3 <- anti_join(cleaned, code, by = c("Region", "Province"))
+not_in_df3
+cleaned
+
+```
+
+```{r}
+
+repeat_values <- table(full_admin_final_2022$village)
+
+# Extract the repeated values
+repeated <- names(repeat_values[repeat_values > 1])
+
+repeated
+```
+
+```{r}
+
+#name: Ethan Carlson
+#load packages
+library(tidyverse)
+library(rvest)
+library(lubridate)
+library(robotstxt)
+
+# check that we can scrape data from the cornell review
+paths_allowed("http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/11/1101.html")
+
+# read the first page
+page <- read_html("http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/11/1101.html")
+
+# extract desired components
+names <- html_elements(x = page, css = ".countytr td:nth-child(2) font") |>
+  html_text2()
+
+codes <- html_elements(x = page, css = ".countytr td:nth-child(1) font") |>
+  html_text2()
+
+# create a tibble with this data
+review_raw <- tibble(
+  name = names,
+  code = codes
+)
+# clean up the data
+# review <- review_raw |>
+#   mutate(date = mdy(date))
+# save to disk
+write_csv(x = review_raw, file = "data/test_text.csv")
+
+
+
+```
+
+```{r}
+#| id-integration-version-1
+
+city_names_codes <- read_excel("Shared_Data/NewFixedCode.xlsx")
+
+code <- city_names_codes
+# Removes duplicate rows, ignoring item number
+code <- code[!duplicated(select(code, -Item)), ]
+
+# Removes unnecessary wording from Region names
+code$Region <- str_remove_all(code$Region,
+  paste(c(" area",
+          " league",
+          " district",
+          " new district",
+          " county", 
+          " city", 
+          " administration",
+          " autonomous county",
+          " autonomous region",
+          " new area",
+          " administrative region",
+          " administrative prefecture",
+          " autonomous prefecture",
+          " Tibetan Qiang",
+          " Li Miao"),
+        collapse = "|"))
+
+# Removes unnecessary wording from Province names
+code$Province <- str_remove_all(code$Province,
+  paste(c(" province",
+          " autonomous region",
+          " autonomous prefecture",
+          " uygur"),
+        collapse = "|"))
+
+code
+
+# Adds city codes to each location in cleaned
+#merged_df <- merge(cleaned, code, by = c("Region", "Province"), all.x = TRUE)
+# na_checker <- merged_df |> filter(is.na(`2019_code`)) 
+# all_good <- merged_df |> filter(!is.na(`2019_code`))
+# cleaned_2 <- all_good |> select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
+# 
+# cleaned_2 |> write_csv(file = "data/in_progress_ei_provinces.csv")
+# cleaned_2 |> write_excel_csv(file = "data/in_progress_ei_provinces.xlsx")
+
+# Fuzzy joining method (no need to remove more stuff)
+fuzzy_matched_df <- stringdist_left_join(cleaned, code, by = c("Region", "Province"), method = "jw", max_dist = 0.3)
+
+# Figure out if there is a way to individually adjust the "generosity" of the string estimation for Region and Province.
+
+fuzzy_na_checker <- fuzzy_matched_df |> filter(is.na(`2019_code`)) |>
+  filter(Province.x != Region.x)
+
+# Notes:
+# - We can use fuzzy join methods for less tedious results, but it might take some time for me to tune the parameters
+# - Or, we can use exact joining, but it would take a very long time for me to see through all of the small errors.
+
+```
+
+```{r}
+# 
+#
+# 
+# folder_path_3 <- "Shared_Data/provincial_lgfv"
+# file_list_3 <- list.files(folder_path_3)
+# data_list_3 <- list()
+# 
+# for (file_name in file_list_3) {
+#   if (grepl("^LGFV", file_name)) {
+#     file_path_3 <- file.path(folder_path_3, file_name)
+#     file_data_3 <- read_xlsx(file_path_3, na = "--") |>
+#       separate(col = Region, into = c("Province", "City"), sep = "-")
+#     data_list_3[[file_name]] <- file_data_3 |>
+#       mutate(
+#         across(c(Ranking, 
+#                  `Outsatanding Bonds(CNY,B)`, 
+#                  `Accumulated Bonds(CNY,B)`,
+#                  `Total Assets(CNY,B)`,
+#                  `Asset-liability Ratio(%)`,
+#                  `Government Subsidy(10K)`,
+#                  `Non-Standard Financing(CNY,B)`
+#                  ), as.numeric))
+#   }
+# }
+# 
+# 
+# 
+# # cleaned <- bind_rows(data_list_2) |> 
+# #   filter(Region != "Source: Wind") |>
+# #   group_by(Providence)
+# # cleaned
+# # 
+# # cleaned |> write_csv(file = "data/E_I(all provinces).csv")
+
+```
+
+```{r}
+
+# FIX SO NO REPEATS
+full_admin_final_2022 <- read_csv("Shared_Data/full_admin_final_2022.csv")
+
+place_holder <- full_admin_final_2022 |> select(province, city, county, code)
+
+remove_tv <- distinct(place_holder, province, city, county, .keep_all = TRUE)
+
+remove_tv |> write_csv(file = "data/remove_tv.csv")
+
+distinct(remove_tv, province)
+
+# full_admin <- read_csv("Shared_Data/full_admin_final_2022.csv")
+# 
+# remove_tv_2 <- full_admin[!complete.cases(full_admin$town), ]
+# remove_tv_2 <- remove_tv_2[!complete.cases(remove_tv_2$village), ]
+# remove_tv$code <- format(remove_tv$code, scientific = FALSE)
+# 
+# remove_tv_2 <- remove_tv_2 |> select(province, city, county, code)
+# 
+# remove_tv
+# remove_tv_2
+
+#remove_tv |> write_csv(file = "data/remove_tv.csv")
+                     
+```
+
+```{r}
+# #| new-city-codes
+# 
+# prc_place_names <- read_excel("Shared_Data/China City Codes (2022).xlsx", 
+#                               na = c("Na", "City area", "")) 
+# #Assumes 'City area' mean code for entire city
+# 
+# prc_place_names$Statistical_Division_Code <- format(
+#   prc_place_names$Statistical_Division_Code, 
+#   scientific = FALSE)
+# prc_place_names$Statistical_Division_Code <- gsub("000000", "", 
+#   prc_place_names$Statistical_Division_Code) #Removes extra zeros
+# 
+# for_cleaned <- prc_place_names
+# for_cleaned$Province <- tolower(for_cleaned$Province)
+# for_cleaned$Region <- tolower(for_cleaned$Region)
+# 
+# remove_words <- function(text, words) {
+#   pattern <- paste0("\\b", paste(words, collapse = "|"), "\\b")
+#   cleaned_text <- gsub(pattern, "", text, ignore.case = TRUE)
+#   return(cleaned_text)
+# }
+# 
+# # ERROR SOMEWHERE HERE CAUSING DUPLICATES
+# # for_cleaned <- prc_place_names |> 
+# #   mutate(Province = str_remove_all(en_province,
+# #   paste(c(" province",
+# #           " autonomous region",
+# #           " autonomous prefecture",
+# #           " uygur",
+# #           " hui"),
+# #         collapse = "|"))) |>
+# #   mutate(Region = ifelse(is.na(en_county), en_city, en_county)) |>
+# #   mutate(zh_Region = ifelse(is.na(county), city, county)) |>
+# #   select(Province, Region, code) |>
+# #   na.omit()
+# 
+# #   mutate(Province = str_remove_all(Province,
+# #   paste(c(" province",
+# #           " autonomous region",
+# #           " autonomous prefecture",
+# #           " uygur",
+# #           " hui",
+# #           " zhuang"),
+# #         collapse = "|"))) |>
+# #   select(Province, Region, Statistical_Division_Code)
+# 
+# p_words_to_remove <- c(" province",
+#           " autonomous region",
+#           " autonomous prefecture",
+#           " uygur",
+#           " hui",
+#           " zhuang")
+# 
+# r_words_to_remove <- c(" area",
+#           " league",
+#           " district",
+#           " new district",
+#           " county",
+#           " city",
+#           " administration",
+#           " region",
+#           " autonomous county",
+#           " autonomous region",
+#           " new area",
+#           " administrative region",
+#           " administrative prefecture",
+#           " autonomous prefecture",
+#           " tibetan qiang",
+#           " li miao",
+#           " tibetan and qiang autonomous prefecture")
+# 
+# for_cleaned$Province <- remove_words(for_cleaned$Province, p_words_to_remove)
+# for_cleaned$Region <- remove_words(for_cleaned$Region, r_words_to_remove)
+# 
+# merged_cleaned <- merge(cleaned, for_cleaned, by = c("Province", "Region"), all.x = TRUE)
+# na_merged_cleaned <- merged_cleaned |> filter(is.na(Statistical_Division_Code))
+# 
+
+```
