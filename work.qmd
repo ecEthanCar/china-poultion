@@ -119,6 +119,9 @@ cleaned$Region <- gsub("Zhongxian", "Zhong", cleaned$Region)
 cleaned$Region <- gsub("Zhanjiang", "Zhangjiang", cleaned$Region)
 cleaned$Region <- gsub("Xigaze", "Shigatse", cleaned$Region)
 cleaned$Region <- gsub("ürümqi", "Urumqi", cleaned$Region)
+cleaned$Region <- gsub("Lvliang", "Lüliang", cleaned$Region)
+cleaned[421, "Region"] <- "Chamdo"
+
 
 cleaned$Region[cleaned$Region == cleaned$Province] <- NA
 
@@ -166,7 +169,7 @@ efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
 ```{r}
 #| new-city-codes
 
-prc_place_names <- read_excel("Shared_Data/China City Codes (2022).xlsx", 
+prc_place_names <- read_excel("Shared_Data/Copy China City Codes (2022).xlsx", 
                               na = c("Na", "City area", "")) 
 #Assumes 'City area' mean code for entire city
 
@@ -227,6 +230,7 @@ for_cleaned$Region <- str_remove_all(for_cleaned$Region,
 for_cleaned$Region <- gsub("Huaian", "Huai'an", for_cleaned$Region)
 for_cleaned$Region <- gsub("Hulunbeir", "Hulun Beir", for_cleaned$Region)
 for_cleaned$Region <- gsub("Jinan", "Ji'nan", for_cleaned$Region)
+for_cleaned$Region <- gsub("NanNing", "Nanning", for_cleaned$Region)
 
 merged_cleaned <- merge(cleaned, for_cleaned, by = c("Region", "Province"), all.x = TRUE) 
 # |> 
@@ -234,8 +238,10 @@ merged_cleaned <- merge(cleaned, for_cleaned, by = c("Region", "Province"), all.
 na_merged_cleaned <- merged_cleaned |> filter(is.na(Statistical_Division_Code)) |>
   filter(Region != Province)
 
-merged_cleaned |> write_csv(file = "data/known_city_codes.csv")
-na_merged_cleaned |> write_csv(file = "data/unknown_city_codes.csv")
+# merged_cleaned |> write_csv(file = "data/known_city_codes.csv")
+# na_merged_cleaned |> write_csv(file = "data/unknown_city_codes.csv")
+
+merged_cleaned |> write_csv(file = "data/[WITHCODES]E_I(all provinces).csv")
 
 # # fuzzy_df <- stringdist_left_join(prc_place_names, cleaned, by = c("Region", "Province"), method = "jw", max_dist = 0.3)
 # 
@@ -245,7 +251,28 @@ na_merged_cleaned |> write_csv(file = "data/unknown_city_codes.csv")
 
 ```{r}
 
-Carbon_Triangle_CEIC <- read_excel("Shared_Data/Carbon Triangle--CEIC.xlsx")
+# Carbon_Triangle_CEIC <- read_excel("Shared_Data/Carbon Triangle--CEIC.xlsx", sheet = 1, col_names = FALSE)
+# 
+# colnames(Carbon_Triangle_CEIC) <- Carbon_Triangle_CEIC[1, ]
+# Carbon_Triangle_CEIC <- Carbon_Triangle_CEIC[-1, ]
+
+Carbon_Triangle <- read_csv("Shared_Data/Carbon Triangle Copy - My Series.csv")
+
+names(Carbon_Triangle)[names(Carbon_Triangle) == 'Data_type'] <- "Province"
+
+names(Carbon_Triangle) <- gsub(" ", "_", names(Carbon_Triangle))
+
+real_estate <- Carbon_Triangle |> 
+  filter(grepl("CN: Real Estate Investment:", Province))
+real_estate$Province <- gsub(".*?:.*?:(.*?):.*", "\\1", real_estate$Province)
+real_estate$Province <- gsub("CN: Real Estate Investment:", "", real_estate$Province)
+
+
+property <- Carbon_Triangle |> 
+  filter(grepl("CN: Property Price: Residential:", Province))
+property$Province <- gsub("CN: Property Price: Residential:", "", property$Province)
+property$Province <- sub(":.*", "", property$Province)
+
 
 # New goal: merge this dataset with the one I just finished (confirm with professor that this is the one he want me to use to merge of if there is a newer version, same goes for the data I just merged)
 

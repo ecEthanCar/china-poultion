@@ -411,7 +411,7 @@ library(tidymodels) </code></pre>
 ## ✖ dplyr::lag()             masks stats::lag()
 ## ✖ yardstick::spec()        masks readr::spec()
 ## ✖ recipes::step()          masks stats::step()
-## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
+## • Learn how to get started at https://www.tidymodels.org/start/</code></pre>
 <pre class="r"><code>library(gridExtra) </code></pre>
 <pre><code>## 
 ## Attaching package: &#39;gridExtra&#39;
@@ -503,6 +503,9 @@ cleaned$Region &lt;- gsub(&quot;Zhongxian&quot;, &quot;Zhong&quot;, cleaned$Regi
 cleaned$Region &lt;- gsub(&quot;Zhanjiang&quot;, &quot;Zhangjiang&quot;, cleaned$Region)
 cleaned$Region &lt;- gsub(&quot;Xigaze&quot;, &quot;Shigatse&quot;, cleaned$Region)
 cleaned$Region &lt;- gsub(&quot;ürümqi&quot;, &quot;Urumqi&quot;, cleaned$Region)
+cleaned$Region &lt;- gsub(&quot;Lvliang&quot;, &quot;Lüliang&quot;, cleaned$Region)
+cleaned[421, &quot;Region&quot;] &lt;- &quot;Chamdo&quot;
+
 
 cleaned$Region[cleaned$Region == cleaned$Province] &lt;- NA
 
@@ -538,152 +541,7 @@ efs_2022 &lt;- full_join(economy_2022, finaical_2022, by = join_by(Region)) |&gt
 
 efs_2022 |&gt; write_csv(file = &quot;data/efs_2022.csv&quot;)
 efs_2022 |&gt; write_excel_csv(file = &quot;data/efs_2022.xlsx&quot;)</code></pre>
-<pre class="r"><code>city_names_codes &lt;- read_excel(&quot;Shared_Data/NewFixedCode.xlsx&quot;)
-
-code &lt;- city_names_codes
-# Removes duplicate rows, ignoring item number
-code &lt;- code[!duplicated(select(code, -Item)), ]
-
-# Removes unnecessary wording from Region names
-code$Region &lt;- str_remove_all(code$Region,
-  paste(c(&quot; area&quot;,
-          &quot; league&quot;,
-          &quot; district&quot;,
-          &quot; new district&quot;,
-          &quot; county&quot;, 
-          &quot; city&quot;, 
-          &quot; administration&quot;,
-          &quot; autonomous county&quot;,
-          &quot; autonomous region&quot;,
-          &quot; new area&quot;,
-          &quot; administrative region&quot;,
-          &quot; administrative prefecture&quot;,
-          &quot; autonomous prefecture&quot;,
-          &quot; Tibetan Qiang&quot;,
-          &quot; Li Miao&quot;),
-        collapse = &quot;|&quot;))
-
-# Removes unnecessary wording from Province names
-code$Province &lt;- str_remove_all(code$Province,
-  paste(c(&quot; province&quot;,
-          &quot; autonomous region&quot;,
-          &quot; autonomous prefecture&quot;,
-          &quot; uygur&quot;),
-        collapse = &quot;|&quot;))
-
-code</code></pre>
-<pre><code>## # A tibble: 601 × 10
-##     Item Province prov_name prov_sname prov_code `2019_sname` Region `2019_name`
-##    &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;      
-##  1     1 Beijing  北京市    北京          110000 东城         Dongc… 东城区     
-##  2     2 Beijing  北京市    北京          110000 西城         Xiche… 西城区     
-##  3     3 Beijing  北京市    北京          110000 崇文         Chong… 崇文区     
-##  4     4 Beijing  北京市    北京          110000 宣武         Xuanw… 宣武区     
-##  5     5 Beijing  北京市    北京          110000 朝阳         Chaoy… 朝阳区     
-##  6     6 Beijing  北京市    北京          110000 丰台         Fengt… 丰台区     
-##  7     7 Beijing  北京市    北京          110000 石景山       Shiji… 石景山区   
-##  8     8 Beijing  北京市    北京          110000 海淀         Haidi… 海淀区     
-##  9     9 Beijing  北京市    北京          110000 门头沟       Mento… 门头沟区   
-## 10    10 Beijing  北京市    北京          110000 房山         Fangs… 房山区     
-## # ℹ 591 more rows
-## # ℹ 2 more variables: `2019_code` &lt;dbl&gt;, zhixiashi &lt;lgl&gt;</code></pre>
-<pre class="r"><code># Adds city codes to each location in cleaned
-#merged_df &lt;- merge(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE)
-# na_checker &lt;- merged_df |&gt; filter(is.na(`2019_code`)) 
-# all_good &lt;- merged_df |&gt; filter(!is.na(`2019_code`))
-# cleaned_2 &lt;- all_good |&gt; select(!c(prov_name, prov_sname, `2019_sname`, `2019_name`))
-# 
-# cleaned_2 |&gt; write_csv(file = &quot;data/in_progress_ei_provinces.csv&quot;)
-# cleaned_2 |&gt; write_excel_csv(file = &quot;data/in_progress_ei_provinces.xlsx&quot;)
-
-# Fuzzy joining method (no need to remove more stuff)
-fuzzy_matched_df &lt;- stringdist_left_join(cleaned, code, by = c(&quot;Region&quot;, &quot;Province&quot;), method = &quot;jw&quot;, max_dist = 0.3)
-
-# Figure out if there is a way to individually adjust the &quot;generosity&quot; of the string estimation for Region and Province.
-
-fuzzy_na_checker &lt;- fuzzy_matched_df |&gt; filter(is.na(`2019_code`)) |&gt;
-  filter(Province.x != Region.x)
-
-# Notes:
-# - We can use fuzzy join methods for less tedious results, but it might take some time for me to tune the parameters
-# - Or, we can use exact joining, but it would take a very long time for me to see through all of the small errors.</code></pre>
-<pre class="r"><code># 
-#
-# 
-# folder_path_3 &lt;- &quot;Shared_Data/provincial_lgfv&quot;
-# file_list_3 &lt;- list.files(folder_path_3)
-# data_list_3 &lt;- list()
-# 
-# for (file_name in file_list_3) {
-#   if (grepl(&quot;^LGFV&quot;, file_name)) {
-#     file_path_3 &lt;- file.path(folder_path_3, file_name)
-#     file_data_3 &lt;- read_xlsx(file_path_3, na = &quot;--&quot;) |&gt;
-#       separate(col = Region, into = c(&quot;Province&quot;, &quot;City&quot;), sep = &quot;-&quot;)
-#     data_list_3[[file_name]] &lt;- file_data_3 |&gt;
-#       mutate(
-#         across(c(Ranking, 
-#                  `Outsatanding Bonds(CNY,B)`, 
-#                  `Accumulated Bonds(CNY,B)`,
-#                  `Total Assets(CNY,B)`,
-#                  `Asset-liability Ratio(%)`,
-#                  `Government Subsidy(10K)`,
-#                  `Non-Standard Financing(CNY,B)`
-#                  ), as.numeric))
-#   }
-# }
-# 
-# 
-# 
-# # cleaned &lt;- bind_rows(data_list_2) |&gt; 
-# #   filter(Region != &quot;Source: Wind&quot;) |&gt;
-# #   group_by(Providence)
-# # cleaned
-# # 
-# # cleaned |&gt; write_csv(file = &quot;data/E_I(all provinces).csv&quot;)</code></pre>
-<pre class="r"><code># FIX SO NO REPEATS
-full_admin_final_2022 &lt;- read_csv(&quot;Shared_Data/full_admin_final_2022.csv&quot;)</code></pre>
-<pre><code>## Rows: 664315 Columns: 6
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (5): province, city, county, town, village
-## dbl (1): code
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code>place_holder &lt;- full_admin_final_2022 |&gt; select(province, city, county, code)
-
-remove_tv &lt;- distinct(place_holder, province, city, county, .keep_all = TRUE)
-
-remove_tv |&gt; write_csv(file = &quot;data/remove_tv.csv&quot;)
-
-distinct(remove_tv, province)</code></pre>
-<pre><code>## # A tibble: 31 × 1
-##    province        
-##    &lt;chr&gt;           
-##  1 新疆维吾尔自治区
-##  2 山西省          
-##  3 青海省          
-##  4 湖南省          
-##  5 上海市          
-##  6 浙江省          
-##  7 安徽省          
-##  8 广东省          
-##  9 宁夏回族自治区  
-## 10 江西省          
-## # ℹ 21 more rows</code></pre>
-<pre class="r"><code># full_admin &lt;- read_csv(&quot;Shared_Data/full_admin_final_2022.csv&quot;)
-# 
-# remove_tv_2 &lt;- full_admin[!complete.cases(full_admin$town), ]
-# remove_tv_2 &lt;- remove_tv_2[!complete.cases(remove_tv_2$village), ]
-# remove_tv$code &lt;- format(remove_tv$code, scientific = FALSE)
-# 
-# remove_tv_2 &lt;- remove_tv_2 |&gt; select(province, city, county, code)
-# 
-# remove_tv
-# remove_tv_2
-
-#remove_tv |&gt; write_csv(file = &quot;data/remove_tv.csv&quot;)</code></pre>
-<pre class="r"><code>prc_place_names &lt;- read_excel(&quot;Shared_Data/China City Codes (2022).xlsx&quot;, 
+<pre class="r"><code>prc_place_names &lt;- read_excel(&quot;Shared_Data/Copy China City Codes (2022).xlsx&quot;, 
                               na = c(&quot;Na&quot;, &quot;City area&quot;, &quot;&quot;)) 
 #Assumes &#39;City area&#39; mean code for entire city
 
@@ -744,6 +602,7 @@ for_cleaned$Region &lt;- str_remove_all(for_cleaned$Region,
 for_cleaned$Region &lt;- gsub(&quot;Huaian&quot;, &quot;Huai&#39;an&quot;, for_cleaned$Region)
 for_cleaned$Region &lt;- gsub(&quot;Hulunbeir&quot;, &quot;Hulun Beir&quot;, for_cleaned$Region)
 for_cleaned$Region &lt;- gsub(&quot;Jinan&quot;, &quot;Ji&#39;nan&quot;, for_cleaned$Region)
+for_cleaned$Region &lt;- gsub(&quot;NanNing&quot;, &quot;Nanning&quot;, for_cleaned$Region)
 
 merged_cleaned &lt;- merge(cleaned, for_cleaned, by = c(&quot;Region&quot;, &quot;Province&quot;), all.x = TRUE) 
 # |&gt; 
@@ -751,89 +610,47 @@ merged_cleaned &lt;- merge(cleaned, for_cleaned, by = c(&quot;Region&quot;, &quo
 na_merged_cleaned &lt;- merged_cleaned |&gt; filter(is.na(Statistical_Division_Code)) |&gt;
   filter(Region != Province)
 
-merged_cleaned |&gt; write_csv(file = &quot;data/known_city_codes.csv&quot;)
-na_merged_cleaned |&gt; write_csv(file = &quot;data/unknown_city_codes.csv&quot;)
+# merged_cleaned |&gt; write_csv(file = &quot;data/known_city_codes.csv&quot;)
+# na_merged_cleaned |&gt; write_csv(file = &quot;data/unknown_city_codes.csv&quot;)
+
+merged_cleaned |&gt; write_csv(file = &quot;data/[WITHCODES]E_I(all provinces).csv&quot;)
 
 # # fuzzy_df &lt;- stringdist_left_join(prc_place_names, cleaned, by = c(&quot;Region&quot;, &quot;Province&quot;), method = &quot;jw&quot;, max_dist = 0.3)
 # 
-# fuzzy_df</code></pre>
-<pre class="r"><code># #| new-city-codes
+# fuzzy_df
+# find the province codes too</code></pre>
+<pre class="r"><code># Carbon_Triangle_CEIC &lt;- read_excel(&quot;Shared_Data/Carbon Triangle--CEIC.xlsx&quot;, sheet = 1, col_names = FALSE)
 # 
-# prc_place_names &lt;- read_excel(&quot;Shared_Data/China City Codes (2022).xlsx&quot;, 
-#                               na = c(&quot;Na&quot;, &quot;City area&quot;, &quot;&quot;)) 
-# #Assumes &#39;City area&#39; mean code for entire city
-# 
-# prc_place_names$Statistical_Division_Code &lt;- format(
-#   prc_place_names$Statistical_Division_Code, 
-#   scientific = FALSE)
-# prc_place_names$Statistical_Division_Code &lt;- gsub(&quot;000000&quot;, &quot;&quot;, 
-#   prc_place_names$Statistical_Division_Code) #Removes extra zeros
-# 
-# for_cleaned &lt;- prc_place_names
-# for_cleaned$Province &lt;- tolower(for_cleaned$Province)
-# for_cleaned$Region &lt;- tolower(for_cleaned$Region)
-# 
-# remove_words &lt;- function(text, words) {
-#   pattern &lt;- paste0(&quot;\\b&quot;, paste(words, collapse = &quot;|&quot;), &quot;\\b&quot;)
-#   cleaned_text &lt;- gsub(pattern, &quot;&quot;, text, ignore.case = TRUE)
-#   return(cleaned_text)
-# }
-# 
-# # ERROR SOMEWHERE HERE CAUSING DUPLICATES
-# # for_cleaned &lt;- prc_place_names |&gt; 
-# #   mutate(Province = str_remove_all(en_province,
-# #   paste(c(&quot; province&quot;,
-# #           &quot; autonomous region&quot;,
-# #           &quot; autonomous prefecture&quot;,
-# #           &quot; uygur&quot;,
-# #           &quot; hui&quot;),
-# #         collapse = &quot;|&quot;))) |&gt;
-# #   mutate(Region = ifelse(is.na(en_county), en_city, en_county)) |&gt;
-# #   mutate(zh_Region = ifelse(is.na(county), city, county)) |&gt;
-# #   select(Province, Region, code) |&gt;
-# #   na.omit()
-# 
-# #   mutate(Province = str_remove_all(Province,
-# #   paste(c(&quot; province&quot;,
-# #           &quot; autonomous region&quot;,
-# #           &quot; autonomous prefecture&quot;,
-# #           &quot; uygur&quot;,
-# #           &quot; hui&quot;,
-# #           &quot; zhuang&quot;),
-# #         collapse = &quot;|&quot;))) |&gt;
-# #   select(Province, Region, Statistical_Division_Code)
-# 
-# p_words_to_remove &lt;- c(&quot; province&quot;,
-#           &quot; autonomous region&quot;,
-#           &quot; autonomous prefecture&quot;,
-#           &quot; uygur&quot;,
-#           &quot; hui&quot;,
-#           &quot; zhuang&quot;)
-# 
-# r_words_to_remove &lt;- c(&quot; area&quot;,
-#           &quot; league&quot;,
-#           &quot; district&quot;,
-#           &quot; new district&quot;,
-#           &quot; county&quot;,
-#           &quot; city&quot;,
-#           &quot; administration&quot;,
-#           &quot; region&quot;,
-#           &quot; autonomous county&quot;,
-#           &quot; autonomous region&quot;,
-#           &quot; new area&quot;,
-#           &quot; administrative region&quot;,
-#           &quot; administrative prefecture&quot;,
-#           &quot; autonomous prefecture&quot;,
-#           &quot; tibetan qiang&quot;,
-#           &quot; li miao&quot;,
-#           &quot; tibetan and qiang autonomous prefecture&quot;)
-# 
-# for_cleaned$Province &lt;- remove_words(for_cleaned$Province, p_words_to_remove)
-# for_cleaned$Region &lt;- remove_words(for_cleaned$Region, r_words_to_remove)
-# 
-# merged_cleaned &lt;- merge(cleaned, for_cleaned, by = c(&quot;Province&quot;, &quot;Region&quot;), all.x = TRUE)
-# na_merged_cleaned &lt;- merged_cleaned |&gt; filter(is.na(Statistical_Division_Code))
-# </code></pre>
+# colnames(Carbon_Triangle_CEIC) &lt;- Carbon_Triangle_CEIC[1, ]
+# Carbon_Triangle_CEIC &lt;- Carbon_Triangle_CEIC[-1, ]
+
+Carbon_Triangle &lt;- read_csv(&quot;Shared_Data/Carbon Triangle Copy - My Series.csv&quot;)</code></pre>
+<pre><code>## Rows: 1704 Columns: 51
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (10): Data_type, Region, Subnational, Frequency, Unit, Source, Status, S...
+## dbl (36): First Obs. Date, Last Obs. Date, Mean, Variance, Standard Deviatio...
+## lgl  (5): Trade Code, Mnemonic, Function Description, Series remarks, Sugges...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>names(Carbon_Triangle)[names(Carbon_Triangle) == &#39;Data_type&#39;] &lt;- &quot;Province&quot;
+
+names(Carbon_Triangle) &lt;- gsub(&quot; &quot;, &quot;_&quot;, names(Carbon_Triangle))
+
+real_estate &lt;- Carbon_Triangle |&gt; 
+  filter(grepl(&quot;CN: Real Estate Investment:&quot;, Province))
+real_estate$Province &lt;- gsub(&quot;.*?:.*?:(.*?):.*&quot;, &quot;\\1&quot;, real_estate$Province)
+real_estate$Province &lt;- gsub(&quot;CN: Real Estate Investment:&quot;, &quot;&quot;, real_estate$Province)
+
+
+property &lt;- Carbon_Triangle |&gt; 
+  filter(grepl(&quot;CN: Property Price: Residential:&quot;, Province))
+property$Province &lt;- gsub(&quot;CN: Property Price: Residential:&quot;, &quot;&quot;, property$Province)
+property$Province &lt;- sub(&quot;:.*&quot;, &quot;&quot;, property$Province)
+
+
+# New goal: merge this dataset with the one I just finished (confirm with professor that this is the one he want me to use to merge of if there is a newer version, same goes for the data I just merged)</code></pre>
 
 
 
