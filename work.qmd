@@ -251,6 +251,9 @@ merged_cleaned |> write_csv(file = "data/[WITHCODES]E_I(all provinces).csv")
 # 
 # fuzzy_df
 # find the province codes too
+
+for_cleaned |> write_csv("data/cleaned_codes.csv")
+
 ```
 
 ```{r}
@@ -290,15 +293,22 @@ merge_estate <- select(real_estate, !Region) |>
 
 property_for_cleaned <- merge(for_cleaned, merge_property, by = c("Region"), all.x = TRUE)
 all_good_property_for_cleaned <- property_for_cleaned |> 
-  filter(Province.x == Province.y | !is.na(Statistical_Division_Code))
+  filter(Province.x == Province.y & Statistical_Division_Code != "NA")
 wierd_property_for_cleaned <- property_for_cleaned |> 
-  filter(Province.x != Province.y | is.na(Statistical_Division_Code)) # Just fix manually later
+  filter(Province.x != Province.y | Statistical_Division_Code == "NA") # Just fix manually later
 
 estate_for_cleaned <- merge(for_cleaned, merge_estate, by = c("Region"), all.x = TRUE)
 all_good_estate_for_cleaned <- estate_for_cleaned |> 
-  filter(Province.x == Province.y | !is.na(Statistical_Division_Code))
+  filter(Province.x == Province.y & Statistical_Division_Code != "NA")
 wierd_estate_for_cleaned <- estate_for_cleaned |>
-  filter(Province.x != Province.y | is.na(Statistical_Division_Code)) # Just fix manually later
+  filter(Province.x != Province.y | Statistical_Division_Code == "NA") # Just fix manually later
+
+```
+
+```{r}
+
+merged_cleaned_v2 <- merge(merged_cleaned, all_good_property_for_cleaned, by = c("Statistical_Division_Code"), all.x = TRUE)
+merged_cleaned_v2
 
 ```
 
@@ -349,4 +359,14 @@ ggplot(all_good_property_for_cleaned, aes(Median)) +
   facet_wrap(facets = vars(Province.x))
 
 ```
+
+```{r}
+
+library(haven)
+shrinking_map <- read_dta("Shared_Data/joined-layer-shrinking-map.dta")
+View(shrinking_map)
+
+```
+
+
 

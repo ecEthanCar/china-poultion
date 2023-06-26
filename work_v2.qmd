@@ -1,0 +1,129 @@
+```{r}
+
+# Set the directory path where the files are located
+folder_path_6 <- "city-level-take-two"
+
+# List all the files in the folder
+file_list_6 <- list.files(folder_path_6)
+
+# Create an empty list to store the data from each file
+data_list_6 <- list()
+
+suppressWarnings({
+# Iterate over the file list using a for loop
+for (file_name in file_list_6) {
+  file_path <- file.path(folder_path_6, file_name)
+  # file_data <- read_xlsx(file_path, na = "NA")
+  file_data <- merge(merge(merge(
+    read_xlsx(file_path, sheet = 1, na = "NA"),
+    read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"),
+    read_xlsx(file_path, sheet = 3, na = "NA"), by = "Region"), 
+    read_xlsx(file_path, sheet = 4, na = "NA"), by = "Region")
+  # New column indicating year
+  file_data$Province <- str_replace_all(
+    str_extract(file_name, "\\((.*?)\\)"), "\\(|\\)", "") |> 
+    as.character()
+  file_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
+  # Converts all but Region to doubles
+  data_list_6[[file_name]] <- file_data |>
+    mutate(across(-c(Region, Province), as.numeric))
+}
+})
+# Merge files
+data_6 <- bind_rows(data_list_6) |>
+  filter(Region != "Source: Wind") |>
+  mutate(Region = trimws(Region)) |>
+  mutate(Region = ifelse(Region == Province, NA, Region)) |>
+  group_by(year)
+
+# 
+# providence_only |> write_csv(file = "data/E_I(2016-2022).csv")
+# providence_only |> write_excel_csv(file = "data/E_I(2016-2022).xlsx")
+
+```
+
+```{r}
+
+data_6$Region <- gsub(" Dist", "", data_6$Region)
+data_6$Province <- gsub("Neimenggu", "Inner Mongolia", data_6$Province)
+data_6$Region <- gsub("\\bBaisha\\b", "Baisha Li", data_6$Region)
+data_6$Region <- gsub("tongling", "Tongling", data_6$Region)
+data_6$Region <- gsub("Bose", "Baise", data_6$Region)
+data_6$Region <- gsub("Changdu", "Chengdu", data_6$Region)
+data_6$Region <- gsub("Changjiang", "Changjiang Li", data_6$Region)
+data_6$Region <- gsub("Hulun Buir", "Hulun Beir", data_6$Region)
+data_6$Region <- gsub("Ili Kazak", "Ili Kazakh", data_6$Region)
+data_6$Region <- gsub("Kaixian", "Kaizhou", data_6$Region)
+data_6$Region <- gsub("Zhongxian", "Zhong", data_6$Region)
+data_6$Region <- gsub("Zhanjiang", "Zhangjiang", data_6$Region)
+data_6$Region <- gsub("Xigaze", "Shigatse", data_6$Region)
+data_6$Region <- gsub("ürümqi", "Urumqi", data_6$Region)
+data_6$Region <- gsub("Lvliang", "Lüliang", data_6$Region)
+
+data_6$Region <- gsub("Dist", "", data_6$Region)
+
+encoded_data_6 <- merge(data_6, for_cleaned, by = c("Region", "Province"), all.x = TRUE)
+
+na_encoded_data_6 <- encoded_data_6 |> filter(is.na(Statistical_Division_Code)) |>
+  distinct(Region, Province)
+
+good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code)) |>
+  distinct(Region, Province)
+
+```
+
+```{r}
+
+  # file_data <- merge(merge(
+  #   read_xlsx(file_path, sheet = 1, na = "NA"), 
+  #   read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"), 
+  #   read_xlsx(file_path, sheet = 3, na = "NA"), by = "Region")
+  # New column indicating year
+
+# 
+# # Set the directory path where the files are located
+# folder_path_6 <- "city-level-take-two"
+# 
+# # List all the files in the folder
+# file_list_6 <- list.files(folder_path_6)
+# 
+# # Create an empty list to store the data from each file
+# data_list_6 <- list()
+# 
+# # Iterate over the file list using a for loop
+# for (file_name in file_list_6) {
+#   file_path <- file.path(folder_path_6, file_name)
+#   
+#   # Get the names of all sheets in the Excel file
+#   sheet_names <- excel_sheets(file_path)
+#   
+#   # Create an empty list to store the data from each sheet
+#   sheet_data_list <- list()
+#   
+#   # Iterate over the sheet names using a nested for loop
+#   for (sheet_name in sheet_names) {
+#     sheet_data <- read_excel(file_path, sheet = sheet_name, na = "NA")
+#     # New column indicating year
+#     sheet_data$Province <- str_replace_all(
+#       str_extract(file_name, "\\((.*?)\\)"), "\\(|\\)", "") |>
+#       as.character()
+#     sheet_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
+#     # Converts all but Region to doubles
+#     sheet_data <- sheet_data |>
+#       mutate(across(-c(Region, Province), as.numeric))
+#     
+#     # Append the sheet data to the list
+#     sheet_data_list[[sheet_name]] <- sheet_data
+#   }
+#   
+#   # Append the sheet data list to the main data list
+#   data_list_6[[file_name]] <- sheet_data_list
+# }
+# 
+# data_6 <- bind_rows(data_list_6) |>
+#   filter(Region != "Source: Wind") |>
+#   group_by(year)
+# 
+# data_6$Region <- gsub("Dist", "", data_6$Region)
+
+```
