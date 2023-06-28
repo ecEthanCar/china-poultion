@@ -74,6 +74,12 @@ good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code
 
 ```{r}
 
+bigger <- merge(encoded_data_6, pivot_estate_property, by = c("Region", "Province", "year"))
+
+```
+
+```{r}
+
   # file_data <- merge(merge(
   #   read_xlsx(file_path, sheet = 1, na = "NA"), 
   #   read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"), 

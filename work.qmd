@@ -315,25 +315,28 @@ merged_cleaned_v2
 ```{r}
 #| pivot-year-data
 
-pivot_property <- property |>
+pivot_property <- merge_property |>
   pivot_longer(
     cols = c(`1999`:`2021`),
     names_to = "year",
-    values_to = "pct"
+    values_to = "Annual_Real_Estate_Investment"
   ) |>
-  select(Province, Region, Subnational, year, pct) |>
+  select(Province, Region, year, Annual_Real_Estate_Investment) |>
   mutate(year = as.numeric(year),
-         pct = as.numeric(pct))
+         pct = as.numeric(Annual_Real_Estate_Investment))
 
-pivot_estate <- real_estate |>
+pivot_estate <- merge_estate |>
   pivot_longer(
     cols = c(`1999`:`2021`),
     names_to = "year",
-    values_to = "pct"
+    values_to = "Annual_Avg_Property_Price"
   ) |>
-  select(Province, Region, Subnational, year, pct) |>
+  select(Province, Region, year, Annual_Avg_Property_Price) |>
   mutate(year = as.numeric(year),
-         pct = as.numeric(pct))
+         pct = as.numeric(Annual_Avg_Property_Price))
+
+pivot_estate_property <- merge(pivot_property, pivot_estate, by = c("Region", "Province", "year"), all.x = TRUE) |>
+  select(!c(`pct.x`, `pct.y`))
 
 ```
 
