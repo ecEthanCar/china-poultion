@@ -74,7 +74,48 @@ good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code
 
 ```{r}
 
+# gdp <- read_csv("Shared_Data/copy-city-level-gdp - My Series.csv")
+# 
+# gdp_2 <- gdp |>
+#   mutate(Province = gsub("CN: GDP: ", "", Province)) |>
+#   mutate(Province = gsub("\\(DC\\)", "", Province)) |>
+#   mutate(Industry = str_extract(Province, "^[^:]+")) |>
+#   mutate(Industry = ifelse(Industry %in% c("Primary Industry",
+#                                            "Secondary Industry", 
+#                                            "Tertiary Industry", 
+#                                            "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. 
+#                                            Services)",
+#                                            "SI: Industry",
+#                                            "SI: Construction"), 
+#                            Industry, NA)) |> 
+#   mutate(Province = gsub("Primary Industry: |Secondary Industry: |Tertiary Industry: |Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services): |SI: Industry : |SI: Construction : ", "", Province)) 
+# 
+# gdp_3 <- gdp_2 |> mutate(Province = str_extract(Province, "^[^:]+"))
+#   
+# 
+# gdp_2
+# gdp_3
+# gdp_2$Industry <- str_extract(Province, "^[^:]+", gdp_2$Province)
+
+# gdp$Province <- gsub("CN: GDP: ", "", gdp$Province)
+
+```
+
+```{r}
+
+gdp <- read_csv("Shared_Data/copy-city-level-gdp - My Series.csv")
+
+gdp_2 <- gdp |>
+  separate(Province, into = paste0("col", 1:6), sep = ":", extra = "merge") |>
+  mutate(Province = ifelse(is.na(col5)|is.na(col6), ))
+
+
+```
+
+```{r}
+
 bigger <- merge(encoded_data_6, pivot_estate_property, by = c("Region", "Province", "year"))
+bigger |> write_csv(file = "data/in_progress_estate_property_debt(2016-2022).csv")
 
 ```
 
