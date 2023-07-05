@@ -336,7 +336,9 @@ pivot_estate <- merge_estate |>
          pct = as.numeric(Annual_Avg_Property_Price))
 
 pivot_estate_property <- merge(pivot_property, pivot_estate, by = c("Region", "Province", "year"), all.x = TRUE) |>
-  select(!c(`pct.x`, `pct.y`))
+  select(!c(`pct.x`, `pct.y`)) |>
+  mutate(Province = gsub("\\(DC\\) ", "", Province), 
+         Region = gsub("\\(DC\\) ", "", Region))
 
 ```
 

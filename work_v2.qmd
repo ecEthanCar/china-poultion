@@ -103,19 +103,53 @@ good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code
 
 ```{r}
 
-gdp <- read_csv("Shared_Data/copy-city-level-gdp - My Series.csv")
+gdp <- read_csv("Shared_Data/copy2-city-level-gdp - My Series.csv")
 
 gdp_2 <- gdp |>
   separate(Province, into = paste0("col", 1:6), sep = ":", extra = "merge") |>
-  mutate(Province = ifelse(is.na(col5)|is.na(col6), ))
+  # Removes extra spaces after separation
+  mutate_at(vars(c(col1, col2, col3, col4, col5, col6)), trimws) |>
+  # Removes things in col4 (future Province col) not in col3 (future Industry col)
+  mutate(col4 = ifelse(col4 %in% col3, col4, NA)) |>
+  # Pastes Province names in col3 onto col4, them removes from col3
+  mutate(col4 = ifelse(is.na(col4) & col3 %in% col4, col3, col4),
+         col3 = ifelse(col3 %in% col4, NA, col3)) |> # Ask later what NA for industry should be
+  rename(`GDP: Industry` = col3, Province = col4) |>
+  select(!c(col1, col2, col5, col6))
+  
+  #mutate(col4 = ifelse(col4 %in% col3, col4, NA))
+  #distinct(col3)
+  
+  # mutate(col3 = ifelse(col3 == "SI" & (col4 == "Industry" | col4 == "Construction"), col4, col3)) |>
+  # mutate(col4 = ifelse(col4 == col3, NA, col4)) |>
+  # mutate(col5 = ifelse(col4 == Region, NA, col4))
 
+```
+```{r}
+
+pivot_gdp <- gdp_2 |>
+  pivot_longer(
+    cols = c(`1999`:`2020`),
+    names_to = "year",
+    values_to = "GDP"
+  ) |>
+  select(`GDP: Industry`, Province, Region, year, GDP) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(GDP))
 
 ```
 
 ```{r}
 
+# Remember: encoded_data_6 is a incomplete data set
 bigger <- merge(encoded_data_6, pivot_estate_property, by = c("Region", "Province", "year"))
 bigger |> write_csv(file = "data/in_progress_estate_property_debt(2016-2022).csv")
+
+```
+
+```{r}
+
+bigger_2 <- merge(pivot_gdp, bigger, by = c("Region", "Province", "year"))
 
 ```
 
