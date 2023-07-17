@@ -120,8 +120,11 @@ cleaned$Region <- gsub("Zhanjiang", "Zhangjiang", cleaned$Region)
 cleaned$Region <- gsub("Xigaze", "Shigatse", cleaned$Region)
 cleaned$Region <- gsub("ürümqi", "Urumqi", cleaned$Region)
 cleaned$Region <- gsub("Lvliang", "Lüliang", cleaned$Region)
-cleaned[421, "Region"] <- "Chamdo"
-
+cleaned$Region <- ifelse(
+  cleaned$Region == "Chengdu" & cleaned$Province == "Tibet", 
+  "Chamdo", 
+  cleaned$Region
+)
 
 cleaned$Region[cleaned$Region == cleaned$Province] <- NA
 
@@ -373,10 +376,6 @@ ggplot(all_good_property_for_cleaned, aes(Median)) +
 ```
 
 ```{r}
-
-library(haven)
-shrinking_map <- read_dta("Shared_Data/joined-layer-shrinking-map.dta")
-View(shrinking_map)
 
 ```
 

@@ -15,7 +15,8 @@ for (file_name in file_list_6) {
   file_path <- file.path(folder_path_6, file_name)
   # file_data <- read_xlsx(file_path, na = "NA")
   file_data <- merge(merge(merge(
-    read_xlsx(file_path, sheet = 1, na = "NA"),
+    read_xlsx(file_path, sheet = 1, na = "NA"), 
+    # weird error where this can run but cannot be rendered because "read_xlsx doesn't exist"
     read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"),
     read_xlsx(file_path, sheet = 3, na = "NA"), by = "Region"), 
     read_xlsx(file_path, sheet = 4, na = "NA"), by = "Region")
@@ -148,8 +149,58 @@ bigger |> write_csv(file = "data/in_progress_estate_property_debt(2016-2022).csv
 ```
 
 ```{r}
+#| Gdp-estate-property-with-economic-indicators
 
+##IMPORTANT##
 bigger_2 <- merge(pivot_gdp, bigger, by = c("Region", "Province", "year"))
+
+```
+
+```{r}
+#| shrinking-cities-with-ids
+
+library(haven)
+shrinking_map <- read_dta("Shared_Data/joined-layer-shrinking-map.dta")
+
+shrinking_map <- shrinking_map |>
+  rename(Region = adm2_en) |>
+  rename(Province = adm1_en) |>
+  mutate(Province = str_remove_all(Province,
+    paste(c(" (?i)province",
+            " (?i)autonomous region",
+            " (?i)autonomous prefecture",
+            " (?i)uygur",
+            " (?i)hui",
+            " (?i)zhuang",
+            " (?i)municipality"),
+          collapse = "|")))
+
+shrinking_map$Region <- gsub("Dist", "", shrinking_map$Region)
+shrinking_map$Region <- gsub("\\(Inner Mongolia", "", shrinking_map$Region)
+shrinking_map$Region <- gsub("WULONG", "Wulong", shrinking_map$Region)
+shrinking_map$Region <- gsub("Neimenggu\\)", "Neimenggu", shrinking_map$Region)
+shrinking_map$Province <- gsub("\\(Inner Mongolia", "", shrinking_map$Province)
+shrinking_map$Province <- gsub("Neimenggu", "Inner Mongolia", shrinking_map$Province)
+shrinking_map$Region <- gsub("\\bBaisha\\b", "Baisha Li", shrinking_map$Region)
+shrinking_map$Region <- gsub("tongling", "Tongling", shrinking_map$Region)
+shrinking_map$Region <- gsub("Bose", "Baise", shrinking_map$Region)
+shrinking_map$Region <- gsub("Changdu", "Chengdu", shrinking_map$Region)
+shrinking_map$Region <- gsub("Changjiang", "Changjiang Li", shrinking_map$Region)
+shrinking_map$Region <- gsub("Hulun Buir", "Hulun Beir", shrinking_map$Region)
+shrinking_map$Region <- gsub("Ili Kazak", "Ili Kazakh", shrinking_map$Region)
+shrinking_map$Region <- gsub("Kaixian", "Kaizhou", shrinking_map$Region)
+shrinking_map$Region <- gsub("Zhongxian", "Zhong", shrinking_map$Region)
+shrinking_map$Region <- gsub("Zhanjiang", "Zhangjiang", shrinking_map$Region)
+shrinking_map$Region <- gsub("Xigaze", "Shigatse", shrinking_map$Region)
+shrinking_map$Region <- gsub("ürümqi", "Urumqi", shrinking_map$Region)
+shrinking_map$Region <- gsub("Lvliang", "Lüliang", shrinking_map$Region)
+shrinking_map$Region <- ifelse(
+  shrinking_map$Region == "Chengdu" & shrinking_map$Province == "Tibet", 
+  "Chamdo", 
+  shrinking_map$Region
+)
+
+shrinking_map_wid <- merge(shrinking_map, for_cleaned, by = c("Region", "Province"))
 
 ```
 
