@@ -1,492 +1,520 @@
-Province,Region,Statistical_Division_Code
-Beijing,NA,110100
-Beijing,Dongcheng,110101
-Beijing,Xicheng,110102
-Beijing,Chaoyang,110105
-Beijing,Fengtai,110106
-Beijing,Shijingshan,110107
-Beijing,Haidian,110108
-Beijing,Mentougou,110109
-Beijing,Fangshan,110111
-Beijing,Tongzhou,110112
-Beijing,Shunyi,110113
-Beijing,Changping,110114
-Beijing,Daxing,110115
-Beijing,Huairou,110116
-Beijing,Pinggu,110117
-Beijing,Miyun,110118
-Beijing,Yanqing,110119
-Tianjin,NA,120100
-Tianjin,Heping,120101
-Tianjin,East,120102
-Tianjin,Hexi,120103
-Tianjin,Nankai,120104
-Tianjin,Hebei,120105
-Tianjin,Hongqiao,120106
-Tianjin,Dongli,120110
-Tianjin,Xiqing,120111
-Tianjin,Jinnan,120112
-Tianjin,Beichen,120113
-Tianjin,Wuqing,120114
-Tianjin,Baodi,120115
-Tianjin,Binhai,120116
-Tianjin,Ninghe,120117
-Tianjin,Jinghai,120118
-Tianjin,Jizhou,120119
-Hebei,Shijiazhuang,130100
-Hebei,Tangshan,130200
-Hebei,Qinhuangdao,130300
-Hebei,Handan,130400
-Hebei,Xingtai,130500
-Hebei,Baoding,130600
-Hebei,Zhangjiakou,130700
-Hebei,Chengde,130800
-Hebei,Cangzhou,130900
-Hebei,Langfang,131000
-Hebei,Hengshui,131100
-Shanxi,Taiyuan,140100
-Shanxi,Datong,140200
-Shanxi,Yangquan,140300
-Shanxi,Changzhi,140400
-Shanxi,Jincheng,140500
-Shanxi,Shuozhou,140600
-Shanxi,Jinzhong,140700
-Shanxi,Yuncheng,140800
-Shanxi,Xinzhou,140900
-Shanxi,Linfen,141000
-Shanxi,Luliang,141100
-Inner Mongolia,Hohhot,150100
-Inner Mongolia,Baotou,150200
-Inner Mongolia,Wuhai,150300
-Inner Mongolia,Chifeng,150400
-Inner Mongolia,Tongliao,150500
-Inner Mongolia,Ordos,150600
-Inner Mongolia,Hulun Beir,150700
-Inner Mongolia,Bayannur,150800
-Inner Mongolia,Wulanchabu,150900
-Inner Mongolia,Xing'an,152200
-Inner Mongolia,Xilin Gol,152500
-Inner Mongolia,Alxa,152900
-Liaoning,Shenyang,210100
-Liaoning,Dalian,210200
-Liaoning,Anshan,210300
-Liaoning,Fushun,210400
-Liaoning,Benxi,210500
-Liaoning,Dandong,210600
-Liaoning,Jinzhou,210700
-Liaoning,Yingkou,210800
-Liaoning,Fuxin,210900
-Liaoning,Liaoyang,211000
-Liaoning,Panjin,211100
-Liaoning,Tieling,211200
-Liaoning,Chaoyang,211300
-Liaoning,Huludao,211400
-Jilin,Changchun,220100
-Jilin,Jilin,220200
-Jilin,Siping,220300
-Jilin,Liaoyuan,220400
-Jilin,Tonghua,220500
-Jilin,Baishan,220600
-Jilin,Songyuan,220700
-Jilin,Baicheng,220800
-Jilin,Yanbian,222400
-Heilongjiang,Harbin,230100
-Heilongjiang,Qiqihar,230200
-Heilongjiang,Jixi,230300
-Heilongjiang,Hegang,230400
-Heilongjiang,Shuangyashan,230500
-Heilongjiang,Daqing,230600
-Heilongjiang,Yichun,230700
-Heilongjiang,Jiamusi,230800
-Heilongjiang,Qitaihe,230900
-Heilongjiang,Mudanjiang,231000
-Heilongjiang,Heihe,231100
-Heilongjiang,Suihua,231200
-Heilongjiang,Greater Khingan Mountains,232700
-Shanghai,NA,310100
-Shanghai,Huangpu,310101
-Shanghai,Xuhui,310104
-Shanghai,Changning,310105
-Shanghai,Jing'an,310106
-Shanghai,Putuo,310107
-Shanghai,Hongkou,310109
-Shanghai,Yangpu,310110
-Shanghai,Minhang,310112
-Shanghai,Baoshan,310113
-Shanghai,Jiading,310114
-Shanghai,Pudong,310115
-Shanghai,Jinshan,310116
-Shanghai,Songjiang,310117
-Shanghai,Qingpu,310118
-Shanghai,Fengxian,310120
-Shanghai,Chongming,310151
-Jiangsu,Nanjing,320100
-Jiangsu,Wuxi,320200
-Jiangsu,Xuzhou,320300
-Jiangsu,Changzhou,320400
-Jiangsu,Suzhou,320500
-Jiangsu,Nantong,320600
-Jiangsu,Lianyungang,320700
-Jiangsu,Huai'an,320800
-Jiangsu,Yancheng,320900
-Jiangsu,Yangzhou,321000
-Jiangsu,Zhenjiang,321100
-Jiangsu,Taizhou,321200
-Jiangsu,Suqian,321300
-Zhejiang,Hangzhou,330100
-Zhejiang,Ningbo,330200
-Zhejiang,Wenzhou,330300
-Zhejiang,Jiaxing,330400
-Zhejiang,Huzhou,330500
-Zhejiang,Shaoxing,330600
-Zhejiang,Jinhua,330700
-Zhejiang,Quzhou,330800
-Zhejiang,Zhoushan,330900
-Zhejiang,Taizhou,331000
-Zhejiang,Lishui,331100
-Anhui,Hefei,340100
-Anhui,Wuhu,340200
-Anhui,Bengbu,340300
-Anhui,Huainan,340400
-Anhui,Ma'anshan,340500
-Anhui,Huaibei,340600
-Anhui,Tongling,340700
-Anhui,Anqing,340800
-Anhui,Huangshan,341000
-Anhui,Chuzhou,341100
-Anhui,Fuyang,341200
-Anhui,Suzhou,341300
-Anhui,Lu'an,341500
-Anhui,Bozhou,341600
-Anhui,Chizhou,341700
-Anhui,Xuancheng,341800
-Fujian,Fuzhou,350100
-Fujian,Xiamen,350200
-Fujian,Putian,350300
-Fujian,Sanming,350400
-Fujian,Quanzhou,350500
-Fujian,Zhangzhou,350600
-Fujian,Nanping,350700
-Fujian,Longyan,350800
-Fujian,Ningde,350900
-Jiangxi,Nanchang,360100
-Jiangxi,Jingdezhen,360200
-Jiangxi,Pingxiang,360300
-Jiangxi,Jiujiang,360400
-Jiangxi,Xinyu,360500
-Jiangxi,Yingtan,360600
-Jiangxi,Ganzhou,360700
-Jiangxi,Ji'an,360800
-Jiangxi,Yichun,360900
-Jiangxi,Fuzhou,361000
-Jiangxi,Shangrao,361100
-Shandong,Ji'nan,370100
-Shandong,Qingdao,370200
-Shandong,Zibo,370300
-Shandong,Zaozhuang,370400
-Shandong,Dongying,370500
-Shandong,Yantai,370600
-Shandong,Weifang,370700
-Shandong,Jining,370800
-Shandong,Tai'an,370900
-Shandong,Weihai,371000
-Shandong,Rizhao,371100
-Shandong,Linyi,371300
-Shandong,Dezhou,371400
-Shandong,Liaocheng,371500
-Shandong,Binzhou,371600
-Shandong,Heze,371700
-Henan,Zhengzhou,410100
-Henan,Kaifeng,410200
-Henan,Luoyang,410300
-Henan,Pingdingshan,410400
-Henan,Anyang,410500
-Henan,Hebi,410600
-Henan,Xinxiang,410700
-Henan,Jiaozuo,410800
-Henan,Puyang,410900
-Henan,Xuchang,411000
-Henan,Luohe,411100
-Henan,Sanmenxia,411200
-Henan,Nanyang,411300
-Henan,Shangqiu,411400
-Henan,Xinyang,411500
-Henan,Zhoukou,411600
-Henan,Zhumadian,411700
-Henan,Provincial-level administrative divisions,419000
-Hubei,Wuhan,420100
-Hubei,Huangshi,420200
-Hubei,Shiyan,420300
-Hubei,Yichang,420500
-Hubei,Xiangyang,420600
-Hubei,Ezhou,420700
-Hubei,Jingmen,420800
-Hubei,Xiaogan,420900
-Hubei,Jingzhou,421000
-Hubei,Huanggang,421100
-Hubei,Xianning,421200
-Hubei,Suizhou,421300
-Hubei,Enshi,422800
-Hubei,Provincial-level administrative divisions,429000
-Hunan,Changsha,430100
-Hunan,Zhuzhou,430200
-Hunan,Xiangtan,430300
-Hunan,Hengyang,430400
-Hunan,Shaoyang,430500
-Hunan,Yueyang,430600
-Hunan,Changde,430700
-Hunan,Zhangjiajie,430800
-Hunan,Yiyang,430900
-Hunan,Chenzhou,431000
-Hunan,Yongzhou,431100
-Hunan,Huaihua,431200
-Hunan,Loudi,431300
-Hunan,Xiangxi,433100
-Guangdong,Guangzhou,440100
-Guangdong,Shaoguan,440200
-Guangdong,Shenzhen,440300
-Guangdong,Zhuhai,440400
-Guangdong,Shan Tou,440500
-Guangdong,Foshan,440600
-Guangdong,Jiangmen,440700
-Guangdong,Zhangjiang,440800
-Guangdong,Maoming,440900
-Guangdong,Zhaoqing,441200
-Guangdong,Huizhou,441300
-Guangdong,Meizhou,441400
-Guangdong,Shanwei,441500
-Guangdong,Heyuan,441600
-Guangdong,Yangjiang,441700
-Guangdong,Qingyuan,441800
-Guangdong,Dongguan,441900
-Guangdong,Zhongshan,442000
-Guangdong,Chaozhou,445100
-Guangdong,Jieyang,445200
-Guangdong,Yunfu,445300
-Guangxi,Nanning,450100
-Guangxi,Liuzhou,450200
-Guangxi,Guilin,450300
-Guangxi,Wuzhou,450400
-Guangxi,Beihai,450500
-Guangxi,Fangchenggang,450600
-Guangxi,Qinzhou,450700
-Guangxi,Guigang,450800
-Guangxi,Yulin,450900
-Guangxi,Baise,451000
-Guangxi,Hezhou,451100
-Guangxi,Hechi,451200
-Guangxi,Laibin,451300
-Guangxi,Chongzuo,451400
-Hainan,Haikou,460100
-Hainan,Sanya,460200
-Hainan,Sansha,460300
-Hainan,Danzhou,460400
-Hainan,Provincial-level administrative divisions,469000
-Hainan,Wuzhishan,469001
-Hainan,Qionghai,469002
-Hainan,Wenchang,469005
-Hainan,Wanning,469006
-Hainan,Dongfang,469007
-Hainan,Ding'an,469021
-Hainan,Tunchang,469022
-Hainan,Chengmai,469023
-Hainan,Lingao,469024
-Hainan,Baisha Li,469025
-Hainan,Changjiang Li,469026
-Hainan,Ledong Li,469027
-Hainan,Lingshui Li,469028
-Hainan,Baoting,469029
-Hainan,Qiongzhong,469030
-Chongqing,NA,500100
-Chongqing,Wanzhou,500101
-Chongqing,Fuling,500102
-Chongqing,Yuzhong,500103
-Chongqing,Dadukou,500104
-Chongqing,Jiangbei,500105
-Chongqing,Shapingba,500106
-Chongqing,Jiulongpo,500107
-Chongqing,South Bank,500108
-Chongqing,Beibei,500109
-Chongqing,Qijiang,500110
-Chongqing,Dazu,500111
-Chongqing,Yu Bei,500112
-Chongqing,Banan,500113
-Chongqing,Qianjiang,500114
-Chongqing,Changshou,500115
-Chongqing,Jiangjin,500116
-Chongqing,Hechuan,500117
-Chongqing,Yongchuan,500118
-Chongqing,Nanchuan,500119
-Chongqing,Bishan,500120
-Chongqing,Tongliang,500151
-Chongqing,Tongnan,500152
-Chongqing,Rongchang,500153
-Chongqing,Kaizhou,500154
-Chongqing,Liangping,500155
-Chongqing,Wulong,500156
-Chongqing,County,500200
-Chongqing,Chengkou,500229
-Chongqing,Fengdu,500230
-Chongqing,Dianjiang,500231
-Chongqing,Zhong,500233
-Chongqing,Yunyang,500235
-Chongqing,Fengjie,500236
-Chongqing,Wushan,500237
-Chongqing,Wuxi,500238
-Chongqing,Shizhu,500240
-Chongqing,Xiushan,500241
-Chongqing,Youyang,500242
-Chongqing,Pengshui Miao,500243
-Sichuan,Chengdu,510100
-Sichuan,Zigong,510300
-Sichuan,Panzhihua,510400
-Sichuan,Luzhou,510500
-Sichuan,Deyang,510600
-Sichuan,Mianyang,510700
-Sichuan,Guangyuan,510800
-Sichuan,Suining,510900
-Sichuan,Neijiang,511000
-Sichuan,Leshan,511100
-Sichuan,Nanchong,511300
-Sichuan,Meishan,511400
-Sichuan,Yibin,511500
-Sichuan,Guang'an,511600
-Sichuan,Dazhou,511700
-Sichuan,Ya'an,511800
-Sichuan,Bazhong,511900
-Sichuan,Ziyang,512000
-Sichuan,Aba,513200
-Sichuan,Ganzi,513300
-Sichuan,Liangshan,513400
-Guizhou,Guiyang,520100
-Guizhou,Liupanshui,520200
-Guizhou,Zunyi,520300
-Guizhou,Anshun,520400
-Guizhou,Bijie,520500
-Guizhou,Tongren,520600
-Guizhou,Qianxinan Buyi Miao,522300
-Guizhou,Qiandongnan,522600
-Guizhou,Qiannan Buyi Miao,522700
-Yunnan,Kunming,530100
-Yunnan,Qujing,530300
-Yunnan,Yuxi,530400
-Yunnan,Baoshan,530500
-Yunnan,Zhaotong,530600
-Yunnan,Lijiang,530700
-Yunnan,Pu'er,530800
-Yunnan,Lincang,530900
-Yunnan,Chuxiong,532300
-Yunnan,Honghe,532500
-Yunnan,Wenshan,532600
-Yunnan,Xishuangbanna,532800
-Yunnan,Dali,532900
-Yunnan,Dehong,533100
-Yunnan,Nujiang Lisu,533300
-Yunnan,Diqing,533400
-Tibet,Lhasa,540100
-Tibet,Shigatse,540200
-Tibet,Qamdo,540300
-Tibet,Nyingchi,540400
-Tibet,Shannan,540500
-Tibet,Nagqu,540600
-Tibet,Ngari,542500
-Shaanxi,Xi'an,610100
-Shaanxi,Tongchuan,610200
-Shaanxi,Baoji,610300
-Shaanxi,Xianyang,610400
-Shaanxi,Weinan,610500
-Shaanxi,Yan'an,610600
-Shaanxi,Hanzhong,610700
-Shaanxi,Yulin,610800
-Shaanxi,Ankang,610900
-Shaanxi,Shangluo,611000
-Gansu,Lan'Zhou,620100
-Gansu,Jiayuguan,620200
-Gansu,Jinchang,620300
-Gansu,Baiyin,620400
-Gansu,Tianshui,620500
-Gansu,Wuwei,620600
-Gansu,Zhangye,620700
-Gansu,Pingliang,620800
-Gansu,Jiuquan,620900
-Gansu,Qingyang,621000
-Gansu,Dingxi,621100
-Gansu,Longnan,621200
-Gansu,Linxia,622900
-Gansu,Gannan,623000
-Qinghai,Xining,630100
-Qinghai,Haidong,630200
-Qinghai,Haibei,632200
-Qinghai,Huangnan,632300
-Qinghai,Hainan,632500
-Qinghai,Golog,632600
-Qinghai,Yushu,632700
-Qinghai,Haixi,632800
-Ningxia,Yinchuan,640100
-Ningxia,Shizuishan,640200
-Ningxia,Wuzhong,640300
-Ningxia,Guyuan,640400
-Ningxia,Zhongwei,640500
-Xinjiang,Urumqi,650100
-Xinjiang,Karamay,650200
-Xinjiang,Turpan,650400
-Xinjiang,Hami,650500
-Xinjiang,Changji,652300
-Xinjiang,Bortala,652700
-Xinjiang,Bayingolin,652800
-Xinjiang,Aksu,652900
-Xinjiang,Kizilsu Kirgiz,653000
-Xinjiang,Kashgar,653100
-Xinjiang,Hotan,653200
-Xinjiang,Ili Kazakh,654000
-Xinjiang,Tacheng,654200
-Xinjiang,Altay,654300
-Xinjiang,County-level administrative divisions directly under the,659000
-Xinjiang,Shihezi,659001
-Xinjiang,Aral,659002
-Xinjiang,Tumusuk,659003
-Xinjiang,Wujiaqu,659004
-Xinjiang,Beitun,659005
-Xinjiang,Tiemenguan,659006
-Xinjiang,Shuanghe,659007
-Xinjiang,Kokkhara,659008
-Xinjiang,Kunyu,659009
-Xinjiang,Huyanghe,659010
-Xinjiang,Nova,659011
-Source: http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/index.html,NA,          NA
-Heilongjiang,Da Hinggan Ling,232700
-Yunnan,Deqen,533400
-Sichuan,Garze,513300
-Tianjin,Hedong,120102
-Inner Mongolia,Hinggan,152200
-Henan,Jiyuan,419001
-Xinjiang,Kashi,653100
-Xinjiang,Kekedala,659008
-Gansu,Lanzhou,620100
-Hainan,Ledong,469027
-Hainan,Lingshui,469028
-Guizhou,Lupanshui,520200
-Shanxi,Lüliang,141100
-Fujian,Nan'an,500108
-Chongqing,Nanning,450100
-Inner Mongolia,Neimenggu,150000
-Yunnan,Nujiang,533300
-Chongqing,Pengshui,500243
-Guizhou,Qiannan,522700
-Guizhou,Qianxinan,522300
-Guangdong,Shantou,440500
-Hubei,Shennongjia,429021
-Hubei,Tianmen,429006
-Xinjiang,Tumxuk,659003
-Inner Mongolia,Ulanqab,150900
-Hubei,Xiantao,429004
-Xinjiang,Xinxing,659011
-Chongqing,Yubei,500112
-Source: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,NA,          NA
-Link: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,NA,          NA
-Hubei,Qianjiang,429005
-Source: https://en.wikipedia.org/wiki/List_of_administrative_divisions_of_Hubei,NA,          NA
-Chongqing,Nan'an,500108
-Source: https://www.wikidata.org/wiki/Q713491,NA,          NA
-Tibet,Chamdo,540300
-Source: https://en.wikipedia.org/wiki/Tibet_Autonomous_Region,NA,          NA
+Province,Region,Statistical_Division_Code,Province.Code
+Beijing,NA,      110000,110000
+Beijing,Dongcheng,110101,110000
+Beijing,Xicheng,110102,110000
+Beijing,Chaoyang,110105,110000
+Beijing,Fengtai,110106,110000
+Beijing,Shijingshan,110107,110000
+Beijing,Haidian,110108,110000
+Beijing,Mentougou,110109,110000
+Beijing,Fangshan,110111,110000
+Beijing,Tongzhou,110112,110000
+Beijing,Shunyi,110113,110000
+Beijing,Changping,110114,110000
+Beijing,Daxing,110115,110000
+Beijing,Huairou,110116,110000
+Beijing,Pinggu,110117,110000
+Beijing,Miyun,110118,110000
+Beijing,Yanqing,110119,110000
+Tianjin,NA,      120000,120000
+Tianjin,Heping,120101,120000
+Tianjin,East,120102,120000
+Tianjin,Hexi,120103,120000
+Tianjin,Nankai,120104,120000
+Tianjin,Hebei,120105,120000
+Tianjin,Hongqiao,120106,120000
+Tianjin,Dongli,120110,120000
+Tianjin,Xiqing,120111,120000
+Tianjin,Jinnan,120112,120000
+Tianjin,Beichen,120113,120000
+Tianjin,Wuqing,120114,120000
+Tianjin,Baodi,120115,120000
+Tianjin,Binhai,120116,120000
+Tianjin,Ninghe,120117,120000
+Tianjin,Jinghai,120118,120000
+Tianjin,Jizhou,120119,120000
+Hebei,NA,      130000,130000
+Hebei,Shijiazhuang,130100,130000
+Hebei,Tangshan,130200,130000
+Hebei,Qinhuangdao,130300,130000
+Hebei,Handan,130400,130000
+Hebei,Xingtai,130500,130000
+Hebei,Baoding,130600,130000
+Hebei,Zhangjiakou,130700,130000
+Hebei,Chengde,130800,130000
+Hebei,Cangzhou,130900,130000
+Hebei,Langfang,131000,130000
+Hebei,Hengshui,131100,130000
+Shanxi,NA,      140000,140000
+Shanxi,Taiyuan,140100,140000
+Shanxi,Datong,140200,140000
+Shanxi,Yangquan,140300,140000
+Shanxi,Changzhi,140400,140000
+Shanxi,Jincheng,140500,140000
+Shanxi,Shuozhou,140600,140000
+Shanxi,Jinzhong,140700,140000
+Shanxi,Yuncheng,140800,140000
+Shanxi,Xinzhou,140900,140000
+Shanxi,Linfen,141000,140000
+Shanxi,Luliang,141100,140000
+Inner Mongolia,NA,      150000,150000
+Inner Mongolia,Hohhot,150100,150000
+Inner Mongolia,Baotou,150200,150000
+Inner Mongolia,Wuhai,150300,150000
+Inner Mongolia,Chifeng,150400,150000
+Inner Mongolia,Tongliao,150500,150000
+Inner Mongolia,Ordos,150600,150000
+Inner Mongolia,Hulun Beir,150700,150000
+Inner Mongolia,Bayannur,150800,150000
+Inner Mongolia,Wulanchabu,150900,150000
+Inner Mongolia,Xing'an,152200,150000
+Inner Mongolia,Xilin Gol,152500,150000
+Inner Mongolia,Alxa,152900,150000
+Liaoning,NA,      210000,210000
+Liaoning,Shenyang,210100,210000
+Liaoning,Dalian,210200,210000
+Liaoning,Anshan,210300,210000
+Liaoning,Fushun,210400,210000
+Liaoning,Benxi,210500,210000
+Liaoning,Dandong,210600,210000
+Liaoning,Jinzhou,210700,210000
+Liaoning,Yingkou,210800,210000
+Liaoning,Fuxin,210900,210000
+Liaoning,Liaoyang,211000,210000
+Liaoning,Panjin,211100,210000
+Liaoning,Tieling,211200,210000
+Liaoning,Chaoyang,211300,210000
+Liaoning,Huludao,211400,210000
+Jilin,NA,      220000,220000
+Jilin,Changchun,220100,220000
+Jilin,Jilin,220200,220000
+Jilin,Siping,220300,220000
+Jilin,Liaoyuan,220400,220000
+Jilin,Tonghua,220500,220000
+Jilin,Baishan,220600,220000
+Jilin,Songyuan,220700,220000
+Jilin,Baicheng,220800,220000
+Jilin,Yanbian,222400,220000
+Heilongjiang,NA,      230000,230000
+Heilongjiang,Harbin,230100,230000
+Heilongjiang,Qiqihar,230200,230000
+Heilongjiang,Jixi,230300,230000
+Heilongjiang,Hegang,230400,230000
+Heilongjiang,Shuangyashan,230500,230000
+Heilongjiang,Daqing,230600,230000
+Heilongjiang,Yichun,230700,230000
+Heilongjiang,Jiamusi,230800,230000
+Heilongjiang,Qitaihe,230900,230000
+Heilongjiang,Mudanjiang,231000,230000
+Heilongjiang,Heihe,231100,230000
+Heilongjiang,Suihua,231200,230000
+Heilongjiang,Greater Khingan Mountains,232700,230000
+Shanghai,NA,      310000,310000
+Shanghai,Huangpu,310101,310000
+Shanghai,Xuhui,310104,310000
+Shanghai,Changning,310105,310000
+Shanghai,Jing'an,310106,310000
+Shanghai,Putuo,310107,310000
+Shanghai,Hongkou,310109,310000
+Shanghai,Yangpu,310110,310000
+Shanghai,Minhang,310112,310000
+Shanghai,Baoshan,310113,310000
+Shanghai,Jiading,310114,310000
+Shanghai,Pudong,310115,310000
+Shanghai,Jinshan,310116,310000
+Shanghai,Songjiang,310117,310000
+Shanghai,Qingpu,310118,310000
+Shanghai,Fengxian,310120,310000
+Shanghai,Chongming,310151,310000
+Jiangsu,NA,      320000,320000
+Jiangsu,Nanjing,320100,320000
+Jiangsu,Wuxi,320200,320000
+Jiangsu,Xuzhou,320300,320000
+Jiangsu,Changzhou,320400,320000
+Jiangsu,Suzhou,320500,320000
+Jiangsu,Nantong,320600,320000
+Jiangsu,Lianyungang,320700,320000
+Jiangsu,Huai'an,320800,320000
+Jiangsu,Yancheng,320900,320000
+Jiangsu,Yangzhou,321000,320000
+Jiangsu,Zhenjiang,321100,320000
+Jiangsu,Taizhou,321200,320000
+Jiangsu,Suqian,321300,320000
+Zhejiang,NA,      330000,330000
+Zhejiang,Hangzhou,330100,330000
+Zhejiang,Ningbo,330200,330000
+Zhejiang,Wenzhou,330300,330000
+Zhejiang,Jiaxing,330400,330000
+Zhejiang,Huzhou,330500,330000
+Zhejiang,Shaoxing,330600,330000
+Zhejiang,Jinhua,330700,330000
+Zhejiang,Quzhou,330800,330000
+Zhejiang,Zhoushan,330900,330000
+Zhejiang,Taizhou,331000,330000
+Zhejiang,Lishui,331100,330000
+Anhui,NA,      340000,340000
+Anhui,Hefei,340100,340000
+Anhui,Wuhu,340200,340000
+Anhui,Bengbu,340300,340000
+Anhui,Huainan,340400,340000
+Anhui,Ma'anshan,340500,340000
+Anhui,Huaibei,340600,340000
+Anhui,Tongling,340700,340000
+Anhui,Anqing,340800,340000
+Anhui,Huangshan,341000,340000
+Anhui,Chuzhou,341100,340000
+Anhui,Fuyang,341200,340000
+Anhui,Suzhou,341300,340000
+Anhui,Lu'an,341500,340000
+Anhui,Bozhou,341600,340000
+Anhui,Chizhou,341700,340000
+Anhui,Xuancheng,341800,340000
+Fujian,NA,      350000,350000
+Fujian,Fuzhou,350100,350000
+Fujian,Xiamen,350200,350000
+Fujian,Putian,350300,350000
+Fujian,Sanming,350400,350000
+Fujian,Quanzhou,350500,350000
+Fujian,Zhangzhou,350600,350000
+Fujian,Nanping,350700,350000
+Fujian,Longyan,350800,350000
+Fujian,Ningde,350900,350000
+Jiangxi,NA,      360000,360000
+Jiangxi,Nanchang,360100,360000
+Jiangxi,Jingdezhen,360200,360000
+Jiangxi,Pingxiang,360300,360000
+Jiangxi,Jiujiang,360400,360000
+Jiangxi,Xinyu,360500,360000
+Jiangxi,Yingtan,360600,360000
+Jiangxi,Ganzhou,360700,360000
+Jiangxi,Ji'an,360800,360000
+Jiangxi,Yichun,360900,360000
+Jiangxi,Fuzhou,361000,360000
+Jiangxi,Shangrao,361100,360000
+Shandong,NA,      370000,370000
+Shandong,Ji'nan,370100,370000
+Shandong,Qingdao,370200,370000
+Shandong,Zibo,370300,370000
+Shandong,Zaozhuang,370400,370000
+Shandong,Dongying,370500,370000
+Shandong,Yantai,370600,370000
+Shandong,Weifang,370700,370000
+Shandong,Jining,370800,370000
+Shandong,Tai'an,370900,370000
+Shandong,Weihai,371000,370000
+Shandong,Rizhao,371100,370000
+Shandong,Linyi,371300,370000
+Shandong,Dezhou,371400,370000
+Shandong,Liaocheng,371500,370000
+Shandong,Binzhou,371600,370000
+Shandong,Heze,371700,370000
+Henan,NA,      410000,410000
+Henan,Zhengzhou,410100,410000
+Henan,Kaifeng,410200,410000
+Henan,Luoyang,410300,410000
+Henan,Pingdingshan,410400,410000
+Henan,Anyang,410500,410000
+Henan,Hebi,410600,410000
+Henan,Xinxiang,410700,410000
+Henan,Jiaozuo,410800,410000
+Henan,Puyang,410900,410000
+Henan,Xuchang,411000,410000
+Henan,Luohe,411100,410000
+Henan,Sanmenxia,411200,410000
+Henan,Nanyang,411300,410000
+Henan,Shangqiu,411400,410000
+Henan,Xinyang,411500,410000
+Henan,Zhoukou,411600,410000
+Henan,Zhumadian,411700,410000
+Henan,Provincial-level administrative divisions,419000,410000
+Hubei,NA,      420000,420000
+Hubei,Wuhan,420100,420000
+Hubei,Huangshi,420200,420000
+Hubei,Shiyan,420300,420000
+Hubei,Yichang,420500,420000
+Hubei,Xiangyang,420600,420000
+Hubei,Ezhou,420700,420000
+Hubei,Jingmen,420800,420000
+Hubei,Xiaogan,420900,420000
+Hubei,Jingzhou,421000,420000
+Hubei,Huanggang,421100,420000
+Hubei,Xianning,421200,420000
+Hubei,Suizhou,421300,420000
+Hubei,Enshi,422800,420000
+Hubei,Provincial-level administrative divisions,429000,420000
+Hunan,NA,      430000,430000
+Hunan,Changsha,430100,430000
+Hunan,Zhuzhou,430200,430000
+Hunan,Xiangtan,430300,430000
+Hunan,Hengyang,430400,430000
+Hunan,Shaoyang,430500,430000
+Hunan,Yueyang,430600,430000
+Hunan,Changde,430700,430000
+Hunan,Zhangjiajie,430800,430000
+Hunan,Yiyang,430900,430000
+Hunan,Chenzhou,431000,430000
+Hunan,Yongzhou,431100,430000
+Hunan,Huaihua,431200,430000
+Hunan,Loudi,431300,430000
+Hunan,Xiangxi,433100,430000
+Guangdong,NA,      440000,440000
+Guangdong,Guangzhou,440100,440000
+Guangdong,Shaoguan,440200,440000
+Guangdong,Shenzhen,440300,440000
+Guangdong,Zhuhai,440400,440000
+Guangdong,Shan Tou,440500,440000
+Guangdong,Foshan,440600,440000
+Guangdong,Jiangmen,440700,440000
+Guangdong,Zhangjiang,440800,440000
+Guangdong,Maoming,440900,440000
+Guangdong,Zhaoqing,441200,440000
+Guangdong,Huizhou,441300,440000
+Guangdong,Meizhou,441400,440000
+Guangdong,Shanwei,441500,440000
+Guangdong,Heyuan,441600,440000
+Guangdong,Yangjiang,441700,440000
+Guangdong,Qingyuan,441800,440000
+Guangdong,Dongguan,441900,440000
+Guangdong,Zhongshan,442000,440000
+Guangdong,Chaozhou,445100,440000
+Guangdong,Jieyang,445200,440000
+Guangdong,Yunfu,445300,440000
+Guangxi,NA,      450000,450000
+Guangxi,Nanning,450100,450000
+Guangxi,Liuzhou,450200,450000
+Guangxi,Guilin,450300,450000
+Guangxi,Wuzhou,450400,450000
+Guangxi,Beihai,450500,450000
+Guangxi,Fangchenggang,450600,450000
+Guangxi,Qinzhou,450700,450000
+Guangxi,Guigang,450800,450000
+Guangxi,Yulin,450900,450000
+Guangxi,Baise,451000,450000
+Guangxi,Hezhou,451100,450000
+Guangxi,Hechi,451200,450000
+Guangxi,Laibin,451300,450000
+Guangxi,Chongzuo,451400,450000
+Hainan,NA,      460000,460000
+Hainan,Haikou,460100,460000
+Hainan,Sanya,460200,460000
+Hainan,Sansha,460300,460000
+Hainan,Danzhou,460400,460000
+Hainan,Provincial-level administrative divisions,469000,460000
+Hainan,Wuzhishan,469001,460000
+Hainan,Qionghai,469002,460000
+Hainan,Wenchang,469005,460000
+Hainan,Wanning,469006,460000
+Hainan,Dongfang,469007,460000
+Hainan,Ding'an,469021,460000
+Hainan,Tunchang,469022,460000
+Hainan,Chengmai,469023,460000
+Hainan,Lingao,469024,460000
+Hainan,Baisha Li,469025,460000
+Hainan,Changjiang Li,469026,460000
+Hainan,Ledong Li,469027,460000
+Hainan,Lingshui Li,469028,460000
+Hainan,Baoting,469029,460000
+Hainan,Qiongzhong,469030,460000
+Chongqing,NA,      500000,500000
+Chongqing,Wanzhou,500101,500000
+Chongqing,Fuling,500102,500000
+Chongqing,Yuzhong,500103,500000
+Chongqing,Dadukou,500104,500000
+Chongqing,Jiangbei,500105,500000
+Chongqing,Shapingba,500106,500000
+Chongqing,Jiulongpo,500107,500000
+Chongqing,South Bank,500108,500000
+Chongqing,Beibei,500109,500000
+Chongqing,Qijiang,500110,500000
+Chongqing,Dazu,500111,500000
+Chongqing,Yu Bei,500112,500000
+Chongqing,Banan,500113,500000
+Chongqing,Qianjiang,500114,500000
+Chongqing,Changshou,500115,500000
+Chongqing,Jiangjin,500116,500000
+Chongqing,Hechuan,500117,500000
+Chongqing,Yongchuan,500118,500000
+Chongqing,Nanchuan,500119,500000
+Chongqing,Bishan,500120,500000
+Chongqing,Tongliang,500151,500000
+Chongqing,Tongnan,500152,500000
+Chongqing,Rongchang,500153,500000
+Chongqing,Kaizhou,500154,500000
+Chongqing,Liangping,500155,500000
+Chongqing,Wulong,500156,500000
+Chongqing,County,500200,500000
+Chongqing,Chengkou,500229,500000
+Chongqing,Fengdu,500230,500000
+Chongqing,Dianjiang,500231,500000
+Chongqing,Zhong,500233,500000
+Chongqing,Yunyang,500235,500000
+Chongqing,Fengjie,500236,500000
+Chongqing,Wushan,500237,500000
+Chongqing,Wuxi,500238,500000
+Chongqing,Shizhu,500240,500000
+Chongqing,Xiushan,500241,500000
+Chongqing,Youyang,500242,500000
+Chongqing,Pengshui Miao,500243,500000
+Sichuan,NA,      510000,510000
+Sichuan,Chengdu,510100,510000
+Sichuan,Zigong,510300,510000
+Sichuan,Panzhihua,510400,510000
+Sichuan,Luzhou,510500,510000
+Sichuan,Deyang,510600,510000
+Sichuan,Mianyang,510700,510000
+Sichuan,Guangyuan,510800,510000
+Sichuan,Suining,510900,510000
+Sichuan,Neijiang,511000,510000
+Sichuan,Leshan,511100,510000
+Sichuan,Nanchong,511300,510000
+Sichuan,Meishan,511400,510000
+Sichuan,Yibin,511500,510000
+Sichuan,Guang'an,511600,510000
+Sichuan,Dazhou,511700,510000
+Sichuan,Ya'an,511800,510000
+Sichuan,Bazhong,511900,510000
+Sichuan,Ziyang,512000,510000
+Sichuan,Aba,513200,510000
+Sichuan,Ganzi,513300,510000
+Sichuan,Liangshan,513400,510000
+Guizhou,NA,      520000,520000
+Guizhou,Guiyang,520100,520000
+Guizhou,Liupanshui,520200,520000
+Guizhou,Zunyi,520300,520000
+Guizhou,Anshun,520400,520000
+Guizhou,Bijie,520500,520000
+Guizhou,Tongren,520600,520000
+Guizhou,Qianxinan Buyi Miao,522300,520000
+Guizhou,Qiandongnan,522600,520000
+Guizhou,Qiannan Buyi Miao,522700,520000
+Yunnan,NA,      530000,530000
+Yunnan,Kunming,530100,530000
+Yunnan,Qujing,530300,530000
+Yunnan,Yuxi,530400,530000
+Yunnan,Baoshan,530500,530000
+Yunnan,Zhaotong,530600,530000
+Yunnan,Lijiang,530700,530000
+Yunnan,Pu'er,530800,530000
+Yunnan,Lincang,530900,530000
+Yunnan,Chuxiong,532300,530000
+Yunnan,Honghe,532500,530000
+Yunnan,Wenshan,532600,530000
+Yunnan,Xishuangbanna,532800,530000
+Yunnan,Dali,532900,530000
+Yunnan,Dehong,533100,530000
+Yunnan,Nujiang Lisu,533300,530000
+Yunnan,Diqing,533400,530000
+Tibet,NA,      540000,540000
+Tibet,Lhasa,540100,540000
+Tibet,Shigatse,540200,540000
+Tibet,Qamdo,540300,540000
+Tibet,Nyingchi,540400,540000
+Tibet,Shannan,540500,540000
+Tibet,Nagqu,540600,540000
+Tibet,Ngari,542500,540000
+Shaanxi,NA,      610000,610000
+Shaanxi,Xi'an,610100,610000
+Shaanxi,Tongchuan,610200,610000
+Shaanxi,Baoji,610300,610000
+Shaanxi,Xianyang,610400,610000
+Shaanxi,Weinan,610500,610000
+Shaanxi,Yan'an,610600,610000
+Shaanxi,Hanzhong,610700,610000
+Shaanxi,Yulin,610800,610000
+Shaanxi,Ankang,610900,610000
+Shaanxi,Shangluo,611000,610000
+Gansu,NA,      620000,620000
+Gansu,Lan'Zhou,620100,620000
+Gansu,Jiayuguan,620200,620000
+Gansu,Jinchang,620300,620000
+Gansu,Baiyin,620400,620000
+Gansu,Tianshui,620500,620000
+Gansu,Wuwei,620600,620000
+Gansu,Zhangye,620700,620000
+Gansu,Pingliang,620800,620000
+Gansu,Jiuquan,620900,620000
+Gansu,Qingyang,621000,620000
+Gansu,Dingxi,621100,620000
+Gansu,Longnan,621200,620000
+Gansu,Linxia,622900,620000
+Gansu,Gannan,623000,620000
+Qinghai,NA,      630000,630000
+Qinghai,Xining,630100,630000
+Qinghai,Haidong,630200,630000
+Qinghai,Haibei,632200,630000
+Qinghai,Huangnan,632300,630000
+Qinghai,Hainan,632500,630000
+Qinghai,Golog,632600,630000
+Qinghai,Yushu,632700,630000
+Qinghai,Haixi,632800,630000
+Ningxia,NA,      640000,640000
+Ningxia,Yinchuan,640100,640000
+Ningxia,Yinchuan,640100,640000
+Ningxia,Shizuishan,640200,640000
+Ningxia,Wuzhong,640300,640000
+Ningxia,Guyuan,640400,640000
+Ningxia,Zhongwei,640500,640000
+Xinjiang,NA,      650000,650000
+Xinjiang,Urumqi,650100,650000
+Xinjiang,Karamay,650200,650000
+Xinjiang,Turpan,650400,650000
+Xinjiang,Hami,650500,650000
+Xinjiang,Changji,652300,650000
+Xinjiang,Bortala,652700,650000
+Xinjiang,Bayingolin,652800,650000
+Xinjiang,Aksu,652900,650000
+Xinjiang,Kizilsu Kirgiz,653000,650000
+Xinjiang,Kashgar,653100,650000
+Xinjiang,Hotan,653200,650000
+Xinjiang,Ili Kazakh,654000,650000
+Xinjiang,Tacheng,654200,650000
+Xinjiang,Altay,654300,650000
+Xinjiang,County-level administrative divisions directly under the,659000,650000
+Xinjiang,Shihezi,659001,650000
+Xinjiang,Aral,659002,650000
+Xinjiang,Tumusuk,659003,650000
+Xinjiang,Wujiaqu,659004,650000
+Xinjiang,Beitun,659005,650000
+Xinjiang,Tiemenguan,659006,650000
+Xinjiang,Shuanghe,659007,650000
+Xinjiang,Kokkhara,659008,650000
+Xinjiang,Kunyu,659009,650000
+Xinjiang,Huyanghe,659010,650000
+Xinjiang,Nova,659011,650000
+Source: http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/index.html,NA,          NA,NA
+Heilongjiang,Da Hinggan Ling,232700,230000
+Yunnan,Deqen,533400,530000
+Sichuan,Garze,513300,510000
+Tianjin,Hedong,120102,120000
+Inner Mongolia,Hinggan,152200,150000
+Henan,Jiyuan,419001,410000
+Xinjiang,Kashi,653100,650000
+Xinjiang,Kekedala,659008,650000
+Gansu,Lanzhou,620100,620000
+Hainan,Ledong,469027,460000
+Hainan,Lingshui,469028,460000
+Guizhou,Lupanshui,520200,520000
+Shanxi,Lüliang,141100,140000
+Fujian,Nan'an,500108,350000
+Chongqing,Nanning,450100,500000
+Inner Mongolia,Neimenggu,150000,150000
+Yunnan,Nujiang,533300,530000
+Chongqing,Pengshui,500243,500000
+Guizhou,Qiannan,522700,520000
+Guizhou,Qianxinan,522300,520000
+Guangdong,Shantou,440500,440000
+Hubei,Shennongjia,429021,420000
+Hubei,Tianmen,429006,420000
+Xinjiang,Tumxuk,659003,650000
+Inner Mongolia,Ulanqab,150900,150000
+Hubei,Xiantao,429004,420000
+Xinjiang,Xinxing,659011,650000
+Chongqing,Yubei,500112,500000
+Source: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,NA,          NA,NA
+Link: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,NA,          NA,NA
+Hubei,Qianjiang,429005,420000
+Source: https://en.wikipedia.org/wiki/List_of_administrative_divisions_of_Hubei,NA,          NA,NA
+Chongqing,Nan'an,500108,500000
+Source: https://www.wikidata.org/wiki/Q713491,NA,          NA,NA
+Tibet,Chamdo,540300,540000
+Source: https://en.wikipedia.org/wiki/Tibet_Autonomous_Region,NA,          NA,NA

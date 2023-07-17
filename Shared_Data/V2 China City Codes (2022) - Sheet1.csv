@@ -1,0 +1,492 @@
+Province Code,Province,Statistical_Division_Code,Region
+110000,Beijing,110100000000,City area
+110000,Beijing,110101000000,Dongcheng Area
+110000,Beijing,110102000000,Xicheng District
+110000,Beijing,110105000000,Chaoyang District
+110000,Beijing,110106000000,Fengtai District
+110000,Beijing,110107000000,Shijingshan District
+110000,Beijing,110108000000,Haidian District
+110000,Beijing,110109000000,Mentougou District
+110000,Beijing,110111000000,Fangshan District
+110000,Beijing,110112000000,Tongzhou District
+110000,Beijing,110113000000,Shunyi District
+110000,Beijing,110114000000,Changping District
+110000,Beijing,110115000000,Daxing District
+110000,Beijing,110116000000,Huairou District
+110000,Beijing,110117000000,Pinggu District
+110000,Beijing,110118000000,Miyun District
+110000,Beijing,110119000000,Yanqing District
+120000,Tianjin,120100000000,City area
+120000,Tianjin,120101000000,Heping District
+120000,Tianjin,120102000000,East District
+120000,Tianjin,120103000000,Hexi District
+120000,Tianjin,120104000000,Nankai District
+120000,Tianjin,120105000000,Hebei District
+120000,Tianjin,120106000000,Hongqiao District
+120000,Tianjin,120110000000,Dongli District
+120000,Tianjin,120111000000,Xiqing District
+120000,Tianjin,120112000000,Jinnan District
+120000,Tianjin,120113000000,Beichen District
+120000,Tianjin,120114000000,Wuqing District
+120000,Tianjin,120115000000,Baodi District
+120000,Tianjin,120116000000,Binhai New Area
+120000,Tianjin,120117000000,Ninghe District
+120000,Tianjin,120118000000,Jinghai District
+120000,Tianjin,120119000000,Jizhou District
+130000,Hebei Province,130100000000,Shijiazhuang City
+130000,Hebei Province,130200000000,Tangshan
+130000,Hebei Province,130300000000,Qinhuangdao
+130000,Hebei Province,130400000000,Handan
+130000,Hebei Province,130500000000,Xingtai city
+130000,Hebei Province,130600000000,Baoding
+130000,Hebei Province,130700000000,Zhangjiakou
+130000,Hebei Province,130800000000,Chengde
+130000,Hebei Province,130900000000,Cangzhou
+130000,Hebei Province,131000000000,Langfang City
+130000,Hebei Province,131100000000,Hengshui
+140000,Shanxi Province,140100000000,Taiyuan City
+140000,Shanxi Province,140200000000,Datong
+140000,Shanxi Province,140300000000,Yangquan City
+140000,Shanxi Province,140400000000,Changzhi City
+140000,Shanxi Province,140500000000,Jincheng City
+140000,Shanxi Province,140600000000,Shuozhou
+140000,Shanxi Province,140700000000,Jinzhong
+140000,Shanxi Province,140800000000,Yuncheng
+140000,Shanxi Province,140900000000,Xinzhou
+140000,Shanxi Province,141000000000,Linfen City
+140000,Shanxi Province,141100000000,Luliang City
+150000,Inner Mongolia Autonomous Region,150100000000,Hohhot
+150000,Inner Mongolia Autonomous Region,150200000000,Baotou
+150000,Inner Mongolia Autonomous Region,150300000000,Wuhai City
+150000,Inner Mongolia Autonomous Region,150400000000,Chifeng
+150000,Inner Mongolia Autonomous Region,150500000000,Tongliao
+150000,Inner Mongolia Autonomous Region,150600000000,Ordos City
+150000,Inner Mongolia Autonomous Region,150700000000,Hulunbeir
+150000,Inner Mongolia Autonomous Region,150800000000,Bayannur City
+150000,Inner Mongolia Autonomous Region,150900000000,Wulanchabu
+150000,Inner Mongolia Autonomous Region,152200000000,Xing'an League
+150000,Inner Mongolia Autonomous Region,152500000000,Xilin Gol League
+150000,Inner Mongolia Autonomous Region,152900000000,Alxa League
+210000,Liaoning Province,210100000000,Shenyang city
+210000,Liaoning Province,210200000000,Dalian
+210000,Liaoning Province,210300000000,Anshan City
+210000,Liaoning Province,210400000000,Fushun City
+210000,Liaoning Province,210500000000,Benxi
+210000,Liaoning Province,210600000000,Dandong
+210000,Liaoning Province,210700000000,Jinzhou City
+210000,Liaoning Province,210800000000,Yingkou
+210000,Liaoning Province,210900000000,Fuxin City
+210000,Liaoning Province,211000000000,Liaoyang City
+210000,Liaoning Province,211100000000,Panjin
+210000,Liaoning Province,211200000000,Tieling City
+210000,Liaoning Province,211300000000,Chaoyang City
+210000,Liaoning Province,211400000000,Huludao City
+220000,Jilin Province,220100000000,Changchun City
+220000,Jilin Province,220200000000,Jilin City
+220000,Jilin Province,220300000000,Siping City
+220000,Jilin Province,220400000000,Liaoyuan City
+220000,Jilin Province,220500000000,Tonghua City
+220000,Jilin Province,220600000000,Baishan City
+220000,Jilin Province,220700000000,Songyuan City
+220000,Jilin Province,220800000000,Baicheng
+220000,Jilin Province,222400000000,Yanbian Korean Autonomous Prefecture
+230000,Heilongjiang Province,230100000000,Harbin City
+230000,Heilongjiang Province,230200000000,Qiqihar City
+230000,Heilongjiang Province,230300000000,Jixi City
+230000,Heilongjiang Province,230400000000,Hegang City
+230000,Heilongjiang Province,230500000000,Shuangyashan City
+230000,Heilongjiang Province,230600000000,Daqing City
+230000,Heilongjiang Province,230700000000,Yichun
+230000,Heilongjiang Province,230800000000,Jiamusi City
+230000,Heilongjiang Province,230900000000,Qitaihe
+230000,Heilongjiang Province,231000000000,Mudanjiang City
+230000,Heilongjiang Province,231100000000,Heihe City
+230000,Heilongjiang Province,231200000000,Suihua City
+230000,Heilongjiang Province,232700000000,Greater Khingan Mountains
+310000,Shanghai,310100000000,City area
+310000,Shanghai,310101000000,Huangpu District
+310000,Shanghai,310104000000,Xuhui District
+310000,Shanghai,310105000000,Changning District
+310000,Shanghai,310106000000,Jing'an District
+310000,Shanghai,310107000000,Putuo District
+310000,Shanghai,310109000000,Hongkou District
+310000,Shanghai,310110000000,Yangpu District
+310000,Shanghai,310112000000,Minhang District
+310000,Shanghai,310113000000,Baoshan District
+310000,Shanghai,310114000000,Jiading District
+310000,Shanghai,310115000000,Pudong New Area
+310000,Shanghai,310116000000,Jinshan District
+310000,Shanghai,310117000000,Songjiang District
+310000,Shanghai,310118000000,Qingpu District
+310000,Shanghai,310120000000,Fengxian District
+310000,Shanghai,310151000000,Chongming District
+320000,Jiangsu Province,320100000000,Nanjing
+320000,Jiangsu Province,320200000000,Wuxi
+320000,Jiangsu Province,320300000000,Xuzhou
+320000,Jiangsu Province,320400000000,Changzhou City
+320000,Jiangsu Province,320500000000,Suzhou City
+320000,Jiangsu Province,320600000000,Nantong city
+320000,Jiangsu Province,320700000000,Lianyungang
+320000,Jiangsu Province,320800000000,Huaian city
+320000,Jiangsu Province,320900000000,Yancheng City
+320000,Jiangsu Province,321000000000,Yangzhou
+320000,Jiangsu Province,321100000000,Zhenjiang
+320000,Jiangsu Province,321200000000,Taizhou
+320000,Jiangsu Province,321300000000,Suqian
+330000,Zhejiang Province,330100000000,Hangzhou city
+330000,Zhejiang Province,330200000000,Ningbo
+330000,Zhejiang Province,330300000000,Wenzhou city
+330000,Zhejiang Province,330400000000,Jiaxing
+330000,Zhejiang Province,330500000000,Huzhou
+330000,Zhejiang Province,330600000000,Shaoxing
+330000,Zhejiang Province,330700000000,Jinhua City
+330000,Zhejiang Province,330800000000,Quzhou City
+330000,Zhejiang Province,330900000000,Zhoushan City
+330000,Zhejiang Province,331000000000,Taizhou
+330000,Zhejiang Province,331100000000,Lishui City
+340000,Anhui Province,340100000000,Hefei
+340000,Anhui Province,340200000000,Wuhu
+340000,Anhui Province,340300000000,Bengbu
+340000,Anhui Province,340400000000,Huainan City
+340000,Anhui Province,340500000000,Ma'anshan
+340000,Anhui Province,340600000000,Huaibei
+340000,Anhui Province,340700000000,Tongling
+340000,Anhui Province,340800000000,Anqing City
+340000,Anhui Province,341000000000,Huangshan City
+340000,Anhui Province,341100000000,Chuzhou
+340000,Anhui Province,341200000000,Fuyang City
+340000,Anhui Province,341300000000,Suzhou City
+340000,Anhui Province,341500000000,Lu'an City
+340000,Anhui Province,341600000000,Bozhou
+340000,Anhui Province,341700000000,Chizhou
+340000,Anhui Province,341800000000,Xuancheng
+350000,Fujian Province,350100000000,Fuzhou
+350000,Fujian Province,350200000000,Xiamen City
+350000,Fujian Province,350300000000,Putian City
+350000,Fujian Province,350400000000,Sanming City
+350000,Fujian Province,350500000000,Quanzhou
+350000,Fujian Province,350600000000,Zhangzhou
+350000,Fujian Province,350700000000,Nanping
+350000,Fujian Province,350800000000,Longyan City
+350000,Fujian Province,350900000000,Ningde
+360000,Jiangxi Province,360100000000,Nanchang
+360000,Jiangxi Province,360200000000,Jingdezhen
+360000,Jiangxi Province,360300000000,Pingxiang
+360000,Jiangxi Province,360400000000,Jiujiang City
+360000,Jiangxi Province,360500000000,Xinyu City
+360000,Jiangxi Province,360600000000,Yingtan City
+360000,Jiangxi Province,360700000000,Ganzhou City
+360000,Jiangxi Province,360800000000,Ji'an City
+360000,Jiangxi Province,360900000000,Yichun City
+360000,Jiangxi Province,361000000000,Fuzhou
+360000,Jiangxi Province,361100000000,Shangrao
+370000,Shandong Province,370100000000,Jinan City
+370000,Shandong Province,370200000000,Qingdao
+370000,Shandong Province,370300000000,Zibo
+370000,Shandong Province,370400000000,Zaozhuang
+370000,Shandong Province,370500000000,Dongying City
+370000,Shandong Province,370600000000,City of Yantai
+370000,Shandong Province,370700000000,Weifang
+370000,Shandong Province,370800000000,Jining
+370000,Shandong Province,370900000000,Tai'an City
+370000,Shandong Province,371000000000,Weihai
+370000,Shandong Province,371100000000,Rizhao City
+370000,Shandong Province,371300000000,Linyi City
+370000,Shandong Province,371400000000,Dezhou
+370000,Shandong Province,371500000000,Liaocheng
+370000,Shandong Province,371600000000,Binzhou
+370000,Shandong Province,371700000000,Heze City
+410000,Henan Province,410100000000,Zhengzhou City
+410000,Henan Province,410200000000,Kaifeng
+410000,Henan Province,410300000000,Luoyang City
+410000,Henan Province,410400000000,Pingdingshan City
+410000,Henan Province,410500000000,Anyang City
+410000,Henan Province,410600000000,Hebi
+410000,Henan Province,410700000000,Xinxiang
+410000,Henan Province,410800000000,Jiaozuo City
+410000,Henan Province,410900000000,Puyang City
+410000,Henan Province,411000000000,Xuchang
+410000,Henan Province,411100000000,Luohe City
+410000,Henan Province,411200000000,Sanmenxia
+410000,Henan Province,411300000000,Nanyang City
+410000,Henan Province,411400000000,Shangqiu
+410000,Henan Province,411500000000,Xinyang City
+410000,Henan Province,411600000000,Zhoukou City
+410000,Henan Province,411700000000,Zhumadian City
+410000,Henan Province,419000000000,Provincial and county-level administrative divisions
+420000,Hubei Province,420100000000,Wuhan
+420000,Hubei Province,420200000000,Huangshi City
+420000,Hubei Province,420300000000,Shiyan City
+420000,Hubei Province,420500000000,Yichang City
+420000,Hubei Province,420600000000,Xiangyang City
+420000,Hubei Province,420700000000,Ezhou
+420000,Hubei Province,420800000000,Jingmen
+420000,Hubei Province,420900000000,Xiaogan City
+420000,Hubei Province,421000000000,Jingzhou
+420000,Hubei Province,421100000000,Huanggang City
+420000,Hubei Province,421200000000,Xianning
+420000,Hubei Province,421300000000,Suizhou
+420000,Hubei Province,422800000000,Enshi Tujia and Miao Autonomous Prefecture
+420000,Hubei Province,429000000000,Provincial and county-level administrative divisions
+430000,Hunan Province,430100000000,Changsha City
+430000,Hunan Province,430200000000,Zhuzhou City
+430000,Hunan Province,430300000000,Xiangtan City
+430000,Hunan Province,430400000000,Hengyang
+430000,Hunan Province,430500000000,Shaoyang
+430000,Hunan Province,430600000000,Yueyang City
+430000,Hunan Province,430700000000,Changde City
+430000,Hunan Province,430800000000,Zhangjiajie City
+430000,Hunan Province,430900000000,Yiyang City
+430000,Hunan Province,431000000000,Chenzhou
+430000,Hunan Province,431100000000,Yongzhou
+430000,Hunan Province,431200000000,Huaihua City
+430000,Hunan Province,431300000000,Loudi
+430000,Hunan Province,433100000000,Xiangxi Tujia and Miao Autonomous Prefecture
+440000,Guangdong Province,440100000000,Guangzhou City
+440000,Guangdong Province,440200000000,Shaoguan City
+440000,Guangdong Province,440300000000,Shenzhen
+440000,Guangdong Province,440400000000,Zhuhai city
+440000,Guangdong Province,440500000000,Shan Tou
+440000,Guangdong Province,440600000000,Foshan City
+440000,Guangdong Province,440700000000,Jiangmen
+440000,Guangdong Province,440800000000,Zhangjiang City
+440000,Guangdong Province,440900000000,Maoming
+440000,Guangdong Province,441200000000,Zhaoqing
+440000,Guangdong Province,441300000000,Huizhou
+440000,Guangdong Province,441400000000,Meizhou
+440000,Guangdong Province,441500000000,Shanwei City
+440000,Guangdong Province,441600000000,Heyuan City
+440000,Guangdong Province,441700000000,Yangjiang
+440000,Guangdong Province,441800000000,Qingyuan
+440000,Guangdong Province,441900000000,Dongguan city
+440000,Guangdong Province,442000000000,Zhongshan City
+440000,Guangdong Province,445100000000,Chaozhou
+440000,Guangdong Province,445200000000,Jieyang
+440000,Guangdong Province,445300000000,Yunfu City
+450000,Guangxi Zhuang Autonomous Region,450100000000,NanNing City
+450000,Guangxi Zhuang Autonomous Region,450200000000,Liuzhou
+450000,Guangxi Zhuang Autonomous Region,450300000000,Guilin
+450000,Guangxi Zhuang Autonomous Region,450400000000,Wuzhou
+450000,Guangxi Zhuang Autonomous Region,450500000000,Beihai
+450000,Guangxi Zhuang Autonomous Region,450600000000,Fangchenggang
+450000,Guangxi Zhuang Autonomous Region,450700000000,Qinzhou
+450000,Guangxi Zhuang Autonomous Region,450800000000,Guigang
+450000,Guangxi Zhuang Autonomous Region,450900000000,Yulin City
+450000,Guangxi Zhuang Autonomous Region,451000000000,Baise
+450000,Guangxi Zhuang Autonomous Region,451100000000,Hezhou
+450000,Guangxi Zhuang Autonomous Region,451200000000,Hechi City
+450000,Guangxi Zhuang Autonomous Region,451300000000,Laibin City
+450000,Guangxi Zhuang Autonomous Region,451400000000,Chongzuo
+460000,Hainan,460100000000,Haikou
+460000,Hainan,460200000000,Sanya
+460000,Hainan,460300000000,Sansha
+460000,Hainan,460400000000,Danzhou
+460000,Hainan,469000000000,Provincial and county-level administrative divisions
+460000,Hainan,469001000000,Wuzhishan City
+460000,Hainan,469002000000,Qionghai City
+460000,Hainan,469005000000,Wenchang City
+460000,Hainan,469006000000,Wanning
+460000,Hainan,469007000000,Dongfang City
+460000,Hainan,469021000000,Ding'an County
+460000,Hainan,469022000000,Tunchang County
+460000,Hainan,469023000000,Chengmai County
+460000,Hainan,469024000000,Lingao County
+460000,Hainan,469025000000,Baisha Li Autonomous County
+460000,Hainan,469026000000,Changjiang Li Autonomous County
+460000,Hainan,469027000000,Ledong Li Autonomous County
+460000,Hainan,469028000000,Lingshui Li Autonomous County
+460000,Hainan,469029000000,Baoting Li and Miao Autonomous County
+460000,Hainan,469030000000,Qiongzhong Li and Miao Autonomous County
+500000,Chongqing,500100000000,City area
+500000,Chongqing,500101000000,Wanzhou District
+500000,Chongqing,500102000000,Fuling District
+500000,Chongqing,500103000000,Yuzhong District
+500000,Chongqing,500104000000,Dadukou District
+500000,Chongqing,500105000000,Jiangbei District
+500000,Chongqing,500106000000,Shapingba District
+500000,Chongqing,500107000000,Jiulongpo District
+500000,Chongqing,500108000000,South Bank area
+500000,Chongqing,500109000000,Beibei District
+500000,Chongqing,500110000000,Qijiang District
+500000,Chongqing,500111000000,Dazu District
+500000,Chongqing,500112000000,Yu Bei District
+500000,Chongqing,500113000000,Banan District
+500000,Chongqing,500114000000,Qianjiang District
+500000,Chongqing,500115000000,Changshou District
+500000,Chongqing,500116000000,Jiangjin District
+500000,Chongqing,500117000000,Hechuan District
+500000,Chongqing,500118000000,Yongchuan District
+500000,Chongqing,500119000000,Nanchuan District
+500000,Chongqing,500120000000,Bishan District
+500000,Chongqing,500151000000,Tongliang District
+500000,Chongqing,500152000000,Tongnan District
+500000,Chongqing,500153000000,Rongchang District
+500000,Chongqing,500154000000,Kaizhou District
+500000,Chongqing,500155000000,Liangping District
+500000,Chongqing,500156000000,Wulong District
+500000,Chongqing,500200000000,County
+500000,Chongqing,500229000000,Chengkou County
+500000,Chongqing,500230000000,Fengdu County
+500000,Chongqing,500231000000,Dianjiang County
+500000,Chongqing,500233000000,Zhong County
+500000,Chongqing,500235000000,Yunyang County
+500000,Chongqing,500236000000,Fengjie County
+500000,Chongqing,500237000000,Wushan County
+500000,Chongqing,500238000000,Wuxi County
+500000,Chongqing,500240000000,Shizhu Tujia Autonomous County
+500000,Chongqing,500241000000,Xiushan Tujia and Miao Autonomous County
+500000,Chongqing,500242000000,Youyang Tujia and Miao Autonomous County
+500000,Chongqing,500243000000,Pengshui Miao and Tujia Autonomous County
+510000,Sichuan Province,510100000000,Chengdu
+510000,Sichuan Province,510300000000,Zigong City
+510000,Sichuan Province,510400000000,Panzhihua
+510000,Sichuan Province,510500000000,Luzhou
+510000,Sichuan Province,510600000000,Deyang City
+510000,Sichuan Province,510700000000,Mianyang City
+510000,Sichuan Province,510800000000,Guangyuan City
+510000,Sichuan Province,510900000000,Suining City
+510000,Sichuan Province,511000000000,Neijiang City
+510000,Sichuan Province,511100000000,Leshan
+510000,Sichuan Province,511300000000,Nanchong
+510000,Sichuan Province,511400000000,Meishan City
+510000,Sichuan Province,511500000000,Yibin
+510000,Sichuan Province,511600000000,Guang'an
+510000,Sichuan Province,511700000000,Dazhou
+510000,Sichuan Province,511800000000,Ya'an city
+510000,Sichuan Province,511900000000,Bazhong City
+510000,Sichuan Province,512000000000,Ziyang City
+510000,Sichuan Province,513200000000,Aba Tibetan and Qiang Autonomous Prefecture
+510000,Sichuan Province,513300000000,Ganzi Tibetan Autonomous Prefecture
+510000,Sichuan Province,513400000000,Liangshan Yi Autonomous Prefecture
+520000,Guizhou Province,520100000000,Guiyang City
+520000,Guizhou Province,520200000000,Liupanshui
+520000,Guizhou Province,520300000000,Zunyi City
+520000,Guizhou Province,520400000000,Anshun City
+520000,Guizhou Province,520500000000,Bijie City
+520000,Guizhou Province,520600000000,Tongren City
+520000,Guizhou Province,522300000000,Qianxinan Buyi and Miao Autonomous Prefecture
+520000,Guizhou Province,522600000000,Qiandongnan Miao and Dong Autonomous Prefecture
+520000,Guizhou Province,522700000000,Qiannan Buyi and Miao Autonomous Prefecture
+530000,Yunnan Province,530100000000,Kunming
+530000,Yunnan Province,530300000000,Qujing City
+530000,Yunnan Province,530400000000,Yuxi City
+530000,Yunnan Province,530500000000,Baoshan
+530000,Yunnan Province,530600000000,Zhaotong
+530000,Yunnan Province,530700000000,Lijiang
+530000,Yunnan Province,530800000000,Pu'er City
+530000,Yunnan Province,530900000000,Lincang
+530000,Yunnan Province,532300000000,Chuxiong Yi Autonomous Prefecture
+530000,Yunnan Province,532500000000,Honghe Hani and Yi Autonomous Prefecture
+530000,Yunnan Province,532600000000,Wenshan Zhuang and Miao Autonomous Prefecture
+530000,Yunnan Province,532800000000,Xishuangbanna Dai Autonomous Prefecture
+530000,Yunnan Province,532900000000,Dali Bai Autonomous Prefecture
+530000,Yunnan Province,533100000000,Dehong Dai and Jingpo Autonomous Prefecture
+530000,Yunnan Province,533300000000,Nujiang Lisu Autonomous Prefecture
+530000,Yunnan Province,533400000000,Diqing Tibetan Autonomous Prefecture
+540000,Tibet Autonomous Region,540100000000,Lhasa
+540000,Tibet Autonomous Region,540200000000,Shigatse
+540000,Tibet Autonomous Region,540300000000,Qamdo
+540000,Tibet Autonomous Region,540400000000,Nyingchi
+540000,Tibet Autonomous Region,540500000000,Shannan City
+540000,Tibet Autonomous Region,540600000000,Nagqu
+540000,Tibet Autonomous Region,542500000000,Ngari area
+610000,Shaanxi Province,610100000000,Xi'an
+610000,Shaanxi Province,610200000000,Tongchuan City
+610000,Shaanxi Province,610300000000,Baoji
+610000,Shaanxi Province,610400000000,Xianyang
+610000,Shaanxi Province,610500000000,Weinan City
+610000,Shaanxi Province,610600000000,Yan'an
+610000,Shaanxi Province,610700000000,Hanzhong
+610000,Shaanxi Province,610800000000,Yulin
+610000,Shaanxi Province,610900000000,Ankang
+610000,Shaanxi Province,611000000000,Shangluo
+620000,Gansu province,620100000000,Lan'Zhou City
+620000,Gansu province,620200000000,Jiayuguan
+620000,Gansu province,620300000000,Jinchang City
+620000,Gansu province,620400000000,Baiyin City
+620000,Gansu province,620500000000,Tianshui City
+620000,Gansu province,620600000000,Wuwei City
+620000,Gansu province,620700000000,Zhangye City
+620000,Gansu province,620800000000,Pingliang City
+620000,Gansu province,620900000000,Jiuquan City
+620000,Gansu province,621000000000,Qingyang City
+620000,Gansu province,621100000000,Dingxi
+620000,Gansu province,621200000000,Longnan City
+620000,Gansu province,622900000000,Linxia Hui Autonomous Prefecture
+620000,Gansu province,623000000000,Gannan Tibetan Autonomous Prefecture
+630000,Qinghai Province,630100000000,Xining
+630000,Qinghai Province,630200000000,Haidong City
+630000,Qinghai Province,632200000000,Haibei Tibetan Autonomous Prefecture
+630000,Qinghai Province,632300000000,Huangnan Tibetan Autonomous Prefecture
+630000,Qinghai Province,632500000000,Hainan Tibetan Autonomous Prefecture
+630000,Qinghai Province,632600000000,Golog Tibetan Autonomous Prefecture
+630000,Qinghai Province,632700000000,Yushu Tibetan Autonomous Prefecture
+630000,Qinghai Province,632800000000,Haixi Mongolian and Tibetan Autonomous Prefecture
+640000,Ningxia Hui Autonomous Region,640100000000,Yinchuan
+640000,Ningxia Hui Autonomous Region,640200000000,Shizuishan City
+640000,Ningxia Hui Autonomous Region,640300000000,Wuzhong City
+640000,Ningxia Hui Autonomous Region,640400000000,Guyuan City
+640000,Ningxia Hui Autonomous Region,640500000000,Zhongwei City
+650000,Xinjiang Uygur Autonomous Region,650100000000,Urumqi
+650000,Xinjiang Uygur Autonomous Region,650200000000,Karamay
+650000,Xinjiang Uygur Autonomous Region,650400000000,Turpan
+650000,Xinjiang Uygur Autonomous Region,650500000000,Hami City
+650000,Xinjiang Uygur Autonomous Region,652300000000,Changji Hui Autonomous Prefecture
+650000,Xinjiang Uygur Autonomous Region,652700000000,Bortala Mongolian Autonomous Prefecture
+650000,Xinjiang Uygur Autonomous Region,652800000000,Bayingolin Mongolian Autonomous Prefecture
+650000,Xinjiang Uygur Autonomous Region,652900000000,Aksu area
+650000,Xinjiang Uygur Autonomous Region,653000000000,Kizilsu Kirgiz Autonomous Prefecture
+650000,Xinjiang Uygur Autonomous Region,653100000000,Kashgar area
+650000,Xinjiang Uygur Autonomous Region,653200000000,Hotan area
+650000,Xinjiang Uygur Autonomous Region,654000000000,Ili Kazakh Autonomous Prefecture
+650000,Xinjiang Uygur Autonomous Region,654200000000,Tacheng area
+650000,Xinjiang Uygur Autonomous Region,654300000000,Altay region
+650000,Xinjiang Uygur Autonomous Region,659000000000,County-level administrative divisions directly under the autonomous region
+650000,Xinjiang Uygur Autonomous Region,659001000000,Shihezi City
+650000,Xinjiang Uygur Autonomous Region,659002000000,Aral
+650000,Xinjiang Uygur Autonomous Region,659003000000,Tumusuk
+650000,Xinjiang Uygur Autonomous Region,659004000000,Wujiaqu
+650000,Xinjiang Uygur Autonomous Region,659005000000,Beitun City
+650000,Xinjiang Uygur Autonomous Region,659006000000,Tiemenguan City
+650000,Xinjiang Uygur Autonomous Region,659007000000,Shuanghe City
+650000,Xinjiang Uygur Autonomous Region,659008000000,Kokkhara
+650000,Xinjiang Uygur Autonomous Region,659009000000,Kunyu City
+650000,Xinjiang Uygur Autonomous Region,659010000000,Huyanghe City
+650000,Xinjiang Uygur Autonomous Region,659011000000,Nova city
+,Source: http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/index.html,,
+230000,Heilongjiang Province,232700000000,Da Hinggan Ling
+530000,Yunnan Province,533400000000,Deqen
+510000,Sichuan Province,513300000000,Garze
+120000,Tianjin Province,120102000000,Hedong
+150000,Inner Mongolia Autonomous Region,152200000000,Hinggan
+410000,Henan Province,419001000000,Jiyuan
+650000,Xinjiang Uygur Autonomous Region,653100000000,Kashi
+650000,Xinjiang Uygur Autonomous Region,659008000000,Kekedala
+620000,Gansu Province,620100000000,Lanzhou
+460000,Hainan Province,469027000000,Ledong
+460000,Hainan Province,469028000000,Lingshui
+520000,Guizhou Province,520200000000,Lupanshui
+140000,Shanxi Province,141100000000,Lüliang
+350000,Fujian Province,500108000000,Nan'an
+500000,Chongqing Province,450100000000,Nanning
+150000,Inner Mongolia Autonomous Region,150000000000,Neimenggu
+530000,Yunnan Province,533300000000,Nujiang
+500000,Chongqing Province,500243000000,Pengshui
+520000,Guizhou Province,522700000000,Qiannan
+520000,Guizhou Province,522300000000,Qianxinan
+440000,Guangdong Province,440500000000,Shantou
+420000,Hubei Province,429021000000,Shennongjia
+420000,Hubei Province,429006000000,Tianmen
+650000,Xinjiang Uygur Autonomous Region,659003000000,Tumxuk
+150000,Inner Mongolia Autonomous Region,150900000000,Ulanqab
+420000,Hubei Province,429004000000,Xiantao
+650000,Xinjiang Uygur Autonomous Region,659011000000,Xinxing
+500000,Chongqing Province,500112000000,Yubei
+,Source: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,,
+,Link: 中华人民共和国县以上行政区划代码 (in Simplified Chinese). Ministry of Civil Affairs.,,
+420000,Hubei Province,429005000000,Qianjiang city
+,Source: https://en.wikipedia.org/wiki/List_of_administrative_divisions_of_Hubei,,
+500000,Chongqing Province,500108000000,Nan'an
+,Source: https://www.wikidata.org/wiki/Q713491,,
+540000,Tibet Autonomous Region,540300000000,Chamdo
+,Source: https://en.wikipedia.org/wiki/Tibet_Autonomous_Region,,

@@ -170,8 +170,11 @@ efs_2022 |> write_excel_csv(file = "data/efs_2022.xlsx")
 ```{r}
 #| new-city-codes
 
-prc_place_names <- read_excel("Shared_Data/Copy China City Codes (2022).xlsx", 
-                              na = c("Na", "City area", "")) 
+# prc_place_names <- read_excel("Shared_Data/Copy China City Codes (2022).xlsx", 
+#                               na = c("Na", "City area", "")) 
+
+prc_place_names <- read.csv("Shared_Data/V3 China City Codes (2022) - Sheet1.csv", na.strings = c("Na", "City area", ""))
+
 #Assumes 'City area' mean code for entire city
 
 prc_place_names$Statistical_Division_Code <- format(
@@ -190,7 +193,9 @@ for_cleaned <- prc_place_names |>
           " (?i)hui",
           " (?i)zhuang"),
         collapse = "|"))) |>
-  select(Province, Region, Statistical_Division_Code)
+  select(Province, Region, Statistical_Division_Code, Province.Code)
+
+test <- for_cleaned |> filter(is.na(Region))
 
 #Removing superfluous word from Region
 for_cleaned$Region <- str_remove_all(for_cleaned$Region,
@@ -346,13 +351,15 @@ pivot_estate_property <- merge(pivot_property, pivot_estate, by = c("Region", "P
 #| test graphs
 
 #Test graph with usable data
-province_only_property <- pivot_property |> filter(Province == Subnational)
+province_only_property <- pivot_property 
+##|> filter(Province == Subnational)
 
 ggplot(province_only_property, aes(year, pct)) +
   geom_line() +
   facet_wrap(facets = vars(Province))
 
-estate_only_property <- pivot_estate |> filter(Province == Subnational)
+estate_only_property <- pivot_estate 
+##|> filter(Province == Subnational)
 
 ggplot(estate_only_property, aes(year, pct)) +
   geom_line() +
