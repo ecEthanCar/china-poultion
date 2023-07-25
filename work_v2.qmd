@@ -1,4 +1,5 @@
 ```{r}
+#| updated-economic-indicators
 
 # Set the directory path where the files are located
 folder_path_6 <- "city-level-take-two"
@@ -44,6 +45,7 @@ data_6 <- bind_rows(data_list_6) |>
 ```
 
 ```{r}
+#| modifying-updated-economic-indicators
 
 data_6$Region <- gsub(" Dist", "", data_6$Region)
 data_6$Province <- gsub("Neimenggu", "Inner Mongolia", data_6$Province)
@@ -103,6 +105,7 @@ good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code
 ```
 
 ```{r}
+#| gdp-redone
 
 gdp <- read_csv("Shared_Data/copy2-city-level-gdp - My Series.csv")
 
@@ -127,6 +130,7 @@ gdp_2 <- gdp |>
 
 ```
 ```{r}
+#| pivot-gdp-by-year
 
 pivot_gdp <- gdp_2 |>
   pivot_longer(
@@ -152,7 +156,10 @@ bigger |> write_csv(file = "data/in_progress_estate_property_debt(2016-2022).csv
 #| Gdp-estate-property-with-economic-indicators
 
 ##IMPORTANT##
-bigger_2 <- merge(pivot_gdp, bigger, by = c("Region", "Province", "year"))
+bigger_2 <- merge(pivot_gdp, bigger, by = c("Region", "Province", "year")) |>
+  select(!pct)
+
+# bigger_2$`GDP: Industry` <- gsub("SI", "Secondary Industry", bigger_2$`GDP: Industry`)
 
 ```
 
@@ -257,5 +264,28 @@ shrinking_map_wid <- merge(shrinking_map, for_cleaned, by = c("Region", "Provinc
 #   group_by(year)
 # 
 # data_6$Region <- gsub("Dist", "", data_6$Region)
+
+```
+
+```{r}
+#| local-government-funds-total-tidying
+
+province_cleaned <- for_cleaned |>
+  distinct(Province, Province.Code) |>
+  na.omit()
+
+jiangsu_funds <- read_csv("Shared_Data/Jiangsu Revenue of Local Government Funds Total - China_ Jiangsu_ Revenue of Loca.csv") |>
+  pivot_longer(
+    cols = c(`2006`:`2022`),
+    names_to = "year",
+  ) |>
+  separate(Name, into = paste0("col", 1:4), sep = ":", extra = "merge") |>
+  mutate_at(vars(c(col1, col2, col3, col4)), trimws) |>
+  rename(Province = col2, Country = col1, Type = col3, Amount = col4)
+
+provcodes_jiangsu_funds <- merge(jiangsu_funds, province_cleaned, by = c("Province"))
+
+province_cleaned |> write_csv(file = "data/PROVONLY_cleaned_codes.csv")
+provcodes_jiangsu_funds |> write_csv(file = "data/jiangsu_funds(2006-2022).csv")
 
 ```
