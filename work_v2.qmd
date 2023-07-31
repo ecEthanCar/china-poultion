@@ -1,8 +1,10 @@
 ```{r}
 #| updated-economic-indicators
 
+### IGNORE ###
+
 # Set the directory path where the files are located
-folder_path_6 <- "city-level-take-two"
+folder_path_6 <- "city-level-take-two (1)"
 
 # List all the files in the folder
 file_list_6 <- list.files(folder_path_6)
@@ -38,6 +40,8 @@ data_6 <- bind_rows(data_list_6) |>
   mutate(Region = ifelse(Region == Province, NA, Region)) |>
   group_by(year)
 
+data_6 |> write_csv("data/data_6.csv")
+
 # 
 # providence_only |> write_csv(file = "data/E_I(2016-2022).csv")
 # providence_only |> write_excel_csv(file = "data/E_I(2016-2022).xlsx")
@@ -47,13 +51,15 @@ data_6 <- bind_rows(data_list_6) |>
 ```{r}
 #| modifying-updated-economic-indicators
 
+data_6 <- read_csv("Shared_Data/Untitled spreadsheet - data_6.csv")
+
 data_6$Region <- gsub(" Dist", "", data_6$Region)
 data_6$Province <- gsub("Neimenggu", "Inner Mongolia", data_6$Province)
 data_6$Region <- gsub("\\bBaisha\\b", "Baisha Li", data_6$Region)
 data_6$Region <- gsub("tongling", "Tongling", data_6$Region)
 data_6$Region <- gsub("Bose", "Baise", data_6$Region)
 data_6$Region <- gsub("Changdu", "Chengdu", data_6$Region)
-data_6$Region <- gsub("Changjiang", "Changjiang Li", data_6$Region)
+data_6$Region <- gsub("\\bChangjiang\\b", "Changjiang Li", data_6$Region)
 data_6$Region <- gsub("Hulun Buir", "Hulun Beir", data_6$Region)
 data_6$Region <- gsub("Ili Kazak", "Ili Kazakh", data_6$Region)
 data_6$Region <- gsub("Kaixian", "Kaizhou", data_6$Region)
@@ -62,10 +68,24 @@ data_6$Region <- gsub("Zhanjiang", "Zhangjiang", data_6$Region)
 data_6$Region <- gsub("Xigaze", "Shigatse", data_6$Region)
 data_6$Region <- gsub("ürümqi", "Urumqi", data_6$Region)
 data_6$Region <- gsub("Lvliang", "Lüliang", data_6$Region)
-
 data_6$Region <- gsub("Dist", "", data_6$Region)
+data_6$Region <- ifelse(
+  data_6$Region == "Chengdu" & data_6$Province == "Tibet", 
+  "Chamdo", 
+  data_6$Region
+)
+data_6$Region <- gsub("Ili Kazakhhhh", "Ili Kazak", data_6$Region)
+data_6$Region <- gsub("Baisha Li Li Li Li Li", "Baisha Li", data_6$Region)
+data_6$Region <- gsub("Changjiang Li Li Li Li Li", "Changjiang Li", data_6$Region)
+data_6$Region <- gsub("白杨市", "Baiyang", data_6$Region)
+data_6$Region <- gsub("WULONG", "Wulong", data_6$Region)
+data_6$Region <- gsub("Neimenggu\\(Inner Mongolia\\)", "Inner Mongolia", data_6$Region)
+
+data_6$Region <- ifelse(data_6$Region == data_6$Province, NA, data_6$Region)
 
 encoded_data_6 <- merge(data_6, for_cleaned, by = c("Region", "Province"), all.x = TRUE)
+
+# encoded_data_6 |> distinct(Province)
 
 na_encoded_data_6 <- encoded_data_6 |> filter(is.na(Statistical_Division_Code)) |>
   distinct(Region, Province)
@@ -147,17 +167,27 @@ pivot_gdp <- gdp_2 |>
 ```{r}
 
 # Remember: encoded_data_6 is a incomplete data set
-bigger <- merge(encoded_data_6, pivot_estate_property, by = c("Region", "Province", "year"))
-bigger |> write_csv(file = "data/in_progress_estate_property_debt(2016-2022).csv")
+pivot_estate_property_n <- pivot_estate_property |>
+  mutate(Region = ifelse(Region == Province, NA, Region))
+
+bigger <- merge(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"))
+bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
+
+# pivot_estate_property |> distinct(Province)
 
 ```
 
 ```{r}
 #| Gdp-estate-property-with-economic-indicators
 
+pivot_gdp_n <- pivot_gdp |>
+  mutate(Region = ifelse(Region == Province, NA, Region))
+
 ##IMPORTANT##
-bigger_2 <- merge(pivot_gdp, bigger, by = c("Region", "Province", "year")) |>
+bigger_2 <- merge(pivot_gdp_n, bigger, by = c("Region", "Province", "year")) |>
   select(!pct)
+
+bigger_2 |> write_csv(file = "data/estate_property_debt_gdp(2016-2022).csv")
 
 # bigger_2$`GDP: Industry` <- gsub("SI", "Secondary Industry", bigger_2$`GDP: Industry`)
 
