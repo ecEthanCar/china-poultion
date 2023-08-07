@@ -1,0 +1,57 @@
+---
+title: "About"
+format: html
+editor: visual
+---
+
+```{r}
+#| install-packages
+
+library(readr)
+library(dplyr)
+library(magrittr)
+library(hchinamap)
+
+```
+
+```{r}
+
+dir <- tempdir()
+download.file('https://czxb.github.io/br/chinadf.rda', file.path(dir, 'chinadf.rda'))
+load(file.path(dir, 'chinadf.rda'), verbose = TRUE)
+
+```
+
+```{r}
+
+provs <- read_csv("data/PROVONLY_cleaned_codes.csv")
+big <- bigger_2 |>
+  filter(is.na(Region))
+
+china <- chinadf %>% 
+  dplyr::filter(region == "China")
+hchinamap(name = provs$Province, value = jiang$value,
+           width = "100%", height = "400px",
+           title = "Map of China", region = "China")
+
+### Goal for next time: find the latitude and longitude for every county/province in for_cleaned
+
+```
+
+```{r}
+library(haven)
+beijing_parking_lots_2014 <- read_dta("Shared_Data/beijing-parking-lots-2014.dta")
+View(beijing_parking_lots_2014)
+```
+
+```{r}
+
+library(leaflet)
+
+map <- leaflet() |>
+  addTiles() |>
+  addMarkers(data = park)
+
+map
+
+```
