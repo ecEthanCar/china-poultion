@@ -11,6 +11,9 @@ library(readr)
 library(dplyr)
 library(magrittr)
 library(hchinamap)
+library(leaflet)
+library(leaflet.extras)
+library(haven)
 
 ```
 
@@ -25,7 +28,7 @@ load(file.path(dir, 'chinadf.rda'), verbose = TRUE)
 ```{r}
 
 provs <- read_csv("data/PROVONLY_cleaned_codes.csv")
-big <- bigger_2 |>
+big <- bigger_3 |>
   filter(is.na(Region))
 
 china <- chinadf %>% 
@@ -39,19 +42,43 @@ hchinamap(name = provs$Province, value = jiang$value,
 ```
 
 ```{r}
-library(haven)
+
 beijing_parking_lots_2014 <- read_dta("Shared_Data/beijing-parking-lots-2014.dta")
 View(beijing_parking_lots_2014)
+
 ```
 
 ```{r}
-
-library(leaflet)
+#| basic-map-all-lats-longs-very-laggy
 
 map <- leaflet() |>
   addTiles() |>
-  addMarkers(data = park)
+  addMarkers(
+    data = bigger_3,
+    lng = ~Longitude,
+    lat = ~Latitude,
+    popup = ~paste(Province, " ,", Region)  # Popup content for each marker
+  )
 
 map
+
+```
+
+```{r}
+#| heat-map-test
+
+prime_bigger_16 <- bigger_3 |> filter(year == 2016) |>
+  filter(`GDP: Industry` == "Primary Industry")
+
+map_2 <- leaflet() |> 
+  addTiles() |>
+  addHeatmap(
+    data = prime_bigger_16,
+    lng = ~Longitude,
+    lat = ~Latitude,
+    intensity = ~`Debt Ratio(%)`
+  )
+
+map_2
 
 ```

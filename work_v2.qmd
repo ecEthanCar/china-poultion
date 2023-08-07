@@ -194,6 +194,64 @@ bigger_2 |> write_csv(file = "data/estate_property_debt_gdp(2016-2022).csv")
 ```
 
 ```{r}
+
+lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location.csv") |>
+  select(!c(Region, Region_ch, `District/County_ch`, Province_ch)) |>
+  rename(Region = `District/County`) |>
+  mutate(Province = str_remove_all(Province,
+  paste(c(" (?i)province",
+          " (?i)autonomous region",
+          " (?i)autonomous prefecture",
+          " (?i)uygur",
+          " (?i)hui",
+          " (?i)zhuang"),
+        collapse = "|"))) |>
+  mutate(Region = str_remove_all(Region,
+  paste(c(" (?i)area",
+          " (?i)league",
+          " (?i)district",
+          " (?i)new district",
+          " (?i)county", 
+          " (?i)city", 
+          " (?i)administration",
+          " (?i)region",
+          " (?i)autonomous county",
+          " (?i)autonomous region",
+          " (?i)new area",
+          " (?i)administrative region",
+          " (?i)administrative prefecture",
+          " (?i)autonomous prefecture",
+          " Tibetan Qiang",
+          " Li Miao",
+          " Tibetan and Qiang Autonomous Prefecture",
+          " Li and Miao",
+          " Mongolian",
+          " (?i)hui",
+          " Bai",
+          " Dai and Jingpo",
+          " Tujia and Miao",
+          " Tibetan",
+          " Hani| Yi",
+          "City of ",
+          " Korean",
+          " Dai",
+          " Zhuang Miao",
+          " Tujia",
+          " Buyi Miao",
+          " Miao and Dong",
+          " Zhuang and Miao Autonomous Prefecture",
+          " and"),
+        collapse = "|"))) |>
+  mutate(Region = ifelse(Region == Province, NA, Region))
+
+bigger_3 <- merge(bigger_2, lat_long, by = c("Region", "Province"))
+
+na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude))
+# Nothing's here, that's good
+
+```
+
+```{r}
 #| shrinking-cities-with-ids
 
 library(haven)
