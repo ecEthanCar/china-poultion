@@ -14,6 +14,8 @@ library(hchinamap)
 library(leaflet)
 library(leaflet.extras)
 library(haven)
+library(shiny)
+
 
 ```
 
@@ -49,15 +51,18 @@ View(beijing_parking_lots_2014)
 ```
 
 ```{r}
-#| basic-map-all-lats-longs-very-laggy
+#| basic-map-all-lats-longs-clusters
+
+prime_bigger_16 <- bigger_3 |> filter(year == 2022)
 
 map <- leaflet() |>
   addTiles() |>
   addMarkers(
-    data = bigger_3,
+    data = prime_bigger_16,
     lng = ~Longitude,
     lat = ~Latitude,
-    popup = ~paste(Province, " ,", Region)  # Popup content for each marker
+    popup = ~paste(Province, " ,", Region),  # Popup content for each marker
+    clusterOptions = markerClusterOptions()
   )
 
 map
@@ -66,9 +71,6 @@ map
 
 ```{r}
 #| heat-map-test
-
-prime_bigger_16 <- bigger_3 |> filter(year == 2016) |>
-  filter(`GDP: Industry` == "Primary Industry")
 
 map_2 <- leaflet() |> 
   addTiles() |>
@@ -80,5 +82,16 @@ map_2 <- leaflet() |>
   )
 
 map_2
+
+```
+
+```{f}
+
+leaflet(bigger_3) %>%
+  addProviderTiles(bigger_3$CartoDB.Positron) %>%
+  addCircleMarkers(lng = ~X, lat = ~Y, stroke = FALSE, radius = 8, 
+                   color = ~pal.gen(genus), fillOpacity = 0.7,
+                   popup = ~leafpop::popupImage(img = palms.redux$pics,
+                                       src = "local", embed = TRUE))
 
 ```

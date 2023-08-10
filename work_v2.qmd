@@ -170,7 +170,8 @@ pivot_gdp <- gdp_2 |>
 pivot_estate_property_n <- pivot_estate_property |>
   mutate(Region = ifelse(Region == Province, NA, Region))
 
-bigger <- merge(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"))
+# bigger <- merge(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"), how = "outer")
+bigger <- left_join(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"))
 bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
 
 # pivot_estate_property |> distinct(Province)
@@ -183,11 +184,13 @@ bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
 pivot_gdp_n <- pivot_gdp |>
   mutate(Region = ifelse(Region == Province, NA, Region))
 
-##IMPORTANT##
-bigger_2 <- merge(pivot_gdp_n, bigger, by = c("Region", "Province", "year")) |>
+# bigger_2 <- merge(bigger, pivot_gdp_n, by = c("Region", "Province", "year"), how = "outer") |>
+#   select(!pct)
+
+bigger_2 <- left_join(bigger, pivot_gdp_n, by = c("Region", "Province", "year")) |>
   select(!pct)
 
-bigger_2 |> write_csv(file = "data/estate_property_debt_gdp(2016-2022).csv")
+# bigger_2 |> write_csv(file = "data/estate_property_debt_gdp(2016-2022).csv")
 
 # bigger_2$`GDP: Industry` <- gsub("SI", "Secondary Industry", bigger_2$`GDP: Industry`)
 
@@ -244,10 +247,12 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
         collapse = "|"))) |>
   mutate(Region = ifelse(Region == Province, NA, Region))
 
-bigger_3 <- merge(bigger_2, lat_long, by = c("Region", "Province"))
+bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
 
 na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude))
 # Nothing's here, that's good
+
+bigger_3 |> write_csv(file = "data/estate_property_debt_gdp_location(2016-2022).csv")
 
 ```
 
