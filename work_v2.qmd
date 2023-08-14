@@ -181,9 +181,13 @@ bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
 ```{r}
 #| Gdp-estate-property-with-economic-indicators
 
-pivot_gdp_n <- pivot_gdp |>
-  mutate(Region = ifelse(Region == Province, NA, Region))
+# pivot_gdp_n <- pivot_gdp |>
+#   mutate(Region = ifelse(Region == Province, NA, Region))
 
+pivot_gdp_n <- pivot_gdp |>
+  mutate(Region = ifelse(Region == Province, NA, Region)) |>
+  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) |> # ASSUME TOTAL FOR NOW, CHECK WITH PROFESSOR
+  
 # bigger_2 <- merge(bigger, pivot_gdp_n, by = c("Region", "Province", "year"), how = "outer") |>
 #   select(!pct)
 
@@ -248,6 +252,9 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
   mutate(Region = ifelse(Region == Province, NA, Region))
 
 bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
+
+bigger_4 <- left_join(bigger_2, lat_long, by = c("Region", "Province")) |>
+  mutate(Region = ifelse(is.na(Region), Province, Region))
 
 na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude))
 # Nothing's here, that's good
