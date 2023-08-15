@@ -270,6 +270,8 @@ for_cleaned |> write_csv("data/cleaned_codes.csv")
 Carbon_Triangle <- read_csv("Shared_Data/Carbon Triangle Copy - My Series.csv") |>
   rename(Province = Data_type)
 
+Carbon_Triangle_2 <- Carbon_Triangle |> distinct(Unit)
+
 names(Carbon_Triangle) <- gsub(" ", "_", names(Carbon_Triangle))
 
 #Filtering if real estate, then removing superfluous word from Province

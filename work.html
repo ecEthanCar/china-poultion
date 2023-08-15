@@ -411,7 +411,7 @@ library(tidymodels) </code></pre>
 ## ✖ dplyr::lag()             masks stats::lag()
 ## ✖ yardstick::spec()        masks readr::spec()
 ## ✖ recipes::step()          masks stats::step()
-## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
+## • Learn how to get started at https://www.tidymodels.org/start/</code></pre>
 <pre class="r"><code>library(gridExtra) </code></pre>
 <pre><code>## 
 ## Attaching package: &#39;gridExtra&#39;
@@ -644,7 +644,9 @@ for_cleaned |&gt; write_csv(&quot;data/cleaned_codes.csv&quot;)</code></pre>
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code>names(Carbon_Triangle) &lt;- gsub(&quot; &quot;, &quot;_&quot;, names(Carbon_Triangle))
+<pre class="r"><code>Carbon_Triangle_2 &lt;- Carbon_Triangle |&gt; distinct(Unit)
+
+names(Carbon_Triangle) &lt;- gsub(&quot; &quot;, &quot;_&quot;, names(Carbon_Triangle))
 
 #Filtering if real estate, then removing superfluous word from Province
 real_estate &lt;- Carbon_Triangle |&gt; 

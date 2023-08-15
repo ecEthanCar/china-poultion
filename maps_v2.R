@@ -6,10 +6,11 @@ library(readr)
 # Define UI
 ui <- fluidPage(
   titlePanel("Interactive Map with Year Dropdown"),
-  selectInput("year_selector", "Select Year:", choices = sort(bigger_4$year)),
-  selectInput("gdp_industry_selector", "Select Industry:", choices = sort(bigger_4$`GDP: Industry`)),
+  selectInput("year_selector", "Select Year:", choices = sort(bigger_4$year), selected = 2016),
+  selectInput("gdp_industry_selector", "Select Industry:", choices = sort(bigger_4$`GDP: Industry`),
+  selected = "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services)"),
   selectInput("province_selector", "Select Province:", choices = c("All Provinces", sort(bigger_4$Province))),
-  selectInput("city_selector", "Select City:", choices = c("None", sort(bigger_4$Region))),
+  # selectInput("city_selector", "Select City:", choices = c("None", sort(bigger_4$Region))),
   leafletOutput("map")
 )
 
@@ -23,10 +24,10 @@ server <- function(input, output) {
         filter(Province == input$province_selector)
     }
 
-    if (input$city_selector != "None") {
-      filtered_data <- filtered_data |>
-        filter(Region == input$city_selector)
-    }
+    # if (input$city_selector != "None") {
+    #   filtered_data <- filtered_data |>
+    #     filter(Region == input$city_selector)
+    # }
 
     filtered_data <- filtered_data |>
       filter(year == input$year_selector,
@@ -37,11 +38,14 @@ server <- function(input, output) {
         lng = ~Longitude,
         lat = ~Latitude,
         popup = ~paste(
-          "Region: ", Region,
-          " , Province: ", Province,
-          " ,  Year: ", year
-          # Figure out how to add other column data other than Region, Province, and year
-          # " , Administrative Division Code: ", `Debt Ratio(%)`
+          "<b>Region:</b> ", Region,
+          " , <b>Province:</b> ", Province,
+          " <br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
+          " <br><b>Year:</b> ", year,
+          " <br><b>GDP</b>: ", GDP, ifelse(is.na(GDP), "", " RBM bn"),
+          " <br><b>Debt Ratio</b>: ", `Debt Ratio(%)`, "%",
+          " <br><b>Annual Real Estate Investment:</b> ", Annual_Real_Estate_Investment, ifelse(is.na(Annual_Real_Estate_Investment), "", " RBM mn"),
+          " <br><b>Annual Average Property Prices:</b> ", Annual_Avg_Property_Price, ifelse(is.na(Annual_Avg_Property_Price), "", " RMB/sq m")
           ),
         clusterOptions = markerClusterOptions(minZoom = 1, maxZoom = 10))
   })
