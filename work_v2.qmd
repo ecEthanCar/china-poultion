@@ -1,3 +1,9 @@
+---
+title: "China Pollution Tidying Pt 2"
+subtitle: "Report"
+format: pdf
+---
+
 ```{r}
 #| updated-economic-indicators
 
@@ -253,8 +259,11 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
 
 bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
 
-bigger_4 <- left_join(bigger_2, lat_long, by = c("Region", "Province")) |>
-  mutate(Region = ifelse(is.na(Region), Province, Region))
+bigger_4 <- bigger_3 |>
+  mutate(Region = ifelse(is.na(Region), Province, Region)) |> 
+  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) 
+
+no_na_bigger_4 <- bigger_4 |> na.omit()
 
 na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude))
 # Nothing's here, that's good
@@ -387,5 +396,34 @@ provcodes_jiangsu_funds <- merge(jiangsu_funds, province_cleaned, by = c("Provin
 
 province_cleaned |> write_csv(file = "data/PROVONLY_cleaned_codes.csv")
 provcodes_jiangsu_funds |> write_csv(file = "data/jiangsu_funds(2006-2022).csv")
+
+```
+
+```{r}
+#| emissions-draft-file
+
+ceads_city_2022 <- read_excel("Shared_Data/ceads-city-2022.xlsx")
+
+pivot_ceads_city_2022 <- ceads_city_2022 |>
+  pivot_longer(
+    cols = c(`1995`:`2019`),
+    names_to = "year",
+    values_to = "Carbon Emissions"
+  ) |>
+  select(`Carbon Emissions`, CityID, ProvinceID, CityNameEn, year) |>
+  mutate(year = as.numeric(year),
+         CityID = as.character(CityID)) |>
+  rename(`Province.Code` = ProvinceID, 
+         Statistical_Division_Code = CityID,
+         Region = CityNameEn)
+
+bigger_n <- bigger |> mutate(Region = ifelse(is.na(Region), Province, Region))
+
+smaller <- left_join(pivot_ceads_city_2022, pivot_estate_property, by = c("year", "Region")) |>
+  filter(year <= 2019, !is.na(`Carbon Emissions`))
+
+smaller <- left_join(smaller, bigger_n, by = c("year", "Region", "Statistical_Division_Code"))
+
+smaller |> write_csv(file = "data/IN_PROGRESS_carbon_emissions_est_prop_gdp.csv")
 
 ```

@@ -6,7 +6,7 @@ library(readr)
 # Define UI
 ui <- fluidPage(
   titlePanel("Interactive Map with Year Dropdown"),
-  selectInput("year_selector", "Select Year:", choices = sort(bigger_4$year), selected = 2016),
+  sliderInput("year_selector", "Select Year:", min = 2016, max = 2022, value = 1),
   selectInput("gdp_industry_selector", "Select Industry:", choices = sort(bigger_4$`GDP: Industry`),
   selected = "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services)"),
   selectInput("province_selector", "Select Province:", choices = c("All Provinces", sort(bigger_4$Province))),
