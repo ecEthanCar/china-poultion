@@ -1,11 +1,12 @@
 
 library(readr)
+library(leaflet)
 # big_for_map <- read_csv("data/estate_property_debt_gdp_location(2016-2022).csv")
 # View(estate_property_debt_gdp_location_2016_2022_)
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Interactive Map with Year Dropdown"),
+  titlePanel("Interactive Map On China's Economics"),
   selectInput("year_selector", "Select Year:", choices = sort(bigger_4$year), selected = 2016),
   selectInput("gdp_industry_selector", "Select Industry:", choices = sort(bigger_4$`GDP: Industry`),
   selected = "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services)"),
@@ -37,10 +38,11 @@ server <- function(input, output) {
       addCircleMarkers(
         lng = ~Longitude,
         lat = ~Latitude,
-        popup = ~paste(
-          "<b>Region:</b> ", Region,
+        popup = ~paste0(
+          "<b>Year:</b> ", year,
+          "<br><b>Region:</b> ", Region,
           ", <b>Province:</b> ", Province,
-          ", <b>Year:</b> ", year,
+          "<br><b>Coordinates:</b> (", Latitude, ", ", Longitude, ")",
           "<br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
           "<br><b>GDP</b>: ", GDP, ifelse(is.na(GDP), "", " RBM bn"),
           "<br><b>Debt Ratio</b>: ", `Debt Ratio(%)`, "%",

@@ -192,7 +192,7 @@ bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
 
 pivot_gdp_n <- pivot_gdp |>
   mutate(Region = ifelse(Region == Province, NA, Region)) |>
-  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) |> # ASSUME TOTAL FOR NOW, CHECK WITH PROFESSOR
+  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) # ASSUME TOTAL FOR NOW, CHECK WITH PROFESSOR
   
 # bigger_2 <- merge(bigger, pivot_gdp_n, by = c("Region", "Province", "year"), how = "outer") |>
 #   select(!pct)
@@ -404,6 +404,8 @@ provcodes_jiangsu_funds |> write_csv(file = "data/jiangsu_funds(2006-2022).csv")
 
 ceads_city_2022 <- read_excel("Shared_Data/ceads-city-2022.xlsx")
 
+### Definitely make a dataset to check if there are non-matching locations just because of the string.
+
 pivot_ceads_city_2022 <- ceads_city_2022 |>
   pivot_longer(
     cols = c(`1995`:`2019`),
@@ -424,6 +426,8 @@ smaller <- left_join(pivot_ceads_city_2022, pivot_estate_property, by = c("year"
 
 smaller <- left_join(smaller, bigger_n, by = c("year", "Region", "Statistical_Division_Code"))
 
-smaller |> write_csv(file = "data/IN_PROGRESS_carbon_emissions_est_prop_gdp.csv")
+smaller_2 <- filter(smaller, year >= 2016)
+
+smaller_2 |> write_csv(file = "data/carbon_emissions_est_prop_gdp_(2016-2019).csv")
 
 ```
