@@ -1,37 +1,30 @@
 
 library(readr)
-# big_for_map <- read_csv("data/estate_property_debt_gdp_location(2016-2022).csv")
-# View(estate_property_debt_gdp_location_2016_2022_)
+library(leaflet)
+
+smaller_app <- read_csv("data/carbon_emissions_est_prop_gdp_(2016-2019).csv")
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Interactive Map with Year Dropdown"),
-  sliderInput("year_selector", "Select Year:", min = 2016, max = 2022, value = 1),
-  selectInput("gdp_industry_selector", "Select Industry:", choices = sort(bigger_4$`GDP: Industry`),
-  selected = "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services)"),
-  selectInput("province_selector", "Select Province:", choices = c("All Provinces", sort(bigger_4$Province))),
-  # selectInput("city_selector", "Select City:", choices = c("None", sort(bigger_4$Region))),
+  titlePanel("Interactive Map with Year Dropdown (Carbon Emissions)"),
+  selectInput("year_selector", "Select Year:", choices = sort(smaller_app$year), selected = 2016),
+  # selectInput("province_selector", "Select Province:", choices = c("All Provinces", sort(smaller_app$Province))),
   leafletOutput("map")
 )
 
 # Define server logic
 server <- function(input, output) {
   output$map <- renderLeaflet({
-    filtered_data <- bigger_4
+    filtered_data <- smaller_app
 
-    if (input$province_selector != "All Provinces") {
-      filtered_data <- filtered_data |>
-        filter(Province == input$province_selector)
-    }
-
-    # if (input$city_selector != "None") {
+    # if (input$province_selector != "All Provinces") {
     #   filtered_data <- filtered_data |>
-    #     filter(Region == input$city_selector)
+    #     filter(Province == input$province_selector)
     # }
 
     filtered_data <- filtered_data |>
-      filter(year == input$year_selector,
-             `GDP: Industry` == input$gdp_industry_selector)
+      filter(year == input$year_selector)
+
     leaflet(data = filtered_data) |>
       addTiles() |>
       addCircleMarkers(
@@ -39,10 +32,10 @@ server <- function(input, output) {
         lat = ~Latitude,
         popup = ~paste(
           "<b>Region:</b> ", Region,
-          ", <b>Province:</b> ", Province,
+          # ", <b>Province:</b> ", Province,
           ", <b>Year:</b> ", year,
           "<br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
-          "<br><b>GDP</b>: ", GDP, ifelse(is.na(GDP), "", " RBM bn"),
+          "<br><b>Carbon Emissions</b>: ", `Carbon Emissions`,
           "<br><b>Debt Ratio</b>: ", `Debt Ratio(%)`, "%",
           "<br><b>Annual Real Estate Investment:</b> ",
             Annual_Real_Estate_Investment,

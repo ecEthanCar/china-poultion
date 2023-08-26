@@ -1,7 +1,7 @@
 
 library(readr)
 library(leaflet)
-# big_for_map <- read_csv("data/estate_property_debt_gdp_location(2016-2022).csv")
+# bigger_4 <- read_csv("data/estate_property_debt_gdp_location(2016-2022).csv")
 # View(estate_property_debt_gdp_location_2016_2022_)
 
 # Define UI

@@ -256,6 +256,11 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
           " and"),
         collapse = "|"))) |>
   mutate(Region = ifelse(Region == Province, NA, Region))
+# 
+# lat_long_n <- lat_long
+#   mutate(Region = ifelse(is.na(Province), Region, NA))
+# 
+# lat_long_2 <- left_join(for_cleaned, lat_long_n, by = c("Region", "Province"))
 
 bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
 
@@ -421,13 +426,23 @@ pivot_ceads_city_2022 <- ceads_city_2022 |>
 
 bigger_n <- bigger |> mutate(Region = ifelse(is.na(Region), Province, Region))
 
-smaller <- left_join(pivot_ceads_city_2022, pivot_estate_property, by = c("year", "Region")) |>
-  filter(year <= 2019, !is.na(`Carbon Emissions`))
+# smaller <- left_join(pivot_ceads_city_2022, pivot_estate_property, by = c("year", "Region")) |>
+#   filter(year <= 2019, !is.na(`Carbon Emissions`))
 
-smaller <- left_join(smaller, bigger_n, by = c("year", "Region", "Statistical_Division_Code"))
+smaller <- left_join(pivot_ceads_city_2022, bigger_n, by = c("year", "Region", "Statistical_Division_Code", "Province.Code"))
+smaller <- left_join(smaller, lat_long_2, by = c("Region", "Statistical_Division_Code", "Province.Code"))
 
-smaller_2 <- filter(smaller, year >= 2016)
+smaller_2 <- filter(smaller, year >= 2016, year <= 2019)
+  
+# smaller_na <- smaller_2 |> filter(is.na(Province)) |> distinct(Province.Code)
+
+smaller_na_cleaned <- for_cleaned |> filter(Province.Code == smaller_na$Province.Code) |> distinct(Province.Code, Province)
+
+smaller_2 <- filter(smaller, year >= 2016, year <= 2019)
 
 smaller_2 |> write_csv(file = "data/carbon_emissions_est_prop_gdp_(2016-2019).csv")
+
+# |>
+#   filter(Annual_Real_Estate_Investment.x == Annual_Real_Estate_Investment.y)
 
 ```
