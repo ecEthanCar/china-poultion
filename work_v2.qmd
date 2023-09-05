@@ -270,8 +270,8 @@ bigger_4 <- bigger_3 |>
 
 no_na_bigger_4 <- bigger_4 |> na.omit()
 
-na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude))
-# Nothing's here, that's good
+na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |>
+  distinct(Province, Region)
 
 bigger_3 |> write_csv(file = "data/estate_property_debt_gdp_location(2016-2022).csv")
 
@@ -431,18 +431,56 @@ bigger_n <- bigger |> mutate(Region = ifelse(is.na(Region), Province, Region))
 
 smaller <- left_join(pivot_ceads_city_2022, bigger_n, by = c("year", "Region", "Statistical_Division_Code", "Province.Code"))
 smaller <- left_join(smaller, lat_long_2, by = c("Region", "Statistical_Division_Code", "Province.Code"))
+colnames(smaller) <- gsub("（Special Bond）", " (Special Bond)", colnames(smaller))
 
 smaller_2 <- filter(smaller, year >= 2016, year <= 2019)
   
-# smaller_na <- smaller_2 |> filter(is.na(Province)) |> distinct(Province.Code)
+smaller_lat_long_na <- smaller_2 |> 
+  filter(is.na(Latitude) | is.na(Longitude)) |> 
+  distinct(Province.Code, Region)
 
-smaller_na_cleaned <- for_cleaned |> filter(Province.Code == smaller_na$Province.Code) |> distinct(Province.Code, Province)
+smaller_gdp_data_na <- smaller_2 |>
+  filter(
+    is.na(`Debt Ratio(%)`),
+    is.na(`Wide Range Debt Ratio(%)`),
+    is.na(`Debt Asset Ratio(%)`),
+    is.na(`Wide Range Debt Asset Ratio(%)`),
+    is.na(`Balance of Municipal Bonds(CNY,B)`),
+    is.na(`Limitation of Municipal Bonds(CNY,B)`),
+    is.na(`Fiscal Self-sufficiency(%)`),
+    is.na(`GDP(CNY,B)`),
+    is.na(`Growth Rate of GDP(%)`),
+    is.na(`Per capita GDP(CNY)`),
+    is.na(`Fixed Asset Investment(CNY,B)`),
+    is.na(`Total Value of Imports and Exports(CNY,B)`),
+    is.na(`Per Capita Disposable Income(CNY)`),
+    is.na(`Industrial Increase Volume(CNY,B)`),
+    is.na(`Budget Revenue(CNY,B)`),
+    is.na(`Budget Expenditure(CNY,B)`),
+    is.na(`Tax Revenue(CNY,B)`),
+    is.na(`Share of Tax Revenue(%)`),
+    is.na(`Revenue of Government-Managed Funds(CNY,B)`),
+    is.na(`Expenditure of Government-Managed Funds(CNY,B)`),
+    is.na(`Issuance（LGFV Bond）(CNY,B)`),
+    is.na(`Net Financing（LGFV Bond）(CNY,B)`),
+    is.na(`Issuance（Non-Standard Financing）(CNY,B)`),
+    is.na(`Net Financing（Non-Standard Financing）(CNY,B)`),
+    is.na(`Issuance(General Bond)(CNY,B)`),
+    is.na(`Net Financing(General Bond)(CNY,B)`),
+    is.na(`Issuance (Special Bond)(CNY,B)`),
+    is.na(`Net Financing (Special Bond)(CNY,B)`)
+  ) |> 
+  distinct(Province.Code, Region)
 
-smaller_2 <- filter(smaller, year >= 2016, year <= 2019)
+smaller_estate_prop_data_na <- smaller_2 |>
+  filter(
+    is.na(Annual_Real_Estate_Investment),
+    is.na(Annual_Avg_Property_Price)
+    ) |> 
+  distinct(Province.Code, Region)
 
 smaller_2 |> write_csv(file = "data/carbon_emissions_est_prop_gdp_(2016-2019).csv")
-
-# |>
-#   filter(Annual_Real_Estate_Investment.x == Annual_Real_Estate_Investment.y)
+smaller_gdp_data_na |> write_csv(file = "na_data/smaller_gdp_data_na.csv")
+smaller_lat_long_na |> write_csv(file = "na_data/smaller_lat_long_na")
 
 ```
