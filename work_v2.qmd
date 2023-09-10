@@ -217,7 +217,8 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
           " (?i)autonomous prefecture",
           " (?i)uygur",
           " (?i)hui",
-          " (?i)zhuang"),
+          " (?i)zhuang",
+          " (?i)uyghur"),
         collapse = "|"))) |>
   mutate(Region = str_remove_all(Region,
   paste(c(" (?i)area",
@@ -256,11 +257,22 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
           " and"),
         collapse = "|"))) |>
   mutate(Region = ifelse(Region == Province, NA, Region))
-# 
-# lat_long_n <- lat_long
-#   mutate(Region = ifelse(is.na(Province), Region, NA))
-# 
-# lat_long_2 <- left_join(for_cleaned, lat_long_n, by = c("Region", "Province"))
+
+lat_long$Region <- gsub("Alar", "Aral", lat_long$Region)
+lat_long$Region <- gsub("Baishali", "Baisha Li", lat_long$Region)
+lat_long$Region <- gsub("\\bZhongxian\\b", "Zhong", lat_long$Region)
+lat_long$Region <- gsub("Bayannuer", "Bayannur", lat_long$Region)
+lat_long$Region <- gsub("Wulanchabu", "Ulanqab", lat_long$Region)
+lat_long$Region <- gsub("West Qing", "Xiqing", lat_long$Region)
+lat_long$Region <- gsub("Ganzi", "Garze", lat_long$Region)
+lat_long$Region <- gsub("Guoluo", "Golog", lat_long$Region)
+
+
+
+lat_long_n <- lat_long |>
+  mutate(Region = ifelse(is.na(Province), Region, NA))
+
+lat_long_2 <- left_join(for_cleaned, lat_long_n, by = c("Region", "Province"))
 
 bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
 
@@ -272,6 +284,8 @@ no_na_bigger_4 <- bigger_4 |> na.omit()
 
 na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |>
   distinct(Province, Region)
+
+na_location |> write_csv(file = "na_data/lat_long_na.csv")
 
 bigger_3 |> write_csv(file = "data/estate_property_debt_gdp_location(2016-2022).csv")
 
