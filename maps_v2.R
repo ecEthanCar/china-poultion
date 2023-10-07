@@ -18,7 +18,9 @@ ui <- fluidPage(
 # Define server logic
 server <- function(input, output) {
   output$map <- renderLeaflet({
-    filtered_data <- bigger_4
+##    filtered_data <- bigger_4
+    filtered_data <- smaller_2
+
 
     if (input$province_selector != "All Provinces") {
       filtered_data <- filtered_data |>
@@ -44,7 +46,8 @@ server <- function(input, output) {
           ", <b>Province:</b> ", Province,
           "<br><b>Coordinates:</b> (", Latitude, ", ", Longitude, ")",
           "<br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
-          "<br><b>GDP</b>: ", GDP, ifelse(is.na(GDP), "", " RBM bn"),
+##          "<br><b>GDP</b>: ", GDP, ifelse(is.na(GDP), "", " RBM bn"),
+          "<br><b>Carbon Emissions: <br>",
           "<br><b>Debt Ratio</b>: ", `Debt Ratio(%)`, "%",
           "<br><b>Annual Real Estate Investment:</b> ",
             Annual_Real_Estate_Investment,

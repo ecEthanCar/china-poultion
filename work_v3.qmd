@@ -3,59 +3,7 @@ title: "China Pollution Tidying Pt 2"
 subtitle: "Report"
 format: pdf
 ---
-
 ```{r}
-#| updated-economic-indicators
-
-### IGNORE ###
-
-# Set the directory path where the files are located
-folder_path_6 <- "city-level-take-two (1)"
-
-# List all the files in the folder
-file_list_6 <- list.files(folder_path_6)
-
-# Create an empty list to store the data from each file
-data_list_6 <- list()
-
-suppressWarnings({
-# Iterate over the file list using a for loop
-for (file_name in file_list_6) {
-  file_path <- file.path(folder_path_6, file_name)
-  # file_data <- read_xlsx(file_path, na = "NA")
-  file_data <- merge(merge(merge(
-    read_xlsx(file_path, sheet = 1, na = "NA"), 
-    # weird error where this can run but cannot be rendered because "read_xlsx doesn't exist"
-    read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"),
-    read_xlsx(file_path, sheet = 3, na = "NA"), by = "Region"), 
-    read_xlsx(file_path, sheet = 4, na = "NA"), by = "Region")
-  # New column indicating year
-  file_data$Province <- str_replace_all(
-    str_extract(file_name, "\\((.*?)\\)"), "\\(|\\)", "") |> 
-    as.character()
-  file_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
-  # Converts all but Region to doubles
-  data_list_6[[file_name]] <- file_data |>
-    mutate(across(-c(Region, Province), as.numeric))
-}
-})
-# Merge files
-data_6 <- bind_rows(data_list_6) |>
-  filter(Region != "Source: Wind") |>
-  mutate(Region = trimws(Region)) |>
-  mutate(Region = ifelse(Region == Province, NA, Region)) |>
-  group_by(year)
-
-data_6 |> write_csv("data/data_6.csv")
-
-# 
-# providence_only |> write_csv(file = "data/E_I(2016-2022).csv")
-# providence_only |> write_excel_csv(file = "data/E_I(2016-2022).xlsx")
-
-```
-
-```{r}
-#| modifying-updated-economic-indicators
 
 data_6 <- read_csv("Shared_Data/Untitled spreadsheet - data_6.csv")
 
@@ -88,127 +36,24 @@ data_6$Region <- gsub("WULONG", "Wulong", data_6$Region)
 data_6$Region <- gsub("Neimenggu\\(Inner Mongolia\\)", "Inner Mongolia", data_6$Region)
 
 data_6$Region <- ifelse(data_6$Region == data_6$Province, NA, data_6$Region)
-
-encoded_data_6 <- merge(data_6, for_cleaned, by = c("Region", "Province"), all.x = TRUE)
+encoded_data_7 <- merge(data_6, for_cleaned, by = c("Region", "Province"), all.x = TRUE)
+encoded_data_7$Region <- ifelse(is.na(encoded_data_7$Region), 
+                                encoded_data_7$Province, encoded_data_7$Region)
 
 # encoded_data_6 |> distinct(Province)
 
-na_encoded_data_6 <- encoded_data_6 |> filter(is.na(Statistical_Division_Code)) |>
+na_encoded_data_7 <- encoded_data_6 |> filter(is.na(Statistical_Division_Code)) |>
+  distinct(Region, Province)
+good_encoded_data_7 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code)) |>
   distinct(Region, Province)
 
-good_encoded_data_6 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code)) |>
-  distinct(Region, Province)
 
 ```
 
-```{r}
-
-# gdp <- read_csv("Shared_Data/copy-city-level-gdp - My Series.csv")
-# 
-# gdp_2 <- gdp |>
-#   mutate(Province = gsub("CN: GDP: ", "", Province)) |>
-#   mutate(Province = gsub("\\(DC\\)", "", Province)) |>
-#   mutate(Industry = str_extract(Province, "^[^:]+")) |>
-#   mutate(Industry = ifelse(Industry %in% c("Primary Industry",
-#                                            "Secondary Industry", 
-#                                            "Tertiary Industry", 
-#                                            "Agriculture, Forestry, Animal Husbandry and Fishery (Incl. 
-#                                            Services)",
-#                                            "SI: Industry",
-#                                            "SI: Construction"), 
-#                            Industry, NA)) |> 
-#   mutate(Province = gsub("Primary Industry: |Secondary Industry: |Tertiary Industry: |Agriculture, Forestry, Animal Husbandry and Fishery (Incl. Services): |SI: Industry : |SI: Construction : ", "", Province)) 
-# 
-# gdp_3 <- gdp_2 |> mutate(Province = str_extract(Province, "^[^:]+"))
-#   
-# 
-# gdp_2
-# gdp_3
-# gdp_2$Industry <- str_extract(Province, "^[^:]+", gdp_2$Province)
-
-# gdp$Province <- gsub("CN: GDP: ", "", gdp$Province)
-
-```
-
-```{r}
-#| gdp-redone
-
-gdp <- read_csv("Shared_Data/copy2-city-level-gdp - My Series.csv")
-
-gdp_2 <- gdp |>
-  separate(Province, into = paste0("col", 1:6), sep = ":", extra = "merge") |>
-  # Removes extra spaces after separation
-  mutate_at(vars(c(col1, col2, col3, col4, col5, col6)), trimws) |>
-  # Removes things in col4 (future Province col) not in col3 (future Industry col)
-  mutate(col4 = ifelse(col4 %in% col3, col4, NA)) |>
-  # Pastes Province names in col3 onto col4, them removes from col3
-  mutate(col4 = ifelse(is.na(col4) & col3 %in% col4, col3, col4),
-         col3 = ifelse(col3 %in% col4, NA, col3)) |> # Ask later what NA for industry should be
-  rename(`GDP: Industry` = col3, Province = col4) |>
-  select(!c(col1, col2, col5, col6))
-  
-  #mutate(col4 = ifelse(col4 %in% col3, col4, NA))
-  #distinct(col3)
-  
-  # mutate(col3 = ifelse(col3 == "SI" & (col4 == "Industry" | col4 == "Construction"), col4, col3)) |>
-  # mutate(col4 = ifelse(col4 == col3, NA, col4)) |>
-  # mutate(col5 = ifelse(col4 == Region, NA, col4))
-
-```
-```{r}
-#| pivot-gdp-by-year
-
-pivot_gdp <- gdp_2 |>
-  pivot_longer(
-    cols = c(`1999`:`2020`),
-    names_to = "year",
-    values_to = "GDP"
-  ) |>
-  select(`GDP: Industry`, Province, Region, year, GDP) |>
-  mutate(year = as.numeric(year),
-         pct = as.numeric(GDP))
-
-```
 
 ```{r}
 
-# Remember: encoded_data_6 is a incomplete data set
-pivot_estate_property_n <- pivot_estate_property |>
-  mutate(Region = ifelse(Region == Province, NA, Region))
-
-# bigger <- merge(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"), how = "outer")
-bigger <- left_join(encoded_data_6, pivot_estate_property_n, by = c("Region", "Province", "year"))
-bigger |> write_csv(file = "data/estate_property_debt(2016-2022).csv")
-
-# pivot_estate_property |> distinct(Province)
-
-```
-
-```{r}
-#| Gdp-estate-property-with-economic-indicators
-
-# pivot_gdp_n <- pivot_gdp |>
-#   mutate(Region = ifelse(Region == Province, NA, Region))
-
-pivot_gdp_n <- pivot_gdp |>
-  mutate(Region = ifelse(Region == Province, NA, Region)) |>
-  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) # ASSUME TOTAL FOR NOW, CHECK WITH PROFESSOR
-  
-# bigger_2 <- merge(bigger, pivot_gdp_n, by = c("Region", "Province", "year"), how = "outer") |>
-#   select(!pct)
-
-bigger_2 <- left_join(bigger, pivot_gdp_n, by = c("Region", "Province", "year")) |>
-  select(!pct)
-
-# bigger_2 |> write_csv(file = "data/estate_property_debt_gdp(2016-2022).csv")
-
-# bigger_2$`GDP: Industry` <- gsub("SI", "Secondary Industry", bigger_2$`GDP: Industry`)
-
-```
-
-```{r}
-
-lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location.csv") |>
+lat_long_V2 <- read_csv(file = "Shared_Data/China Latitude and Longitude - location.csv") |>
   select(!c(Region, Region_ch, `District/County_ch`, Province_ch)) |>
   rename(Region = `District/County`) |>
   mutate(Province = str_remove_all(Province,
@@ -255,38 +100,33 @@ lat_long <- read_csv(file = "Shared_Data/China Latitude and Longitude - location
           " Miao and Dong",
           " Zhuang and Miao Autonomous Prefecture",
           " and"),
-        collapse = "|"))) |>
-  mutate(Region = ifelse(Region == Province, NA, Region))
+        collapse = "|")))
 
-lat_long$Region <- gsub("Alar", "Aral", lat_long$Region)
-lat_long$Region <- gsub("Baishali", "Baisha Li", lat_long$Region)
-lat_long$Region <- gsub("\\bZhongxian\\b", "Zhong", lat_long$Region)
-lat_long$Region <- gsub("Bayannuer", "Bayannur", lat_long$Region)
-lat_long$Region <- gsub("Wulanchabu", "Ulanqab", lat_long$Region)
-lat_long$Region <- gsub("West Qing", "Xiqing", lat_long$Region)
-lat_long$Region <- gsub("Ganzi", "Garze", lat_long$Region)
-lat_long$Region <- gsub("Guoluo", "Golog", lat_long$Region)
+lat_long_V2$Region <- gsub("Alar", "Aral", lat_long$Region)
+lat_long_V2$Region <- gsub("Baishali", "Baisha Li", lat_long$Region)
+lat_long_V2$Region <- gsub("\\bZhongxian\\b", "Zhong", lat_long$Region)
+lat_long_V2$Region <- gsub("Bayannuer", "Bayannur", lat_long$Region)
+lat_long_V2$Region <- gsub("Wulanchabu", "Ulanqab", lat_long$Region)
+lat_long_V2$Region <- gsub("West Qing", "Xiqing", lat_long$Region)
+lat_long_V2$Region <- gsub("Ganzi", "Garze", lat_long$Region)
+lat_long_V2$Region <- gsub("Guoluo", "Golog", lat_long$Region)
 
-#Get rid of doubles in Province
-lat_long_n <- lat_long |>
-  mutate(Region = ifelse(is.na(Province), Region, NA))
+lat_long_encoded <- left_join(encoded_data_7, lat_long_V2, by = c("Region", "Province"))
+na_location_V2 <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |> distinct(Province, Region)
 
-lat_long_2 <- left_join(for_cleaned, lat_long_n, by = c("Region", "Province"))
-
-bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
-
-bigger_4 <- bigger_3 |>
-  mutate(Region = ifelse(is.na(Region), Province, Region)) |> 
-  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) 
-
-no_na_bigger_4 <- bigger_4 |> na.omit()
-
-na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |>
-  distinct(Province, Region)
-
-na_location |> write_csv(file = "na_data/lat_long_na.csv")
-
-bigger_3 |> write_csv(file = "data/estate_property_debt_gdp_location(2016-2022).csv")
+# 
+# bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
+# 
+# bigger_4 <- bigger_3 |>
+#   mutate(Region = ifelse(is.na(Region), Province, Region)) |> 
+#   mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) 
+# 
+# no_na_bigger_4 <- bigger_4 |> na.omit()
+# 
+# na_location <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |>
+#   distinct(Province, Region)
+# 
+# na_location |> write_csv(file = "na_data/lat_long_na.csv")
 
 ```
 
@@ -335,62 +175,6 @@ shrinking_map$Region <- ifelse(
 )
 
 shrinking_map_wid <- merge(shrinking_map, for_cleaned, by = c("Region", "Province"))
-
-```
-
-```{r}
-
-  # file_data <- merge(merge(
-  #   read_xlsx(file_path, sheet = 1, na = "NA"), 
-  #   read_xlsx(file_path, sheet = 2, na = "NA"), by = "Region"), 
-  #   read_xlsx(file_path, sheet = 3, na = "NA"), by = "Region")
-  # New column indicating year
-
-# 
-# # Set the directory path where the files are located
-# folder_path_6 <- "city-level-take-two"
-# 
-# # List all the files in the folder
-# file_list_6 <- list.files(folder_path_6)
-# 
-# # Create an empty list to store the data from each file
-# data_list_6 <- list()
-# 
-# # Iterate over the file list using a for loop
-# for (file_name in file_list_6) {
-#   file_path <- file.path(folder_path_6, file_name)
-#   
-#   # Get the names of all sheets in the Excel file
-#   sheet_names <- excel_sheets(file_path)
-#   
-#   # Create an empty list to store the data from each sheet
-#   sheet_data_list <- list()
-#   
-#   # Iterate over the sheet names using a nested for loop
-#   for (sheet_name in sheet_names) {
-#     sheet_data <- read_excel(file_path, sheet = sheet_name, na = "NA")
-#     # New column indicating year
-#     sheet_data$Province <- str_replace_all(
-#       str_extract(file_name, "\\((.*?)\\)"), "\\(|\\)", "") |>
-#       as.character()
-#     sheet_data$year <- str_extract(file_name, "\\d{4}") |> as.numeric()
-#     # Converts all but Region to doubles
-#     sheet_data <- sheet_data |>
-#       mutate(across(-c(Region, Province), as.numeric))
-#     
-#     # Append the sheet data to the list
-#     sheet_data_list[[sheet_name]] <- sheet_data
-#   }
-#   
-#   # Append the sheet data list to the main data list
-#   data_list_6[[file_name]] <- sheet_data_list
-# }
-# 
-# data_6 <- bind_rows(data_list_6) |>
-#   filter(Region != "Source: Wind") |>
-#   group_by(year)
-# 
-# data_6$Region <- gsub("Dist", "", data_6$Region)
 
 ```
 
