@@ -111,8 +111,12 @@ lat_long_V2$Region <- gsub("West Qing", "Xiqing", lat_long$Region)
 lat_long_V2$Region <- gsub("Ganzi", "Garze", lat_long$Region)
 lat_long_V2$Region <- gsub("Guoluo", "Golog", lat_long$Region)
 
+lat_long_V2 |> write_csv(file = "na_data/temporary_lat_long_V2.csv")
+
 lat_long_encoded <- left_join(encoded_data_7, lat_long_V2, by = c("Region", "Province"))
 na_location_V2 <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |> distinct(Province, Region)
+
+na_location_V2 |> write_csv(file = "na_data/temporary_lat_long_V2_na.csv")
 
 # 
 # bigger_3 <- left_join(bigger_2, lat_long, by = c("Region", "Province"))
@@ -127,6 +131,15 @@ na_location_V2 <- bigger_3 |> filter(is.na(Longitude) | is.na(Latitude)) |> dist
 #   distinct(Province, Region)
 # 
 # na_location |> write_csv(file = "na_data/lat_long_na.csv")
+
+```
+
+```{r}
+#| new-lat-long
+
+lat_long_v2_new <- read_csv("~/china-polution/Shared_Data/Lat-Long-V2 - temporary_lat_long_V2.csv")
+lat_long_v2_new <- lat_long_v2_new |> mutate(Region = ifelse(is.na(Region), Province, Region))
+glimpse(lat_long_v2_new)
 
 ```
 

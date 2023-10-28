@@ -1,0 +1,3180 @@
+Province,Region,Longitude,Latitude,Post Code
+Beijing,NA,116.4,39.9,100000
+Beijing,Dongcheng,116.42,39.93,100010
+Beijing,Xicheng,116.37,39.92,100032
+Beijing,Chongwen,116.43,39.88,100000
+Beijing,Xuanwu,116.35,39.87,100000
+Beijing,Chaoyang,116.43,39.92,100020
+Beijing,Fengtai,116.28,39.85,100071
+Beijing,Shijingshan,116.22,39.9,100043
+Beijing,Haidian,116.3,39.95,100089
+Beijing,Mentougou,116.1,39.93,102300
+Beijing,Fangshan,116.13,39.75,102488
+Beijing,Tongzhou,116.65,39.92,101149
+Beijing,Shunyi,116.65,40.13,101300
+Beijing,Changping,116.23,40.22,102200
+Beijing,Daxing,116.33,39.73,102600
+Beijing,Huairou,116.63,40.32,101400
+Beijing,Pinggu,117.12,40.13,101200
+Beijing,Miyun,116.83,40.37,101500
+Beijing,Yanqing,115.97,40.45,102100
+Tianjin,NA,117.2,39.12,300000
+Tianjin,Heping,117.2,39.12,300041
+Tianjin,Hedong,117.22,39.12,300171
+Tianjin,Hexi,117.22,39.12,300202
+Tianjin,Nankai,117.15,39.13,300110
+Tianjin,Hebei,117.18,39.15,300143
+Tianjin,Hongqiao,117.15,39.17,300131
+Tianjin,Tanggu,117.65,39.02,300450
+Tianjin,Hangu,117.8,39.25,300480
+Tianjin,Dagang,117.45,38.83,300000
+Tianjin,Dongli,117.3,39.08,300300
+Tianjin,Xiqing,117,39.13,300380
+Tianjin,Jinnan,117.38,38.98,300350
+Tianjin,Beichen,117.13,39.22,300400
+Tianjin,Wuqing,117.03,39.38,301700
+Tianjin,Baoyu,117.3,39.72,301800
+Tianjin,Binhai,117.68,39.03,300450
+Tianjin,Ninghe,117.82,39.33,301500
+Tianjin,Jinghai,116.92,38.93,301600
+Tianjin,Jixian,117.4,40.05,301900
+Hebei,Shijiazhuang,114.52,38.05,50000
+Hebei,Chang'an,114.52,38.05,50000
+Hebei,Bridge East,114.5,38.05,50000
+Hebei,Bridge East,114.9,40.78,50000
+Hebei,Bridge East,114.5,37.07,50000
+Hebei,Qiaoxi,114.47,37.05,50051
+Hebei,Qiaoxi,114.87,40.83,50051
+Hebei,Qiaoxi,114.47,38.03,50051
+Hebei,Xinhua,114.47,38.05,453000
+Hebei,Xinhua,116.87,38.32,453000
+Hebei,Jingyu Mining,114.05,38.08,50100
+Hebei,Yuhua,114.52,38.02,50011
+Hebei,Jingyi,114.13,38.03,50300
+Hebei,Zhengding,114.57,38.15,50800
+Hebei,Luancheng,114.65,37.88,51430
+Hebei,Xingtang,114.55,38.43,50600
+Hebei,Lingshou,114.37,38.3,50500
+Hebei,Gaoyi,114.6,37.6,51330
+Hebei,Shenze,115.2,38.18,52560
+Hebei,Zanhuang,114.38,37.67,51230
+Hebei,Wuji,114.97,38.18,52460
+Hebei,Pingshan,114.2,38.25,50400
+Hebei,Yuanshi,114.52,37.75,51130
+Hebei,Zhao,114.77,37.75,51530
+Hebei,Xinji Market,115.22,37.92,52360
+Hebei,Cities,114.83,38.03,52160
+Hebei,Jinzhou,115.03,38.03,52260
+Hebei,Xinle,114.68,38.35,50700
+Hebei,Luquan,114.3,38.08,50200
+Hebei,Tangshan,118.2,39.63,63000
+Hebei,Lunan,118.17,39.63,63017
+Hebei,Lubei,118.22,39.63,63000
+Hebei,Guye,118.42,39.73,63100
+Hebei,Kaiping,118.27,39.68,63021
+Hebei,Fengnan,118.1,39.57,63300
+Hebei,Fengrun,118.17,39.83,64000
+Hebei,Qixian,118.7,39.75,63700
+Hebei,Dannan,118.68,39.5,63500
+Hebei,Ledting,118.9,39.42,63600
+Hebei,Qianxi,118.32,40.15,64300
+Hebei,Yutian,117.73,39.88,64100
+Hebei,Tanghai,118.45,39.27,63200
+Hebei,Zunhua,117.95,40.18,64200
+Hebei,Qian'an,118.7,40.02,64400
+Hebei,Qinhuangdao,119.6,39.93,66000
+Hebei,Haigang,119.6,39.93,66000
+Hebei,Shanhaiguan,119.77,40,66200
+Hebei,Beidaihe,119.48,39.83,66100
+Hebei,Qinglong Manchu,118.95,40.4,66500
+Hebei,Changli,119.17,39.7,66600
+Hebei,Funing,119.23,39.88,66300
+Hebei,Lu Long,118.87,39.88,66400
+Hebei,Handan,114.48,36.62,56000
+Hebei,Hangshan,114.48,36.6,56001
+Hebei,Cluster,114.48,36.63,56004
+Hebei,Revival,114.45,36.63,56002
+Hebei,Fengfeng Mining,114.2,36.42,56200
+Hebei,Handan,114.53,36.6,56100
+Hebei,Linzhang,114.62,36.35,56600
+Hebei,Cheng'an,114.68,36.43,56700
+Hebei,Daming,115.15,36.28,56900
+Hebei,County,113.67,36.57,56400
+Hebei,Magnetic,114.37,36.35,56500
+Hebei,Feixiang,114.8,36.55,57550
+Hebei,Yongnian,114.48,36.78,57150
+Hebei,Qiu,115.17,36.82,57450
+Hebei,Jize,114.87,36.92,57350
+Hebei,Guangping,114.93,36.48,57650
+Hebei,Museumi,115.3,36.53,57750
+Hebei,Wei,114.93,36.37,56800
+Hebei,Qu Zhou,114.95,36.78,57250
+Hebei,Wu'an,114.2,36.7,56300
+Hebei,Xingtai,114.48,37.07,54000
+Hebei,Bridge East,114.5,38.05,54000
+Hebei,Bridge East,114.9,40.78,54000
+Hebei,Bridge East,114.5,37.07,54000
+Hebei,Qiaoxi,114.87,40.83,54000
+Hebei,Qiaoxi,114.47,38.03,54000
+Hebei,Qiaoxi,114.47,37.05,54000
+Hebei,Xingtai,114.5,37.08,54000
+Hebei,Lincheng,114.5,37.43,54300
+Hebei,Neiqiu,114.52,37.3,54200
+Hebei,Baixiang,114.68,37.5,55450
+Hebei,Longyao,114.77,37.35,55350
+Hebei,County,114.68,37.13,55151
+Hebei,Nanhe,114.68,37,54400
+Hebei,Ningjin,114.92,37.62,55550
+Hebei,Junlu,115.03,37.22,55250
+Hebei,Xinhe,115.25,37.53,55650
+Hebei,Guangzong,115.15,37.07,54600
+Hebei,Pingxiang,115.03,37.07,54500
+Hebei,Wei,115.25,36.98,54700
+Hebei,Qinghe,115.67,37.07,54800
+Hebei,Linxi,115.5,36.85,54900
+Hebei,Nangong,115.38,37.35,55750
+Hebei,Shahe,114.5,36.85,54100
+Hebei,Baoding,115.47,38.87,71000
+Hebei,New urban,115.45,38.87,71000
+Hebei,North,115.48,38.87,71000
+Hebei,Nanshi,115.5,38.85,71000
+Hebei,Mancheng,115.32,38.95,72150
+Hebei,Qingyuan,115.48,38.77,71100
+Hebei,Lishui,115.72,39.4,74100
+Hebei,Fuping,114.18,38.85,73200
+Hebei,Xushui,115.65,39.02,72550
+Hebei,Dingxing,115.77,39.27,72650
+Hebei,Tangxian,114.98,38.75,72350
+Hebei,Gaoyang,115.78,38.68,71500
+Hebei,Rongcheng,115.87,39.05,71700
+Hebei,Yiyuan,114.68,39.35,74300
+Hebei,Wangdu,115.15,38.72,72450
+Hebei,Anxin,115.93,38.92,71600
+Hebei,Yixian,115.5,39.35,74200
+Hebei,Quyang,114.7,38.62,73100
+Hebei,Li,115.57,38.48,71400
+Hebei,Shunping,115.13,38.83,72250
+Hebei,Bono,115.47,38.45,71300
+Hebei,County,116.1,38.98,71800
+Hebei,Dazhou,115.97,39.48,72750
+Hebei,Dingzhou,114.97,38.52,73000
+Hebei,Anguo,115.32,38.42,71200
+Hebei,Gaobeidian,115.85,39.33,74000
+Hebei,Zhangjiakou,114.88,40.82,75000
+Hebei,Bridge East,114.5,38.05,75000
+Hebei,Bridge East,114.9,40.78,75000
+Hebei,Bridge East,114.5,37.07,75000
+Hebei,Qiaoxi,114.87,40.83,75061
+Hebei,Qiaoxi,114.47,38.03,75061
+Hebei,Qiaoxi,114.47,37.05,75061
+Hebei,Xuanhua,115.05,40.6,75100
+Hebei,Xiahua Park,115.27,40.48,75300
+Hebei,Xuanhua,115.02,40.55,75100
+Hebei,Zhangbei,114.7,41.15,76450
+Hebei,Kangbao,114.62,41.85,76650
+Hebei,Guyuan,115.7,41.67,76550
+Hebei,Shangyi,113.97,41.08,76750
+Hebei,Wei,114.57,39.85,75700
+Hebei,Yangyuan,114.17,40.12,75800
+Hebei,Huai'an,114.42,40.67,76150
+Hebei,All,114.72,40.75,76250
+Hebei,Huailai,115.52,40.4,75400
+Hebei,Lugu,115.22,40.38,75600
+Hebei,Chicheng,115.83,40.92,75500
+Hebei,Chongli,115.27,40.97,76350
+Hebei,Chengde,117.93,40.97,67000
+Hebei,Shuangqiao,117.93,40.97,67000
+Hebei,Shuanglu,117.78,40.95,67000
+Hebei,Eagle Small Camp Zone Mining,117.65,40.55,67200
+Hebei,Chengde,118.17,40.77,67400
+Hebei,Xinglong,117.52,40.43,67300
+Hebei,Pingquan,118.68,41,67500
+Hebei,Pingping,117.33,40.93,68250
+Hebei,Longhua,117.72,41.32,68150
+Hebei,Fengning Manchu,116.65,41.2,68350
+Hebei,Kuancheng Manchu,118.48,40.6,67600
+Hebei,Piece Manchu,117.75,41.93,68450
+Hebei,Cangzhou,116.83,38.3,61000
+Hebei,Xinhua,114.47,38.05,61000
+Hebei,Xinhua,116.87,38.32,61000
+Hebei,Canal,116.85,38.32,61000
+Hebei,Cangxian,116.87,38.3,61000
+Hebei,Qing,116.82,38.58,62650
+Hebei,Dongguang,116.53,37.88,61600
+Hebei,Haixing,117.48,38.13,61200
+Hebei,Yanyan,117.22,38.05,61300
+Hebei,Suning,115.83,38.43,62350
+Hebei,Nanpi,116.7,38.03,61500
+Hebei,Wuqiao,116.38,37.62,61800
+Hebei,Xianxian,116.12,38.18,62250
+Hebei,Mengcun,117.1,38.07,61400
+Hebei,Botou,116.57,38.07,62150
+Hebei,Renqiu,116.1,38.72,62550
+Hebei,Huanghua,117.35,38.37,61100
+Hebei,Hejian,116.08,38.43,62450
+Hebei,Langfang,116.7,39.52,65000
+Hebei,Sub -zone,116.68,39.52,65000
+Hebei,Guangyang,116.72,39.53,65000
+Hebei,Gu'an,116.3,39.43,65500
+Hebei,Yongqing,116.5,39.32,65600
+Hebei,Xianghe,117,39.77,65400
+Hebei,Dacheng,116.63,38.7,65900
+Hebei,Wen'an,116.47,38.87,65800
+Hebei,Big Factory,116.98,39.88,65300
+Hebei,Bazhou,116.4,39.1,65700
+Hebei,Sanhe,117.07,39.98,65200
+Hebei,Hengshui,115.68,37.73,53000
+Hebei,Taocheng,115.68,37.73,53000
+Hebei,Zaoqiang,115.72,37.52,53100
+Hebei,Wuyi,115.88,37.82,53400
+Hebei,Wuqiang,115.98,38.03,53300
+Hebei,Raoyang,115.73,38.23,53900
+Hebei,Anping,115.52,38.23,53600
+Hebei,Hometown,115.97,37.35,253800
+Hebei,Jingxian,116.27,37.7,53500
+Hebei,Fucheng,116.15,37.87,53700
+Hebei,Jizhou,115.57,37.57,53200
+Hebei,Shenzhou,115.55,38.02,53800
+Shanxi,Taiyuan,112.55,37.87,30000
+Shanxi,Shop,112.57,37.73,30000
+Shanxi,Yingze,112.57,37.87,30000
+Shanxi,Xinghua Ling,112.57,37.88,30000
+Shanxi,Diancaya,112.48,37.93,30000
+Shanxi,Berlin,112.52,37.87,30000
+Shanxi,Jinyuan,112.48,37.73,30000
+Shanxi,Qingxu,112.35,37.6,30400
+Shanxi,Yangqu,112.67,38.07,30100
+Shanxi,Louzhi,111.78,38.07,30300
+Shanxi,Ancient market,112.17,37.92,30200
+Shanxi,Datong,113.3,40.08,37000
+Shanxi,Urban,113.28,40.08,37006
+Shanxi,Urban,113.6,37.85,37006
+Shanxi,Urban,113.12,36.22,37006
+Shanxi,Urban,112.83,35.5,37006
+Shanxi,Mining,113.17,40.03,37001
+Shanxi,Mining,113.57,37.87,37001
+Shanxi,Southern suburbs,113.13,40,37000
+Shanxi,Xinrong,113.15,40.27,37002
+Shanxi,Yanggao,113.75,40.37,38100
+Shanxi,Tianzhen,114.08,40.42,38200
+Shanxi,Guangling,114.28,39.77,37500
+Shanxi,Lingqiu,114.23,39.43,34400
+Shanxi,Hunyuan,113.68,39.7,37400
+Shanxi,Zuo Yun,112.7,40,37100
+Shanxi,Datong,113.6,40.03,37300
+Shanxi,Yangquan,113.57,37.85,45000
+Shanxi,Urban,113.28,40.08,45000
+Shanxi,Urban,113.6,37.85,45000
+Shanxi,Urban,113.12,36.22,45000
+Shanxi,Urban,112.83,35.5,45000
+Shanxi,Mining,113.17,40.03,45000
+Shanxi,Mining,113.57,37.87,45000
+Shanxi,suburbs,113.58,37.93,45000
+Shanxi,suburbs,113.12,36.2,45000
+Shanxi,Pingding,113.62,37.8,45200
+Shanxi,Yaoxian,113.4,38.08,45100
+Shanxi,Changzhi,113.12,36.2,46000
+Shanxi,Urban,113.28,40.08,46000
+Shanxi,Urban,113.6,37.85,46000
+Shanxi,Urban,113.12,36.22,46000
+Shanxi,Urban,112.83,35.5,46000
+Shanxi,suburbs,113.58,37.93,46000
+Shanxi,suburbs,113.12,36.2,46000
+Shanxi,Changzhi,113.03,36.05,47100
+Shanxi,Xiangyuan,113.05,36.53,46200
+Shanxi,Tunliu,112.88,36.32,46100
+Shanxi,Pingshun,113.43,36.2,47400
+Shanxi,Licheng,113.38,36.5,47600
+Shanxi,Huguan,113.2,36.12,47300
+Shanxi,Eldest son,112.87,36.12,46600
+Shanxi,Wuxiang,112.85,36.83,46300
+Shanxi,Qin,112.7,36.75,46400
+Shanxi,Qinyuan,112.33,36.5,46500
+Shanxi,Cities,113.22,36.33,47500
+Shanxi,Jincheng,112.83,35.5,48000
+Shanxi,Urban,113.28,40.08,48000
+Shanxi,Urban,113.6,37.85,48000
+Shanxi,Urban,113.12,36.22,48000
+Shanxi,Urban,112.83,35.5,48000
+Shanxi,Qinshui,112.18,35.68,48200
+Shanxi,Yangcheng,112.42,35.48,48100
+Shanxi,Lingchuan,113.27,35.78,48300
+Shanxi,Zezhou,112.83,35.5,48012
+Shanxi,Gaoping,112.92,35.8,48400
+Shanxi,Shuozhou,112.43,39.33,36000
+Shanxi,Shuocheng,112.43,39.33,36002
+Shanxi,Shanyin,112.82,39.52,36900
+Shanxi,Ying,113.18,39.55,37600
+Shanxi,Youyu,112.47,39.98,37200
+Shanxi,Huairen,113.08,39.83,38300
+Shanxi,Jinzhong,112.75,37.68,30600
+Shanxi,Yuci,112.75,37.68,30600
+Shanxi,Yushe,112.97,37.07,31800
+Shanxi,Zuoquan,113.37,37.07,32600
+Shanxi,Heshun,113.57,37.33,32700
+Shanxi,Xiyang,113.7,37.62,45300
+Shanxi,Shouyang,113.18,37.88,45400
+Shanxi,Taigu,112.55,37.42,30800
+Shanxi,Qixian,112.33,37.35,30900
+Shanxi,Pingyao,112.17,37.18,31100
+Shanxi,Lingshi,111.77,36.85,31300
+Shanxi,Market,111.92,37.03,32000
+Shanxi,Transport,110.98,35.02,44000
+Shanxi,Salt lake,110.98,35.02,44000
+Shanxi,Linyi,110.77,35.15,44100
+Shanxi,Wanrong,110.83,35.42,44200
+Shanxi,Wenxi,111.22,35.35,43800
+Shanxi,Takayama Prefecture,110.97,35.6,43200
+Shanxi,Xinyi,111.22,35.62,43100
+Shanxi,Dangxian,111.57,35.48,43600
+Shanxi,Yuanqu,111.67,35.3,43700
+Shanxi,Xia,111.22,35.15,44400
+Shanxi,Pinglu,111.22,34.83,44300
+Shanxi,Ruicheng,110.68,34.7,44600
+Shanxi,Hejin,110.7,35.6,43300
+Shanxi,Xinzhou,112.73,38.42,34000
+Shanxi,Xinfu,112.73,38.42,34000
+Shanxi,Dingxiang,112.95,38.48,35400
+Shanxi,Wutai,113.25,38.73,35500
+Shanxi,Extended,112.95,39.07,34200
+Shanxi,Fanzhi,113.25,39.18,34300
+Shanxi,Ningwu,112.3,39,36700
+Shanxi,Jingle,111.93,38.37,35100
+Shanxi,Shenchi,112.2,39.08,36100
+Shanxi,Wuzhai,111.85,38.9,36200
+Shanxi,岢 岢 岢 岢 岢,111.57,38.7,36300
+Shanxi,Hequ,111.13,39.38,36500
+Shanxi,Yiguan,111.5,39.43,36400
+Shanxi,Yuanping,112.7,38.73,34100
+Shanxi,Linfen,111.52,36.08,41000
+Shanxi,Yaotu,111.52,36.08,41000
+Shanxi,Quwo,111.47,35.63,43400
+Shanxi,Yicheng,111.72,35.73,43500
+Shanxi,Xiangfen,111.43,35.88,41500
+Shanxi,Hongdong,111.67,36.25,41600
+Shanxi,Ancient,111.92,36.27,42400
+Shanxi,Anze,112.25,36.15,42500
+Shanxi,Fushan,111.83,35.97,42600
+Shanxi,Ji,110.68,36.1,42200
+Shanxi,Xiangning,110.83,35.97,42100
+Shanxi,Daning,110.75,36.47,42300
+Shanxi,Qixian,110.93,36.7,41300
+Shanxi,Yonghe,110.63,36.77,41400
+Shanxi,Pu,111.08,36.42,41200
+Shanxi,Fenxi,111.57,36.65,31500
+Shanxi,Houma,111.35,35.62,43000
+Shanxi,Huozhou,111.72,36.57,31400
+Shanxi,Luliang,111.13,37.52,33000
+Shanxi,Littering,111.13,37.52,33000
+Shanxi,Wenshui,112.02,37.43,32100
+Shanxi,Jiaocheng,112.15,37.55,30500
+Shanxi,Xingxian,111.12,38.47,33600
+Shanxi,Linxian,110.98,37.95,33200
+Shanxi,Liulin,110.9,37.43,33300
+Shanxi,Shilou,110.83,37,32500
+Shanxi,Lanxian,111.67,38.28,35200
+Shanxi,Fangshan,111.23,37.88,33100
+Shanxi,Zhongyang,111.18,37.33,33400
+Shanxi,Jiakou,111.2,36.97,32400
+Shanxi,Xiaoyi,111.77,37.15,32300
+Shanxi,Fenyang,111.78,37.27,32200
+Inner Mongolia,Hohhot,111.73,40.83,10000
+Inner Mongolia,New town,111.65,40.87,10000
+Inner Mongolia,Return to the people,111.6,40.8,10030
+Inner Mongolia,Yuquan,111.67,40.75,10000
+Inner Mongolia,SaiHan,111.68,40.8,10020
+Inner Mongolia,Turkom Zuoqi,111.13,40.72,10100
+Inner Mongolia,Toto,111.18,40.27,10200
+Inner Mongolia,Helinle,111.82,40.38,11500
+Inner Mongolia,Qingshuihe,111.68,39.92,11600
+Inner Mongolia,Wuchuan,111.45,41.08,11700
+Inner Mongolia,Baotou,109.83,40.65,14000
+Inner Mongolia,Donghe,110.02,40.58,14040
+Inner Mongolia,Kundulun,109.83,40.63,14010
+Inner Mongolia,Qingshan,109.9,40.65,14030
+Inner Mongolia,Shiguang,110.27,40.68,14070
+Inner Mongolia,Jiutihara,109.97,40.6,14060
+Inner Mongolia,Turkom Right Banner,110.52,40.57,14100
+Inner Mongolia,Guyang,110.05,41.03,14200
+Inner Mongolia,Darhamima Mingan Union Flag,110.43,41.7,14500
+Inner Mongolia,Wuhai,106.82,39.67,16000
+Inner Mongolia,Hai Bay Bay,106.83,39.7,16000
+Inner Mongolia,Hainan,106.88,39.43,16000
+Inner Mongolia,Wuda,106.7,39.5,16000
+Inner Mongolia,Chifeng,118.92,42.27,24000
+Inner Mongolia,Hongshan,118.97,42.28,24000
+Inner Mongolia,Yuanbao Mountain,119.28,42.03,24000
+Inner Mongolia,Songshan,118.92,42.28,24000
+Inner Mongolia,Arukorqin Banner,120.08,43.88,25550
+Inner Mongolia,Balin Zuoqi,119.38,43.98,25450
+Inner Mongolia,Barin Right Banner,118.67,43.52,25150
+Inner Mongolia,Linxi,118.05,43.6,25350
+Inner Mongolia,Kashkteng Banner,117.53,43.25,25350
+Inner Mongolia,Weng Niuteqi,119.02,42.93,24500
+Inner Mongolia,Karaqinqi,118.7,41.93,24400
+Inner Mongolia,Ningcheng,119.33,41.6,24200
+Inner Mongolia,Aohan Banner,119.9,42.28,24300
+Inner Mongolia,Tongliao,122.27,43.62,28000
+Inner Mongolia,Corin,122.27,43.62,28000
+Inner Mongolia,Korqin's left wing Zhongqi,123.32,44.13,29300
+Inner Mongolia,Korqin's left wing back flag,122.35,42.95,28100
+Inner Mongolia,Kailu,121.3,43.6,28400
+Inner Mongolia,Kuron Banner,121.77,42.73,28200
+Inner Mongolia,Naiman Banner,120.65,42.85,28300
+Inner Mongolia,Zarut Banner,120.92,44.55,29100
+Inner Mongolia,Huolin Guole,119.65,45.53,29200
+Inner Mongolia,Ordos,109.8,39.62,17000
+Inner Mongolia,Dongsheng,110,39.82,17000
+Inner Mongolia,Dalat Banner,110.03,40.4,14300
+Inner Mongolia,Jun Ge Ban,111.23,39.87,17100
+Inner Mongolia,Ortokqian flag,107.48,38.18,16200
+Inner Mongolia,Ortoch Banner,107.98,39.1,16100
+Inner Mongolia,Hangzhou Jinqi,108.72,39.83,17400
+Inner Mongolia,Ukraine Banner,108.85,38.6,17300
+Inner Mongolia,Ikinhlo Banner,109.73,39.57,17200
+Inner Mongolia,Hulunbeir,119.77,49.22,21000
+Inner Mongolia,Hailar,119.77,49.22,21000
+Inner Mongolia,Arong Banner,123.47,48.13,162750
+Inner Mongolia,Olun Autonomous Banner,123.72,50.58,22450
+Inner Mongolia,Ewenki Autonomous Banner,119.75,49.13,21100
+Inner Mongolia,Chen Balhu Banner,119.43,49.32,21500
+Inner Mongolia,New Balhu Zuoqi,118.27,48.22,21200
+Inner Mongolia,New Barcoro Right Banner,116.82,48.67,21300
+Inner Mongolia,Manzhouli,117.45,49.58,21400
+Inner Mongolia,Kukeshi,120.73,49.28,22150
+Inner Mongolia,Zhalantun,122.75,47.98,162650
+Inner Mongolia,Erguna,120.18,50.23,22250
+Inner Mongolia,Genhe,121.52,50.78,22350
+Inner Mongolia,Bayannur,107.42,40.75,15000
+Inner Mongolia,Linhe,107.4,40.75,15000
+Inner Mongolia,Wuyuan,108.27,41.1,15100
+Inner Mongolia,Takou,107.02,40.33,15200
+Inner Mongolia,Urart Qianqi Banner,108.65,40.72,14400
+Inner Mongolia,Ulatzaka Banner,108.52,41.57,15300
+Inner Mongolia,Urater Houqi Banner,107.07,41.1,15543
+Inner Mongolia,Hangjin Houqi Banner,107.15,40.88,15400
+Inner Mongolia,Ulanqab,113.12,40.98,12000
+Inner Mongolia,Jining,113.1,41.03,12000
+Inner Mongolia,Zhuozi,112.57,40.9,12300
+Inner Mongolia,Hua De,114,41.9,13350
+Inner Mongolia,Shangdu,113.53,41.55,13450
+Inner Mongolia,Xinghe,113.88,40.88,13650
+Inner Mongolia,Liangcheng,112.48,40.53,13750
+Inner Mongolia,Chahar's right wing front flag,113.22,40.78,12200
+Inner Mongolia,Chahar's right wing middle flag,112.63,41.27,13550
+Inner Mongolia,Chahar's right -wing back flag,113.18,41.45,12400
+Inner Mongolia,Four Son King Banner,111.7,41.52,11800
+Inner Mongolia,Fengzhen,113.15,40.43,12100
+Inner Mongolia,Xing'an,122.05,46.08,137400
+Inner Mongolia,Ulanhot,122.05,46.08,137400
+Inner Mongolia,Alishan,119.93,47.18,137805
+Inner Mongolia,Korqin's right front flag,121.92,46.07,137423
+Inner Mongolia,Korqin's right -wing Banner,121.47,45.05,29400
+Inner Mongolia,Takaya Banner,122.9,46.73,137600
+Inner Mongolia,Taro Spring,121.57,45.38,137500
+Inner Mongolia,Xilin Gol,116.07,43.95,26000
+Inner Mongolia,Erlianhot,111.98,43.65,12600
+Inner Mongolia,Silinhot,116.07,43.93,26000
+Inner Mongolia,Aboba Banner,114.97,44.02,11400
+Inner Mongolia,Sonit Zuoqi,113.63,43.85,11300
+Inner Mongolia,Sonit Right Banner,112.65,42.75,11200
+Inner Mongolia,Dongwu Mount,116.97,45.52,26300
+Inner Mongolia,West Wusumin Banner,117.6,44.58,26200
+Inner Mongolia,Taipi Temple Banner,115.28,41.9,27000
+Inner Mongolia,Mosaic,113.83,42.23,13250
+Inner Mongolia,Positive white flag,115,42.3,13800
+Inner Mongolia,Zhenglan Banner,116,42.25,27200
+Inner Mongolia,Duolun,116.47,42.18,27300
+Inner Mongolia,Alxa,105.67,38.83,750306
+Inner Mongolia,Alxa Zuoqi,105.67,38.83,750306
+Inner Mongolia,Alashan Right Banner,101.68,39.2,737300
+Inner Mongolia,Ejin Banner,101.07,41.97,735400
+Liaoning,Shenyang,123.43,41.8,110000
+Liaoning,Heping,123.4,41.78,110000
+Liaoning,Shenhe,123.45,41.8,110000
+Liaoning,Great East,123.47,41.8,110041
+Liaoning,Emperor,123.42,41.82,110000
+Liaoning,Tiexi,122.95,41.12,110020
+Liaoning,Tiexi,123.35,41.8,110020
+Liaoning,Sujiatun,123.33,41.67,110101
+Liaoning,Dongling,123.47,41.77,110000
+Liaoning,Xinchengzi,123.52,42.05,110121
+Liaoning,Yuhong,123.3,41.78,110000
+Liaoning,Liaozhong,122.72,41.52,110200
+Liaoning,Kangping,123.35,42.75,110500
+Liaoning,Faku,123.4,42.5,110400
+Liaoning,Xinmin,122.82,42,110300
+Liaoning,Dalian,121.62,38.92,116000
+Liaoning,Zhongshan,121.63,38.92,116001
+Liaoning,Xigang,121.6,38.92,116000
+Liaoning,Shahekou,121.58,38.9,116021
+Liaoning,Ganjingzi,121.57,38.95,116033
+Liaoning,Lushunkou,121.27,38.82,116041
+Liaoning,Jinzhou,121.7,39.1,116100
+Liaoning,Changhai,122.58,39.27,116500
+Liaoning,Wafangdian,122,39.62,116300
+Liaoning,Pulandian,121.95,39.4,116200
+Liaoning,Zhuanghe,122.98,39.7,116400
+Liaoning,Anshan,122.98,41.1,114000
+Liaoning,East,122.98,41.1,114001
+Liaoning,Tiexi,122.95,41.12,114014
+Liaoning,Tiexi,123.35,41.8,114014
+Liaoning,Lishan,123,41.15,114031
+Liaoning,Qianshan,122.97,41.07,114000
+Liaoning,Tai'an,122.42,41.38,114100
+Liaoning,Xiuyan Manchu,123.28,40.28,114300
+Liaoning,Sea,122.7,40.88,114200
+Liaoning,Fushun,123.98,41.88,113006
+Liaoning,New warehouse,123.88,41.87,113008
+Liaoning,Dongzhou,124.02,41.85,113006
+Liaoning,Wanghua,123.78,41.85,113001
+Liaoning,Shuncheng,123.93,41.88,113006
+Liaoning,Fushun,123.9,41.88,113118
+Liaoning,Xinbin Manchu,125.03,41.73,113200
+Liaoning,Qingyuan Manchu,124.92,42.1,113300
+Liaoning,Benxi,123.77,41.3,117000
+Liaoning,Pingshan,123.77,41.3,117000
+Liaoning,Xihu,123.77,41.33,117000
+Liaoning,Mingshan,123.82,41.3,117000
+Liaoning,Nanfen,123.73,41.1,117000
+Liaoning,Benxi Manchu,124.12,41.3,117100
+Liaoning,Huanren Manchu,125.35,41.27,117200
+Liaoning,Dandong,124.38,40.13,118000
+Liaoning,Yuanbao,124.38,40.13,118000
+Liaoning,Revitalize,124.35,40.08,118000
+Liaoning,Zhen'an,124.42,40.17,118000
+Liaoning,Kuandian Manchu,124.78,40.73,118200
+Liaoning,Donggang,124.15,39.87,118300
+Liaoning,Phoenix,124.07,40.45,118100
+Liaoning,Jinzhou,121.13,41.1,121000
+Liaoning,Ancient tower,121.12,41.13,121000
+Liaoning,Linghe,121.15,41.12,121000
+Liaoning,Taihe,121.1,41.1,121011
+Liaoning,Heishan,122.12,41.7,121400
+Liaoning,Righteous,121.23,41.53,121100
+Liaoning,Linghai,121.35,41.17,121200
+Liaoning,Yingkou,122.23,40.67,115000
+Liaoning,Station,122.27,40.68,115002
+Liaoning,West,122.22,40.67,115004
+Liaoning,Bayu circle,122.12,40.27,115007
+Liaoning,Old border,122.37,40.67,115005
+Liaoning,Gaizhou,122.35,40.4,115200
+Liaoning,Dashiqiao,122.5,40.65,115100
+Liaoning,Fuxin,121.67,42.02,123000
+Liaoning,Haizhou,121.65,42.02,123000
+Liaoning,Taiping,121.67,42.02,123003
+Liaoning,Qinghemen,121.42,41.75,123006
+Liaoning,Xixia,121.68,42.03,123000
+Liaoning,Fuxin,121.75,42.07,123100
+Liaoning,Zhangwu,122.53,42.38,123200
+Liaoning,Liaoyang,123.17,41.27,111000
+Liaoning,White tower,123.17,41.27,111000
+Liaoning,Wen Sheng,123.18,41.27,111000
+Liaoning,Hongwei,123.2,41.2,111000
+Liaoning,Gong Changling,123.45,41.13,111008
+Liaoning,Prince River,123.18,41.25,111000
+Liaoning,Liaoyang,123.07,41.22,111200
+Liaoning,Lighthouse,123.33,41.42,111300
+Liaoning,Panjin,122.07,41.12,124000
+Liaoning,Double,122.05,41.2,124000
+Liaoning,Xinglongtai,122.07,41.12,124010
+Liaoning,Dawa,122.07,40.98,124200
+Liaoning,Panshan,122.02,41.25,124100
+Liaoning,Tieling,123.83,42.28,112000
+Liaoning,Yinzhou,123.85,42.28,112000
+Liaoning,Qinghe,124.15,42.53,112003
+Liaoning,Tieling,123.83,42.3,112600
+Liaoning,Xifeng,124.72,42.73,112400
+Liaoning,Changtu,124.1,42.78,112500
+Liaoning,Tune Mountain,123.55,42.47,112700
+Liaoning,Kaiyuan,124.03,42.55,112300
+Liaoning,Chaoyang,120.45,41.57,122000
+Liaoning,Double tower,120.45,41.57,122000
+Liaoning,Longcheng,120.43,41.6,122000
+Liaoning,Chaoyang,120.47,41.58,122000
+Liaoning,Jianping,119.63,41.4,122400
+Liaoning,North Ticket,120.77,41.8,122100
+Liaoning,Lingyuan,119.4,41.25,122500
+Liaoning,Huludao,120.83,40.72,125000
+Liaoning,Mountainous,120.87,40.77,125000
+Liaoning,Longgang,120.93,40.72,125003
+Liaoning,Southern ticket,120.75,41.1,125027
+Liaoning,Suizhong,120.33,40.32,125200
+Liaoning,Jianchang,119.8,40.82,125300
+Liaoning,City,120.72,40.62,125100
+Jilin,Changchun,125.32,43.9,130000
+Jilin,Nanguan,125.33,43.87,130022
+Jilin,Wide,125.32,43.92,130000
+Jilin,Chaoyang,125.28,43.83,130012
+Jilin,Second -road,125.37,43.87,130031
+Jilin,Green park,125.25,43.88,130062
+Jilin,Shuangyang,125.67,43.52,130600
+Jilin,Nong'an,125.18,44.43,130200
+Jilin,Jiu Tai,125.83,44.15,130500
+Jilin,Yushu,126.55,44.82,130400
+Jilin,Dehui,125.7,44.53,130300
+Jilin,NA,126.55,43.83,132000
+Jilin,Changyi,126.57,43.88,132000
+Jilin,Longtan,126.57,43.92,132000
+Jilin,Camping,126.53,43.83,132000
+Jilin,Full,126.57,43.82,132113
+Jilin,Yongji,126.5,43.67,132100
+Jilin,Luohe,127.33,43.72,132500
+Jilin,Huadian,126.73,42.97,132400
+Jilin,Shulan,126.95,44.42,132600
+Jilin,Rock,126.05,42.95,132300
+Jilin,Siping,124.35,43.17,136000
+Jilin,Tiexi,124.35,43.15,136000
+Jilin,East,124.38,43.17,136001
+Jilin,Lishu,124.33,43.32,136500
+Jilin,Yitong Manchu,125.3,43.35,130700
+Jilin,Gongsingling,124.82,43.5,136100
+Jilin,Shuangliao,123.5,43.52,136400
+Jilin,Liaoyuan,125.13,42.88,136200
+Jilin,Longshan,125.12,42.9,136200
+Jilin,Xi'an,125.15,42.92,136201
+Jilin,Dongfeng,125.53,42.68,136300
+Jilin,Dongliao,125,42.92,136600
+Jilin,Tonghua,125.93,41.73,134000
+Jilin,Dongchang,125.95,41.73,134000
+Jilin,Erdaojiang,126.03,41.77,134003
+Jilin,Tonghua,125.75,41.68,134100
+Jilin,Huinan,126.03,42.68,135100
+Jilin,Liuhe,125.73,42.28,135300
+Jilin,Meihekou,125.68,42.53,135000
+Jilin,Ji'an,126.18,41.12,134200
+Jilin,Baishan,126.42,41.93,134300
+Jilin,Badaojiang,126.4,41.93,134300
+Jilin,Fusong,127.28,42.33,134500
+Jilin,Jingyu,126.8,42.4,135200
+Jilin,Changbai,128.2,41.42,134400
+Jilin,Linjiang,126.9,41.8,134600
+Jilin,Songyuan,124.82,45.13,138000
+Jilin,Ningjiang,124.8,45.17,138000
+Jilin,Changling,123.98,44.28,131500
+Jilin,Qian'an,124.02,45.02,131400
+Jilin,Fuyu,126.02,44.98,131200
+Jilin,White,122.83,45.62,137000
+Jilin,Daibei,122.85,45.62,137000
+Jilin,Zhenyi,123.2,45.85,137300
+Jilin,Tongyu,123.08,44.82,137200
+Jilin,Dannan,122.78,45.33,137100
+Jilin,Daan,124.28,45.5,131300
+Jilin,Yanbian,129.5,42.88,133000
+Jilin,Yanji,129.5,42.88,133000
+Jilin,Chart,129.83,42.97,133100
+Jilin,Dunhua,128.23,43.37,133700
+Jilin,Xunchun,130.37,42.87,133300
+Jilin,Longjing,129.42,42.77,133400
+Jilin,Helong,129,42.53,133500
+Jilin,Wang Qing,129.75,43.32,133200
+Jilin,Antu,128.9,43.12,133600
+Heilongjiang,Harbin,126.53,45.8,150000
+Heilongjiang,Diaoli,126.62,45.77,150010
+Heilongjiang,Nangang,126.68,45.77,150000
+Heilongjiang,Outer,126.65,45.78,150026
+Heilongjiang,Xiangfang,126.68,45.72,150036
+Heilongjiang,Bungalow,126.62,45.62,150000
+Heilongjiang,Songbei,126.55,45.8,150028
+Heilongjiang,Hulan,126.58,45.9,150500
+Heilongjiang,Yilan,129.55,46.32,154800
+Heilongjiang,Fangzheng,128.83,45.83,150800
+Heilongjiang,County,127.48,45.75,150400
+Heilongjiang,Bayan,127.4,46.08,151800
+Heilongjiang,Mulan,128.03,45.95,151900
+Heilongjiang,Tonghe,128.75,45.97,150900
+Heilongjiang,Yanshou,128.33,45.45,150700
+Heilongjiang,Dual,126.32,45.37,150100
+Heilongjiang,Shangzhi,127.95,45.22,150600
+Heilongjiang,Wuchang,127.15,44.92,150200
+Heilongjiang,Qiqihar,123.95,47.33,161000
+Heilongjiang,Longsha,123.95,47.32,161005
+Heilongjiang,Jianhua,123.95,47.35,161000
+Heilongjiang,Tiefeng,123.98,47.35,161002
+Heilongjiang,Angangxi,123.8,47.15,161031
+Heilongjiang,Forayki,123.62,47.2,161000
+Heilongjiang,Longjiang,123.18,47.33,161100
+Heilongjiang,Yi'an,125.3,47.88,161500
+Heilongjiang,Tailai,123.42,46.4,162400
+Heilongjiang,Gannan,123.5,47.92,162100
+Heilongjiang,Wealthy,124.47,47.82,161200
+Heilongjiang,Keshan,125.87,48.03,161600
+Heilongjiang,Kidong,126.25,48.03,164800
+Heilongjiang,Baiquan,126.08,47.6,164700
+Heilongjiang,Neohe,124.87,48.48,161300
+Heilongjiang,Jixi,130.97,45.3,158100
+Heilongjiang,Cockle,130.97,45.3,158100
+Heilongjiang,Hengshan,130.93,45.2,158130
+Heilongjiang,Di Dao,130.78,45.37,158150
+Heilongjiang,Pear tree,130.68,45.08,158100
+Heilongjiang,Chengzihe,131,45.33,158100
+Heilongjiang,Mashan,130.52,45.2,158100
+Heilongjiang,Jidong,131.13,45.25,158200
+Heilongjiang,Huilin,132.98,45.77,158400
+Heilongjiang,Miyama,131.87,45.55,158300
+Heilongjiang,Hegang,130.27,47.33,154100
+Heilongjiang,Xiangyang,130.28,47.33,154100
+Heilongjiang,Xiangyang,130.33,46.8,154100
+Heilongjiang,Workers farmers,130.25,47.32,154100
+Heilongjiang,Nanshan,130.28,47.3,154100
+Heilongjiang,Xing'an,130.22,47.27,154102
+Heilongjiang,Dongshan,130.32,47.33,154100
+Heilongjiang,Xingshan,130.3,47.37,154100
+Heilongjiang,Luobei,130.83,47.58,154200
+Heilongjiang,Suibin,131.85,47.28,156200
+Heilongjiang,Shuangyashan,131.15,46.63,155100
+Heilongjiang,Jianshan,131.17,46.63,155100
+Heilongjiang,Lingdong,131.13,46.57,155124
+Heilongjiang,Sifangtai,131.33,46.58,155130
+Heilongjiang,Baoshan,131.4,46.57,155131
+Heilongjiang,Jixian,131.13,46.72,155900
+Heilongjiang,Friendship,131.8,46.78,155800
+Heilongjiang,Baoqing,132.2,46.32,155600
+Heilongjiang,Raohe,134.02,46.8,155700
+Heilongjiang,Daqing,125.03,46.58,163000
+Heilongjiang,Salu,125.02,46.6,163000
+Heilongjiang,Longfeng,125.1,46.53,163711
+Heilongjiang,Luxu,124.85,46.65,163712
+Heilongjiang,Honggang,124.88,46.4,163511
+Heilongjiang,Datong,124.82,46.03,163000
+Heilongjiang,Zhaozhou,125.27,45.7,166400
+Heilongjiang,Zhaoyuan,125.08,45.52,166500
+Heilongjiang,Linkian,124.87,47.18,166300
+Heilongjiang,Durbert,124.45,46.87,166200
+Heilongjiang,Yichun,128.9,47.73,153000
+Heilongjiang,Southern fork,129.28,47.13,153100
+Heilongjiang,Friendly,128.82,47.85,153031
+Heilongjiang,Xilin,129.28,47.48,153000
+Heilongjiang,Cuilian,128.65,47.72,153013
+Heilongjiang,Xinqing,129.53,48.28,153036
+Heilongjiang,Meixi,129.13,47.63,153000
+Heilongjiang,Jinshan Tun,129.43,47.42,153000
+Heilongjiang,Wuying,129.25,48.12,153033
+Heilongjiang,Wuma River,128.78,47.72,153000
+Heilongjiang,Tangwang River,129.57,48.45,153037
+Heilongjiang,Belt mountain,129.02,47.02,153000
+Heilongjiang,Waying,129.42,48.6,153038
+Heilongjiang,Hongxing,129.38,48.23,153000
+Heilongjiang,Shang Ganling,129.02,47.97,153000
+Heilongjiang,Jiayin,130.38,48.88,153200
+Heilongjiang,Tieli,128.02,46.98,152500
+Heilongjiang,Jiamusi,130.37,46.82,154000
+Heilongjiang,Xiangyang,130.28,47.33,154000
+Heilongjiang,Xiangyang,130.33,46.8,154000
+Heilongjiang,Forward zone,130.37,46.82,154002
+Heilongjiang,Dongfeng,130.4,46.82,154000
+Heilongjiang,suburbs,130.32,46.8,154004
+Heilongjiang,Hua Nan,130.57,46.23,154400
+Heilongjiang,Huaichuan,130.72,47.02,154300
+Heilongjiang,Tangyuan,129.9,46.73,154700
+Heilongjiang,Fuyuan,134.28,48.37,156500
+Heilongjiang,Tongjiang,132.52,47.65,156400
+Heilongjiang,Fujin,132.03,47.25,156100
+Heilongjiang,Qitaihe,130.95,45.78,154600
+Heilongjiang,Emerging,130.83,45.8,154600
+Heilongjiang,Momoyama,130.97,45.77,154600
+Heilongjiang,Eggplant River,131.07,45.77,154622
+Heilongjiang,Boli,130.57,45.75,154500
+Heilongjiang,Mudanjiang,129.6,44.58,157000
+Heilongjiang,Dong'an,129.62,44.58,157000
+Heilongjiang,Yangming,129.63,44.6,157000
+Heilongjiang,Aimin,129.58,44.58,157009
+Heilongjiang,Xi'an,129.62,44.57,157000
+Heilongjiang,Dongning,131.12,44.07,157200
+Heilongjiang,Linkou,130.27,45.3,157800
+Heilongjiang,Suifenhe,131.15,44.42,157300
+Heilongjiang,Hailin,129.38,44.57,157100
+Heilongjiang,Ning'an,129.47,44.35,157400
+Heilongjiang,Mu Emperor,130.52,44.92,157500
+Heilongjiang,Heihe,127.48,50.25,164300
+Heilongjiang,Aihui,127.48,50.25,164300
+Heilongjiang,Xunke,128.47,49.58,164400
+Heilongjiang,Sun Wu,127.32,49.42,164299
+Heilongjiang,Bei'an,126.52,48.23,164000
+Heilongjiang,Wu Dalian Chishi,126.2,48.52,164100
+Heilongjiang,Suihua,126.98,46.63,152000
+Heilongjiang,Northern forest,126.98,46.63,152000
+Heilongjiang,Wangkui,126.48,46.83,152101
+Heilongjiang,Lanxi,126.28,46.27,151500
+Heilongjiang,Qinggang,126.1,46.68,151600
+Heilongjiang,Qing'an,127.52,46.88,152400
+Heilongjiang,Mingshui,125.9,47.18,151700
+Heilongjiang,Suilie,127.1,47.25,152200
+Heilongjiang,Anda,125.33,46.4,151400
+Heilongjiang,Zhaodong,125.98,46.07,151100
+Heilongjiang,Helen,126.97,47.47,152300
+Heilongjiang,Daxinganling,124.12,50.42,165000
+Heilongjiang,Homa,126.65,51.73,165100
+Heilongjiang,Tahe,124.7,52.32,165200
+Heilongjiang,Mohe,122.53,52.97,165300
+Shanghai,NA,121.47,31.23,200000
+Shanghai,Huangpu,121.48,31.23,200001
+Shanghai,Luwan,121.47,31.22,200020
+Shanghai,Xuhui,121.43,31.18,200030
+Shanghai,Changning,121.42,31.22,200050
+Shanghai,Jing'an,121.45,31.23,200040
+Shanghai,Putuo,121.4,31.25,200333
+Shanghai,Zhabei,121.45,31.25,200070
+Shanghai,Hongkou,121.5,31.27,200080
+Shanghai,Yangpu,121.52,31.27,200082
+Shanghai,Minhang,121.38,31.12,201100
+Shanghai,Baoshan,121.48,31.4,201900
+Shanghai,Jiading,121.27,31.38,201800
+Shanghai,Pudong,121.53,31.22,200120
+Shanghai,Jinshan,121.33,30.75,201500
+Shanghai,Songjiang,121.22,31.03,201600
+Shanghai,Qingpu,121.12,31.15,201799
+Shanghai,Nanhui,121.75,31.05,201300
+Shanghai,Fengxian,121.47,30.92,201499
+Shanghai,Chongming,121.4,31.62,202150
+Jiangsu,Nanjing,118.78,32.07,210000
+Jiangsu,Xuanwu,118.8,32.05,210000
+Jiangsu,Baixia,118.78,32.03,210000
+Jiangsu,Qinhuai,118.8,32.02,210001
+Jiangsu,Jianye,118.75,32.03,210019
+Jiangsu,Gulou,117.18,34.28,210000
+Jiangsu,Gulou,118.77,32.07,210000
+Jiangsu,Xiaguan,118.73,32.08,210000
+Jiangsu,Pukou,118.62,32.05,211800
+Jiangsu,Qixia,118.88,32.12,210046
+Jiangsu,Yuhuatai,118.77,32,210012
+Jiangsu,Jiangning,118.85,31.95,211100
+Jiangsu,Liuhe,118.83,32.35,211500
+Jiangsu,Lishui,119.02,31.65,211200
+Jiangsu,Gaochun,118.88,31.33,211300
+Jiangsu,Wuxi,120.3,31.57,214000
+Jiangsu,Chong'an,120.3,31.58,214000
+Jiangsu,Nanchang,120.3,31.57,214000
+Jiangsu,Beitang,120.28,31.58,214000
+Jiangsu,Xishan,120.35,31.6,214000
+Jiangsu,Huishan,120.28,31.68,214100
+Jiangsu,Lake,120.27,31.57,214100
+Jiangsu,Jiangyin,120.27,31.9,214400
+Jiangsu,Yixing,119.82,31.35,214200
+Jiangsu,Xuzhou,117.18,34.27,221000
+Jiangsu,Gulou,117.18,34.28,221005
+Jiangsu,Gulou,118.77,32.07,221005
+Jiangsu,Yunlong,117.22,34.25,221000
+Jiangsu,Jiuli,117.13,34.3,221140
+Jiangsu,Jiawang,117.45,34.45,221011
+Jiangsu,Quanshan,117.18,34.25,221000
+Jiangsu,Fengxian,116.6,34.7,221700
+Jiangsu,Pei,116.93,34.73,221600
+Jiangsu,Tongshan,117.17,34.18,999999
+Jiangsu,Suining,117.95,33.9,221200
+Jiangsu,Xinyi,118.35,34.38,221400
+Jiangsu,Dazhou,117.95,34.32,221300
+Jiangsu,Changzhou,119.95,31.78,213000
+Jiangsu,Tianning,119.93,31.75,213000
+Jiangsu,Clock,119.93,31.78,213000
+Jiangsu,Qiushiyan,120.05,31.73,213000
+Jiangsu,Xinbei,119.97,31.83,213001
+Jiangsu,Wujin,119.93,31.72,213100
+Jiangsu,Puyang,119.48,31.42,213300
+Jiangsu,Jintan,119.57,31.75,213200
+Jiangsu,Suzhou,120.58,31.3,215000
+Jiangsu,Canglang,120.63,31.3,215000
+Jiangsu,Pingjiang,120.63,31.32,215000
+Jiangsu,Jinyu,120.6,31.32,215000
+Jiangsu,Huqiu,120.57,31.3,215004
+Jiangsu,Wuzhong,120.63,31.27,215100
+Jiangsu,Phase,120.63,31.37,215131
+Jiangsu,Changshu,120.75,31.65,215500
+Jiangsu,Zhangjiagang,120.55,31.87,215600
+Jiangsu,Kunshan,120.98,31.38,215300
+Jiangsu,Wujiang,120.63,31.17,215200
+Jiangsu,Taicang,121.1,31.45,215400
+Jiangsu,Nantong,120.88,31.98,226000
+Jiangsu,Chongchuan,120.85,32,226001
+Jiangsu,Port,120.8,32.03,226000
+Jiangsu,Hai'an,120.45,32.55,226600
+Jiangsu,Rudong,121.18,32.32,226400
+Jiangsu,Qidong,121.65,31.82,226200
+Jiangsu,Rugao,120.57,32.4,226500
+Jiangsu,Tongzhou,121.07,32.08,999999
+Jiangsu,Sea gate,121.17,31.9,226100
+Jiangsu,Lianyungang,119.22,34.6,222002
+Jiangsu,Lianyun,119.37,34.75,222042
+Jiangsu,Ninpo,119.17,34.6,222000
+Jiangsu,Haizhou,119.12,34.57,222000
+Jiangsu,Gansu,119.12,34.83,222100
+Jiangsu,Donghai,118.77,34.53,222300
+Jiangsu,Guanyun,119.25,34.3,222200
+Jiangsu,Guannan,119.35,34.08,223500
+Jiangsu,Huaian,119.02,33.62,223001
+Jiangsu,Qinghe,119.02,33.6,223001
+Jiangsu,Chuzhou,119.13,33.5,223200
+Jiangsu,Huaiyin,119.03,33.63,223300
+Jiangsu,Qingpu,119.03,33.58,223002
+Jiangsu,Lianshui,119.27,33.78,223400
+Jiangsu,Hongze,118.83,33.3,223100
+Jiangsu,Qixian,118.48,33,211700
+Jiangsu,Jinhu,119.02,33.02,211600
+Jiangsu,Salt,120.15,33.35,224000
+Jiangsu,Tinghu,120.13,33.4,224001
+Jiangsu,Yantu,120.15,33.33,224006
+Jiangsu,Xiangshui,119.57,34.2,224600
+Jiangsu,Binhai,119.83,33.98,224500
+Jiangsu,Funing,119.8,33.78,224400
+Jiangsu,Sheyang,120.25,33.78,224300
+Jiangsu,Jianhu,119.8,33.47,224700
+Jiangsu,Dongtai,120.3,32.85,224200
+Jiangsu,Dafeng,120.47,33.2,224100
+Jiangsu,Yangzhou,119.4,32.4,225000
+Jiangsu,Guangling,119.43,32.38,225002
+Jiangsu,Yijiang,119.4,32.38,225100
+Jiangsu,Victoria,119.4,32.42,999999
+Jiangsu,Baoying,119.3,33.23,225800
+Jiangsu,Yizheng,119.18,32.27,211400
+Jiangsu,High postal market,119.43,32.78,225600
+Jiangsu,Jiangdu,119.55,32.43,225200
+Jiangsu,Zhenjiang,119.45,32.2,212000
+Jiangsu,Kyokou,119.47,32.2,212001
+Jiangsu,Runzhou,119.4,32.2,212004
+Jiangsu,Danfu,119.45,32.13,212100
+Jiangsu,Danyang,119.57,32,212300
+Jiangsu,Yangzhong,119.82,32.23,212200
+Jiangsu,Jurong,119.17,31.95,212400
+Jiangsu,Taizhou,119.92,32.45,225300
+Jiangsu,Xinghua,119.85,32.92,225700
+Jiangsu,Jingjiang,120.27,32.02,214500
+Jiangsu,Taixing,120.02,32.17,225400
+Jiangsu,Jiangyan,120.15,32.52,225500
+Jiangsu,Suqian,118.28,33.97,223800
+Jiangsu,Cosmetic,118.25,33.97,223800
+Jiangsu,Suyu,118.32,33.95,223800
+Jiangsu,Puyang,118.77,34.13,223600
+Jiangsu,Siyang,118.68,33.72,223700
+Jiangsu,Sihong,118.22,33.47,223900
+Zhejiang,Hangzhou,120.15,30.28,310000
+Zhejiang,Uptown,120.17,30.25,310002
+Zhejiang,Downtown,120.17,30.28,310006
+Zhejiang,Jianggan,120.2,30.27,310016
+Zhejiang,Gongshu,120.13,30.32,310011
+Zhejiang,West Lake,120.13,30.27,310012
+Zhejiang,Binjiang,120.2,30.2,310051
+Zhejiang,Xiaoshan Strict,120.27,30.17,311200
+Zhejiang,Yuhang,120.3,30.42,311100
+Zhejiang,Tonglu,119.67,29.8,311500
+Zhejiang,Chun'an,119.03,29.6,311700
+Zhejiang,Jiande,119.28,29.48,311600
+Zhejiang,Fuyang,119.95,30.05,311400
+Zhejiang,Lin'an,119.72,30.23,311300
+Zhejiang,Ningbo,121.55,29.88,315000
+Zhejiang,Haishu,121.55,29.87,315000
+Zhejiang,Jiangdong,121.57,29.87,315040
+Zhejiang,Jiangbei,121.55,29.88,315000
+Zhejiang,Beilun,121.85,29.93,315800
+Zhejiang,Zhenhai,121.72,29.95,315200
+Zhejiang,Yinzhou,121.53,29.83,315100
+Zhejiang,Xiangshan,121.87,29.48,315700
+Zhejiang,Ninghai,121.43,29.28,315600
+Zhejiang,Yuyao,121.15,30.03,315400
+Zhejiang,Cixi,121.23,30.17,315300
+Zhejiang,Fenghua,121.4,29.65,315500
+Zhejiang,Wenzhou,120.7,28,325000
+Zhejiang,Lucheng,120.65,28.02,325000
+Zhejiang,Longwan,120.82,27.93,325024
+Zhejiang,Dongtou,121.15,27.83,325700
+Zhejiang,Yongjia,120.68,28.15,325100
+Zhejiang,Pingyang,120.57,27.67,325400
+Zhejiang,Cangnan,120.4,27.5,325800
+Zhejiang,Wencheng,120.08,27.78,325300
+Zhejiang,Taishun,119.72,27.57,325500
+Zhejiang,Ruian,120.63,27.78,325200
+Zhejiang,Leqing,120.95,28.13,325600
+Zhejiang,Jiaxing,120.75,30.75,314000
+Zhejiang,Xiuzhou,120.7,30.77,314000
+Zhejiang,Jiashan,120.92,30.85,314100
+Zhejiang,Haiyan,120.95,30.53,314300
+Zhejiang,Haining,120.68,30.53,314400
+Zhejiang,Pinghu,121.02,30.7,314200
+Zhejiang,Tongxiang,120.57,30.63,314500
+Zhejiang,Huzhou,120.08,30.9,313000
+Zhejiang,Wuxing,120.12,30.87,313000
+Zhejiang,Nanxun,120.43,30.88,313009
+Zhejiang,Deqing,119.97,30.53,313200
+Zhejiang,Changxing,119.9,31.02,313100
+Zhejiang,Anji,119.68,30.63,313300
+Zhejiang,Shaoxing,120.57,30,312000
+Zhejiang,Vietnamese,120.57,30,312000
+Zhejiang,Shaoxing,120.47,30.08,312000
+Zhejiang,Xinchang,120.9,29.5,312500
+Zhejiang,Zhuji,120.23,29.72,311800
+Zhejiang,Shangyu,120.87,30.03,312300
+Zhejiang,Dazhou,120.82,29.58,312400
+Zhejiang,Jinhua,119.65,29.08,321000
+Zhejiang,Wucheng,119.65,29.08,321000
+Zhejiang,Jindong,119.7,29.08,321015
+Zhejiang,Wuyi,119.82,28.9,321200
+Zhejiang,Pujiang,119.88,29.45,322200
+Zhejiang,Pan'an,120.43,29.05,322300
+Zhejiang,Lanxi,119.45,29.22,321100
+Zhejiang,Yiwu,120.07,29.3,322000
+Zhejiang,Dongyang,120.23,29.28,322100
+Zhejiang,Yongkang,120.03,28.9,321300
+Zhejiang,Luzhou,118.87,28.93,324000
+Zhejiang,Kecheng,118.87,28.93,324000
+Zhejiang,Lujiang,118.93,28.98,324022
+Zhejiang,Changshan,118.52,28.9,324200
+Zhejiang,Kaihua,118.42,29.13,324300
+Zhejiang,Longyou,119.17,29.03,324400
+Zhejiang,Jiangshan,118.62,28.75,324100
+Zhejiang,Zhoushan,122.2,30,316000
+Zhejiang,Dinghai,122.1,30.02,316000
+Zhejiang,Putuo,122.3,29.95,316100
+Zhejiang,Daishan,122.2,30.25,316200
+Zhejiang,Shengsi,122.45,30.73,202450
+Zhejiang,Taizhou,121.43,28.68,318000
+Zhejiang,Jiaojiang,121.43,28.68,318000
+Zhejiang,Huangyan,121.27,28.65,318020
+Zhejiang,Road bridge,121.38,28.58,318050
+Zhejiang,Yuhuan,121.23,28.13,317600
+Zhejiang,Sanmen,121.38,29.12,317100
+Zhejiang,Tiantai,121.03,29.13,317200
+Zhejiang,Xianju,120.73,28.87,317300
+Zhejiang,Wenling,121.37,28.37,317500
+Zhejiang,Linhai,121.12,28.85,317000
+Zhejiang,Lishui,119.92,28.45,323000
+Zhejiang,Liandu,119.92,28.45,323000
+Zhejiang,Qingtian,120.28,28.15,323900
+Zhejiang,Yiyun,120.07,28.65,321400
+Zhejiang,Suichang,119.27,28.6,323300
+Zhejiang,Songyang,119.48,28.45,323400
+Zhejiang,Yunhe,119.57,28.12,323600
+Zhejiang,Qingyuan,119.05,27.62,323800
+Zhejiang,Jingning,119.63,27.98,323500
+Zhejiang,Longquan,119.13,28.08,323700
+Anhui,Hefei,117.25,31.83,230000
+Anhui,Yaohai,117.3,31.87,230011
+Anhui,Luyang,117.25,31.88,230001
+Anhui,Shushan,117.27,31.85,230031
+Anhui,Baohe,117.3,31.8,230041
+Anhui,Changfeng,117.17,32.48,231100
+Anhui,Feidong,117.47,31.88,231600
+Anhui,Feixi,117.17,31.72,231200
+Anhui,Wuhu,118.38,31.33,241000
+Anhui,Jinghu,118.37,31.35,340202
+Anhui,Kujiang,118.38,31.37,241000
+Anhui,Wuhu,118.57,31.15,241100
+Anhui,Fanchang,118.2,31.08,241200
+Anhui,Nanling,118.33,30.92,242400
+Anhui,Bengbu,117.38,32.92,233000
+Anhui,Longzi Lake,117.38,32.95,233000
+Anhui,Gong Mountain,117.35,32.95,233000
+Anhui,Yuhui,117.33,32.93,233010
+Anhui,Huai Shang,117.35,32.97,233002
+Anhui,Huaiyuan,117.18,32.97,233400
+Anhui,Wuhe,117.88,33.15,233300
+Anhui,Guzhen,117.32,33.32,233700
+Anhui,Huainan,117,32.63,232000
+Anhui,Datong,117.05,32.63,232000
+Anhui,Tianjiayu,117,32.67,232000
+Anhui,Xiejia Section,116.85,32.6,232000
+Anhui,Bagongshan,116.83,32.63,232072
+Anhui,Panji,116.82,32.78,232000
+Anhui,Fengtai,116.72,32.7,232100
+Anhui,Ma'anshan,118.5,31.7,243000
+Anhui,Jinjiazhuang,118.48,31.73,243000
+Anhui,Huashan,118.5,31.72,243000
+Anhui,Yushan,118.48,31.68,243000
+Anhui,Dangtu,118.48,31.55,243100
+Anhui,Huaibei,116.8,33.95,235000
+Anhui,Duji,116.82,34,235000
+Anhui,Mountainous,116.8,33.95,235000
+Anhui,Mighty mountainous,116.8,33.9,235025
+Anhui,Daixi,116.77,33.92,235100
+Anhui,Tongling,117.82,30.93,244000
+Anhui,Tongguan Mountain,117.82,30.93,244000
+Anhui,Lion mountain,117.85,30.95,244000
+Anhui,suburbs,117.78,30.92,244000
+Anhui,Tongling,117.78,30.95,244100
+Anhui,Anqing,117.05,30.53,246000
+Anhui,Yingjiang,117.05,30.5,246001
+Anhui,Grand View,117.03,30.52,246000
+Anhui,suburbs,117.78,30.92,246000
+Anhui,Huaining,116.83,30.72,246121
+Anhui,Puyang,117.2,30.7,246700
+Anhui,Qianshan,116.57,30.63,246300
+Anhui,Taihu,116.27,30.43,246400
+Anhui,Su Song,116.12,30.15,246500
+Anhui,Wangjiang,116.68,30.13,246200
+Anhui,Yuexi,116.35,30.85,246600
+Anhui,Tung,116.95,31.05,231400
+Anhui,Huangshan,118.33,29.72,245000
+Anhui,Tunxi,118.33,29.72,245000
+Anhui,Huangshan,118.13,30.3,245700
+Anhui,Huizhou,118.33,29.82,245061
+Anhui,Qixian,118.43,29.87,245200
+Anhui,Hanging,118.18,29.78,245400
+Anhui,Qixian,117.93,29.93,245500
+Anhui,Qimen,117.72,29.87,245600
+Anhui,Luzhou,118.32,32.3,239000
+Anhui,Langya,118.3,32.3,239000
+Anhui,Nanyu,118.3,32.32,239001
+Anhui,Lai'an,118.43,32.45,239200
+Anhui,Whole pepper,118.27,32.1,239500
+Anhui,Dingyuan,117.67,32.53,233200
+Anhui,Fengyang,117.57,32.87,233100
+Anhui,Heaven,119,32.7,239300
+Anhui,Mingguang,117.98,32.78,239400
+Anhui,Fuyang,115.82,32.9,236000
+Anhui,Yingzhou,115.8,32.88,236000
+Anhui,Yingdong,115.85,32.92,236000
+Anhui,Yingquan,115.8,32.93,236000
+Anhui,Linquan,115.25,33.07,236400
+Anhui,Taihe,115.62,33.17,236600
+Anhui,Funan,115.58,32.63,236300
+Anhui,Yingshang,116.27,32.63,236200
+Anhui,Suzhou,116.98,33.63,234000
+Anhui,Qiaoqiao,116.97,33.63,234000
+Anhui,Laoshan,116.35,34.42,235300
+Anhui,Xiaoxian,116.93,34.18,235200
+Anhui,Lingyu,117.55,33.55,234200
+Anhui,Si,117.88,33.48,234300
+Anhui,Chaohu,117.87,31.6,238000
+Anhui,Ji Chao,117.85,31.6,238000
+Anhui,Lujiang,117.28,31.25,231500
+Anhui,Wuwei,117.92,31.3,238300
+Anhui,Hanshan,118.1,31.72,238100
+Anhui,Peace,118.37,31.72,238200
+Anhui,Liu'an,116.5,31.77,237000
+Anhui,Jin'an,116.5,31.77,237005
+Anhui,Yu'an,116.48,31.77,237010
+Anhui,Shouxian,116.78,32.58,232200
+Anhui,Huoqiu,116.27,32.33,237400
+Anhui,Shucheng,116.93,31.47,231300
+Anhui,Jinzhai,115.92,31.72,237300
+Anhui,Huoshan,116.33,31.4,237200
+Anhui,Bozhou,115.78,33.85,236800
+Anhui,Laocheng,115.77,33.88,236800
+Anhui,Temuyang,116.22,33.52,233600
+Anhui,Mengcheng,116.57,33.27,233500
+Anhui,Lixin,116.2,33.15,236700
+Anhui,Chizhou,117.48,30.67,247100
+Anhui,Guichi,117.48,30.65,247100
+Anhui,East to,117.02,30.1,247200
+Anhui,Shitai,117.48,30.22,245100
+Anhui,Qingyang,117.85,30.65,242800
+Anhui,Xuancheng,118.75,30.95,242000
+Anhui,Xuanzhou,118.75,30.95,242000
+Anhui,Langxi,119.17,31.13,242199
+Anhui,Guangde,119.42,30.9,242200
+Anhui,Xixian,118.4,30.7,242500
+Anhui,Jixi,118.6,30.07,245300
+Anhui,Jingde,118.53,30.28,242600
+Anhui,Ningguo,118.98,30.63,242300
+Fujian,Fuzhou,119.3,26.08,350000
+Fujian,Gulou,119.3,26.08,350001
+Fujian,Taijiang,119.3,26.07,350004
+Fujian,Cangshan,119.32,26.05,350007
+Fujian,Mawei,119.45,26,350015
+Fujian,Jin'an,119.32,26.08,350011
+Fujian,Minhou,119.13,26.15,350100
+Fujian,Lianjiang,119.53,26.2,350500
+Fujian,Luoyuan,119.55,26.48,350600
+Fujian,Minqing,118.85,26.22,350800
+Fujian,Yongtai,118.93,25.87,350700
+Fujian,Pingtan,119.78,25.52,350400
+Fujian,Fuqing,119.38,25.72,350300
+Fujian,Changle,119.52,25.97,350200
+Fujian,Xiamen,118.08,24.48,361000
+Fujian,Siming,118.08,24.45,361001
+Fujian,Haicang,117.98,24.47,361026
+Fujian,Lake,118.08,24.52,361006
+Fujian,Jimei,118.1,24.57,361021
+Fujian,Tong'an,118.15,24.73,361100
+Fujian,Xiang'an,118.23,24.62,361101
+Fujian,Putian,119,25.43,351100
+Fujian,City compartment,119,25.43,351100
+Fujian,Hanjiang,119.1,25.45,351111
+Fujian,Licheng,119.02,25.43,351100
+Fujian,Xiuyu,119.08,25.32,351100
+Fujian,Xianyou,118.68,25.37,351200
+Fujian,Sanming,117.62,26.27,365000
+Fujian,Plum,117.63,26.27,365000
+Fujian,Three yuan,117.6,26.23,365000
+Fujian,Mingxi,117.2,26.37,365200
+Fujian,Qingliu,116.82,26.18,365300
+Fujian,Ninghua,116.65,26.27,365400
+Fujian,Datian,117.85,25.7,366100
+Fujian,Youxi,118.18,26.17,365100
+Fujian,Sand,117.78,26.4,365500
+Fujian,Ji Le,117.47,26.73,353300
+Fujian,Taining,117.17,26.9,354400
+Fujian,Jianning,116.83,26.83,354500
+Fujian,Yongan,117.37,25.98,366000
+Fujian,Quanzhou,118.67,24.88,362000
+Fujian,Carp,118.6,24.92,362000
+Fujian,Fengze,118.6,24.92,362000
+Fujian,Luojiang,118.67,24.95,362011
+Fujian,Quangang,118.88,25.12,362800
+Fujian,Hui'an,118.8,25.03,362100
+Fujian,Anxi,118.18,25.07,362400
+Fujian,Yongchun,118.3,25.32,362600
+Fujian,Dehua,118.23,25.5,362500
+Fujian,Kinmen,118.32,24.43,NA
+Fujian,Shishi,118.65,24.73,362700
+Fujian,Jinjiang,118.58,24.82,362200
+Fujian,Nan'an,118.38,24.97,362300
+Fujian,Zhangzhou,117.65,24.52,363000
+Fujian,Laocheng,117.65,24.52,363000
+Fujian,Longwen,117.72,24.52,363005
+Fujian,Yunxiao,117.33,23.95,363300
+Fujian,Zhangpu,117.62,24.13,363200
+Fujian,Zu'an,117.18,23.72,363500
+Fujian,Changtai,117.75,24.62,363900
+Fujian,Dongshan,117.43,23.7,363400
+Fujian,Nanjing,117.37,24.52,363600
+Fujian,Pinghe,117.3,24.37,363700
+Fujian,Hua'an,117.53,25.02,363800
+Fujian,Longhai,117.82,24.45,363100
+Fujian,Nanping,118.17,26.65,353000
+Fujian,Yanping,118.17,26.65,353000
+Fujian,Shunchang,117.8,26.8,353200
+Fujian,Pucheng,118.53,27.92,353400
+Fujian,Glittering,117.33,27.55,354100
+Fujian,Songxi,118.78,27.53,353500
+Fujian,Zhenghe,118.85,27.37,353600
+Fujian,Shawu,117.48,27.37,354000
+Fujian,Wuyishan,118.03,27.77,354300
+Fujian,Jian'ou,118.32,27.03,353100
+Fujian,Jianyang,118.12,27.33,354200
+Fujian,Longyan,117.03,25.1,364000
+Fujian,Silla,117.03,25.1,364000
+Fujian,Changting,116.35,25.83,366300
+Fujian,Yongding,116.73,24.72,364100
+Fujian,Shanghang,116.42,25.05,364200
+Fujian,Wu Ping,116.1,25.1,364300
+Fujian,Liancheng,116.75,25.72,366200
+Fujian,Zhangping,117.42,25.3,364400
+Fujian,Ningde,119.52,26.67,352000
+Fujian,Jiaocheng,119.52,26.67,352100
+Fujian,Xiapu,120,26.88,355100
+Fujian,Gutian,118.75,26.58,352200
+Fujian,Pingnan,118.98,26.92,352300
+Fujian,Shouning,119.5,27.47,355500
+Fujian,Zhouning,119.33,27.12,355400
+Fujian,Dai Rong,119.9,27.23,355300
+Fujian,Fu'an,119.65,27.08,355000
+Fujian,Fuding,120.22,27.33,355200
+Jiangxi,Nanchang,115.85,28.68,330000
+Jiangxi,Donghu,115.9,28.68,330000
+Jiangxi,West Lake,115.87,28.67,330009
+Jiangxi,Qingyun spectrum,115.92,28.63,330001
+Jiangxi,Bayi,115.73,28.72,330004
+Jiangxi,Qingshan Lake,115.95,28.68,330006
+Jiangxi,Nanchang,115.93,28.55,330200
+Jiangxi,New,115.82,28.7,330100
+Jiangxi,Anyi,115.55,28.85,330500
+Jiangxi,Jinxian,116.27,28.37,331700
+Jiangxi,Jingdezhen,117.17,29.27,333000
+Jiangxi,Changjiang,117.17,29.27,333000
+Jiangxi,Zhu Shan,117.2,29.3,333000
+Jiangxi,Fu Liang,117.25,29.37,333400
+Jiangxi,Leping,117.12,28.97,333300
+Jiangxi,Pingxiang,113.85,27.63,337000
+Jiangxi,Anyuan,113.87,27.65,337000
+Jiangxi,Xiangdong,113.73,27.65,337016
+Jiangxi,Lianhua,113.95,27.13,337100
+Jiangxi,Shangli,113.8,27.88,337009
+Jiangxi,Luxi,114.03,27.63,337200
+Jiangxi,Jiujiang,116,29.7,332000
+Jiangxi,Lushan,115.98,29.68,332900
+Jiangxi,Xunyang,115.98,29.73,332000
+Jiangxi,Jiujiang,115.88,29.62,332100
+Jiangxi,Wuning,115.1,29.27,332300
+Jiangxi,Xiushui,114.57,29.03,332400
+Jiangxi,Yongxiu,115.8,29.03,330300
+Jiangxi,De'an,115.77,29.33,330400
+Jiangxi,Xingzi,116.03,29.45,332800
+Jiangxi,Duchang,116.18,29.27,332600
+Jiangxi,Hukou,116.22,29.73,332500
+Jiangxi,Pengze,116.55,29.9,332700
+Jiangxi,Ruichang,115.67,29.68,332200
+Jiangxi,Xinyu,114.92,27.82,338000
+Jiangxi,Yushui,114.93,27.8,338000
+Jiangxi,Division,114.67,27.82,336600
+Jiangxi,Yingtan,117.07,28.27,335000
+Jiangxi,Moon Lake,117.05,28.23,335000
+Jiangxi,Yujiang,116.82,28.2,335200
+Jiangxi,Guixi,117.22,28.28,335400
+Jiangxi,Ganzhou,114.93,25.83,341000
+Jiangxi,Zhang tribute,114.93,25.87,341000
+Jiangxi,NA,115,25.87,341100
+Jiangxi,Xinfeng,114.93,25.38,341600
+Jiangxi,Dabu,114.35,25.4,341500
+Jiangxi,Shangshang,114.53,25.8,341200
+Jiangxi,Chongyi,114.3,25.7,341300
+Jiangxi,Anyuan,115.38,25.13,342100
+Jiangxi,Longnan,114.78,24.92,341700
+Jiangxi,Dingnan,115.03,24.78,341900
+Jiangxi,All over the south,114.52,24.75,341800
+Jiangxi,Ningdu,116.02,26.48,342800
+Jiangxi,Yudu,115.42,25.95,342300
+Jiangxi,Xingguo,115.35,26.33,342400
+Jiangxi,Huichang,115.78,25.6,342600
+Jiangxi,Xunwu,115.65,24.95,342200
+Jiangxi,Shicheng,116.33,26.33,342700
+Jiangxi,Ruijin,116.03,25.88,342500
+Jiangxi,Nangang,114.75,25.65,341400
+Jiangxi,Ji'an,114.98,27.12,343000
+Jiangxi,Jizhou,114.98,27.12,343000
+Jiangxi,Qingyuan,115,27.1,343009
+Jiangxi,Ji'an,114.9,27.05,343100
+Jiangxi,Jishui,115.13,27.22,331603
+Jiangxi,Xiangjiang,115.33,27.62,331409
+Jiangxi,Xingan,115.4,27.77,331300
+Jiangxi,Yongfeng,115.43,27.32,331500
+Jiangxi,Taihe,114.88,26.8,343700
+Jiangxi,Suichuan,114.52,26.33,343900
+Jiangxi,Wan'an,114.78,26.47,343800
+Jiangxi,Anfu,114.62,27.38,343200
+Jiangxi,Yongxin,114.23,26.95,343400
+Jiangxi,Jinggangshan,114.27,26.72,343600
+Jiangxi,Yichun,114.38,27.8,336000
+Jiangxi,Yuanzhou,114.38,27.8,336000
+Jiangxi,Fengxin,115.38,28.7,330700
+Jiangxi,Wanzai,114.43,28.12,336100
+Jiangxi,Shanggao,114.92,28.23,336400
+Jiangxi,Yifeng,114.78,28.38,336300
+Jiangxi,Jing'an,115.35,28.87,330600
+Jiangxi,Tonggu,114.37,28.53,336200
+Jiangxi,Abundant,115.78,28.2,331100
+Jiangxi,Camphor,115.53,28.07,331200
+Jiangxi,Ga'an,115.37,28.42,330800
+Jiangxi,Fuzhou,116.35,28,344000
+Jiangxi,Linchuan,116.35,27.98,344100
+Jiangxi,Nancheng,116.63,27.55,344700
+Jiangxi,Lichuan,116.92,27.3,344600
+Jiangxi,Nanfeng,116.53,27.22,344500
+Jiangxi,Chongren,116.05,27.77,344200
+Jiangxi,Le'an,115.83,27.43,344300
+Jiangxi,Yihuang,116.22,27.55,344400
+Jiangxi,Jinxi,116.77,27.92,344800
+Jiangxi,Zixi,117.07,27.7,335300
+Jiangxi,Dongxiang,116.62,28.23,331800
+Jiangxi,Guangchang,116.32,26.83,344900
+Jiangxi,Shangrao,117.97,28.45,334000
+Jiangxi,Xinzhou,117.95,28.43,334000
+Jiangxi,Shangrao,117.92,28.43,334100
+Jiangxi,Guangfeng,118.18,28.43,334600
+Jiangxi,Yushan,118.25,28.68,334700
+Jiangxi,Lead mountain,117.7,28.32,334500
+Jiangxi,Hengfeng,117.6,28.42,334300
+Jiangxi,Puyang,117.43,28.4,334400
+Jiangxi,Yuqian,116.68,28.7,335100
+Jiangxi,Poyang,116.67,29,333100
+Jiangxi,Wannian,117.07,28.7,335500
+Jiangxi,Wuyuan,117.85,29.25,333200
+Jiangxi,Dexing,117.57,28.95,334200
+Shandong,Jinan,116.98,36.67,250000
+Shandong,Xiaxia,117.08,36.67,250014
+Shandong,Central,117,36.65,250002
+Shandong,Central,116.58,35.4,250002
+Shandong,Central,117.57,34.87,250002
+Shandong,Huaiyin,116.93,36.65,250000
+Shandong,Flying,116.98,36.68,250000
+Shandong,Calendar,117.07,36.68,250100
+Shandong,Changqing,116.73,36.55,250300
+Shandong,Pingyin,116.45,36.28,250400
+Shandong,Jiyang,117.22,36.98,251400
+Shandong,Shanghe,117.15,37.32,251600
+Shandong,Zhangqiu,117.53,36.72,250200
+Shandong,Qingdao,120.38,36.07,266000
+Shandong,South of the,120.38,36.07,266071
+Shandong,Northern,120.38,36.08,266011
+Shandong,Square,120.35,36.1,266000
+Shandong,Huangdao,120.18,35.97,999999
+Shandong,Laoshan,120.47,36.1,266100
+Shandong,Licang,120.43,36.15,266041
+Shandong,Chengyang,120.37,36.3,266109
+Shandong,Jiaozhou,120.03,36.27,266300
+Shandong,Jimo,120.45,36.38,266200
+Shandong,Pingdu,119.95,36.78,266700
+Shandong,Jiaonan,120.03,35.87,266400
+Shandong,Laixi,120.5,36.87,266600
+Shandong,Zibo,118.05,36.82,255000
+Shandong,Zhangdian,118.03,36.82,255022
+Shandong,Boshan,117.85,36.5,255200
+Shandong,Linzi,118.3,36.82,255400
+Shandong,Zhoucun,117.87,36.8,255300
+Shandong,Huantai,118.08,36.97,256400
+Shandong,Gaoqing,117.82,37.17,256300
+Shandong,Yiyuan,118.17,36.18,256100
+Shandong,Zaozhuang,117.32,34.82,277100
+Shandong,Central,117,36.65,277100
+Shandong,Central,116.58,35.4,277100
+Shandong,Central,117.57,34.87,277100
+Shandong,Xuecheng,117.25,34.8,277000
+Shandong,Laocheng,117.58,34.77,277300
+Shandong,Taierzhuang,117.73,34.57,277400
+Shandong,Mountain pavilion,117.45,35.08,277200
+Shandong,Tengzhou,117.15,35.08,277500
+Shandong,Dongying,118.67,37.43,257000
+Shandong,Dongying,118.5,37.47,257100
+Shandong,Estuary,118.53,37.88,257200
+Shandong,Kenli,118.55,37.58,257500
+Shandong,Lijin,118.25,37.48,257400
+Shandong,Guangrao,118.4,37.07,257300
+Shandong,Yantai,121.43,37.45,264000
+Shandong,Zhizhen,121.38,37.53,264001
+Shandong,Fushan,121.25,37.5,265500
+Shandong,Mouping,121.6,37.38,264100
+Shandong,Laishan,121.43,37.5,264003
+Shandong,Changdao,120.73,37.92,265800
+Shandong,Longkou,120.52,37.65,265700
+Shandong,Laiyang,120.7,36.98,265200
+Shandong,Laizhou,119.93,37.18,261400
+Shandong,Penglai,120.75,37.82,265600
+Shandong,Zhaoyuan,120.4,37.37,265400
+Shandong,Qixia,120.83,37.3,265300
+Shandong,Haiyang,121.15,36.78,265100
+Shandong,Weifang,119.15,36.7,261000
+Shandong,Weicheng,119.1,36.72,261021
+Shandong,Hansing,119.22,36.77,261100
+Shandong,Fangzi,119.17,36.67,261200
+Shandong,Kuiwen,119.12,36.72,261000
+Shandong,Linyi,118.53,36.52,262600
+Shandong,Changle,118.82,36.7,262400
+Shandong,Qingzhou,118.47,36.68,262500
+Shandong,Cities,119.4,36,262200
+Shandong,Shouguang,118.73,36.88,262700
+Shandong,Anqiu,119.2,36.43,262100
+Shandong,Gao Mi,119.75,36.38,261500
+Shandong,Changyi,119.4,36.87,261300
+Shandong,Jining,116.58,35.42,272000
+Shandong,Central,117,36.65,272000
+Shandong,Central,116.58,35.4,272000
+Shandong,Central,117.57,34.87,272000
+Shandong,Cities,116.58,35.42,272000
+Shandong,Weishan,117.13,34.82,277600
+Shandong,Yutai,116.65,35,272300
+Shandong,Jinxiang,116.3,35.07,272200
+Shandong,Jiaxiang,116.33,35.42,272400
+Shandong,Wenshang,116.48,35.73,272500
+Shandong,Surabaya,117.27,35.67,273200
+Shandong,Liangshan,116.08,35.8,272600
+Shandong,Qufu,116.98,35.58,273100
+Shandong,Yanzhou,116.83,35.55,272100
+Shandong,Zou,116.97,35.4,273500
+Shandong,Tai'an,117.08,36.2,271000
+Shandong,Taishan,117.13,36.18,271000
+Shandong,Daiyue,117,36.18,271000
+Shandong,Ningyang,116.8,35.77,271400
+Shandong,Dongping,116.47,35.93,271500
+Shandong,Xintai,117.77,35.92,271200
+Shandong,Fat,116.77,36.18,271600
+Shandong,Weihai,122.12,37.52,264200
+Shandong,Huancui,122.12,37.5,264200
+Shandong,Wendeng,122.05,37.2,264400
+Shandong,Rongcheng,122.42,37.17,264300
+Shandong,Rushan,121.53,36.92,264500
+Shandong,Rizhao,119.52,35.42,276800
+Shandong,Donggang,119.45,35.42,276800
+Shandong,Lanshan,119.33,35.1,276800
+Shandong,Wulian,119.2,35.75,262300
+Shandong,Qixian,118.83,35.58,276500
+Shandong,Laiwu,117.67,36.22,271100
+Shandong,Laicheng,117.65,36.2,271100
+Shandong,Steel,117.8,36.07,271104
+Shandong,Linyi,118.35,35.05,276000
+Shandong,Lan Mountain,118.33,35.07,276002
+Shandong,Luozhuang,118.28,34.98,276017
+Shandong,Hedong,118.4,35.08,276000
+Shandong,Yinan,118.47,35.55,276300
+Shandong,Tancheng,118.35,34.62,276100
+Shandong,Yishui,118.62,35.78,276400
+Shandong,Cangshan,118.05,34.85,277700
+Shandong,Feixian,117.97,35.27,273400
+Shandong,Pingyi,117.63,35.5,273300
+Shandong,Junan,118.83,35.18,276600
+Shandong,Mengyin,117.93,35.72,276200
+Shandong,Linyi,118.65,34.92,276700
+Shandong,Texas,116.3,37.45,253000
+Shandong,Virtue,116.3,37.45,253011
+Shandong,Lingxian,116.57,37.33,253500
+Shandong,Ningjin,116.78,37.65,253400
+Shandong,Qingyun,117.38,37.78,253700
+Shandong,Linyi,116.87,37.18,251500
+Shandong,Qihe,116.75,36.8,251100
+Shandong,Plain,116.43,37.17,253100
+Shandong,Xiajin,116,36.95,253200
+Shandong,Martial arts,116.07,37.22,253300
+Shandong,La Ling,117.23,37.73,253600
+Shandong,Yu,116.63,36.93,251200
+Shandong,Chat cities,115.98,36.45,252000
+Shandong,Dongchangfu,115.98,36.45,252000
+Shandong,Yanggu,115.78,36.12,252300
+Shandong,Xinxian,115.67,36.23,252400
+Shandong,Pingping,116.25,36.58,252100
+Shandong,Donga,116.25,36.33,252200
+Shandong,Guanxian,115.43,36.48,252500
+Shandong,Gaotang,116.23,36.87,252800
+Shandong,Linqing,115.7,36.85,252600
+Shandong,Binzhou,117.97,37.38,256600
+Shandong,Coastal,118,37.38,256600
+Shandong,Huimin,117.5,37.48,251700
+Shandong,Yangxin,117.58,37.63,251800
+Shandong,Wudi,117.6,37.73,251900
+Shandong,Zhanhua,118.13,37.7,256800
+Shandong,Boxing,118.13,37.15,256500
+Shandong,Zouping,117.73,36.88,256200
+Shandong,Peony,115.43,35.25,274009
+Shandong,Cao,115.53,34.83,274000
+Shandong,Single,116.08,34.8,274000
+Shandong,Chengwu,115.88,34.95,274000
+Shandong,Junye,116.08,35.4,274000
+Shandong,Tancheng,115.93,35.6,274000
+Shandong,Tancheng,115.5,35.57,274000
+Shandong,Dingtao,115.57,35.07,274000
+Shandong,Dongming,115.08,35.28,274500
+Henan,Zhengzhou,113.62,34.75,450000
+Henan,Central Plains,113.6,34.75,450000
+Henan,Two -sevens,113.65,34.73,450000
+Henan,Guancheng,113.67,34.75,450000
+Henan,Jinshui,113.65,34.78,450003
+Henan,Upper neighborhood,113.28,34.82,450041
+Henan,Huiji,113.6,34.87,450044
+Henan,Zhongmu,113.97,34.72,451450
+Henan,Gongyi,112.98,34.77,451200
+Henan,Puyang,113.4,34.78,450100
+Henan,Xinmi,113.38,34.53,452370
+Henan,Xinzheng,113.73,34.4,451150
+Henan,Dengfeng,113.03,34.47,452470
+Henan,Kaifeng,114.3,34.8,475000
+Henan,Longting,114.35,34.8,475000
+Henan,Shunhe,114.35,34.8,475000
+Henan,Gulou,114.35,34.78,475000
+Henan,Qi,114.78,34.55,475200
+Henan,Tongxu,114.47,34.48,475400
+Henan,Weishi,114.18,34.42,475500
+Henan,Kaifeng,114.43,34.77,475100
+Henan,Lancao,114.82,34.82,475300
+Henan,Luoyang,112.45,34.62,471000
+Henan,old Town,112.47,34.68,471000
+Henan,Western Gong,112.43,34.67,471000
+Henan,Xunxi,112.4,34.67,471000
+Henan,Geely,112.58,34.9,471012
+Henan,Luolong,112.45,34.62,471000
+Henan,Mengjin,112.43,34.83,471100
+Henan,Xin'an,112.15,34.72,471800
+Henan,Luanchuan,111.62,33.78,471500
+Henan,Song,112.1,34.15,471400
+Henan,Ruyang,112.47,34.15,471200
+Henan,Yiyang,112.17,34.52,471600
+Henan,Luoning,111.65,34.38,471700
+Henan,Yichuan,112.42,34.42,471300
+Henan,Yanshi,112.78,34.73,471900
+Henan,Pingdingshan,113.18,33.77,467000
+Henan,Xinhua,113.3,33.73,467000
+Henan,Weidong,113.33,33.73,467000
+Henan,Shilong,112.88,33.9,467045
+Henan,Zhanhe,113.28,33.73,467000
+Henan,Baofeng,113.07,33.88,467400
+Henan,Ye,113.35,33.62,467200
+Henan,Lushan,112.9,33.73,467300
+Henan,Qixian,113.22,33.97,467100
+Henan,Dance steel market,113.52,33.3,462500
+Henan,Ruzhou,112.83,34.17,467599
+Henan,Anyang,114.38,36.1,455000
+Henan,Wenfeng,114.35,36.08,455000
+Henan,Beiguan,114.35,36.12,455000
+Henan,Yindu,114.3,36.12,455000
+Henan,Longan,114.32,36.1,455000
+Henan,Anyang,114.35,36.1,455100
+Henan,Tangyin,114.35,35.92,456150
+Henan,Slippery,114.52,35.58,456400
+Henan,Neihuang,114.9,35.95,456350
+Henan,Linzhou,113.82,36.07,456550
+Henan,Hebi,114.28,35.75,458000
+Henan,Heshan,114.15,35.95,458010
+Henan,Mountainous,114.18,35.9,458000
+Henan,Qibin,114.3,35.73,458030
+Henan,Junxian,114.55,35.67,456250
+Henan,Qi,114.2,35.6,456750
+Henan,Xinxiang,113.9,35.3,453000
+Henan,Red flag,113.87,35.3,453000
+Henan,Wei Bin,113.85,35.3,453000
+Henan,Fengquan,113.92,35.38,4453011
+Henan,Makino,113.9,35.32,453002
+Henan,Xinxiang,113.8,35.2,453700
+Henan,Gongjia,113.65,35.27,453800
+Henan,Yuanyang,113.97,35.05,453500
+Henan,Yanjin,114.2,35.15,453200
+Henan,Fengqiu,114.42,35.05,453300
+Henan,Changyuan,114.68,35.2,453400
+Henan,Weihui,114.07,35.4,453100
+Henan,Huixian,113.8,35.47,453600
+Henan,Jiaozuo,113.25,35.22,454150
+Henan,Liberation,113.22,35.25,454150
+Henan,Central station,113.17,35.23,454150
+Henan,Ma Village,113.32,35.27,454150
+Henan,Shanyang,113.25,35.22,454150
+Henan,Xiuwu,113.43,35.23,454350
+Henan,Boai,113.07,35.17,454450
+Henan,Martial arts,113.38,35.1,454950
+Henan,Wen,113.08,34.93,454850
+Henan,Jiyuan,112.58,35.07,454150
+Henan,Qinyang,112.93,35.08,454550
+Henan,Mengzhou,112.78,34.9,454750
+Henan,Puyang,115.03,35.77,457000
+Henan,Hualong,115.07,35.78,457001
+Henan,Qingfeng,115.12,35.9,457300
+Henan,Nanle,115.2,36.08,457400
+Henan,Fan,115.5,35.87,457500
+Henan,Former,115.85,36,457600
+Henan,Puyang,115.02,35.7,457100
+Henan,Xuchang,113.85,34.03,461000
+Henan,Weidu,113.82,34.03,461000
+Henan,Xuchang,113.83,34,461100
+Henan,Liling,114.2,34.1,461200
+Henan,Xiangcheng,113.48,33.85,461700
+Henan,Yuzhou,113.47,34.17,461670
+Henan,Changge,113.77,34.22,461500
+Henan,Luohe,114.02,33.58,462000
+Henan,Laocheng,114,33.58,462300
+Henan,Zuming,114.07,33.57,462300
+Henan,Wuyang,113.6,33.43,462400
+Henan,Lintong,113.93,33.82,462600
+Henan,Sanmenxia,111.2,34.78,472000
+Henan,Lake,111.2,34.78,472000
+Henan,Pochi,111.75,34.77,472400
+Henan,Shaanxi,111.08,34.7,472100
+Henan,Lu's,111.05,34.05,472200
+Henan,Yima,111.87,34.75,472300
+Henan,Lingbao,110.87,34.52,472500
+Henan,Nanyang,112.52,33,473000
+Henan,Wancheng,112.55,33.02,473000
+Henan,Wolong,112.53,32.98,473000
+Henan,Nanzhao,112.43,33.5,474650
+Henan,Fangcheng,113,33.27,473200
+Henan,Xixia,111.48,33.28,474550
+Henan,Zhenping,112.23,33.03,474250
+Henan,Nengxiang,111.85,33.05,474350
+Henan,Xichuan,111.48,33.13,474450
+Henan,Sheqi,112.93,33.05,473300
+Henan,Tanghe,112.83,32.7,473400
+Henan,Xinye,112.35,32.52,473500
+Henan,Tongbai,113.4,32.37,474750
+Henan,Dengzhou,112.08,32.68,474150
+Henan,Shangqiu,115.65,34.45,476000
+Henan,Liangyuan,115.63,34.45,476000
+Henan,Puyang,115.63,34.38,476000
+Henan,Civil rights,115.13,34.65,476800
+Henan,Suixian,115.07,34.45,476900
+Henan,Ningling,115.32,34.45,476700
+Henan,Tancheng,115.3,34.07,476200
+Henan,Yucheng,115.85,34.4,476300
+Henan,Xiayi,116.13,34.23,476400
+Henan,Permanent,116.43,33.92,476600
+Henan,Xinyang,114.07,32.13,464000
+Henan,Luohe,114.05,32.12,464000
+Henan,Pingqiao,114.12,32.1,464100
+Henan,Luoshan,114.53,32.2,464200
+Henan,Guangshan,114.9,32.02,465450
+Henan,New,114.87,31.63,465550
+Henan,Mall,115.4,31.8,465350
+Henan,Gu Shi,115.68,32.18,465200
+Henan,Huangchuan,115.03,32.13,465150
+Henan,Huaibin,115.4,32.43,464400
+Henan,Xixian,114.73,32.35,464300
+Henan,Zhoukou,114.65,33.62,466000
+Henan,Fugou,114.38,34.07,461300
+Henan,Xihua,114.53,33.8,466600
+Henan,Shangshui,114.6,33.53,466100
+Henan,Shenqiu,115.07,33.4,466300
+Henan,Dancheng,115.2,33.65,477150
+Henan,Huaiyang,114.88,33.73,466700
+Henan,Taikang,114.85,34.07,475400
+Henan,Luyi,115.48,33.87,477200
+Henan,Cities,114.9,33.45,466200
+Henan,Zhumadian,114.02,32.98,463000
+Henan,Post -city,114.05,32.97,463000
+Henan,Xiping,114.02,33.38,463900
+Henan,Shangcai,114.27,33.27,463800
+Henan,Pingyu,114.63,32.97,463400
+Henan,Zhengyang,114.38,32.6,463600
+Henan,Qingshan,114.02,32.8,463200
+Henan,Biyang,113.32,32.72,463700
+Henan,Runan,114.35,33,463300
+Henan,Suiping,114,33.15,463100
+Henan,Xin Cai,114.98,32.75,463500
+Hubei,Wuhan,114.3,30.6,430000
+Hubei,River bank,114.3,30.6,430014
+Hubei,Jianghan,114.27,30.6,430000
+Hubei,Kukou,114.27,30.57,430000
+Hubei,Hanyang,114.27,30.55,430050
+Hubei,Wuchang,114.3,30.57,430061
+Hubei,Qingshan,114.38,30.63,430080
+Hubei,Hongshan,114.33,30.5,430070
+Hubei,East West Lake,114.13,30.62,430040
+Hubei,Hannan,114.08,30.32,430090
+Hubei,Cai Dian,114.03,30.58,430100
+Hubei,Jiangxia,114.32,30.35,430200
+Hubei,Huangpi,114.37,30.87,432200
+Hubei,Xinzhou,114.8,30.85,431400
+Hubei,Yellowstone,115.03,30.2,435000
+Hubei,Huangshigang,115.07,30.23,435000
+Hubei,Sisai Mountains,115.12,30.2,435000
+Hubei,Landing,114.97,30.18,435005
+Hubei,Iron mountain,114.9,30.2,435006
+Hubei,Yangxin,115.2,29.85,435200
+Hubei,Daeye,114.97,30.1,435100
+Hubei,Shiyan,110.78,32.65,442000
+Hubei,Mao Jian,110.82,32.6,442000
+Hubei,Zhangwan,110.78,32.65,442000
+Hubei,Qixian,110.82,32.83,442500
+Hubei,Daixi,110.42,33,442600
+Hubei,Zhushan,110.23,32.23,442200
+Hubei,Zhuxi,109.72,32.32,442300
+Hubei,House,110.73,32.07,442100
+Hubei,Danjiangkou,111.52,32.55,442700
+Hubei,Yichang,111.28,30.7,443000
+Hubei,Xiling,111.27,30.7,443000
+Hubei,Wujiagang,111.35,30.65,443000
+Hubei,Point military,111.27,30.7,443004
+Hubei,Laoting,111.42,30.53,443007
+Hubei,Yiling,111.32,30.77,443100
+Hubei,Yuan'an,111.63,31.07,444200
+Hubei,Xingshan,110.75,31.35,443711
+Hubei,Yigui,110.98,30.83,443600
+Hubei,Changyang,111.18,30.47,443501
+Hubei,Wufeng,110.67,30.2,443400
+Hubei,Yidu,111.45,30.4,443300
+Hubei,Dangyang,111.78,30.82,444100
+Hubei,Zhijiang,111.77,30.43,443200
+Hubei,Xiangfan,112.15,32.02,441000
+Hubei,Xiangcheng,112.15,32.02,441000
+Hubei,Fancheng,112.13,32.03,441000
+Hubei,Xiangyang,112.2,32.08,441100
+Hubei,Nanzhang,111.83,31.78,441500
+Hubei,Gucheng,111.65,32.27,441700
+Hubei,Baokang,111.25,31.88,441600
+Hubei,Old Hekou,111.67,32.38,441800
+Hubei,Zaoyang,112.75,32.13,441200
+Hubei,Suitable,112.25,31.72,441400
+Hubei,Ezhou,114.88,30.4,436000
+Hubei,Liangzi Lake,114.67,30.08,436060
+Hubei,Huarong,114.73,30.53,436000
+Hubei,NA,114.88,30.4,436001
+Hubei,Jingmen,112.2,31.03,448000
+Hubei,Dongbao,112.2,31.05,448004
+Hubei,Scalp,112.2,30.98,448000
+Hubei,Jingshan,113.1,31.02,431800
+Hubei,Shayang,112.58,30.7,448200
+Hubei,Zhongxiang,112.58,31.17,431900
+Hubei,Xiaogan,113.92,30.93,432000
+Hubei,Xiaonan,113.92,30.92,432100
+Hubei,Xiaochang,113.97,31.25,432900
+Hubei,Dawu,114.12,31.57,432800
+Hubei,Yunmeng,113.75,31.02,432500
+Hubei,Cities,113.57,30.95,432400
+Hubei,Anlu,113.68,31.27,432600
+Hubei,Hanchuan,113.83,30.65,432300
+Hubei,Jingzhou,112.23,30.33,434000
+Hubei,Sand,112.25,30.32,434000
+Hubei,Jingzhou,112.18,30.35,434020
+Hubei,Public security,112.23,30.07,434300
+Hubei,Jianli,112.88,29.82,433300
+Hubei,Jiangling,112.42,30.03,434100
+Hubei,Shishou,112.4,29.73,434400
+Hubei,Honghu,113.45,29.8,433200
+Hubei,Songzi,111.77,30.18,434200
+Hubei,Huanggang,114.87,30.45,438000
+Hubei,Huangzhou,114.88,30.43,438000
+Hubei,Tuanfeng,114.87,30.63,438000
+Hubei,Hong'an,114.62,31.28,438400
+Hubei,Luotian,115.4,30.78,438600
+Hubei,Yingshan,115.67,30.75,438700
+Hubei,Lishui,115.27,30.45,438200
+Hubei,Xunchun,115.43,30.23,435300
+Hubei,Huangmei,115.93,30.08,435500
+Hubei,Macheng,115.03,31.18,438300
+Hubei,Martial,115.55,29.85,435400
+Hubei,Xianning,114.32,29.85,437000
+Hubei,Xian'an,114.3,29.87,437000
+Hubei,Jiayu,113.9,29.98,437200
+Hubei,Tongcheng,113.82,29.25,437400
+Hubei,Chongyang,114.03,29.55,437500
+Hubei,Tongshan,114.52,29.6,437600
+Hubei,Chibi,113.88,29.72,437300
+Hubei,Suizhou,113.37,31.72,441300
+Hubei,Zengdu,113.37,31.72,441300
+Hubei,Guangshui,113.82,31.62,432700
+Hubei,Enshi Tu Family Miao,109.47,30.3,445000
+Hubei,Enshi,109.47,30.3,445000
+Hubei,Lichuan,108.93,30.3,445400
+Hubei,Jianchi,109.73,30.6,445300
+Hubei,Badong,110.33,31.05,444300
+Hubei,Xuan En,109.48,29.98,445500
+Hubei,Xianfeng,109.15,29.68,445600
+Hubei,Laifeng,109.4,29.52,445700
+Hubei,Hefeng,110.03,29.9,445800
+Hubei,Xian Tao,113.45,30.37,433000
+Hubei,Qianjiang,112.88,30.42,433100
+Hubei,Tianmen,113.17,30.67,431700
+Hubei,Shennongjia Forest,110.67,31.75,442400
+Hunan,Changsha,112.93,28.23,410000
+Hunan,Hibiscus,113.03,28.18,410000
+Hunan,Tianxin,112.98,28.12,410000
+Hunan,Yuelu,112.93,28.23,410006
+Hunan,Kaifu,112.98,28.25,410005
+Hunan,Yuhua,113.03,28.13,410007
+Hunan,Changsha,113.07,28.25,410100
+Hunan,Wangcheng,112.82,28.37,410200
+Hunan,Ningxiang,112.55,28.25,410600
+Hunan,Liuyang,113.63,28.15,410300
+Hunan,Zhuzhou,113.13,27.83,412000
+Hunan,Lotus pond,113.17,27.87,412000
+Hunan,Lujing,113.15,27.83,412000
+Hunan,Shifeng,113.1,27.87,412005
+Hunan,Tianyuan,113.12,27.83,412007
+Hunan,Zhuzhou,113.13,27.72,412000
+Hunan,You,113.33,27,412300
+Hunan,Chaling,113.53,26.8,412400
+Hunan,Yanling,113.77,26.48,412500
+Hunan,Liling,113.48,27.67,412200
+Hunan,Xiangtan,112.93,27.83,411100
+Hunan,Yuhu,112.9,27.87,411100
+Hunan,Yuetang,112.95,27.87,411100
+Hunan,Xiangtan,112.95,27.78,411200
+Hunan,Xiangxiang,112.53,27.73,411400
+Hunan,Shaoshan,112.52,27.93,411300
+Hunan,Hengyang,112.57,26.9,421000
+Hunan,Zhuhui,112.62,26.9,421002
+Hunan,Yanfeng,112.6,26.88,421000
+Hunan,Stone drum,112.6,26.9,421000
+Hunan,Steaming,112.6,26.9,421001
+Hunan,Nanyue,112.73,27.25,421900
+Hunan,Hengyang,112.37,26.97,421200
+Hunan,Hengnan,112.67,26.73,430422
+Hunan,Hengshan,112.87,27.23,421300
+Hunan,Hengdong,112.95,27.08,421400
+Hunan,Qidong,112.12,26.78,421600
+Hunan,Puyang,112.85,26.42,421800
+Hunan,Changning,112.38,26.42,421500
+Hunan,Shaoyang,111.47,27.25,422000
+Hunan,Shuangqing,111.47,27.23,422000
+Hunan,Daxiang,111.45,27.23,422200
+Hunan,North Tower,111.45,27.25,422000
+Hunan,Shaodong,111.75,27.25,422800
+Hunan,Xin Shao,111.45,27.32,422900
+Hunan,Shaoyang,111.27,27,422100
+Hunan,Longhui,111.03,27.12,422200
+Hunan,Dongkou,110.57,27.05,422300
+Hunan,Suining,110.15,26.58,422600
+Hunan,Xinning,110.85,26.43,422700
+Hunan,Chengbu Miao,110.32,26.37,422500
+Hunan,Wugang,110.63,26.73,422400
+Hunan,Yueyang,113.12,29.37,414000
+Hunan,Yueyang Building,113.1,29.37,414000
+Hunan,Yunxi,113.3,29.47,414000
+Hunan,Junshan,113,29.43,414000
+Hunan,Yueyang,113.12,29.15,414100
+Hunan,Huarong,112.57,29.52,414200
+Hunan,Xiangyin,112.88,28.68,414600
+Hunan,Pingjiang,113.58,28.72,414500
+Hunan,La Luo,113.08,28.8,414400
+Hunan,Linxiang,113.47,29.48,414300
+Hunan,Changde,111.68,29.05,415000
+Hunan,Wuling,111.68,29.03,415000
+Hunan,Dingcheng,111.68,29.02,415100
+Hunan,Anxiang,112.17,29.42,415600
+Hunan,Hanshou,111.97,28.9,415900
+Hunan,Qixian,111.75,29.63,415500
+Hunan,Linyi,111.65,29.45,415200
+Hunan,Taoyuan,111.48,28.9,451700
+Hunan,Shimen,111.38,29.58,415300
+Hunan,Tianjin,111.88,29.62,415400
+Hunan,Zhangjiajie,110.47,29.13,427000
+Hunan,Yongding,110.48,29.13,427000
+Hunan,Wulingyuan,110.53,29.35,427400
+Hunan,Cili,111.12,29.42,427200
+Hunan,Sangzhi,110.15,29.4,427100
+Hunan,Yiyang,112.32,28.6,413000
+Hunan,Ziyang,112.32,28.6,413000
+Hunan,Heshan,112.37,28.6,413002
+Hunan,Nanxian,112.4,29.38,413200
+Hunan,Taojiang,112.12,28.53,413400
+Hunan,Anhua,111.22,28.38,413500
+Hunan,Qijiang,112.38,28.85,413100
+Hunan,Luzhou,113.02,25.78,423000
+Hunan,Beihu,113.02,25.8,423000
+Hunan,Suxian,113.03,25.8,423000
+Hunan,Guiyang,112.73,25.73,424400
+Hunan,Yizhang,112.95,25.4,424200
+Hunan,Yongxing,113.1,26.13,423300
+Hunan,Jiahe,112.37,25.58,424500
+Hunan,Linwu,112.55,25.28,424300
+Hunan,Rucheng,113.68,25.55,424100
+Hunan,Guidong,113.93,26.08,423500
+Hunan,Anren,113.27,26.7,423600
+Hunan,Zixing,113.23,25.98,423400
+Hunan,Yongzhou,111.62,26.43,425000
+Hunan,Cold water beach,111.6,26.43,425000
+Hunan,Qiyang,111.85,26.58,426100
+Hunan,Dong'an,111.28,26.4,425900
+Hunan,Dual -card,111.65,25.97,425200
+Hunan,Daoxian,111.58,25.53,425300
+Hunan,Jiangyong,111.33,25.28,425400
+Hunan,Ningyuan,111.93,25.6,425600
+Hunan,Lan Mountain,112.18,25.37,425800
+Hunan,Xintian,112.22,25.92,425700
+Hunan,Jianghua Yao,111.58,25.18,425500
+Hunan,Huaihua,110,27.57,418000
+Hunan,Cricket,109.95,27.55,418000
+Hunan,Chinese,109.93,27.4,418000
+Hunan,Fuling,110.38,28.47,419600
+Hunan,Chenxi,110.18,28,419500
+Hunan,Xupu,110.58,27.92,419300
+Hunan,Together with the,109.72,26.87,418300
+Hunan,Mayang Miao,109.8,27.87,419400
+Hunan,Xinhuang Dong,109.17,27.37,419200
+Hunan,Qijiang,109.68,27.45,419100
+Hunan,Jingzhou,109.68,26.58,418400
+Hunan,Channel,109.78,26.17,418500
+Hunan,Hongjiang,109.82,27.2,418200
+Hunan,Loudi,112,27.73,417000
+Hunan,Louxing,112,27.73,417000
+Hunan,Shuangfeng,112.2,27.45,417700
+Hunan,Xinhua,111.3,27.75,417600
+Hunan,Lengshuijiang,111.43,27.68,417500
+Hunan,Lianyuan,111.67,27.7,417100
+Hunan,Xiangxi Miao,109.73,28.32,416000
+Hunan,Jishou,109.73,28.32,416000
+Hunan,Luxi,110.22,28.22,416100
+Hunan,Phoenix,109.6,27.95,416200
+Hunan,Huayuan,109.48,28.58,416400
+Hunan,Baojing,109.65,28.72,416500
+Hunan,Guzhang,109.95,28.62,416300
+Hunan,Yongshun,109.85,29,416700
+Hunan,Longshan,109.43,29.47,416800
+Guangdong,Guangzhou,113.27,23.13,510000
+Guangdong,Liwan,113.23,23.13,510145
+Guangdong,Yuexiu,113.27,23.13,510030
+Guangdong,Haizhu,113.25,23.1,510220
+Guangdong,Tianhe,113.35,23.12,510000
+Guangdong,Baiyun,113.27,23.17,510080
+Guangdong,Huangpu,113.45,23.1,510700
+Guangdong,Panyu,113.35,22.95,511400
+Guangdong,Huadu,113.22,23.4,510800
+Guangdong,Increase the,113.83,23.3,511300
+Guangdong,Conghua,113.58,23.55,510900
+Guangdong,Shaoguan,113.6,24.82,512000
+Guangdong,Wujiang,113.57,24.8,512026
+Guangdong,Yijiang,113.6,24.8,512023
+Guangdong,Qujiang,113.6,24.68,512100
+Guangdong,Shixing,114.07,24.95,512500
+Guangdong,Renhua,113.75,25.08,512300
+Guangdong,Wengyuan,114.13,24.35,512600
+Guangdong,Ruyuan Yao,113.27,24.78,512700
+Guangdong,Xinfeng,114.2,24.07,511100
+Guangdong,Lechang,113.35,25.13,512200
+Guangdong,Nangxiong,114.3,25.12,512400
+Guangdong,Shenzhen,114.05,22.55,518000
+Guangdong,Luohu,114.12,22.55,518001
+Guangdong,Futian,114.05,22.53,518000
+Guangdong,Nanshan,113.92,22.52,518000
+Guangdong,Bao'an,113.9,22.57,518101
+Guangdong,Longgang,114.27,22.73,518116
+Guangdong,Yantian,114.22,22.55,518000
+Guangdong,Zhuhai,113.57,22.27,519000
+Guangdong,Xiangzhou,113.55,22.27,519000
+Guangdong,Doumen,113.28,22.22,519100
+Guangdong,Golden Bay,113.4,22.07,519090
+Guangdong,Shan Tou,116.68,23.35,515000
+Guangdong,Longhu,116.72,23.37,515041
+Guangdong,Jinping,116.7,23.37,515041
+Guangdong,Chaoyang,116.6,23.27,515100
+Guangdong,Chaonan,116.43,23.25,515100
+Guangdong,Chenghai,116.77,23.48,515800
+Guangdong,Nan'ao,117.02,23.42,515900
+Guangdong,Foshan,113.12,23.02,528000
+Guangdong,Nanhai,113.15,23.03,528200
+Guangdong,Shunde,113.3,22.8,528300
+Guangdong,Three waters,112.87,23.17,528100
+Guangdong,Gaoming,112.88,22.9,528500
+Guangdong,Jiangmen,113.08,22.58,529000
+Guangdong,Xinhui,113.03,22.47,529100
+Guangdong,Taishan,112.78,22.25,529200
+Guangdong,Kaiping,112.67,22.38,529300
+Guangdong,Heshan,112.97,22.77,529700
+Guangdong,Enping,112.3,22.18,529400
+Guangdong,Zhangjiang,110.35,21.27,524000
+Guangdong,Chican,110.37,21.27,524033
+Guangdong,Xia Mountain,110.4,21.2,524002
+Guangdong,Slope,110.47,21.23,524057
+Guangdong,Hemp,110.32,21.27,524003
+Guangdong,Suixi,110.25,21.38,524300
+Guangdong,Xuwen,110.17,20.33,524100
+Guangdong,Lianjiang,110.27,21.62,524400
+Guangdong,Leizhou,110.08,20.92,524200
+Guangdong,Wuchuan,110.77,21.43,524500
+Guangdong,Maoming,110.92,21.67,525000
+Guangdong,Maonan,110.92,21.63,525011
+Guangdong,Maogang,111.02,21.47,525000
+Guangdong,Dianbai,111,21.5,525400
+Guangdong,Gaozhou,110.85,21.92,525200
+Guangdong,Huazhou,110.63,21.67,525100
+Guangdong,Xinyi,110.95,22.35,525300
+Guangdong,Zhaoqing,112.47,23.05,526000
+Guangdong,Duanzhou,112.48,23.05,526060
+Guangdong,Dinghu,112.57,23.17,526070
+Guangdong,Guangning,112.43,23.63,526300
+Guangdong,Huaiji,112.18,23.92,526400
+Guangdong,Fengkai,111.5,23.43,526500
+Guangdong,Deqing,111.77,23.15,526600
+Guangdong,Highlight,112.45,23.03,526100
+Guangdong,Sihui,112.68,23.33,526200
+Guangdong,Huizhou,114.42,23.12,516000
+Guangdong,Huicheng,114.4,23.08,516000
+Guangdong,Huiyang,114.47,22.8,516200
+Guangdong,Bolo,114.28,23.18,516100
+Guangdong,Huidong,114.72,22.98,516300
+Guangdong,Longmen,114.25,23.73,516800
+Guangdong,Meizhou,116.12,24.28,514021
+Guangdong,Meijiang,116.12,24.32,514000
+Guangdong,Plum,116.05,24.28,514700
+Guangdong,Tai Po,116.7,24.35,514200
+Guangdong,Fengshun,116.18,23.77,514300
+Guangdong,Wuhua,115.77,23.93,514400
+Guangdong,Pingyuan,115.88,24.57,514600
+Guangdong,Jialing,116.17,24.67,514100
+Guangdong,Xingning,115.73,24.15,514500
+Guangdong,Shanwei,115.37,22.78,516600
+Guangdong,Haifeng,115.33,22.97,516400
+Guangdong,Luhe,115.65,23.3,516700
+Guangdong,Lufeng,115.65,22.95,516500
+Guangdong,Heyuan,114.7,23.73,517000
+Guangdong,Source,114.7,23.73,517000
+Guangdong,Zijin,115.18,23.63,517400
+Guangdong,Longchuan,115.25,24.1,517300
+Guangdong,Lianping,114.48,24.37,517100
+Guangdong,Heping,114.93,24.45,517200
+Guangdong,Dongyuan,114.77,23.82,517500
+Guangdong,Yangjiang,111.98,21.87,529500
+Guangdong,Jiangcheng,111.95,21.87,529500
+Guangdong,Yangxi,111.62,21.75,529800
+Guangdong,Yangdong,112.02,21.88,529900
+Guangdong,Yangchun,111.78,22.18,529600
+Guangdong,Qingyuan,113.03,23.7,511500
+Guangdong,Qingcheng,113.02,23.7,511500
+Guangdong,Fogang,113.53,23.88,511600
+Guangdong,Yangshan,112.63,24.48,513100
+Guangdong,Lianshan Zhuang Yao,112.08,24.57,513200
+Guangdong,Liannan Yao,112.28,24.72,513300
+Guangdong,Fresh,112.98,23.73,511800
+Guangdong,Yingde,113.4,24.18,513000
+Guangdong,Lianzhou,112.38,24.78,513400
+Guangdong,Dongguan,113.75,23.05,523000
+Guangdong,Zhongshan,113.38,22.52,528400
+Guangdong,Chaozhou,116.62,23.67,521000
+Guangdong,Xiangqiao,116.63,23.68,521021
+Guangdong,Chao'an,116.68,23.45,515600
+Guangdong,Rao Ping,117,23.67,515700
+Guangdong,Jieyang,116.37,23.55,522000
+Guangdong,Jiedong,116.42,23.57,515500
+Guangdong,Jiexi,115.83,23.43,515400
+Guangdong,Huilai,116.28,23.03,515200
+Guangdong,Puning,116.18,23.3,515300
+Guangdong,Yunfu,112.03,22.92,527300
+Guangdong,Yuncheng,112.03,22.93,527300
+Guangdong,Xinxing,112.23,22.7,527400
+Guangdong,Yunan,111.53,23.23,527100
+Guangdong,Yun'an,112,23.08,527500
+Guangdong,Luoding,111.57,22.77,527200
+Guangxi,NanNing,108.37,22.82,530000
+Guangxi,Xingning,108.38,22.87,530012
+Guangxi,Jiangnan,108.28,22.78,530031
+Guangxi,Xixiangtang,108.3,22.83,530000
+Guangxi,Liangqing,108.32,22.77,530200
+Guangxi,Yongning,108.48,22.75,530200
+Guangxi,Wuming,108.27,23.17,530100
+Guangxi,Longan,107.68,23.18,532700
+Guangxi,Mashan,108.17,23.72,530600
+Guangxi,Shanglin,108.6,23.43,530500
+Guangxi,Binyang,108.8,23.22,530400
+Guangxi,Hengxian,109.27,22.68,530300
+Guangxi,Liuzhou,109.42,24.33,545000
+Guangxi,Liunan,109.38,24.35,545005
+Guangxi,Liujiang,109.33,24.27,545100
+Guangxi,Liucheng,109.23,24.65,545200
+Guangxi,Luzhai,109.73,24.48,545600
+Guangxi,Rong'an,109.4,25.23,545400
+Guangxi,Rongshui Miao,109.25,25.07,545300
+Guangxi,Sanjiang Dong,109.6,25.78,545500
+Guangxi,Guilin,110.28,25.28,541000
+Guangxi,Yangshuo,110.48,24.78,541900
+Guangxi,Lingui,110.2,25.23,541100
+Guangxi,Lingchuan,110.32,25.42,541200
+Guangxi,Whole state,111.07,25.93,541500
+Guangxi,Xing'an,110.67,25.62,541399
+Guangxi,Yongfu,109.98,24.98,541899
+Guangxi,Guanyang,111.15,25.48,541600
+Guangxi,Longsheng autonomous counties,110,25.8,541799
+Guangxi,Resource,110.63,26.03,541400
+Guangxi,Pingle,110.63,24.63,542400
+Guangxi,Gongcheng Yao,110.83,24.83,542500
+Guangxi,Wuzhou,111.27,23.48,543000
+Guangxi,Cangwu,111.23,23.42,543100
+Guangxi,Vine,110.92,23.38,543300
+Guangxi,Mengshan,110.52,24.2,546700
+Guangxi,Cenxi,110.98,22.92,543200
+Guangxi,Beihai,109.12,21.48,536000
+Guangxi,Tieshan Port,109.43,21.53,536017
+Guangxi,Hepu,109.2,21.67,536100
+Guangxi,Fangchenggang,108.35,21.7,538000
+Guangxi,Port,108.37,21.65,538000
+Guangxi,Fangcheng,108.35,21.77,538000
+Guangxi,Shangsi,107.98,22.15,535500
+Guangxi,Dongxing,107.97,21.53,538100
+Guangxi,Qinzhou,108.62,21.95,535000
+Guangxi,Qinbei,108.63,21.98,535000
+Guangxi,Lingshan,109.3,22.43,535400
+Guangxi,Pu Beibei,109.55,22.27,535300
+Guangxi,Guigang,109.6,23.1,537100
+Guangxi,Qintang,109.42,23.13,537121
+Guangxi,Pingnan,110.38,23.55,537300
+Guangxi,Guiping,110.08,23.4,537200
+Guangxi,Yulin,110.17,22.63,537000
+Guangxi,Rongxian,110.55,22.87,537500
+Guangxi,Luchuan,110.27,22.33,537700
+Guangxi,Babai,109.97,22.28,537600
+Guangxi,Xingye,109.87,22.75,537800
+Guangxi,Beiliu,110.35,22.72,537400
+Guangxi,Best,106.62,23.9,533000
+Guangxi,Tianyang,106.92,23.73,533600
+Guangxi,Tiandong,107.12,23.6,531500
+Guangxi,Pingguo,107.58,23.32,531400
+Guangxi,Debao,106.62,23.33,533700
+Guangxi,Jingxi,106.42,23.13,533800
+Guangxi,Naipo,105.83,23.42,533900
+Guangxi,Lingyun,106.57,24.35,533100
+Guangxi,Leye,106.55,24.78,533200
+Guangxi,Tianlin,106.23,24.3,533300
+Guangxi,Xilin,105.1,24.5,533500
+Guangxi,Autonomous counties of all ethnic groups in Longlin,105.33,24.77,533500
+Guangxi,Hezhou,111.55,24.42,542800
+Guangxi,Zhaoping,110.8,24.17,546800
+Guangxi,Zhongshan,111.3,24.53,542600
+Guangxi,Fuchuan Yao,111.27,24.83,542700
+Guangxi,Hechi,108.07,24.7,547000
+Guangxi,Jinshengjiang,108.05,24.7,547000
+Guangxi,Nandan,107.53,24.98,547200
+Guangxi,Tian'e,107.17,25,547300
+Guangxi,Fengshan,107.05,24.55,547600
+Guangxi,Donglan,107.37,24.52,547400
+Guangxi,Luocheng 族,108.9,24.78,546499
+Guangxi,Huanjiang Maonan,108.25,24.83,547100
+Guangxi,Bama Yao,107.25,24.15,547500
+Guangxi,Du'an Yao,108.1,23.93,530700
+Guangxi,Dahua Yao,107.98,23.73,530800
+Guangxi,Yizhou,108.67,24.5,546300
+Guangxi,Guest,109.23,23.73,546100
+Guangxi,Xincheng,108.67,24.07,546200
+Guangxi,Xiangzhou,109.68,23.97,545800
+Guangxi,Wuxuan,109.67,23.6,545900
+Guangxi,Jinxiu Yao,110.18,24.13,545700
+Guangxi,Heshan,108.87,23.82,546500
+Guangxi,Chongzuo,107.37,22.4,532200
+Guangxi,Fusui,107.9,22.63,532100
+Guangxi,Ningming,107.07,22.13,532500
+Guangxi,Longzhou,106.85,22.35,532400
+Guangxi,Daxin,107.2,22.83,532300
+Guangxi,Tianyou,107.13,23.08,532800
+Guangxi,Pingxiang,106.75,22.12,532600
+Hainan,Haikou,110.32,20.03,570100
+Hainan,Xiuying,110.28,20.02,570300
+Hainan,Longhua,110.3,20.03,570100
+Hainan,Qiongshan,110.35,20,571199
+Hainan,Meilan,110.37,20.03,570203
+Hainan,Sanya,109.5,18.25,572000
+Hainan,Wuzhishan,109.52,18.78,572200
+Hainan,Qionghai,110.47,19.25,571400
+Hainan,Dazhou,109.57,19.52,571700
+Hainan,Wenchang,110.8,19.55,571300
+Hainan,Wanning,110.4,18.8,571500
+Hainan,Oriental,108.63,19.1,572600
+Hainan,Ding'an,110.32,19.7,571200
+Hainan,Tunchang,110.1,19.37,571600
+Hainan,Chengmai,110,19.73,571900
+Hainan,Lingao,109.68,19.92,571800
+Hainan,Baisha Li,109.45,19.23,572800
+Hainan,Changjiang Li,109.05,19.25,572700
+Hainan,Ledongli,109.17,18.75,572500
+Hainan,Lingshui Li,110.03,18.5,572400
+Hainan,Baoting,109.7,18.63,572300
+Hainan,Qiongzhongli Miao,109.83,19.03,572900
+Chongqing,NA,106.55,29.57,400000
+Chongqing,Wanzhou,108.4,30.82,404100
+Chongqing,Fuling,107.4,29.72,408000
+Chongqing,Yuzhong,106.57,29.55,400010
+Chongqing,Dadukou,106.48,29.48,400000
+Chongqing,Jiangbei,106.57,29.6,400000
+Chongqing,Shapingba,106.45,29.53,400000
+Chongqing,Jiulongpo,106.5,29.5,400000
+Chongqing,South Bank,106.57,29.52,400000
+Chongqing,Beibei,106.4,29.8,400700
+Chongqing,Wansheng,106.92,28.97,400800
+Chongqing,Shuangqiao,105.78,29.48,400900
+Chongqing,Yu Bei,106.63,29.72,401120
+Chongqing,Banan,106.52,29.38,401320
+Chongqing,Qianjiang,108.77,29.53,409000
+Chongqing,Longevity,107.08,29.87,401220
+Chongqing,Yijiang,106.65,29.03,401420
+Chongqing,Tongnan,105.83,30.18,402660
+Chongqing,Tongliang,106.05,29.85,402560
+Chongqing,Dazu,105.72,29.7,402360
+Chongqing,Rongchang,105.58,29.4,402460
+Chongqing,Laoshan,106.22,29.6,402760
+Chongqing,Liangping,107.8,30.68,405200
+Chongqing,Chengkou,108.67,31.95,405900
+Chongqing,Fengdu,107.73,29.87,408200
+Chongqing,Pental,107.35,30.33,408300
+Chongqing,Wulong,107.75,29.33,408500
+Chongqing,Zhong,108.02,30.3,404300
+Chongqing,Open a,108.42,31.18,405400
+Chongqing,Yunyang,108.67,30.95,404500
+Chongqing,Fengjie,109.47,31.02,404600
+Chongqing,Wushan,109.88,31.08,404700
+Chongqing,Wuxi,109.63,31.4,405800
+Chongqing,Shizhu,108.12,30,409100
+Chongqing,Xiushan Miao,108.98,28.45,409900
+Chongqing,Puyang Miao,108.77,28.85,648800
+Chongqing,Pengshui Miao,108.17,29.3,409600
+Sichuan,Chengdu,104.07,30.67,610000
+Sichuan,Jinjiang,104.08,30.67,610011
+Sichuan,Qingyang,104.05,30.68,610031
+Sichuan,Taurus,104.05,30.7,610036
+Sichuan,Wuhou,104.05,30.65,610041
+Sichuan,Chenghua,104.1,30.67,610051
+Sichuan,Longquanyi,104.27,30.57,610100
+Sichuan,Qingbaijiang,104.23,30.88,610300
+Sichuan,Xindu,104.15,30.83,610500
+Sichuan,Wenjiang,103.83,30.7,611130
+Sichuan,Jinsang,104.43,30.85,610400
+Sichuan,Shuangliu,103.92,30.58,610200
+Sichuan,Qixian,103.88,30.82,611730
+Sichuan,Dayi,103.52,30.58,611330
+Sichuan,Pujiang,103.5,30.2,611630
+Sichuan,Xinjin,103.82,30.42,611430
+Sichuan,Dujiangyan,103.62,31,611830
+Sichuan,Pengzhou,103.93,30.98,611930
+Sichuan,Municipality,103.47,30.42,611530
+Sichuan,Chongzhou,103.67,30.63,611230
+Sichuan,Zigong,104.78,29.35,643000
+Sichuan,Self -streaming,104.77,29.35,643000
+Sichuan,Gongjing,104.72,29.35,643020
+Sichuan,Daan,104.77,29.37,643010
+Sichuan,Beach,104.87,29.27,643030
+Sichuan,Rongxian,104.42,29.47,643100
+Sichuan,Fushun,104.98,29.18,643200
+Sichuan,Panzhihua,101.72,26.58,617000
+Sichuan,Eastern,101.7,26.55,617067
+Sichuan,Western,101.6,26.6,617000
+Sichuan,Renhe,101.73,26.5,617000
+Sichuan,Miyi,102.12,26.88,617200
+Sichuan,Yanbian,101.85,26.7,617100
+Sichuan,Luzhou,105.43,28.87,646000
+Sichuan,Jiangyang,105.45,28.88,646000
+Sichuan,Naxi,105.37,28.77,646300
+Sichuan,Longma Tan,105.43,28.9,646000
+Sichuan,Luxian,105.38,29.15,646100
+Sichuan,Hejiang,105.83,28.82,646200
+Sichuan,Xuyong,105.43,28.17,646400
+Sichuan,Gulin,105.82,28.05,646500
+Sichuan,Deyang,104.38,31.13,618000
+Sichuan,Jingyang,104.38,31.13,618000
+Sichuan,Zhongjiang,104.68,31.03,618100
+Sichuan,Luojiang,104.5,31.32,618500
+Sichuan,Guanghan,104.28,30.98,618300
+Sichuan,Shifang,104.17,31.13,618400
+Sichuan,Mianzhu,104.2,31.35,618200
+Sichuan,Mianyang,104.73,31.47,621000
+Sichuan,Wucheng,104.73,31.47,621000
+Sichuan,Youxian,104.75,31.47,621000
+Sichuan,Three counties,105.08,31.1,621100
+Sichuan,Yanting,105.38,31.22,621600
+Sichuan,Anxian,104.57,31.53,622650
+Sichuan,Ziyi,105.17,31.63,622150
+Sichuan,Beichuan Qiang,104.45,31.82,622750
+Sichuan,Pingwu,104.53,32.42,622553
+Sichuan,Jiangyou,104.75,31.78,621700
+Sichuan,Guangyuan,105.83,32.43,628000
+Sichuan,Central,105.05,29.58,628000
+Sichuan,Central,103.77,29.57,628000
+Sichuan,Yuanba,105.97,32.32,628000
+Sichuan,Chaotic,105.88,32.65,628012
+Sichuan,Wangcang,106.28,32.23,628200
+Sichuan,Qingchuan,105.23,32.58,628100
+Sichuan,Jiange,105.52,32.28,628300
+Sichuan,Cangxi,105.93,31.73,628400
+Sichuan,Suining,105.57,30.52,629000
+Sichuan,Payhan,105.57,30.52,629000
+Sichuan,Residential,105.45,30.35,629000
+Sichuan,Pengxi,105.72,30.78,629100
+Sichuan,Shijiahong,105.38,30.87,629200
+Sichuan,Daying,105.25,30.58,629300
+Sichuan,Neijiang,105.05,29.58,641000
+Sichuan,Central,105.05,29.58,641000
+Sichuan,Central,103.77,29.57,641000
+Sichuan,Dongxing,105.07,29.6,641100
+Sichuan,Weiyuan,104.67,29.53,642450
+Sichuan,Zizhong,104.85,29.78,641200
+Sichuan,Long ??,105.28,29.35,641000
+Sichuan,Leshan,103.77,29.57,614000
+Sichuan,Central,105.05,29.58,614000
+Sichuan,Central,103.77,29.57,614000
+Sichuan,Shawan,103.55,29.42,614900
+Sichuan,Wutongqiao,103.82,29.4,614800
+Sichuan,Jinkouhe,103.08,29.25,614700
+Sichuan,犍 犍 犍 犍,103.95,29.22,614400
+Sichuan,Jingyan,104.07,29.65,613100
+Sichuan,Jiajiang,103.57,29.73,614100
+Sichuan,Muchuan,103.9,28.97,614500
+Sichuan,Eibian,103.27,29.23,614300
+Sichuan,Matabian,103.55,28.83,614600
+Sichuan,Emeishan,103.48,29.6,614200
+Sichuan,Nanchong,106.08,30.78,637000
+Sichuan,Shunqing,106.08,30.78,637000
+Sichuan,Gaoping,106.1,30.77,637100
+Sichuan,Jialing,106.05,30.77,637500
+Sichuan,Southern,106.07,31.35,637300
+Sichuan,Yingshan,106.57,31.08,637700
+Sichuan,Pengan,106.42,31.03,637800
+Sichuan,Yilong,106.28,31.27,637600
+Sichuan,Xichong,105.88,31,637200
+Sichuan,Langzhong,106,31.55,637400
+Sichuan,Meishan,103.83,30.05,620010
+Sichuan,Dongpo,103.83,30.05,620000
+Sichuan,Renshou,104.15,30,620500
+Sichuan,Pengshan,103.87,30.2,620800
+Sichuan,Hongya,103.37,29.92,620360
+Sichuan,Danling,103.52,30.02,620200
+Sichuan,Qing Shen,103.85,29.83,620460
+Sichuan,Yibin,104.62,28.77,644000
+Sichuan,Cuiping,104.62,28.77,644000
+Sichuan,Yibin,104.55,28.7,644600
+Sichuan,Nanxi,104.98,28.85,644100
+Sichuan,Jiang'an,105.07,28.73,644200
+Sichuan,Changning,104.92,28.58,644300
+Sichuan,Gaoxian,104.52,28.43,645154
+Sichuan,Qixian,104.72,28.45,644500
+Sichuan,Lianlian,104.52,28.17,645250
+Sichuan,Xingwen,105.23,28.3,644400
+Sichuan,Pingshan,104.33,28.83,645350
+Sichuan,Guang'an,106.63,30.47,638500
+Sichuan,Yuechi,106.43,30.55,638399
+Sichuan,Wusheng,106.28,30.35,638400
+Sichuan,Neighbor water,106.93,30.33,638500
+Sichuan,Huayu,106.77,30.38,638600
+Sichuan,Dazhou,107.5,31.22,635000
+Sichuan,Tongchuan,107.48,31.22,635000
+Sichuan,Daxian,107.5,31.2,635000
+Sichuan,Xuanhan,107.72,31.35,636150
+Sichuan,Kaijiang,107.87,31.08,636250
+Sichuan,Dazhu,107.2,30.73,635199
+Sichuan,County,106.97,30.83,635200
+Sichuan,Wanyuan,108.03,32.07,636350
+Sichuan,Ya'an,103,29.98,625000
+Sichuan,Yucheng,103,29.98,625000
+Sichuan,Mingshan,103.12,30.08,625100
+Sichuan,Daijing,102.85,29.8,625200
+Sichuan,Hanyuan,102.65,29.35,625300
+Sichuan,Asaimonian Prefecture,102.37,29.23,625400
+Sichuan,Tianquan,102.75,30.07,625500
+Sichuan,Lushan,102.92,30.15,625600
+Sichuan,Baoxing,102.82,30.37,625700
+Sichuan,Bazhong,106.77,31.85,636600
+Sichuan,Bazhou,106.77,31.85,636600
+Sichuan,Tongjiang,107.23,31.92,636700
+Sichuan,Nanjiang,106.83,32.35,635600
+Sichuan,Pingchang,107.1,31.57,636400
+Sichuan,Ziyang,104.65,30.12,641300
+Sichuan,Yanjiang,104.65,30.12,641300
+Sichuan,Anyue,105.33,30.1,642350
+Sichuan,Lezhi,105.02,30.28,641500
+Sichuan,Jianyang,104.55,30.4,641400
+Sichuan,Aba,102.22,31.9,624000
+Sichuan,Wenchuan,103.58,31.48,623000
+Sichuan,County,103.17,31.43,623100
+Sichuan,Mao,103.85,31.68,623200
+Sichuan,Songpan,103.6,32.63,623300
+Sichuan,Jiuzhaigou,104.23,33.27,623400
+Sichuan,Jinsheng,102.07,31.48,624100
+Sichuan,Xiaojin,102.37,31,624200
+Sichuan,Heishui,102.98,32.07,623500
+Sichuan,Malkang,102.22,31.9,624000
+Sichuan,Yangtang,100.98,32.27,624300
+Sichuan,Aba,101.7,32.9,624600
+Sichuan,Johgai,102.95,33.58,624500
+Sichuan,Hongyuan,102.55,32.8,624400
+Sichuan,Garze,101.97,30.05,626000
+Sichuan,Kangding,101.97,30.05,626000
+Sichuan,Luding,102.23,29.92,626100
+Sichuan,Danba,101.88,30.88,626300
+Sichuan,Kowloon,101.5,29,616200
+Sichuan,Yajiang,101.02,30.03,627450
+Sichuan,Daofu,101.12,30.98,626400
+Sichuan,Ouhuo,100.68,31.4,626500
+Sichuan,Garze,99.98,31.62,626700
+Sichuan,Xinlong,100.32,30.95,626800
+Sichuan,Derge,98.58,31.82,627250
+Sichuan,Baiyu,98.83,31.22,627150
+Sichuan,Shiqu,98.1,32.98,627350
+Sichuan,Seda Prefecture,100.33,32.27,626600
+Sichuan,Litang,100.27,30,624300
+Sichuan,Batang,99.1,30,627650
+Sichuan,Township,99.8,28.93,627850
+Sichuan,Daocheng,100.3,29.03,627750
+Sichuan,Yerong,99.28,28.72,627950
+Sichuan,Liangshan,102.27,27.9,615000
+Sichuan,Xichang,102.27,27.9,615000
+Sichuan,Tibetan,101.28,27.93,615800
+Sichuan,Yanyuan,101.5,27.43,615700
+Sichuan,Dechang,102.18,27.4,615500
+Sichuan,Huili,102.25,26.67,615100
+Sichuan,Huidong,102.58,26.63,615200
+Sichuan,Ningnan,102.77,27.07,615400
+Sichuan,Pigx,102.53,27.38,615300
+Sichuan,Budao,102.82,27.72,615350
+Sichuan,Jinyang,103.25,27.7,616250
+Sichuan,Zhaojue,102.85,28.02,616150
+Sichuan,Xide,102.42,28.32,616750
+Sichuan,Mianning,102.17,28.55,615600
+Sichuan,Yuexi,102.52,28.65,616650
+Sichuan,Ganluo,102.77,28.97,616850
+Sichuan,Meagu,103.13,28.33,616450
+Sichuan,Leibo,103.57,28.27,616550
+Guizhou,Guiyang,106.63,26.65,550000
+Guizhou,Nanming,106.72,26.57,550002
+Guizhou,Yunyan,106.72,26.62,550001
+Guizhou,Wu Dang,106.75,26.63,550018
+Guizhou,Baiyun,106.65,26.68,550014
+Guizhou,Small river,106.7,26.53,550000
+Guizhou,Kaiyang,106.97,27.07,550300
+Guizhou,Xixian,106.73,27.1,551100
+Guizhou,Xiuwen,106.58,26.83,550200
+Guizhou,Qingzhen,106.47,26.55,551400
+Guizhou,Liupan Water Market,104.83,26.6,553000
+Guizhou,Zhongshan,104.83,26.6,553000
+Guizhou,Liuzhi Special Economic Zone,105.48,26.22,553400
+Guizhou,Shuicheng,104.95,26.55,553600
+Guizhou,Panxian,104.47,25.72,553537
+Guizhou,Zunyi,106.92,27.73,563000
+Guizhou,Honghuagang,106.92,27.65,563000
+Guizhou,Huichuan,106.92,27.73,563000
+Guizhou,Zunyi,106.83,27.53,563100
+Guizhou,Tongzi,106.82,28.13,563200
+Guizhou,Suiyang,107.18,27.95,563300
+Guizhou,Zheng'an,107.43,28.55,563400
+Guizhou,Dao Zhenzheng Gecer Miao,107.6,28.88,563500
+Guizhou,Kuchuan Gelao Miao,107.88,28.53,564300
+Guizhou,Fenggang,107.72,27.97,564200
+Guizhou,Meitan,107.48,27.77,564100
+Guizhou,Yuqing,107.88,27.22,564400
+Guizhou,Xi Shui,106.22,28.32,564600
+Guizhou,Chishui,105.7,28.58,564700
+Guizhou,Renhuai,106.42,27.82,564500
+Guizhou,Anshun,105.95,26.25,561000
+Guizhou,Xixiu,105.92,26.25,561000
+Guizhou,Pingba,106.25,26.42,561100
+Guizhou,Puding,105.75,26.32,562100
+Guizhou,Zhen Ning,105.77,26.07,561200
+Guizhou,Guoling,105.62,25.95,561300
+Guizhou,Ziyun Miao Miao Buyi,106.08,25.75,560800
+Guizhou,Tongren,109.18,27.72,554300
+Guizhou,Tongren,109.18,27.72,554300
+Guizhou,Jiangkou,108.85,27.7,554400
+Guizhou,Yuping,108.92,27.23,554000
+Guizhou,Shizhen,108.23,27.52,555100
+Guizhou,Sinan,108.25,27.93,565100
+Guizhou,Yinjiang Miao,108.4,28,555200
+Guizhou,Dejiang,108.12,28.27,565200
+Guizhou,Along the river,108.5,28.57,565300
+Guizhou,Songtao Miao,109.2,28.17,554100
+Guizhou,Wanshan Special Economic Zone,109.2,27.52,554200
+Guizhou,Xingyi,104.9,25.08,562400
+Guizhou,Xingren,105.18,25.43,562300
+Guizhou,Putian,104.95,25.78,562400
+Guizhou,Qinglong,105.22,25.83,562400
+Guizhou,Zhenfeng,105.65,25.38,562400
+Guizhou,Wangmo,106.1,25.17,552300
+Guizhou,Book of Heng,105.82,24.98,562400
+Guizhou,Anlong,105.47,25.12,562400
+Guizhou,Bijie,105.28,27.3,551700
+Guizhou,Bijie,105.28,27.3,551700
+Guizhou,Great Prefecture,105.6,27.15,551600
+Guizhou,Qianxi,106.03,27.03,551500
+Guizhou,Jinsha,106.22,27.47,551800
+Guizhou,Weakin,105.77,26.67,552100
+Guizhou,Nayong,105.38,26.78,553300
+Guizhou,Hezhang,104.72,27.13,553200
+Guizhou,Southeast Guizhou Miao,107.97,26.58,556000
+Guizhou,Kaili,107.97,26.58,556000
+Guizhou,Huangping,107.9,26.9,556100
+Guizhou,Shi Bing,108.12,27.03,556200
+Guizhou,Sansui,108.68,26.97,556500
+Guizhou,Zhenyuan,108.42,27.05,557700
+Guizhou,Cen Gong,108.82,27.18,557800
+Guizhou,Tianzhu,109.2,26.92,556600
+Guizhou,Jinping,109.2,26.68,556700
+Guizhou,Jianhe,108.45,26.73,556400
+Guizhou,Taijiang,108.32,26.67,556300
+Guizhou,Liping,109.13,26.23,557300
+Guizhou,Rongjiang,108.52,25.93,557200
+Guizhou,Congjiang,108.9,25.75,557400
+Guizhou,Leishan,108.07,26.38,557100
+Guizhou,Majiang,107.58,26.5,557600
+Guizhou,Danzhai,107.8,26.2,557500
+Guizhou,Qiannan,107.52,26.27,558000
+Guizhou,Duyun,107.52,26.27,558000
+Guizhou,Fuquan,107.5,26.7,550500
+Guizhou,Libo,107.88,25.42,558400
+Guizhou,Guiding,107.23,26.58,551300
+Guizhou,Junan,107.47,27.07,550400
+Guizhou,Dushan,107.53,25.83,558200
+Guizhou,Pingtang,107.32,25.83,558300
+Guizhou,Luodian,106.75,25.43,550100
+Guizhou,Changshun,106.45,26.03,550700
+Guizhou,Longli,106.97,26.45,551200
+Guizhou,Huishui,106.65,26.13,550600
+Guizhou,Sandu aquarium,107.87,25.98,558100
+Yunnan,Kunming,102.72,25.05,650000
+Yunnan,Wuhua,102.7,25.05,650032
+Yunnan,Panlong,102.72,25.03,650051
+Yunnan,Guandu,102.75,25.02,650200
+Yunnan,Xishan,102.67,25.03,650100
+Yunnan,Dongchuan,103.18,26.08,654100
+Yunnan,Chenggong,102.8,24.88,650500
+Yunnan,Jinning,102.6,24.67,650600
+Yunnan,Fumin,102.5,25.22,650400
+Yunnan,Yiliang,103.15,24.92,652100
+Yunnan,Shilin,103.27,24.77,652200
+Yunnan,Songming,103.03,25.35,651700
+Yunnan,Lu Dusan Miao,102.47,25.55,651500
+Yunnan,Xundian,103.25,25.57,655200
+Yunnan,Anning,102.48,24.92,650300
+Yunnan,Qujing,103.8,25.5,655000
+Yunnan,Kirin,103.8,25.5,655000
+Yunnan,Martong,103.58,25.43,655100
+Yunnan,Lu Liang,103.67,25.03,655699
+Yunnan,Shizong,103.98,24.83,655700
+Yunnan,Luoping,104.3,24.88,655800
+Yunnan,Fuyuan,104.25,25.67,655500
+Yunnan,Huizawa Prefecture,103.3,26.42,654200
+Yunnan,Zhanyi,103.82,25.62,655500
+Yunnan,Xuanwei,104.1,26.22,655400
+Yunnan,Yuxi,102.55,24.35,653100
+Yunnan,Jiangchuan,102.75,24.28,652600
+Yunnan,Chengjiang,102.92,24.67,652500
+Yunnan,Tonghai,102.75,24.12,652700
+Yunnan,Huining,102.93,24.2,652800
+Yunnan,Yimen,102.17,24.67,651100
+Yunnan,Eshan,102.4,24.18,653200
+Yunnan,Xinping,101.98,24.07,653400
+Yunnan,Baoshan,99.17,25.12,678000
+Yunnan,Longyang,99.17,25.12,678000
+Yunnan,Shidian,99.18,24.73,678200
+Yunnan,Tengchong,98.5,25.03,679100
+Yunnan,Longling,98.68,24.58,678300
+Yunnan,Changning,99.6,24.83,678100
+Yunnan,Zhaotong,103.72,27.33,657000
+Yunnan,Zhaoyang,103.72,27.33,657000
+Yunnan,Ludian,103.55,27.2,657100
+Yunnan,Qiaojia,102.92,26.92,654600
+Yunnan,Yanjin,104.23,28.12,657500
+Yunnan,Daguan,103.88,27.75,657400
+Yunnan,Yongshan,103.63,28.23,657300
+Yunnan,Suijiang,103.95,28.6,657700
+Yunnan,Zhenxiong,104.87,27.45,657200
+Yunnan,Yiliang,104.05,27.63,657600
+Yunnan,Prestige,105.05,27.85,657900
+Yunnan,Shuifu,104.4,28.63,657800
+Yunnan,Lijiang,100.23,26.88,674100
+Yunnan,Ancient,100.23,26.88,674100
+Yunnan,Yulong Naxi,100.23,26.82,674100
+Yunnan,Yongsheng,100.75,26.68,674200
+Yunnan,Huaping,101.27,26.63,674800
+Yunnan,Ningyi,100.85,27.28,674300
+Yunnan,Mojiang,101.68,23.43,654800
+Yunnan,Jingdong,100.83,24.45,654800
+Yunnan,Jinggu,100.7,23.5,654800
+Yunnan,Jiangcheng,101.85,22.58,654800
+Yunnan,Lancang La Ling,99.93,22.55,654800
+Yunnan,Western Union Langu,99.62,22.63,654800
+Yunnan,Lincang,100.08,23.88,677000
+Yunnan,Linxiang,100.08,23.88,677000
+Yunnan,Fengqing,99.92,24.6,675900
+Yunnan,Yunxian,100.13,24.45,675800
+Yunnan,Yongde,99.25,24.03,677600
+Yunnan,Zhenkang,98.83,23.78,677704
+Yunnan,Gengma Tuban,99.4,23.55,677500
+Yunnan,Cangyuan Qi,99.25,23.15,677400
+Yunnan,Chuxiong,101.55,25.03,675000
+Yunnan,Chuxiong,101.55,25.03,675000
+Yunnan,Shuangbai,101.63,24.7,675100
+Yunnan,Mouding,101.53,25.32,675500
+Yunnan,Nanhua,101.27,25.2,675200
+Yunnan,Yao'an,101.23,25.5,675300
+Yunnan,Dayao,101.32,25.73,675400
+Yunnan,Yongren,101.67,26.07,651400
+Yunnan,Yuanmou,101.88,25.7,651300
+Yunnan,Wuding,102.4,25.53,651600
+Yunnan,Lufeng,102.08,25.15,651200
+Yunnan,Honghehani,103.4,23.37,661400
+Yunnan,Old,103.15,23.37,661000
+Yunnan,Kaiyuan,103.27,23.72,661600
+Yunnan,Montzi,103.4,23.37,661100
+Yunnan,Pingbian Miao,103.68,22.98,661200
+Yunnan,Jianshui,102.83,23.62,654300
+Yunnan,Shiping,102.5,23.72,662200
+Yunnan,Maitreya,103.43,24.4,652300
+Yunnan,Luxi,103.77,24.53,652400
+Yunnan,Yuanyang,102.83,23.23,662400
+Yunnan,Honghe,102.42,23.37,654400
+Yunnan,Lvchun,102.4,23,662500
+Yunnan,Hekou Yao,103.97,22.52,661300
+Yunnan,Wenshan,104.25,23.37,663000
+Yunnan,Wenshan,104.25,23.37,663000
+Yunnan,Takayama Prefecture,104.33,23.62,663100
+Yunnan,Xichou,104.67,23.45,663500
+Yunnan,Malipo,104.7,23.12,663600
+Yunnan,Maguan,104.4,23.02,663700
+Yunnan,Qiubei,104.18,24.05,663200
+Yunnan,Guangnan,105.07,24.05,663300
+Yunnan,Funing,105.62,23.63,663400
+Yunnan,Xishuangbanna,100.8,22.02,666100
+Yunnan,Jinghong,100.8,22.02,666100
+Yunnan,Erhai,100.45,21.97,666200
+Yunnan,Mengla,101.57,21.48,666300
+Yunnan,Dali,100.23,25.6,671000
+Yunnan,Dali,100.23,25.6,671000
+Yunnan,Yangyi,99.95,25.67,672500
+Yunnan,Xiangyun,100.55,25.48,672100
+Yunnan,Binchuan,100.58,25.83,671600
+Yunnan,Midu,100.48,25.35,675600
+Yunnan,Nanxun,100.52,25.05,675700
+Yunnan,Weishan,100.3,25.23,672400
+Yunnan,Yongping,99.53,25.47,672600
+Yunnan,Yunlong,99.37,25.88,672700
+Yunnan,Eriyuan,99.95,26.12,671200
+Yunnan,Jianchuan,99.9,26.53,671300
+Yunnan,Heqing,100.18,26.57,671500
+Yunnan,Dehong Jingpo,98.58,24.43,678400
+Yunnan,Ruili,97.85,24.02,678600
+Yunnan,Tongxi,98.58,24.43,678400
+Yunnan,Lianghe,98.3,24.82,679200
+Yunnan,Yingjiang,97.93,24.72,679300
+Yunnan,Longchuan,97.8,24.2,678700
+Yunnan,Nujiang Ling,98.85,25.85,673200
+Yunnan,Lishui,98.85,25.85,673200
+Yunnan,Figong,98.87,26.9,673400
+Yunnan,Gongshan Dulong Nu Nu,98.67,27.73,673500
+Yunnan,Lanping people Pumen,99.42,26.45,671400
+Yunnan,Diqing,99.7,27.83,674400
+Yunnan,Shangri -La,99.7,27.83,674400
+Yunnan,Deqin,98.92,28.48,674500
+Yunnan,Weixi Lang,99.28,27.18,674600
+Tibet,Lhasa,91.13,29.65,850000
+Tibet,City customs,91.13,29.65,850000
+Tibet,Linzhou,91.25,29.9,851600
+Tibet,Dangxiong,91.1,30.48,851500
+Tibet,Nimu,90.15,29.45,851600
+Tibet,Qushui,90.73,29.37,850600
+Tibet,Dai Long Deqing,91,29.65,851400
+Tibet,Dazi,91.35,29.68,850100
+Tibet,Mozhu Gongka,91.73,29.83,850200
+Tibet,Qamdo,97.18,31.13,854000
+Tibet,Changdu,97.18,31.13,854000
+Tibet,Jiangda,98.22,31.5,854100
+Tibet,Gongjue,98.27,30.87,854200
+Tibet,Wuqi,96.6,31.22,855600
+Tibet,Dingqing,95.6,31.42,855700
+Tibet,Chaya Prefecture,97.57,30.65,854300
+Tibet,Babu,96.92,30.05,854600
+Tibet,Zuo Gong,97.85,29.67,854400
+Tibet,Mangang,98.6,29.68,854500
+Tibet,Luolong,95.83,30.75,855400
+Tibet,Bianba,94.7,30.93,855500
+Tibet,Southern,91.77,29.23,856000
+Tibet,Naidong,91.77,29.23,856100
+Tibet,Zhabao,91.33,29.25,850800
+Tibet,Gongga,90.98,29.3,850700
+Tibet,Sangri,92.02,29.27,856200
+Tibet,Qiongjie,91.68,29.03,856800
+Tibet,Qu Song,92.2,29.07,856300
+Tibet,Gumei,91.43,28.43,856900
+Tibet,Luoza,90.87,28.38,851200
+Tibet,Garcha,92.58,29.15,856400
+Tibet,Longzi,92.47,28.42,856600
+Tibet,Wrong,91.95,28,856700
+Tibet,Langka,90.4,28.97,851100
+Tibet,Shigatse,88.88,29.27,857000
+Tibet,Shigatse,88.88,29.27,857000
+Tibet,Nanmulin,89.1,29.68,857100
+Tibet,Jiangzi,89.6,28.92,857400
+Tibet,Dingri,87.12,28.67,858200
+Tibet,Sakya Prefecture,88.02,28.9,857800
+Tibet,Lazi,87.63,29.08,858100
+Tibet,Angren,87.23,29.3,858500
+Tibet,Xie Tongmen,88.27,29.43,858900
+Tibet,Bailang,89.27,29.12,857300
+Tibet,Rinbu,89.83,29.23,857200
+Tibet,Kangma,89.68,28.57,857500
+Tibet,Dingjie,87.77,28.37,857900
+Tibet,Zhongba,84.03,29.77,858800
+Tibet,Yadong,88.9,27.48,857600
+Tibet,Kualal,85.3,28.85,858700
+Tibet,Nyramu,85.98,28.17,858300
+Tibet,Saga,85.23,29.33,858600
+Tibet,Gangba,88.52,28.28,857700
+Tibet,Naqu,92.07,31.48,852000
+Tibet,Naqu,92.07,31.48,852000
+Tibet,Jiali,93.25,30.65,852400
+Tibet,Such as a,93.68,31.48,852300
+Tibet,Nie Rong,92.3,32.12,853500
+Tibet,Anto,91.68,32.27,853400
+Tibet,Shenza,88.7,30.93,853100
+Tibet,Suo,93.78,31.88,852200
+Tibet,Bango,90.02,31.37,852500
+Tibet,Baqing,94.03,31.93,852100
+Tibet,Nima,87.23,31.78,853200
+Tibet,Ali,80.1,32.5,859000
+Tibet,Pulandian,81.17,30.3,859500
+Tibet,Zada,79.8,31.48,859600
+Tibet,Gal,80.1,32.5,859400
+Tibet,Rita,79.72,33.38,859700
+Tibet,Geji,81.12,32.4,859100
+Tibet,Reform the,84.07,32.3,859200
+Tibet,Guoqin,85.17,31.02,859300
+Tibet,Nyingchi,94.37,29.68,860000
+Tibet,Nyingchi,94.37,29.68,860100
+Tibet,Gongbujiangda,93.25,29.88,860200
+Tibet,Milin,94.22,29.22,860500
+Tibet,Moqi,95.33,29.33,860700
+Tibet,Bomi,95.77,29.87,860300
+Tibet,Chada,97.47,28.67,860600
+Tibet,Langxian,93.07,29.05,860400
+Shaanxi,Xi'an,108.93,34.27,710000
+Shaanxi,New town,108.95,34.27,710000
+Shaanxi,Beilin,108.93,34.23,710000
+Shaanxi,Lianhu,108.93,34.27,710003
+Shaanxi,Qiaoqiao,109.07,34.27,710038
+Shaanxi,Weiyang,108.93,34.28,710016
+Shaanxi,Yanta,108.95,34.22,710000
+Shaanxi,Yanliang,109.23,34.65,710089
+Shaanxi,Lintong,109.22,34.37,710600
+Shaanxi,Chang'an,108.93,34.17,710100
+Shaanxi,Lantian,109.32,34.15,710500
+Shaanxi,Zhouzhi,108.2,34.17,710400
+Shaanxi,Household,108.6,34.1,710300
+Shaanxi,Gauling,109.08,34.53,710200
+Shaanxi,Tongchuan,108.93,34.9,727000
+Shaanxi,Wangyi,109.07,35.07,727000
+Shaanxi,Seal,109.1,35.1,727007
+Shaanxi,Yaozhou,108.98,34.92,727100
+Shaanxi,Yijun,109.12,35.4,727200
+Shaanxi,Baoji,107.13,34.37,721000
+Shaanxi,Weibin,107.15,34.37,721000
+Shaanxi,Jintai,107.13,34.38,721000
+Shaanxi,Chencang,107.37,34.37,721300
+Shaanxi,Fengxiang,107.38,34.52,721400
+Shaanxi,Qishan,107.62,34.45,722400
+Shaanxi,Fufeng,107.87,34.37,722200
+Shaanxi,Eyebrow,107.75,34.28,722300
+Shaanxi,Longxian,106.85,34.9,721200
+Shaanxi,Qianyang,107.13,34.65,721100
+Shaanxi,Linyou,107.78,34.68,721500
+Shaanxi,Fengxian,106.52,33.92,721700
+Shaanxi,Taibai,107.32,34.07,721600
+Shaanxi,Xianyang,108.7,34.33,712000
+Shaanxi,Qindu,108.72,34.35,712000
+Shaanxi,Yangling,108.07,34.28,712100
+Shaanxi,Weicheng,108.73,34.33,712000
+Shaanxi,Sanyuan,108.93,34.62,713800
+Shaanxi,Puyang,108.83,34.53,713700
+Shaanxi,Qianxian,108.23,34.53,713300
+Shaanxi,Liquan,108.42,34.48,713200
+Shaanxi,Yongshou,108.13,34.7,713400
+Shaanxi,Binxian,108.08,35.03,713500
+Shaanxi,Changwu,107.78,35.2,713600
+Shaanxi,Xunyi,108.33,35.12,711300
+Shaanxi,Chunhua,108.58,34.78,711200
+Shaanxi,Martial arts,108.2,34.27,712200
+Shaanxi,Xingping,108.48,34.3,713100
+Shaanxi,Weinan,109.5,34.5,714000
+Shaanxi,Linwei,109.48,34.5,714000
+Shaanxi,Chinese,109.77,34.52,714100
+Shaanxi,Tongguan,110.23,34.55,714300
+Shaanxi,Dali,109.93,34.8,715100
+Shaanxi,Heyang,110.15,35.23,715300
+Shaanxi,Chengcheng,109.93,35.18,715200
+Shaanxi,Pucheng,109.58,34.95,715500
+Shaanxi,Baishui,109.58,35.18,715600
+Shaanxi,Fuping,109.18,34.75,711700
+Shaanxi,Korean,110.43,35.48,715400
+Shaanxi,Huayin,110.08,34.57,714200
+Shaanxi,Yan'an,109.48,36.6,716000
+Shaanxi,Pagoda,109.48,36.6,716000
+Shaanxi,Extended,110,36.58,717100
+Shaanxi,Yanchuan,110.18,36.88,717200
+Shaanxi,Zichang,109.67,37.13,717300
+Shaanxi,Ansai,109.32,36.87,717400
+Shaanxi,Zhidan,108.77,36.82,717500
+Shaanxi,Ganquan,109.35,36.28,716100
+Shaanxi,Rich,109.37,35.98,727500
+Shaanxi,Luochuan,109.43,35.77,727400
+Shaanxi,Yichuan,110.17,36.05,716200
+Shaanxi,Huanglong,109.83,35.58,715700
+Shaanxi,Huangling,109.25,35.58,727300
+Shaanxi,Hanzhong,107.02,33.07,723000
+Shaanxi,Hantai,107.03,33.07,723000
+Shaanxi,Nanzheng,106.93,33,723100
+Shaanxi,Chenggu,107.33,33.15,723200
+Shaanxi,Prefecture,107.55,33.22,723300
+Shaanxi,Xixiang,107.77,32.98,723500
+Shaanxi,Mian,106.67,33.15,724200
+Shaanxi,Ningqiang,106.25,32.83,724400
+Shaanxi,Lueyang,106.15,33.33,724300
+Shaanxi,Zhenba,107.9,32.53,723600
+Shaanxi,Liuba,106.92,33.62,724100
+Shaanxi,Ferping,107.98,33.53,723400
+Shaanxi,Yulin,109.73,38.28,719000
+Shaanxi,Yuyang,109.75,38.28,719000
+Shaanxi,Shenmu,110.5,38.83,719300
+Shaanxi,Fugu,111.07,39.03,719400
+Shaanxi,Hengshan,109.28,37.95,719200
+Shaanxi,Jingbian,108.8,37.6,718500
+Shaanxi,Dingbian,107.6,37.58,718600
+Shaanxi,Suide,110.25,37.5,718000
+Shaanxi,Mizhi,110.18,37.75,718100
+Shaanxi,Good,110.48,38.02,719200
+Shaanxi,Wubao,110.73,37.45,718200
+Shaanxi,Qingxi,110.12,37.08,718300
+Shaanxi,Zizhou,110.03,37.62,718400
+Shaanxi,Ankang,109.02,32.68,725000
+Shaanxi,Hanbin,109.02,32.68,725000
+Shaanxi,Hanyin,108.5,32.9,725100
+Shaanxi,Shiquan,108.25,33.05,725200
+Shaanxi,Ningshan,108.32,33.32,711699
+Shaanxi,Ziyang,108.53,32.52,725300
+Shaanxi,Lanji,108.9,32.32,725400
+Shaanxi,Pingli,109.35,32.4,725500
+Shaanxi,Zhenping,109.52,31.88,725600
+Shaanxi,Xunyang,109.38,32.83,725700
+Shaanxi,Baihe,110.1,32.82,725800
+Shaanxi,Shangluo,109.93,33.87,726000
+Shaanxi,Shangzhou,109.93,33.87,726000
+Shaanxi,Luonan,110.13,34.08,726100
+Shaanxi,Danfeng,110.33,33.7,726200
+Shaanxi,Shangnan,110.88,33.53,726300
+Shaanxi,Shanyang,109.88,33.53,726400
+Shaanxi,Zhen'an,109.15,33.43,711500
+Shaanxi,Lishui,109.1,33.68,711400
+Gansu,Lan'Zhou,103.82,36.07,730000
+Gansu,City customs,103.83,36.05,730030
+Gansu,Xigu,103.62,36.1,730060
+Gansu,Red ancient zone,102.87,36.33,730084
+Gansu,Yongdeng,103.27,36.73,730300
+Gansu,Yulan,103.95,36.33,730200
+Gansu,Yuzhong,104.12,35.85,730100
+Gansu,Jiayuguan,98.27,39.8,735100
+Gansu,Jinchang,102.18,38.5,737100
+Gansu,Jinsheng,102.18,38.5,737100
+Gansu,Yongchang,101.97,38.25,737200
+Gansu,Silver,104.18,36.55,730900
+Gansu,Silver,104.18,36.55,730900
+Gansu,Pingchuan,104.83,36.73,730913
+Gansu,Jingyuan,104.68,36.57,730600
+Gansu,Huining,105.05,35.7,730700
+Gansu,Jingtai,104.07,37.15,730400
+Gansu,Tianshui,105.72,34.58,741000
+Gansu,Qingshui,106.13,34.75,741400
+Gansu,Qin'an,105.67,34.87,741600
+Gansu,Gangu,105.33,34.73,741200
+Gansu,Wushan,104.88,34.72,741300
+Gansu,Zhangjiachuan,106.22,35,741500
+Gansu,Wuwei,102.63,37.93,733000
+Gansu,Liangzhou,102.63,37.93,733000
+Gansu,Minqin,103.08,38.62,733300
+Gansu,Gulang,102.88,37.47,733100
+Gansu,Tianzhu,103.13,36.98,733200
+Gansu,Zhangye,100.45,38.93,734000
+Gansu,Ganzhou,100.45,38.93,734000
+Gansu,Su Nan Yugu,99.62,38.83,734400
+Gansu,Minle,100.82,38.43,734500
+Gansu,Linze,100.17,39.13,734200
+Gansu,Gaotai,99.82,39.38,734300
+Gansu,Shandan,101.08,38.78,734100
+Gansu,Pingliang,106.67,35.55,744000
+Gansu,District,106.67,35.55,744000
+Gansu,Xichuan,107.37,35.33,744300
+Gansu,Lingtai,107.62,35.07,744400
+Gansu,Chongxin,107.03,35.3,744200
+Gansu,Huating,106.65,35.22,744100
+Gansu,Zhuanglang,106.05,35.2,744600
+Gansu,Jingning,105.72,35.52,743400
+Gansu,Jiuquan,98.52,39.75,735000
+Gansu,Suzhou,98.52,39.75,735000
+Gansu,Jinda,98.9,39.98,735300
+Gansu,Subei,94.88,39.52,736300
+Gansu,Aksachabak,94.33,39.63,736400
+Gansu,Yumen,97.05,40.28,735211
+Gansu,Dunhuang,94.67,40.13,736200
+Gansu,Qingyang,107.63,35.73,745000
+Gansu,Xifeng,107.63,35.73,745000
+Gansu,Qingcheng,107.88,36,745100
+Gansu,County,107.3,36.58,745700
+Gansu,Huachi,107.98,36.47,745600
+Gansu,Heshui,108.02,35.82,745400
+Gansu,Zhengning,108.37,35.5,745300
+Gansu,Ningxian,107.92,35.5,745200
+Gansu,Zhenyuan,107.2,35.68,744500
+Gansu,Dingxi,104.62,35.58,743000
+Gansu,Stable,104.62,35.58,744300
+Gansu,Tongwei,105.25,35.2,743300
+Gansu,Longxi,104.63,35,748100
+Gansu,Weiyuan,104.22,35.13,748200
+Gansu,Linyi,103.87,35.38,730500
+Gansu,Zhang,104.47,34.85,748300
+Gansu,Qixian,104.03,34.43,748400
+Gansu,Longnan,104.92,33.4,746000
+Gansu,Wudu,104.92,33.4,746000
+Gansu,County,105.72,33.73,742500
+Gansu,Wenxian,104.68,32.95,746400
+Gansu,Dangchang,104.38,34.05,748500
+Gansu,Kang,105.6,33.33,746500
+Gansu,Xihe,105.3,34.02,742100
+Gansu,Ritual,105.17,34.18,742200
+Gansu,Huixian,106.08,33.77,742300
+Gansu,Two counties,106.3,33.92,742400
+Gansu,Linxia,103.22,35.6,731100
+Gansu,Linxia,103.22,35.6,731100
+Gansu,Linxia,103,35.5,731800
+Gansu,Kangle,103.72,35.37,731500
+Gansu,Yongjing,103.32,35.93,731600
+Gansu,Guanghe,103.58,35.48,731300
+Gansu,Hezheng,103.35,35.43,731200
+Gansu,Dongxiang Topo,103.4,35.67,731400
+Gansu,Gannan,102.92,34.98,747000
+Gansu,Cooperative market,102.92,34.98,747000
+Gansu,Lintan,103.35,34.7,747500
+Gansu,Tonini Prefecture,103.5,34.58,747600
+Gansu,Zhouqu,104.37,33.78,746300
+Gansu,Diebu,103.22,34.05,747400
+Gansu,Maqu,102.07,34,747300
+Gansu,Luqu,102.48,34.58,747200
+Gansu,Xiahe,102.52,35.2,747100
+Qinghai,Xining,101.78,36.62,810000
+Qinghai,East,101.8,36.62,617000
+Qinghai,District,101.78,36.62,545000
+Qinghai,Western,101.77,36.62,617000
+Qinghai,North of the,101.77,36.67,810000
+Qinghai,Datong Tuju,101.68,36.93,232000
+Qinghai,Langzhong,101.57,36.5,811600
+Qinghai,Yiyuan,101.27,36.68,812100
+Qinghai,Haidong,102.12,36.5,810600
+Qinghai,Ping'an,102.12,36.5,622600
+Qinghai,Minhe Ethnic Tuju,102.8,36.33,810800
+Qinghai,Ledu,102.4,36.48,810700
+Qinghai,Mutual Aid Turkic,101.95,36.83,810500
+Qinghai,Hua Long,102.27,36.1,422200
+Qinghai,Xunhua Sarah,102.48,35.85,811100
+Qinghai,Haibei,100.9,36.97,812200
+Qinghai,Menyuan,101.62,37.38,810300
+Qinghai,Qilian,100.25,38.18,810400
+Qinghai,Haiyan,100.98,36.9,812200
+Qinghai,Gangcha,100.13,37.33,812300
+Qinghai,Huangnan,102.02,35.52,811300
+Qinghai,Tongren,102.02,35.52,811300
+Qinghai,Sinaita Prefecture,102.03,35.93,811200
+Qinghai,Zeku,101.47,35.03,811400
+Qinghai,Henan,101.6,34.73,811500
+Qinghai,Hainan,100.62,36.28,16000
+Qinghai,Republican,100.62,36.28,238200
+Qinghai,Tongde,100.57,35.25,813200
+Qinghai,Guide,101.43,36.05,811700
+Qinghai,Xinghai,99.98,35.58,813300
+Qinghai,Guinan,100.75,35.58,413200
+Qinghai,Golog,100.23,34.48,814000
+Qinghai,Maqin,100.23,34.48,46400
+Qinghai,Banma,100.73,32.93,814300
+Qinghai,Gande,99.9,33.97,814100
+Qinghai,Daigi,99.65,33.75,814200
+Qinghai,Koshi,101.48,33.43,624700
+Qinghai,Mado,98.18,34.92,813500
+Qinghai,Yushu,97.02,33,815000
+Qinghai,Yushu,97.02,33,815000
+Qinghai,Miscellaneous,95.3,32.9,815300
+Qinghai,Duoduo,97.1,33.37,815100
+Qinghai,Zhiduo,95.62,33.85,815400
+Qinghai,Qiqian,96.48,32.2,815200
+Qinghai,Qu Ma Lai,95.8,34.13,815500
+Qinghai,Haixi,97.37,37.37,817000
+Qinghai,Gulmud,94.9,36.42,816000
+Qinghai,Delingha,97.37,37.37,817000
+Qinghai,Wulan,98.48,36.93,817100
+Qinghai,Dulan,98.08,36.3,816100
+Qinghai,Tianjun,99.02,37.3,817200
+Ningxia,Yinchuan,106.28,38.47,750000
+Ningxia,Xingqing,106.28,38.48,750000
+Ningxia,Xixia,106.18,38.48,750000
+Ningxia,Jinfeng,106.25,38.47,750000
+Ningxia,Yongning,106.25,38.28,745200
+Ningxia,Helan,106.35,38.55,750200
+Ningxia,Lingwu,106.33,38.1,750400
+Ningxia,Shizuishan,106.38,39.02,753000
+Ningxia,Dawukou,106.38,39.02,753000
+Ningxia,Huinong,106.78,39.25,753200
+Ningxia,Pingluo,106.53,38.9,753400
+Ningxia,Wuzhong,106.2,37.98,751100
+Ningxia,Litong,106.2,37.98,751100
+Ningxia,Yanchi,107.4,37.78,751500
+Ningxia,Tongxin,105.92,36.98,751300
+Ningxia,Bronze Gorge,106.07,38.02,751600
+Ningxia,Guyuan,106.28,36,756000
+Ningxia,Original state,106.28,36,756000
+Ningxia,Xiji,105.73,35.97,42200
+Ningxia,Longde,106.12,35.62,756300
+Ningxia,Puyuan,106.33,35.48,756400
+Ningxia,Pengyang,106.63,35.85,756500
+Ningxia,Zhongwei,105.18,37.52,755000
+Ningxia,Shapotou,105.18,37.52,524000
+Ningxia,Zhongning,105.67,37.48,745200
+Ningxia,Haiyuan,105.65,36.57,755200
+Xinjiang,Urumqi,87.62,43.82,830000
+Xinjiang,Tianshan,87.65,43.78,830000
+Xinjiang,Shaybak,87.6,43.78,830000
+Xinjiang,New urban,87.6,43.85,830000
+Xinjiang,Water milling,87.63,43.83,830000
+Xinjiang,Toton River,87.42,43.87,830000
+Xinjiang,Daban,88.3,43.35,37000
+Xinjiang,Dongshan,87.68,43.95,154100
+Xinjiang,Urumqi,87.6,43.8,830000
+Xinjiang,Karamay,84.87,45.6,834000
+Xinjiang,Dushanzi,84.85,44.32,558200
+Xinjiang,Karamay,84.87,45.6,834000
+Xinjiang,White -alkali beach,85.13,45.7,834000
+Xinjiang,Urho,85.68,46.08,834000
+Xinjiang,Turpan,89.17,42.95,838000
+Xinjiang,Turpan,89.17,42.95,838000
+Xinjiang,Shan Shan,90.22,42.87,838200
+Xinjiang,Tocozon,88.65,42.78,838100
+Xinjiang,Hami,93.52,42.83,839000
+Xinjiang,Hami,93.52,42.83,839100
+Xinjiang,Yion,94.7,43.25,839300
+Xinjiang,Changji,87.3,44.02,831100
+Xinjiang,Changji,87.3,44.02,831100
+Xinjiang,Fukang,87.98,44.15,831500
+Xinjiang,Miyao,87.65,43.97,831400
+Xinjiang,Hutubi,86.9,44.18,831200
+Xinjiang,Manas,86.22,44.3,832200
+Xinjiang,Qitai,89.58,44.02,831800
+Xinjiang,Jimimsar,89.18,44,831700
+Xinjiang,Wooden Bargain Kazakh,90.28,43.83,831900
+Xinjiang,Boltala Mongolia,82.07,44.9,833400
+Xinjiang,Bole,82.07,44.9,833400
+Xinjiang,Jinghe,82.88,44.6,833300
+Xinjiang,Hot spring,81.03,44.97,833500
+Xinjiang,Bayin Guo Leng,86.15,41.77,841000
+Xinjiang,Korla,86.15,41.77,841000
+Xinjiang,Terrace,84.27,41.78,841600
+Xinjiang,Weili,86.25,41.33,841500
+Xinjiang,Ruoqiang,88.17,39.02,841800
+Xinjiang,And the,85.53,38.13,841900
+Xinjiang,县,86.57,42.07,841100
+Xinjiang,Hejing,86.4,42.32,841300
+Xinjiang,He Shuo,86.87,42.27,841200
+Xinjiang,Bohu,86.63,41.98,841400
+Xinjiang,Aksu,80.27,41.17,843000
+Xinjiang,Aksu,80.27,41.17,843000
+Xinjiang,Wensui,80.23,41.28,843100
+Xinjiang,Kuqi,82.97,41.72,842000
+Xinjiang,Shaya Prefecture,82.78,41.22,842200
+Xinjiang,Xinhe,82.6,41.55,238200
+Xinjiang,Baicheng,81.87,41.8,842300
+Xinjiang,Ush,79.23,41.22,843400
+Xinjiang,Awati,80.38,40.63,843200
+Xinjiang,Keiping,79.05,40.5,843600
+Xinjiang,Abutus,76.17,39.72,845300
+Xinjiang,Akota Prefecture,75.95,39.15,845500
+Xinjiang,Aheci,78.45,40.93,843500
+Xinjiang,Wugu,75.25,39.72,845400
+Xinjiang,Kashgar,75.98,39.47,844000
+Xinjiang,Kashgar,75.98,39.47,844000
+Xinjiang,Shufu,75.85,39.38,844100
+Xinjiang,Shule,76.05,39.4,844200
+Xinjiang,Bingjisha,76.17,38.93,365500
+Xinjiang,Zepu,77.27,38.18,844800
+Xinjiang,Shachache,77.23,38.42,844700
+Xinjiang,Yecheng,77.42,37.88,844900
+Xinjiang,Mai Gaiti,77.65,38.9,844600
+Xinjiang,Yuepuhu,76.77,39.23,844400
+Xinjiang,Gamen,76.73,39.5,844300
+Xinjiang,Barchu,78.55,39.78,843800
+Xinjiang,Hetian,79.92,37.12,848000
+Xinjiang,Hetian,79.92,37.12,848000
+Xinjiang,Hetian,79.93,37.1,848000
+Xinjiang,Mo Yu,79.73,37.27,848100
+Xinjiang,Pishan,78.28,37.62,845100
+Xinjiang,Luopu,80.18,37.07,848200
+Xinjiang,Cele,80.8,37,848300
+Xinjiang,Yutian,81.67,36.85,848400
+Xinjiang,Minfeng,82.68,37.07,221700
+Xinjiang,Ili Kazakh,81.32,43.92,835000
+Xinjiang,Yining,81.32,43.92,835100
+Xinjiang,Kui Tun,84.9,44.42,833200
+Xinjiang,Yining,81.52,43.98,745200
+Xinjiang,Chabchar Xibo,81.15,43.83,835300
+Xinjiang,Huocheng,80.88,44.05,835200
+Xinjiang,Gongliu,82.23,43.48,835400
+Xinjiang,Xinyuan,83.25,43.43,835800
+Xinjiang,Zhaosu,81.13,43.15,835600
+Xinjiang,Tax,81.83,43.22,835500
+Xinjiang,Nilek,82.5,43.78,835700
+Xinjiang,Tower,82.98,46.75,834700
+Xinjiang,Tower,82.98,46.75,834700
+Xinjiang,Wusu,84.68,44.43,833000
+Xinjiang,Ermin,83.63,46.53,834600
+Xinjiang,Shawan,85.62,44.33,614900
+Xinjiang,Tori,83.6,45.93,834500
+Xinjiang,Yumin,82.98,46.2,834800
+Xinjiang,And Bucksl Mongolia,85.72,46.8,834400
+Xinjiang,Altay,88.13,47.85,836500
+Xinjiang,Altay,88.13,47.85,836500
+Xinjiang,Burjin,86.85,47.7,836600
+Xinjiang,Fuyun,89.52,47,836100
+Xinjiang,Fuhai,87.5,47.12,836400
+Xinjiang,Habahe,86.42,48.07,836700
+Xinjiang,Qinghe,90.38,46.67,836200
+Xinjiang,Jimuka Prefecture,85.88,47.43,836800
+Xinjiang,Shihezi,86.03,44.3,832000
+Xinjiang,Aral,81.28,40.55,843300
+Xinjiang,Tumushu,79.13,39.85,844000
+Xinjiang,Wujiaqu,87.53,44.17,831300
+"Hong Kong, Macao and Taiwan",Hongkong,114.08,22.2,999077
+"Hong Kong, Macao and Taiwan",Macao,113.33,22.13,999078
+"Hong Kong, Macao and Taiwan",Taipei,121.5,25.03,222
+"Hong Kong, Macao and Taiwan",Kaohsiung,120.28,22.62,800
+"Hong Kong, Macao and Taiwan",Keelung,121.73,25.13,200
+"Hong Kong, Macao and Taiwan",Taichung,120.67,24.15,400
+"Hong Kong, Macao and Taiwan",Tainan,120.2,23,700
+"Hong Kong, Macao and Taiwan",Hsinchu,120.95,24.82,300
+"Hong Kong, Macao and Taiwan",Chiayi,120.43,23.48,600
+"Hong Kong, Macao and Taiwan",Taipei,121.47,25.02,222
+"Hong Kong, Macao and Taiwan",Yilan,121.75,24.77,260
+"Hong Kong, Macao and Taiwan",Taoyuan,121.3,24.97,330
+"Hong Kong, Macao and Taiwan",Miaoli,120.8,24.53,360
+"Hong Kong, Macao and Taiwan",Taichung,120.72,24.25,400
+"Hong Kong, Macao and Taiwan",Changhua,120.53,24.08,500
+"Hong Kong, Macao and Taiwan",Nantou,120.67,23.92,540
+"Hong Kong, Macao and Taiwan",Yunlin,120.53,23.72,640
+"Hong Kong, Macao and Taiwan",Tainan,120.32,23.32,730
+"Hong Kong, Macao and Taiwan",Kaohsiung,120.37,22.63,800
+"Hong Kong, Macao and Taiwan",Pingtung,120.48,22.67,900
+"Hong Kong, Macao and Taiwan",Taitung,121.15,22.75,210
+"Hong Kong, Macao and Taiwan",Hualien,121.6,23.98,950
+"Hong Kong, Macao and Taiwan",Penghu,119.58,23.58,880
+Source: MIT,NA,NA,NA,NA
