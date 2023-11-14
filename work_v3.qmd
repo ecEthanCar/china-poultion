@@ -297,7 +297,8 @@ pivot_ceads_city_2022 <- ceads_city_2022 |>
          CityID = as.character(CityID)) |>
   rename(`Province.Code` = ProvinceID, 
          Statistical_Division_Code = CityID,
-         Region = CityNameEn)
+         Region = CityNameEn) |>
+  select(-Statistical_Division_Code)
 
 ```
 
@@ -312,6 +313,10 @@ lat_long_v2_with_codes <- bigger_10 |>
   select(Region, Province, Statistical_Division_Code, Province.Code, Latitude, Longitude) |> unique()
 
 emission <- merge(pivot_ceads_city_2022, lat_long_v2_with_codes, by = c("Region", "Province.Code")) |> unique()
+
+bigger_12 |> write_csv(file = "data/debt_estate_property_pivot_gdp_statcodes_lat_long.csv")
+
+emission |> write_csv(file = "data/emissions_lat_long.csv")
 
 ```
 

@@ -2,7 +2,7 @@
 library(readr)
 library(leaflet)
 
-smaller_app <- read_csv("data/carbon_emissions_est_prop_gdp_(2016-2019).csv")
+smaller_app <- read_csv("data/emissions_lat_long.csv")
 
 # Define UI
 ui <- fluidPage(
@@ -35,14 +35,7 @@ server <- function(input, output) {
           # ", <b>Province:</b> ", Province,
           ", <b>Year:</b> ", year,
           "<br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
-          "<br><b>Carbon Emissions</b>: ", `Carbon Emissions`,
-          "<br><b>Debt Ratio</b>: ", `Debt Ratio(%)`, "%",
-          "<br><b>Annual Real Estate Investment:</b> ",
-            Annual_Real_Estate_Investment,
-            ifelse(is.na(Annual_Real_Estate_Investment), "", " RBM mn"),
-          "<br><b>Annual Average Property Price:</b> ",
-            Annual_Avg_Property_Price,
-            ifelse(is.na(Annual_Avg_Property_Price), "", " RMB/sq m")
+          "<br><b>Carbon Emissions</b>: ", `Carbon Emissions`
           ),
         clusterOptions = markerClusterOptions(minZoom = 0, maxZoom = 20)
         )
