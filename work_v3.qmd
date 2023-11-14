@@ -1,5 +1,5 @@
 ---
-title: "China Pollution Tidying Pt 2"
+title: "China Pollution Tidying Pt 3 (combination of Pt 1 and 2)"
 subtitle: "Report"
 format: pdf
 ---
@@ -52,6 +52,11 @@ good_encoded_data_7 <- encoded_data_6 |> filter(!is.na(Statistical_Division_Code
 
 
 ```{r}
+
+##IGNORE##
+
+China_Latitude_and_Longitude_location <- read_csv("~/china-polution/Shared_Data/China Latitude and Longitude - location.csv")
+# View(China_Latitude_and_Longitude_location)
 
 lat_long_V2 <- read_csv(file = "Shared_Data/China Latitude and Longitude - location.csv") |>
   select(!c(Region, Region_ch, `District/County_ch`, Province_ch)) |>
@@ -139,9 +144,178 @@ na_location_V2 |> write_csv(file = "na_data/temporary_lat_long_V2_na.csv")
 
 lat_long_v2_new <- read_csv("~/china-polution/Shared_Data/Lat-Long-V2 - temporary_lat_long_V2.csv")
 lat_long_v2_new <- lat_long_v2_new |> mutate(Region = ifelse(is.na(Region), Province, Region))
-glimpse(lat_long_v2_new)
+lat_long_v2_new <- subset(lat_long_v2_new, select = -`Post Code`)
+
+duplicates <- lat_long_v2_new[duplicated(lat_long_v2_new[c("Province","Region")]), ]
+
+# To deal with multiple smaller areas being under the same Region,
+# but have slightly different coordinates, took the average of each 
+# group to triangulate the "center" of the Region. Can be changed if
+# more specific coordinates are needed
+lat_long_v2_without_duplicates <- lat_long_v2_new |>
+  group_by(Province, Region) |>
+  summarise(Latitude = mean(Latitude), Longitude = mean(Longitude))
+
+duplicates_2 <- lat_long_v2_without_duplicates[duplicated(lat_long_v2_without_duplicates[c("Province","Region")]), ]
+
+bigger_10 <- merge(encoded_data_7, lat_long_v2_without_duplicates, by = c("Region", "Province"))
+
+lat_long_v2_without_duplicates |> write_csv(file = "data/lat_long_*no-duplicates*.csv")
 
 ```
+
+```{r}
+#| for-gdp-stuff
+
+gdp <- read_csv("Shared_Data/copy2-city-level-gdp - My Series.csv")
+
+gdp_2 <- gdp |>
+  separate(Province, into = paste0("col", 1:6), sep = ":", extra = "merge") |>
+  # Removes extra spaces after separation
+  mutate_at(vars(c(col1, col2, col3, col4, col5, col6)), trimws) |>
+  # Removes things in col4 (future Province col) not in col3 (future Industry col)
+  mutate(col4 = ifelse(col4 %in% col3, col4, NA)) |>
+  # Pastes Province names in col3 onto col4, them removes from col3
+  mutate(col4 = ifelse(is.na(col4) & col3 %in% col4, col3, col4),
+         col3 = ifelse(col3 %in% col4, NA, col3)) |> # Ask later what NA for industry should be
+  rename(`GDP: Industry` = col3, Province = col4) |>
+  select(!c(col1, col2, col5, col6))
+
+pivot_gdp <- gdp_2 |>
+  pivot_longer(
+    cols = c(`1999`:`2020`),
+    names_to = "year",
+    values_to = "GDP"
+  ) |>
+  select(`GDP: Industry`, Province, Region, year, GDP) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(GDP))
+
+pivot_gdp_n <- pivot_gdp |>
+  mutate(Region = ifelse(Region == Province, NA, Region)) |>
+  mutate(`GDP: Industry` = ifelse(is.na(`GDP: Industry`), "Total", `GDP: Industry`)) |>
+  subset(select = -pct)
+
+```
+```{r}
+#| carbon-triangle-estate-property-separeation
+
+Carbon_Triangle <- read_csv("Shared_Data/Carbon Triangle Copy - My Series.csv") |>
+  rename(Province = Data_type)
+
+Carbon_Triangle_2 <- Carbon_Triangle |> distinct(Unit)
+
+names(Carbon_Triangle) <- gsub(" ", "_", names(Carbon_Triangle))
+
+#Filtering if real estate, then removing superfluous word from Province
+real_estate <- Carbon_Triangle |> 
+  filter(grepl("CN: Real Estate Investment:", Province))
+real_estate$Province <- gsub(".*?:.*?:(.*?):.*", "\\1", real_estate$Province)
+real_estate$Province <- gsub("CN: Real Estate Investment:", "", real_estate$Province)
+real_estate$Province <- trimws(real_estate$Province)
+
+#Filtering if property, then removing superfluous word from Province
+property <- Carbon_Triangle |> 
+  filter(grepl("CN: Property Price: Residential:", Province))
+property$Province <- gsub("CN: Property Price: Residential:", "", property$Province)
+property$Province <- sub(":.*", "", property$Province)
+property$Province <- trimws(property$Province)
+
+#Renaming Subnational to Region
+merge_property <- property |> select(!Region) |>
+  rename(Region = Subnational)
+
+merge_estate <- select(real_estate, !Region) |>
+    rename(Region = Subnational)
+
+#Pivot merges
+pivot_property <- merge_property |>
+  pivot_longer(
+    cols = c(`1999`:`2021`),
+    names_to = "year",
+    values_to = "Annual_Real_Estate_Investment"
+  ) |>
+  select(Province, Region, year, Annual_Real_Estate_Investment) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(Annual_Real_Estate_Investment))
+
+pivot_estate <- merge_estate |>
+  pivot_longer(
+    cols = c(`1999`:`2021`),
+    names_to = "year",
+    values_to = "Annual_Avg_Property_Price"
+  ) |>
+  select(Province, Region, year, Annual_Avg_Property_Price) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(Annual_Avg_Property_Price))
+
+```
+
+```{r}
+
+#| pivot-year-data
+
+pivot_property <- merge_property |>
+  pivot_longer(
+    cols = c(`1999`:`2021`),
+    names_to = "year",
+    values_to = "Annual_Real_Estate_Investment"
+  ) |>
+  select(Province, Region, year, Annual_Real_Estate_Investment) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(Annual_Real_Estate_Investment))
+
+pivot_estate <- merge_estate |>
+  pivot_longer(
+    cols = c(`1999`:`2021`),
+    names_to = "year",
+    values_to = "Annual_Avg_Property_Price"
+  ) |>
+  select(Province, Region, year, Annual_Avg_Property_Price) |>
+  mutate(year = as.numeric(year),
+         pct = as.numeric(Annual_Avg_Property_Price))
+
+pivot_estate_property <- merge(pivot_property, pivot_estate, by = c("Region", "Province", "year"), all.x = TRUE) |>
+  select(!c(`pct.x`, `pct.y`)) |>
+  mutate(Province = gsub("\\(DC\\) ", "", Province), 
+         Region = gsub("\\(DC\\) ", "", Region))
+
+```
+
+```{r}
+
+ceads_city_2022 <- read_excel("Shared_Data/ceads-city-2022.xlsx")
+
+pivot_ceads_city_2022 <- ceads_city_2022 |>
+  pivot_longer(
+    cols = c(`1995`:`2019`),
+    names_to = "year",
+    values_to = "Carbon Emissions"
+  ) |>
+  select(`Carbon Emissions`, CityID, ProvinceID, CityNameEn, year) |>
+  mutate(year = as.numeric(year),
+         CityID = as.character(CityID)) |>
+  rename(`Province.Code` = ProvinceID, 
+         Statistical_Division_Code = CityID,
+         Region = CityNameEn)
+
+```
+
+```{r}
+#| merging-things
+
+bigger_11 <- merge(pivot_estate_property, bigger_10, by = c("Region", "Province", "year")) |> unique()
+
+bigger_12 <- merge(pivot_gdp_n, bigger_11, by = c("Region", "Province", "year")) |> unique()
+
+lat_long_v2_with_codes <- bigger_10 |>
+  select(Region, Province, Statistical_Division_Code, Province.Code, Latitude, Longitude) |> unique()
+
+emission <- merge(pivot_ceads_city_2022, lat_long_v2_with_codes, by = c("Region", "Province.Code")) |> unique()
+
+```
+
+
 
 ```{r}
 #| shrinking-cities-with-ids
