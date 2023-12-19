@@ -1,0 +1,58 @@
+
+
+```{r}
+#| upload-emissions-for-charting
+
+emissions_for_map <- read_csv("data/emissions_lat_long.csv")
+
+```
+
+```{r}
+#| emissions-chart-using-already-province-PLUS-region-mean-province
+
+# Some provinces already have emission data for the entire region (as far as I can tell).
+# But most don't, so this first data and chart will make up the difference by merging
+# the existing province-level trends with those manufactured by means of regions the
+# remaining data
+
+emissions_for_map_prov <- filter(emissions_for_map, Province == Region) |>
+  select(Province, year, `Carbon Emissions`) |>
+  rename(mean_carbon_emissions = `Carbon Emissions`)
+
+emissions_for_map_prov_1 <- filter(emissions_for_map, Province != Region) |>
+  group_by(Province, year) |>
+  summarise(mean_carbon_emissions = mean(`Carbon Emissions`, na.rm = TRUE)) |>
+  mutate(mean_carbon_emissions = ifelse(mean_carbon_emissions == "NaN", NA, mean_carbon_emissions))
+
+emissions_for_map_prov_2 <- anti_join(emissions_for_map_prov_1, emissions_for_map_prov, by = "Province")
+
+combined_emission_data_prov <- rbind(emissions_for_map_prov_2, emissions_for_map_prov)
+
+ggplot(combined_emission_data_prov, aes(year, mean_carbon_emissions)) +
+  geom_line() +
+  facet_wrap(facets = vars(Province))
+
+combined_emission_data_prov |> write_csv(file = "data/province_emissions_1995_2019.csv")
+
+```
+
+```{r}
+#| emissions-chart-using-ONLY-region-mean-province
+
+# Some provinces already have emission data for the entire region (as far as I can tell).
+# But most don't. This second data and chart ignores the province-level emission trends
+# already in the data set. Instead, only using manufactured trends for each province via 
+# the mean emissions of its regions.
+
+emissions_for_map_prov_3 <- filter(emissions_for_map, Province != Region) |>
+  group_by(Province, year) |>
+  summarise(mean_carbon_emissions = mean(`Carbon Emissions`, na.rm = TRUE)) |>
+  mutate(mean_carbon_emissions = ifelse(mean_carbon_emissions == "NaN", NA, mean_carbon_emissions))
+
+ggplot(emissions_for_map_prov_3, aes(year, mean_carbon_emissions)) +
+  geom_line() +
+  facet_wrap(facets = vars(Province))
+
+emissions_for_map_prov_3 |> write_csv(file = "data/province_via_region_mean_emissions_1995_2019.csv")
+
+```

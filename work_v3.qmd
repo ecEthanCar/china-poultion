@@ -3,6 +3,30 @@ title: "China Pollution Tidying Pt 3 (combination of Pt 1 and 2)"
 subtitle: "Report"
 format: pdf
 ---
+
+```{r}
+#| load-package
+#| echo: false
+
+library(tidyverse) 
+library(skimr) 
+library(jsonlite) 
+library(scales) 
+library(lubridate) 
+library(knitr) 
+library(kableExtra) 
+library(patchwork) 
+library(tidymodels) 
+library(gridExtra) 
+library(broom)
+library(readxl)
+library(dplyr)
+
+library(fuzzyjoin)
+
+theme_set(theme_minimal())
+```
+
 ```{r}
 
 data_6 <- read_csv("Shared_Data/Untitled spreadsheet - data_6.csv")
