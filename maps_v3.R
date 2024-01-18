@@ -37,6 +37,7 @@ server <- function(input, output) {
           "<br><b>Administrative Division Code:</b> ", Statistical_Division_Code,
           "<br><b>Carbon Emissions</b>: ", `Carbon Emissions`
           ),
+        #color = ~colorNumeric("magma", domain = NULL)(`Carbon Emissions`)
         clusterOptions = markerClusterOptions(minZoom = 0, maxZoom = 20)
         )
   })
